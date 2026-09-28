@@ -1,0 +1,50 @@
+============================================================
+ RIMEH - RAPPORT FINAL D'ASSEMBLAGE
+============================================================
+
+Date : 2026-09-24 19:18:01 
+
+1. MODELES
+Nombre de modèles : 76 
+Nombre de RDS : 76 
+Nombre de coefficients : 572 
+
+2. H1-H9
+Nombre de lignes : 165 
+
+Statuts de l'audit H1-H9 :
+
+     A TESTER AVEC RESULTAT STATISTIQUE                 COMPARAISON DESCRIPTIVE 
+                                      3                                       4 
+     NON TESTABLE AVEC LA BASE ACTUELLE NON TESTABLE AVEC LA STRUCTURE ACTUELLE 
+                                      1                                       1 
+
+3. CONTROLE FINAL
+
+                     Element Lignes Statut
+1  Statistiques descriptives      7     OK
+2                    Pearson      6     OK
+3                   Spearman      6     OK
+4              Stationnarite     77     OK
+5                        VIF      5     OK
+6       Tests pre-estimation     11     OK
+7        Modeles GARCH-MIDAS     76     OK
+8               Coefficients    572     OK
+9                        RDS     76     OK
+10                     H1-H9    165     OK
+
+4. VALIDATION RDS
+
+                    Test Valeur
+1             Nombre RDS     76
+2 Nombre modèles tableau     76
+3    Nombre coefficients    572
+4    RDS avec volatilité     76
+5      RDS avec long-run     76
+6        RDS avec LogLik     76
+7           RDS avec AIC     76
+8           RDS avec BIC     76
+
+============================================================
+ FIN DU PIPELINE FINAL
+============================================================

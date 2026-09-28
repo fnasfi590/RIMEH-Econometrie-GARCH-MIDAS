@@ -1,0 +1,1038 @@
+============================================================
+TABLEAU FINAL DES TESTS H1-H9
+============================================================
+
+ Hypothese N_tests N_rejet_H0 N_non_rejet_H0        P_min P_mediane
+        H1      13          7              6 0.000000e+00 0.0496620
+        H2      44          2             42 3.307000e-03 0.2914915
+        H3      42          2             40 6.830000e-04 0.2794600
+        H4       0         NA             NA           NA        NA
+        H5      64          3             61 2.368504e-12 0.2666197
+        H6      64          3             61 2.368504e-12 0.2666197
+        H7       0         NA             NA           NA        NA
+        H8       0         NA             NA           NA        NA
+        H9      21          1             20 1.652486e-02 0.8265238
+                                                     Conclusion
+ Tests individuels disponibles; aucune p-value globale calculee
+ Tests individuels disponibles; aucune p-value globale calculee
+ Tests individuels disponibles; aucune p-value globale calculee
+                                      NON TESTABLE FORMELLEMENT
+               Test de difference sous hypothese d'independance
+               Test de difference sous hypothese d'independance
+                                      NON TESTABLE FORMELLEMENT
+                                      NON TESTABLE FORMELLEMENT
+               Test de difference sous hypothese d'independance
+
+
+============================================================
+DETAIL DES TESTS
+============================================================
+
+ Hypothese                                 Modele Pays         Parametre
+        H1                               GPRT_VIX  DEU           theta_1
+        H1                               GPRT_VIX  DEU           theta_2
+        H1                               GPRT_VIX  GBR           theta_1
+        H1                               GPRT_VIX  GBR           theta_2
+        H1                               GPRT_VIX  IND             theta
+        H1                               GPRT_VIX  JPN             theta
+        H1                               GPRT_VIX  KOR             theta
+        H1                               GPRT_VIX  MEX             theta
+        H1                               GPRT_VIX  NOR             theta
+        H1                               GPRT_VIX  PAK             theta
+        H1                               GPRT_VIX  SAU             theta
+        H1                               GPRT_VIX  TUR             theta
+        H1                               GPRT_VIX  USA             theta
+        H2                               GPRT_DEM  DEU           theta_1
+        H2                               GPRT_DEM  DEU           theta_2
+        H2                                SUP_DEM  DEU           theta_1
+        H2                                SUP_DEM  DEU           theta_2
+        H2                               GPRT_DEM  GBR           theta_1
+        H2                               GPRT_DEM  GBR           theta_2
+        H2                                SUP_DEM  GBR           theta_1
+        H2                                SUP_DEM  GBR           theta_2
+        H2                               GPRT_DEM  IND           theta_1
+        H2                               GPRT_DEM  IND           theta_2
+        H2                                SUP_DEM  IND           theta_1
+        H2                                SUP_DEM  IND           theta_2
+        H2                               GPRT_DEM  JPN           theta_1
+        H2                               GPRT_DEM  JPN           theta_2
+        H2                                SUP_DEM  JPN           theta_1
+        H2                                SUP_DEM  JPN           theta_2
+        H2                               GPRT_DEM  KOR           theta_1
+        H2                               GPRT_DEM  KOR           theta_2
+        H2                                SUP_DEM  KOR           theta_1
+        H2                                SUP_DEM  KOR           theta_2
+        H2                               GPRT_DEM  MEX           theta_1
+        H2                               GPRT_DEM  MEX           theta_2
+        H2                                SUP_DEM  MEX           theta_1
+        H2                                SUP_DEM  MEX           theta_2
+        H2                               GPRT_DEM  NOR           theta_1
+        H2                               GPRT_DEM  NOR           theta_2
+        H2                                SUP_DEM  NOR           theta_1
+        H2                                SUP_DEM  NOR           theta_2
+        H2                               GPRT_DEM  PAK           theta_1
+        H2                               GPRT_DEM  PAK           theta_2
+        H2                                SUP_DEM  PAK           theta_1
+        H2                                SUP_DEM  PAK           theta_2
+        H2                               GPRT_DEM  SAU           theta_1
+        H2                               GPRT_DEM  SAU           theta_2
+        H2                                SUP_DEM  SAU           theta_1
+        H2                                SUP_DEM  SAU           theta_2
+        H2                               GPRT_DEM  TUR           theta_1
+        H2                               GPRT_DEM  TUR           theta_2
+        H2                                SUP_DEM  TUR           theta_1
+        H2                                SUP_DEM  TUR           theta_2
+        H2                               GPRT_DEM  USA           theta_1
+        H2                               GPRT_DEM  USA           theta_2
+        H2                                SUP_DEM  USA           theta_1
+        H2                                SUP_DEM  USA           theta_2
+        H3                               GPRA_SUP  DEU           theta_1
+        H3                               GPRA_SUP  DEU           theta_2
+        H3                               GPRT_SUP  DEU           theta_1
+        H3                               GPRT_SUP  DEU           theta_2
+        H3                               GPRA_SUP  GBR           theta_1
+        H3                               GPRA_SUP  GBR           theta_2
+        H3                               GPRT_SUP  GBR           theta_1
+        H3                               GPRT_SUP  GBR           theta_2
+        H3                               GPRA_SUP  IND           theta_1
+        H3                               GPRA_SUP  IND           theta_2
+        H3                               GPRT_SUP  IND           theta_1
+        H3                               GPRT_SUP  IND           theta_2
+        H3                               GPRA_SUP  JPN           theta_1
+        H3                               GPRA_SUP  JPN           theta_2
+        H3                               GPRT_SUP  JPN           theta_1
+        H3                               GPRT_SUP  JPN           theta_2
+        H3                               GPRA_SUP  KOR           theta_1
+        H3                               GPRA_SUP  KOR           theta_2
+        H3                               GPRT_SUP  KOR           theta_1
+        H3                               GPRT_SUP  KOR           theta_2
+        H3                               GPRA_SUP  MEX           theta_1
+        H3                               GPRA_SUP  MEX           theta_2
+        H3                               GPRT_SUP  MEX           theta_1
+        H3                               GPRT_SUP  MEX           theta_2
+        H3                               GPRA_SUP  NOR           theta_1
+        H3                               GPRA_SUP  NOR           theta_2
+        H3                               GPRT_SUP  NOR           theta_1
+        H3                               GPRT_SUP  NOR           theta_2
+        H3                               GPRA_SUP  PAK             theta
+        H3                               GPRT_SUP  PAK             theta
+        H3                               GPRA_SUP  SAU           theta_1
+        H3                               GPRA_SUP  SAU           theta_2
+        H3                               GPRT_SUP  SAU           theta_1
+        H3                               GPRT_SUP  SAU           theta_2
+        H3                               GPRA_SUP  TUR           theta_1
+        H3                               GPRA_SUP  TUR           theta_2
+        H3                               GPRT_SUP  TUR           theta_1
+        H3                               GPRT_SUP  TUR           theta_2
+        H3                               GPRA_SUP  USA           theta_1
+        H3                               GPRA_SUP  USA           theta_2
+        H3                               GPRT_SUP  USA           theta_1
+        H3                               GPRT_SUP  USA           theta_2
+        H5                               GPRA_SUP  DEU theta_1 - theta_2
+        H5                               GPRT_DEM  DEU theta_1 - theta_2
+        H5                               GPRT_PRE  DEU theta_1 - theta_2
+        H5                               GPRT_SUP  DEU theta_1 - theta_2
+        H5                               GPRT_VIX  DEU theta_1 - theta_2
+        H5                                SUP_DEM  DEU theta_1 - theta_2
+        H5                                SUP_PRE  DEU theta_1 - theta_2
+        H5                               GPRA_SUP  GBR theta_1 - theta_2
+        H5                               GPRT_DEM  GBR theta_1 - theta_2
+        H5                               GPRT_PRE  GBR theta_1 - theta_2
+        H5                               GPRT_SUP  GBR theta_1 - theta_2
+        H5                               GPRT_VIX  GBR theta_1 - theta_2
+        H5                                SUP_DEM  GBR theta_1 - theta_2
+        H5                               GPRA_SUP  IND theta_1 - theta_2
+        H5                               GPRT_DEM  IND theta_1 - theta_2
+        H5                               GPRT_PRE  IND theta_1 - theta_2
+        H5                               GPRT_SUP  IND theta_1 - theta_2
+        H5                                SUP_DEM  IND theta_1 - theta_2
+        H5                                SUP_PRE  IND theta_1 - theta_2
+        H5                               GPRA_SUP  JPN theta_1 - theta_2
+        H5                               GPRT_DEM  JPN theta_1 - theta_2
+        H5                               GPRT_PRE  JPN theta_1 - theta_2
+        H5                               GPRT_SUP  JPN theta_1 - theta_2
+        H5                                SUP_DEM  JPN theta_1 - theta_2
+        H5                                SUP_PRE  JPN theta_1 - theta_2
+        H5                               GPRA_SUP  KOR theta_1 - theta_2
+        H5                               GPRT_DEM  KOR theta_1 - theta_2
+        H5                               GPRT_PRE  KOR theta_1 - theta_2
+        H5                               GPRT_SUP  KOR theta_1 - theta_2
+        H5                                SUP_DEM  KOR theta_1 - theta_2
+        H5                                SUP_PRE  KOR theta_1 - theta_2
+        H5                               GPRA_SUP  MEX theta_1 - theta_2
+        H5                               GPRT_DEM  MEX theta_1 - theta_2
+        H5                               GPRT_PRE  MEX theta_1 - theta_2
+        H5                               GPRT_SUP  MEX theta_1 - theta_2
+        H5                                SUP_DEM  MEX theta_1 - theta_2
+        H5                                SUP_PRE  MEX theta_1 - theta_2
+        H5                               GPRA_SUP  NOR theta_1 - theta_2
+        H5                               GPRT_DEM  NOR theta_1 - theta_2
+        H5                               GPRT_PRE  NOR theta_1 - theta_2
+        H5                               GPRT_SUP  NOR theta_1 - theta_2
+        H5                                SUP_DEM  NOR theta_1 - theta_2
+        H5                                SUP_PRE  NOR theta_1 - theta_2
+        H5                               GPRT_DEM  PAK theta_1 - theta_2
+        H5                                SUP_DEM  PAK theta_1 - theta_2
+        H5                                SUP_PRE  PAK theta_1 - theta_2
+        H5                               GPRA_SUP  SAU theta_1 - theta_2
+        H5                               GPRT_DEM  SAU theta_1 - theta_2
+        H5                               GPRT_PRE  SAU theta_1 - theta_2
+        H5                               GPRT_SUP  SAU theta_1 - theta_2
+        H5                                SUP_DEM  SAU theta_1 - theta_2
+        H5                                SUP_PRE  SAU theta_1 - theta_2
+        H5                               GPRA_SUP  TUR theta_1 - theta_2
+        H5                               GPRT_DEM  TUR theta_1 - theta_2
+        H5                               GPRT_PRE  TUR theta_1 - theta_2
+        H5                               GPRT_SUP  TUR theta_1 - theta_2
+        H5                                SUP_DEM  TUR theta_1 - theta_2
+        H5                                SUP_PRE  TUR theta_1 - theta_2
+        H5                               GPRA_SUP  USA theta_1 - theta_2
+        H5                               GPRT_DEM  USA theta_1 - theta_2
+        H5                               GPRT_PRE  USA theta_1 - theta_2
+        H5                               GPRT_SUP  USA theta_1 - theta_2
+        H5                                SUP_DEM  USA theta_1 - theta_2
+        H5                                SUP_PRE  USA theta_1 - theta_2
+        H6                               GPRA_SUP  DEU theta_1 - theta_2
+        H6                               GPRT_DEM  DEU theta_1 - theta_2
+        H6                               GPRT_PRE  DEU theta_1 - theta_2
+        H6                               GPRT_SUP  DEU theta_1 - theta_2
+        H6                               GPRT_VIX  DEU theta_1 - theta_2
+        H6                                SUP_DEM  DEU theta_1 - theta_2
+        H6                                SUP_PRE  DEU theta_1 - theta_2
+        H6                               GPRA_SUP  GBR theta_1 - theta_2
+        H6                               GPRT_DEM  GBR theta_1 - theta_2
+        H6                               GPRT_PRE  GBR theta_1 - theta_2
+        H6                               GPRT_SUP  GBR theta_1 - theta_2
+        H6                               GPRT_VIX  GBR theta_1 - theta_2
+        H6                                SUP_DEM  GBR theta_1 - theta_2
+        H6                               GPRA_SUP  IND theta_1 - theta_2
+        H6                               GPRT_DEM  IND theta_1 - theta_2
+        H6                               GPRT_PRE  IND theta_1 - theta_2
+        H6                               GPRT_SUP  IND theta_1 - theta_2
+        H6                                SUP_DEM  IND theta_1 - theta_2
+        H6                                SUP_PRE  IND theta_1 - theta_2
+        H6                               GPRA_SUP  JPN theta_1 - theta_2
+        H6                               GPRT_DEM  JPN theta_1 - theta_2
+        H6                               GPRT_PRE  JPN theta_1 - theta_2
+        H6                               GPRT_SUP  JPN theta_1 - theta_2
+        H6                                SUP_DEM  JPN theta_1 - theta_2
+        H6                                SUP_PRE  JPN theta_1 - theta_2
+        H6                               GPRA_SUP  KOR theta_1 - theta_2
+        H6                               GPRT_DEM  KOR theta_1 - theta_2
+        H6                               GPRT_PRE  KOR theta_1 - theta_2
+        H6                               GPRT_SUP  KOR theta_1 - theta_2
+        H6                                SUP_DEM  KOR theta_1 - theta_2
+        H6                                SUP_PRE  KOR theta_1 - theta_2
+        H6                               GPRA_SUP  MEX theta_1 - theta_2
+        H6                               GPRT_DEM  MEX theta_1 - theta_2
+        H6                               GPRT_PRE  MEX theta_1 - theta_2
+        H6                               GPRT_SUP  MEX theta_1 - theta_2
+        H6                                SUP_DEM  MEX theta_1 - theta_2
+        H6                                SUP_PRE  MEX theta_1 - theta_2
+        H6                               GPRA_SUP  NOR theta_1 - theta_2
+        H6                               GPRT_DEM  NOR theta_1 - theta_2
+        H6                               GPRT_PRE  NOR theta_1 - theta_2
+        H6                               GPRT_SUP  NOR theta_1 - theta_2
+        H6                                SUP_DEM  NOR theta_1 - theta_2
+        H6                                SUP_PRE  NOR theta_1 - theta_2
+        H6                               GPRT_DEM  PAK theta_1 - theta_2
+        H6                                SUP_DEM  PAK theta_1 - theta_2
+        H6                                SUP_PRE  PAK theta_1 - theta_2
+        H6                               GPRA_SUP  SAU theta_1 - theta_2
+        H6                               GPRT_DEM  SAU theta_1 - theta_2
+        H6                               GPRT_PRE  SAU theta_1 - theta_2
+        H6                               GPRT_SUP  SAU theta_1 - theta_2
+        H6                                SUP_DEM  SAU theta_1 - theta_2
+        H6                                SUP_PRE  SAU theta_1 - theta_2
+        H6                               GPRA_SUP  TUR theta_1 - theta_2
+        H6                               GPRT_DEM  TUR theta_1 - theta_2
+        H6                               GPRT_PRE  TUR theta_1 - theta_2
+        H6                               GPRT_SUP  TUR theta_1 - theta_2
+        H6                                SUP_DEM  TUR theta_1 - theta_2
+        H6                                SUP_PRE  TUR theta_1 - theta_2
+        H6                               GPRA_SUP  USA theta_1 - theta_2
+        H6                               GPRT_DEM  USA theta_1 - theta_2
+        H6                               GPRT_PRE  USA theta_1 - theta_2
+        H6                               GPRT_SUP  USA theta_1 - theta_2
+        H6                                SUP_DEM  USA theta_1 - theta_2
+        H6                                SUP_PRE  USA theta_1 - theta_2
+        H9                   GPRT_SUP vs GPRA_SUP  DEU           theta_1
+        H9                   GPRT_SUP vs GPRA_SUP  DEU           theta_2
+        H9                   GPRT_SUP vs GPRA_SUP  GBR           theta_1
+        H9                   GPRT_SUP vs GPRA_SUP  GBR           theta_2
+        H9                   GPRT_SUP vs GPRA_SUP  IND           theta_1
+        H9                   GPRT_SUP vs GPRA_SUP  IND           theta_2
+        H9                   GPRT_SUP vs GPRA_SUP  JPN           theta_1
+        H9                   GPRT_SUP vs GPRA_SUP  JPN           theta_2
+        H9                   GPRT_SUP vs GPRA_SUP  KOR           theta_1
+        H9                   GPRT_SUP vs GPRA_SUP  KOR           theta_2
+        H9                   GPRT_SUP vs GPRA_SUP  MEX           theta_1
+        H9                   GPRT_SUP vs GPRA_SUP  MEX           theta_2
+        H9                   GPRT_SUP vs GPRA_SUP  NOR           theta_1
+        H9                   GPRT_SUP vs GPRA_SUP  NOR           theta_2
+        H9                   GPRT_SUP vs GPRA_SUP  PAK             theta
+        H9                   GPRT_SUP vs GPRA_SUP  SAU           theta_1
+        H9                   GPRT_SUP vs GPRA_SUP  SAU           theta_2
+        H9                   GPRT_SUP vs GPRA_SUP  TUR           theta_1
+        H9                   GPRT_SUP vs GPRA_SUP  TUR           theta_2
+        H9                   GPRT_SUP vs GPRA_SUP  USA           theta_1
+        H9                   GPRT_SUP vs GPRA_SUP  USA           theta_2
+        H4 Classification exportateur/importateur <NA>              <NA>
+        H7          Comparaison GPRT/GPRA - PRICE <NA>              <NA>
+        H8         Comparaison GPRT/GPRA - DEMAND <NA>              <NA>
+                                     H0                     H1
+                            theta_1 = 0           theta_1 != 0
+                            theta_2 = 0           theta_2 != 0
+                            theta_1 = 0           theta_1 != 0
+                            theta_2 = 0           theta_2 != 0
+                              theta = 0             theta != 0
+                              theta = 0             theta != 0
+                              theta = 0             theta != 0
+                              theta = 0             theta != 0
+                              theta = 0             theta != 0
+                              theta = 0             theta != 0
+                              theta = 0             theta != 0
+                              theta = 0             theta != 0
+                              theta = 0             theta != 0
+                            theta_1 = 0           theta_1 != 0
+                            theta_2 = 0           theta_2 != 0
+                            theta_1 = 0           theta_1 != 0
+                            theta_2 = 0           theta_2 != 0
+                            theta_1 = 0           theta_1 != 0
+                            theta_2 = 0           theta_2 != 0
+                            theta_1 = 0           theta_1 != 0
+                            theta_2 = 0           theta_2 != 0
+                            theta_1 = 0           theta_1 != 0
+                            theta_2 = 0           theta_2 != 0
+                            theta_1 = 0           theta_1 != 0
+                            theta_2 = 0           theta_2 != 0
+                            theta_1 = 0           theta_1 != 0
+                            theta_2 = 0           theta_2 != 0
+                            theta_1 = 0           theta_1 != 0
+                            theta_2 = 0           theta_2 != 0
+                            theta_1 = 0           theta_1 != 0
+                            theta_2 = 0           theta_2 != 0
+                            theta_1 = 0           theta_1 != 0
+                            theta_2 = 0           theta_2 != 0
+                            theta_1 = 0           theta_1 != 0
+                            theta_2 = 0           theta_2 != 0
+                            theta_1 = 0           theta_1 != 0
+                            theta_2 = 0           theta_2 != 0
+                            theta_1 = 0           theta_1 != 0
+                            theta_2 = 0           theta_2 != 0
+                            theta_1 = 0           theta_1 != 0
+                            theta_2 = 0           theta_2 != 0
+                            theta_1 = 0           theta_1 != 0
+                            theta_2 = 0           theta_2 != 0
+                            theta_1 = 0           theta_1 != 0
+                            theta_2 = 0           theta_2 != 0
+                            theta_1 = 0           theta_1 != 0
+                            theta_2 = 0           theta_2 != 0
+                            theta_1 = 0           theta_1 != 0
+                            theta_2 = 0           theta_2 != 0
+                            theta_1 = 0           theta_1 != 0
+                            theta_2 = 0           theta_2 != 0
+                            theta_1 = 0           theta_1 != 0
+                            theta_2 = 0           theta_2 != 0
+                            theta_1 = 0           theta_1 != 0
+                            theta_2 = 0           theta_2 != 0
+                            theta_1 = 0           theta_1 != 0
+                            theta_2 = 0           theta_2 != 0
+                            theta_1 = 0           theta_1 != 0
+                            theta_2 = 0           theta_2 != 0
+                            theta_1 = 0           theta_1 != 0
+                            theta_2 = 0           theta_2 != 0
+                            theta_1 = 0           theta_1 != 0
+                            theta_2 = 0           theta_2 != 0
+                            theta_1 = 0           theta_1 != 0
+                            theta_2 = 0           theta_2 != 0
+                            theta_1 = 0           theta_1 != 0
+                            theta_2 = 0           theta_2 != 0
+                            theta_1 = 0           theta_1 != 0
+                            theta_2 = 0           theta_2 != 0
+                            theta_1 = 0           theta_1 != 0
+                            theta_2 = 0           theta_2 != 0
+                            theta_1 = 0           theta_1 != 0
+                            theta_2 = 0           theta_2 != 0
+                            theta_1 = 0           theta_1 != 0
+                            theta_2 = 0           theta_2 != 0
+                            theta_1 = 0           theta_1 != 0
+                            theta_2 = 0           theta_2 != 0
+                            theta_1 = 0           theta_1 != 0
+                            theta_2 = 0           theta_2 != 0
+                            theta_1 = 0           theta_1 != 0
+                            theta_2 = 0           theta_2 != 0
+                            theta_1 = 0           theta_1 != 0
+                            theta_2 = 0           theta_2 != 0
+                            theta_1 = 0           theta_1 != 0
+                            theta_2 = 0           theta_2 != 0
+                              theta = 0             theta != 0
+                              theta = 0             theta != 0
+                            theta_1 = 0           theta_1 != 0
+                            theta_2 = 0           theta_2 != 0
+                            theta_1 = 0           theta_1 != 0
+                            theta_2 = 0           theta_2 != 0
+                            theta_1 = 0           theta_1 != 0
+                            theta_2 = 0           theta_2 != 0
+                            theta_1 = 0           theta_1 != 0
+                            theta_2 = 0           theta_2 != 0
+                            theta_1 = 0           theta_1 != 0
+                            theta_2 = 0           theta_2 != 0
+                            theta_1 = 0           theta_1 != 0
+                            theta_2 = 0           theta_2 != 0
+                  theta_1 - theta_2 = 0 theta_1 - theta_2 != 0
+                  theta_1 - theta_2 = 0 theta_1 - theta_2 != 0
+                  theta_1 - theta_2 = 0 theta_1 - theta_2 != 0
+                  theta_1 - theta_2 = 0 theta_1 - theta_2 != 0
+                  theta_1 - theta_2 = 0 theta_1 - theta_2 != 0
+                  theta_1 - theta_2 = 0 theta_1 - theta_2 != 0
+                  theta_1 - theta_2 = 0 theta_1 - theta_2 != 0
+                  theta_1 - theta_2 = 0 theta_1 - theta_2 != 0
+                  theta_1 - theta_2 = 0 theta_1 - theta_2 != 0
+                  theta_1 - theta_2 = 0 theta_1 - theta_2 != 0
+                  theta_1 - theta_2 = 0 theta_1 - theta_2 != 0
+                  theta_1 - theta_2 = 0 theta_1 - theta_2 != 0
+                  theta_1 - theta_2 = 0 theta_1 - theta_2 != 0
+                  theta_1 - theta_2 = 0 theta_1 - theta_2 != 0
+                  theta_1 - theta_2 = 0 theta_1 - theta_2 != 0
+                  theta_1 - theta_2 = 0 theta_1 - theta_2 != 0
+                  theta_1 - theta_2 = 0 theta_1 - theta_2 != 0
+                  theta_1 - theta_2 = 0 theta_1 - theta_2 != 0
+                  theta_1 - theta_2 = 0 theta_1 - theta_2 != 0
+                  theta_1 - theta_2 = 0 theta_1 - theta_2 != 0
+                  theta_1 - theta_2 = 0 theta_1 - theta_2 != 0
+                  theta_1 - theta_2 = 0 theta_1 - theta_2 != 0
+                  theta_1 - theta_2 = 0 theta_1 - theta_2 != 0
+                  theta_1 - theta_2 = 0 theta_1 - theta_2 != 0
+                  theta_1 - theta_2 = 0 theta_1 - theta_2 != 0
+                  theta_1 - theta_2 = 0 theta_1 - theta_2 != 0
+                  theta_1 - theta_2 = 0 theta_1 - theta_2 != 0
+                  theta_1 - theta_2 = 0 theta_1 - theta_2 != 0
+                  theta_1 - theta_2 = 0 theta_1 - theta_2 != 0
+                  theta_1 - theta_2 = 0 theta_1 - theta_2 != 0
+                  theta_1 - theta_2 = 0 theta_1 - theta_2 != 0
+                  theta_1 - theta_2 = 0 theta_1 - theta_2 != 0
+                  theta_1 - theta_2 = 0 theta_1 - theta_2 != 0
+                  theta_1 - theta_2 = 0 theta_1 - theta_2 != 0
+                  theta_1 - theta_2 = 0 theta_1 - theta_2 != 0
+                  theta_1 - theta_2 = 0 theta_1 - theta_2 != 0
+                  theta_1 - theta_2 = 0 theta_1 - theta_2 != 0
+                  theta_1 - theta_2 = 0 theta_1 - theta_2 != 0
+                  theta_1 - theta_2 = 0 theta_1 - theta_2 != 0
+                  theta_1 - theta_2 = 0 theta_1 - theta_2 != 0
+                  theta_1 - theta_2 = 0 theta_1 - theta_2 != 0
+                  theta_1 - theta_2 = 0 theta_1 - theta_2 != 0
+                  theta_1 - theta_2 = 0 theta_1 - theta_2 != 0
+                  theta_1 - theta_2 = 0 theta_1 - theta_2 != 0
+                  theta_1 - theta_2 = 0 theta_1 - theta_2 != 0
+                  theta_1 - theta_2 = 0 theta_1 - theta_2 != 0
+                  theta_1 - theta_2 = 0 theta_1 - theta_2 != 0
+                  theta_1 - theta_2 = 0 theta_1 - theta_2 != 0
+                  theta_1 - theta_2 = 0 theta_1 - theta_2 != 0
+                  theta_1 - theta_2 = 0 theta_1 - theta_2 != 0
+                  theta_1 - theta_2 = 0 theta_1 - theta_2 != 0
+                  theta_1 - theta_2 = 0 theta_1 - theta_2 != 0
+                  theta_1 - theta_2 = 0 theta_1 - theta_2 != 0
+                  theta_1 - theta_2 = 0 theta_1 - theta_2 != 0
+                  theta_1 - theta_2 = 0 theta_1 - theta_2 != 0
+                  theta_1 - theta_2 = 0 theta_1 - theta_2 != 0
+                  theta_1 - theta_2 = 0 theta_1 - theta_2 != 0
+                  theta_1 - theta_2 = 0 theta_1 - theta_2 != 0
+                  theta_1 - theta_2 = 0 theta_1 - theta_2 != 0
+                  theta_1 - theta_2 = 0 theta_1 - theta_2 != 0
+                  theta_1 - theta_2 = 0 theta_1 - theta_2 != 0
+                  theta_1 - theta_2 = 0 theta_1 - theta_2 != 0
+                  theta_1 - theta_2 = 0 theta_1 - theta_2 != 0
+                  theta_1 - theta_2 = 0 theta_1 - theta_2 != 0
+                  theta_1 - theta_2 = 0 theta_1 - theta_2 != 0
+                  theta_1 - theta_2 = 0 theta_1 - theta_2 != 0
+                  theta_1 - theta_2 = 0 theta_1 - theta_2 != 0
+                  theta_1 - theta_2 = 0 theta_1 - theta_2 != 0
+                  theta_1 - theta_2 = 0 theta_1 - theta_2 != 0
+                  theta_1 - theta_2 = 0 theta_1 - theta_2 != 0
+                  theta_1 - theta_2 = 0 theta_1 - theta_2 != 0
+                  theta_1 - theta_2 = 0 theta_1 - theta_2 != 0
+                  theta_1 - theta_2 = 0 theta_1 - theta_2 != 0
+                  theta_1 - theta_2 = 0 theta_1 - theta_2 != 0
+                  theta_1 - theta_2 = 0 theta_1 - theta_2 != 0
+                  theta_1 - theta_2 = 0 theta_1 - theta_2 != 0
+                  theta_1 - theta_2 = 0 theta_1 - theta_2 != 0
+                  theta_1 - theta_2 = 0 theta_1 - theta_2 != 0
+                  theta_1 - theta_2 = 0 theta_1 - theta_2 != 0
+                  theta_1 - theta_2 = 0 theta_1 - theta_2 != 0
+                  theta_1 - theta_2 = 0 theta_1 - theta_2 != 0
+                  theta_1 - theta_2 = 0 theta_1 - theta_2 != 0
+                  theta_1 - theta_2 = 0 theta_1 - theta_2 != 0
+                  theta_1 - theta_2 = 0 theta_1 - theta_2 != 0
+                  theta_1 - theta_2 = 0 theta_1 - theta_2 != 0
+                  theta_1 - theta_2 = 0 theta_1 - theta_2 != 0
+                  theta_1 - theta_2 = 0 theta_1 - theta_2 != 0
+                  theta_1 - theta_2 = 0 theta_1 - theta_2 != 0
+                  theta_1 - theta_2 = 0 theta_1 - theta_2 != 0
+                  theta_1 - theta_2 = 0 theta_1 - theta_2 != 0
+                  theta_1 - theta_2 = 0 theta_1 - theta_2 != 0
+                  theta_1 - theta_2 = 0 theta_1 - theta_2 != 0
+                  theta_1 - theta_2 = 0 theta_1 - theta_2 != 0
+                  theta_1 - theta_2 = 0 theta_1 - theta_2 != 0
+                  theta_1 - theta_2 = 0 theta_1 - theta_2 != 0
+                  theta_1 - theta_2 = 0 theta_1 - theta_2 != 0
+                  theta_1 - theta_2 = 0 theta_1 - theta_2 != 0
+                  theta_1 - theta_2 = 0 theta_1 - theta_2 != 0
+                  theta_1 - theta_2 = 0 theta_1 - theta_2 != 0
+                  theta_1 - theta_2 = 0 theta_1 - theta_2 != 0
+                  theta_1 - theta_2 = 0 theta_1 - theta_2 != 0
+                  theta_1 - theta_2 = 0 theta_1 - theta_2 != 0
+                  theta_1 - theta_2 = 0 theta_1 - theta_2 != 0
+                  theta_1 - theta_2 = 0 theta_1 - theta_2 != 0
+                  theta_1 - theta_2 = 0 theta_1 - theta_2 != 0
+                  theta_1 - theta_2 = 0 theta_1 - theta_2 != 0
+                  theta_1 - theta_2 = 0 theta_1 - theta_2 != 0
+                  theta_1 - theta_2 = 0 theta_1 - theta_2 != 0
+                  theta_1 - theta_2 = 0 theta_1 - theta_2 != 0
+                  theta_1 - theta_2 = 0 theta_1 - theta_2 != 0
+                  theta_1 - theta_2 = 0 theta_1 - theta_2 != 0
+                  theta_1 - theta_2 = 0 theta_1 - theta_2 != 0
+                  theta_1 - theta_2 = 0 theta_1 - theta_2 != 0
+                  theta_1 - theta_2 = 0 theta_1 - theta_2 != 0
+                  theta_1 - theta_2 = 0 theta_1 - theta_2 != 0
+                  theta_1 - theta_2 = 0 theta_1 - theta_2 != 0
+                  theta_1 - theta_2 = 0 theta_1 - theta_2 != 0
+                  theta_1 - theta_2 = 0 theta_1 - theta_2 != 0
+                  theta_1 - theta_2 = 0 theta_1 - theta_2 != 0
+                  theta_1 - theta_2 = 0 theta_1 - theta_2 != 0
+                  theta_1 - theta_2 = 0 theta_1 - theta_2 != 0
+                  theta_1 - theta_2 = 0 theta_1 - theta_2 != 0
+                  theta_1 - theta_2 = 0 theta_1 - theta_2 != 0
+                  theta_1 - theta_2 = 0 theta_1 - theta_2 != 0
+                  theta_1 - theta_2 = 0 theta_1 - theta_2 != 0
+                  theta_1 - theta_2 = 0 theta_1 - theta_2 != 0
+                  theta_1 - theta_2 = 0 theta_1 - theta_2 != 0
+                  theta_1 - theta_2 = 0 theta_1 - theta_2 != 0
+                  beta_GPRT = beta_GPRA beta_GPRT != beta_GPRA
+                  beta_GPRT = beta_GPRA beta_GPRT != beta_GPRA
+                  beta_GPRT = beta_GPRA beta_GPRT != beta_GPRA
+                  beta_GPRT = beta_GPRA beta_GPRT != beta_GPRA
+                  beta_GPRT = beta_GPRA beta_GPRT != beta_GPRA
+                  beta_GPRT = beta_GPRA beta_GPRT != beta_GPRA
+                  beta_GPRT = beta_GPRA beta_GPRT != beta_GPRA
+                  beta_GPRT = beta_GPRA beta_GPRT != beta_GPRA
+                  beta_GPRT = beta_GPRA beta_GPRT != beta_GPRA
+                  beta_GPRT = beta_GPRA beta_GPRT != beta_GPRA
+                  beta_GPRT = beta_GPRA beta_GPRT != beta_GPRA
+                  beta_GPRT = beta_GPRA beta_GPRT != beta_GPRA
+                  beta_GPRT = beta_GPRA beta_GPRT != beta_GPRA
+                  beta_GPRT = beta_GPRA beta_GPRT != beta_GPRA
+                  beta_GPRT = beta_GPRA beta_GPRT != beta_GPRA
+                  beta_GPRT = beta_GPRA beta_GPRT != beta_GPRA
+                  beta_GPRT = beta_GPRA beta_GPRT != beta_GPRA
+                  beta_GPRT = beta_GPRA beta_GPRT != beta_GPRA
+                  beta_GPRT = beta_GPRA beta_GPRT != beta_GPRA
+                  beta_GPRT = beta_GPRA beta_GPRT != beta_GPRA
+                  beta_GPRT = beta_GPRA beta_GPRT != beta_GPRA
+                          Parametre = 0         Parametre != 0
+ Relation nulle / absence de difference Relation conforme a H7
+ Relation nulle / absence de difference Relation conforme a H8
+                                             Test Estimation          SE
+             Test individuel du coefficient (t/z)  -0.003641 0.002742000
+             Test individuel du coefficient (t/z)  -0.025243 0.011748000
+             Test individuel du coefficient (t/z)  -0.004591 0.001751000
+             Test individuel du coefficient (t/z)   0.051701 0.007836000
+             Test individuel du coefficient (t/z)  -0.022206 0.030651000
+             Test individuel du coefficient (t/z)   0.026157 0.010482000
+             Test individuel du coefficient (t/z)  -0.027913 0.015062000
+             Test individuel du coefficient (t/z)   0.006737 0.023275000
+             Test individuel du coefficient (t/z)   0.049238 0.010534000
+             Test individuel du coefficient (t/z)   0.019556 0.013612000
+             Test individuel du coefficient (t/z)  -0.021562 0.010985000
+             Test individuel du coefficient (t/z)   0.008527 0.016583000
+             Test individuel du coefficient (t/z)   0.061236 0.008096000
+             Test individuel du coefficient (t/z)  -0.002223 0.001711000
+             Test individuel du coefficient (t/z)  -0.006484 0.004568000
+             Test individuel du coefficient (t/z)  -0.043625 0.031938000
+             Test individuel du coefficient (t/z)  -0.006883 0.004665000
+             Test individuel du coefficient (t/z)  -0.001056 0.002128000
+             Test individuel du coefficient (t/z)  -0.005159 0.005047000
+             Test individuel du coefficient (t/z)  -0.041417 0.046857000
+             Test individuel du coefficient (t/z)  -0.005035 0.015490000
+             Test individuel du coefficient (t/z)   0.001464 0.011802000
+             Test individuel du coefficient (t/z)  -0.003233 0.016560000
+             Test individuel du coefficient (t/z)  -0.031641 0.088865000
+             Test individuel du coefficient (t/z)  -0.003154 0.001766000
+             Test individuel du coefficient (t/z)   0.000827 0.001590000
+             Test individuel du coefficient (t/z)  -0.003937 0.002943000
+             Test individuel du coefficient (t/z)  -0.073293 0.061751000
+             Test individuel du coefficient (t/z)  -0.003464 0.003325000
+             Test individuel du coefficient (t/z)   0.001130 0.002619000
+             Test individuel du coefficient (t/z)  -0.007341 0.004108000
+             Test individuel du coefficient (t/z)  -0.146125 0.521763000
+             Test individuel du coefficient (t/z)  -0.005057 0.013147000
+             Test individuel du coefficient (t/z)  -0.002262 0.001547000
+             Test individuel du coefficient (t/z)   0.003068 0.002464000
+             Test individuel du coefficient (t/z)  -0.171566 0.160590000
+             Test individuel du coefficient (t/z)   0.002884 0.003718000
+             Test individuel du coefficient (t/z)   0.004015 0.002673000
+             Test individuel du coefficient (t/z)  -0.006717 0.006515000
+             Test individuel du coefficient (t/z)  -0.051061 0.036515000
+             Test individuel du coefficient (t/z)  -0.006888 0.006856000
+             Test individuel du coefficient (t/z)   0.006704 0.004533000
+             Test individuel du coefficient (t/z)   0.016887 0.009328000
+             Test individuel du coefficient (t/z)   0.179884 0.128286000
+             Test individuel du coefficient (t/z)   0.026683 0.009083000
+             Test individuel du coefficient (t/z)   0.005931 0.006506000
+             Test individuel du coefficient (t/z)   0.003156 0.018628000
+             Test individuel du coefficient (t/z)   0.116097 0.071827000
+             Test individuel du coefficient (t/z)   0.004491 0.005564000
+             Test individuel du coefficient (t/z)  -0.003436 0.001939000
+             Test individuel du coefficient (t/z)  -0.006128 0.004138000
+             Test individuel du coefficient (t/z)  -0.118467 0.087203000
+             Test individuel du coefficient (t/z)  -0.002623 0.002673000
+             Test individuel du coefficient (t/z)  -0.000324 0.003698000
+             Test individuel du coefficient (t/z)  -0.003145 0.005279000
+             Test individuel du coefficient (t/z)  -0.083604 0.042419000
+             Test individuel du coefficient (t/z)  -0.002984 0.005210000
+             Test individuel du coefficient (t/z)   0.001129 0.001948000
+             Test individuel du coefficient (t/z)   0.034596 0.105784000
+             Test individuel du coefficient (t/z)  -0.003346 0.003180000
+             Test individuel du coefficient (t/z)   0.022924 0.033201000
+             Test individuel du coefficient (t/z)   0.003842 0.002359000
+             Test individuel du coefficient (t/z)  -0.064704 0.088560000
+             Test individuel du coefficient (t/z)  -0.001022 0.002245000
+             Test individuel du coefficient (t/z)  -0.041527 0.035230000
+             Test individuel du coefficient (t/z)   0.002596 0.002785000
+             Test individuel du coefficient (t/z)  -0.024079 0.338084000
+             Test individuel du coefficient (t/z)   0.000930 0.022739000
+             Test individuel du coefficient (t/z)  -0.022812 0.110028000
+             Test individuel du coefficient (t/z)   0.000710 0.004196000
+             Test individuel du coefficient (t/z)  -0.063324 0.066658000
+             Test individuel du coefficient (t/z)  -0.001144 0.000895000
+             Test individuel du coefficient (t/z)  -0.067728 0.060915000
+             Test individuel du coefficient (t/z)   0.003168 0.002285000
+             Test individuel du coefficient (t/z)  -0.124647 0.084771000
+             Test individuel du coefficient (t/z)   0.000787 0.001761000
+             Test individuel du coefficient (t/z)  -0.152102 0.080502000
+             Test individuel du coefficient (t/z)   0.002704 0.001690000
+             Test individuel du coefficient (t/z)  -0.173397 0.480208000
+             Test individuel du coefficient (t/z)  -0.002352 0.001262000
+             Test individuel du coefficient (t/z)  -0.081757 0.079267000
+             Test individuel du coefficient (t/z)   0.007394 0.004945000
+             Test individuel du coefficient (t/z)  -0.049895 0.035604000
+             Test individuel du coefficient (t/z)   0.003911 0.002821000
+             Test individuel du coefficient (t/z)  -0.050056 0.035990000
+             Test individuel du coefficient (t/z)   0.180961 0.149042000
+             Test individuel du coefficient (t/z)   0.180963 0.148876000
+             Test individuel du coefficient (t/z)   0.001561 0.001701000
+             Test individuel du coefficient (t/z)   0.111432 0.070667000
+             Test individuel du coefficient (t/z)   0.006134 0.001806000
+             Test individuel du coefficient (t/z)   0.126205 0.073429000
+             Test individuel du coefficient (t/z)   0.002194 0.003313000
+             Test individuel du coefficient (t/z)  -0.090177 0.358209000
+             Test individuel du coefficient (t/z)  -0.001543 0.002717000
+             Test individuel du coefficient (t/z)  -0.116573 0.083755000
+             Test individuel du coefficient (t/z)   0.000076 0.002017000
+             Test individuel du coefficient (t/z)  -0.078307 0.044076000
+             Test individuel du coefficient (t/z)  -0.000715 0.002993000
+             Test individuel du coefficient (t/z)  -0.084391 0.042179000
+ Test de difference sous hypothese d'independance  -0.033467 0.105801935
+ Test de difference sous hypothese d'independance   0.004261 0.004877924
+ Test de difference sous hypothese d'independance  -0.011565 0.027063517
+ Test de difference sous hypothese d'independance  -0.026270 0.033352943
+ Test de difference sous hypothese d'independance   0.021602 0.012063750
+ Test de difference sous hypothese d'independance  -0.036742 0.032276897
+ Test de difference sous hypothese d'independance   0.021432 0.088691847
+ Test de difference sous hypothese d'independance   0.068546 0.088591413
+ Test de difference sous hypothese d'independance   0.004103 0.005477280
+ Test de difference sous hypothese d'independance  -0.009734 0.010004710
+ Test de difference sous hypothese d'independance   0.040505 0.035301458
+ Test de difference sous hypothese d'independance  -0.056292 0.008029253
+ Test de difference sous hypothese d'independance  -0.036382 0.049350973
+ Test de difference sous hypothese d'independance   0.026675 0.338095471
+ Test de difference sous hypothese d'independance   0.004697 0.020335211
+ Test de difference sous hypothese d'independance  -0.011715 0.096277888
+ Test de difference sous hypothese d'independance   0.023742 0.112353117
+ Test de difference sous hypothese d'independance  -0.028487 0.088882546
+ Test de difference sous hypothese d'independance  -0.002817 0.035047080
+ Test de difference sous hypothese d'independance   0.064034 0.066789935
+ Test de difference sous hypothese d'independance   0.004764 0.003345048
+ Test de difference sous hypothese d'independance   0.002343 0.004140643
+ Test de difference sous hypothese d'independance   0.066584 0.060921575
+ Test de difference sous hypothese d'independance  -0.069829 0.061840453
+ Test de difference sous hypothese d'independance  -0.062435 0.067431934
+ Test de difference sous hypothese d'independance   0.127815 0.084801790
+ Test de difference sous hypothese d'independance   0.008471 0.004871840
+ Test de difference sous hypothese d'independance  -0.017344 0.009982755
+ Test de difference sous hypothese d'independance   0.152889 0.080521259
+ Test de difference sous hypothese d'independance  -0.141068 0.521928608
+ Test de difference sous hypothese d'independance  -0.148808 0.084934157
+ Test de difference sous hypothese d'independance   0.176101 0.480210974
+ Test de difference sous hypothese d'independance  -0.005330 0.002909382
+ Test de difference sous hypothese d'independance  -0.003813 0.003657495
+ Test de difference sous hypothese d'independance   0.079405 0.079277045
+ Test de difference sous hypothese d'independance  -0.174450 0.160633034
+ Test de difference sous hypothese d'independance  -0.177275 0.093810025
+ Test de difference sous hypothese d'independance   0.057289 0.035945762
+ Test de difference sous hypothese d'independance   0.010732 0.007042028
+ Test de difference sous hypothese d'independance   0.024825 0.018026837
+ Test de difference sous hypothese d'independance   0.053967 0.036100390
+ Test de difference sous hypothese d'independance  -0.044173 0.037153061
+ Test de difference sous hypothese d'independance  -0.045371 0.136849670
+ Test de difference sous hypothese d'independance  -0.010183 0.010371098
+ Test de difference sous hypothese d'independance   0.153201 0.128607149
+ Test de difference sous hypothese d'independance   0.193763 1.068609356
+ Test de difference sous hypothese d'independance  -0.109871 0.070687469
+ Test de difference sous hypothese d'independance   0.002775 0.019731458
+ Test de difference sous hypothese d'independance   0.019117 0.011605935
+ Test de difference sous hypothese d'independance  -0.120071 0.073451206
+ Test de difference sous hypothese d'independance   0.111606 0.072042182
+ Test de difference sous hypothese d'independance   0.123557 0.073025748
+ Test de difference sous hypothese d'independance   0.092371 0.358224320
+ Test de difference sous hypothese d'independance   0.002692 0.004569766
+ Test de difference sous hypothese d'independance  -0.020744 0.013165939
+ Test de difference sous hypothese d'independance   0.115030 0.083799058
+ Test de difference sous hypothese d'independance  -0.115844 0.087243958
+ Test de difference sous hypothese d'independance  -0.134479 0.079831409
+ Test de difference sous hypothese d'independance   0.078383 0.044122127
+ Test de difference sous hypothese d'independance   0.002821 0.006445389
+ Test de difference sous hypothese d'independance   0.002173 0.023379965
+ Test de difference sous hypothese d'independance   0.083676 0.042285058
+ Test de difference sous hypothese d'independance  -0.080620 0.042737755
+ Test de difference sous hypothese d'independance  -0.084684 0.042187866
+ Test de difference sous hypothese d'independance  -0.033467 0.105801935
+ Test de difference sous hypothese d'independance   0.004261 0.004877924
+ Test de difference sous hypothese d'independance  -0.011565 0.027063517
+ Test de difference sous hypothese d'independance  -0.026270 0.033352943
+ Test de difference sous hypothese d'independance   0.021602 0.012063750
+ Test de difference sous hypothese d'independance  -0.036742 0.032276897
+ Test de difference sous hypothese d'independance   0.021432 0.088691847
+ Test de difference sous hypothese d'independance   0.068546 0.088591413
+ Test de difference sous hypothese d'independance   0.004103 0.005477280
+ Test de difference sous hypothese d'independance  -0.009734 0.010004710
+ Test de difference sous hypothese d'independance   0.040505 0.035301458
+ Test de difference sous hypothese d'independance  -0.056292 0.008029253
+ Test de difference sous hypothese d'independance  -0.036382 0.049350973
+ Test de difference sous hypothese d'independance   0.026675 0.338095471
+ Test de difference sous hypothese d'independance   0.004697 0.020335211
+ Test de difference sous hypothese d'independance  -0.011715 0.096277888
+ Test de difference sous hypothese d'independance   0.023742 0.112353117
+ Test de difference sous hypothese d'independance  -0.028487 0.088882546
+ Test de difference sous hypothese d'independance  -0.002817 0.035047080
+ Test de difference sous hypothese d'independance   0.064034 0.066789935
+ Test de difference sous hypothese d'independance   0.004764 0.003345048
+ Test de difference sous hypothese d'independance   0.002343 0.004140643
+ Test de difference sous hypothese d'independance   0.066584 0.060921575
+ Test de difference sous hypothese d'independance  -0.069829 0.061840453
+ Test de difference sous hypothese d'independance  -0.062435 0.067431934
+ Test de difference sous hypothese d'independance   0.127815 0.084801790
+ Test de difference sous hypothese d'independance   0.008471 0.004871840
+ Test de difference sous hypothese d'independance  -0.017344 0.009982755
+ Test de difference sous hypothese d'independance   0.152889 0.080521259
+ Test de difference sous hypothese d'independance  -0.141068 0.521928608
+ Test de difference sous hypothese d'independance  -0.148808 0.084934157
+ Test de difference sous hypothese d'independance   0.176101 0.480210974
+ Test de difference sous hypothese d'independance  -0.005330 0.002909382
+ Test de difference sous hypothese d'independance  -0.003813 0.003657495
+ Test de difference sous hypothese d'independance   0.079405 0.079277045
+ Test de difference sous hypothese d'independance  -0.174450 0.160633034
+ Test de difference sous hypothese d'independance  -0.177275 0.093810025
+ Test de difference sous hypothese d'independance   0.057289 0.035945762
+ Test de difference sous hypothese d'independance   0.010732 0.007042028
+ Test de difference sous hypothese d'independance   0.024825 0.018026837
+ Test de difference sous hypothese d'independance   0.053967 0.036100390
+ Test de difference sous hypothese d'independance  -0.044173 0.037153061
+ Test de difference sous hypothese d'independance  -0.045371 0.136849670
+ Test de difference sous hypothese d'independance  -0.010183 0.010371098
+ Test de difference sous hypothese d'independance   0.153201 0.128607149
+ Test de difference sous hypothese d'independance   0.193763 1.068609356
+ Test de difference sous hypothese d'independance  -0.109871 0.070687469
+ Test de difference sous hypothese d'independance   0.002775 0.019731458
+ Test de difference sous hypothese d'independance   0.019117 0.011605935
+ Test de difference sous hypothese d'independance  -0.120071 0.073451206
+ Test de difference sous hypothese d'independance   0.111606 0.072042182
+ Test de difference sous hypothese d'independance   0.123557 0.073025748
+ Test de difference sous hypothese d'independance   0.092371 0.358224320
+ Test de difference sous hypothese d'independance   0.002692 0.004569766
+ Test de difference sous hypothese d'independance  -0.020744 0.013165939
+ Test de difference sous hypothese d'independance   0.115030 0.083799058
+ Test de difference sous hypothese d'independance  -0.115844 0.087243958
+ Test de difference sous hypothese d'independance  -0.134479 0.079831409
+ Test de difference sous hypothese d'independance   0.078383 0.044122127
+ Test de difference sous hypothese d'independance   0.002821 0.006445389
+ Test de difference sous hypothese d'independance   0.002173 0.023379965
+ Test de difference sous hypothese d'independance   0.083676 0.042285058
+ Test de difference sous hypothese d'independance  -0.080620 0.042737755
+ Test de difference sous hypothese d'independance  -0.084684 0.042187866
+ Test de difference sous hypothese d'independance  -0.004475 0.003729223
+ Test de difference sous hypothese d'independance  -0.011672 0.110871823
+ Test de difference sous hypothese d'independance  -0.004864 0.003256517
+ Test de difference sous hypothese d'independance   0.023177 0.095310159
+ Test de difference sous hypothese d'independance  -0.001666 0.022908914
+ Test de difference sous hypothese d'independance   0.001267 0.355537553
+ Test de difference sous hypothese d'independance  -0.001854 0.004290389
+ Test de difference sous hypothese d'independance  -0.004404 0.090299093
+ Test de difference sous hypothese d'independance  -0.002381 0.002884848
+ Test de difference sous hypothese d'independance  -0.027455 0.116904638
+ Test de difference sous hypothese d'independance  -0.005056 0.002109205
+ Test de difference sous hypothese d'independance   0.091640 0.486706257
+ Test de difference sous hypothese d'independance  -0.003483 0.005693072
+ Test de difference sous hypothese d'independance  -0.000161 0.050625339
+ Test de difference sous hypothese d'independance   0.000002 0.210659871
+ Test de difference sous hypothese d'independance   0.004573 0.002480935
+ Test de difference sous hypothese d'independance   0.014773 0.101909975
+ Test de difference sous hypothese d'independance  -0.003737 0.004284630
+ Test de difference sous hypothese d'independance  -0.026396 0.367870341
+ Test de difference sous hypothese d'independance  -0.000791 0.003609202
+ Test de difference sous hypothese d'independance  -0.006084 0.061006244
+                       Test formel non disponible         NA          NA
+                       Test formel non disponible         NA          NA
+                       Test formel non disponible         NA          NA
+   Statistique      P_value             Decision_5pct
+ -1.327903e+00 1.842100e-01           Non-rejet de H0
+ -2.148796e+00 3.165100e-02               Rejet de H0
+ -2.621706e+00 8.749000e-03               Rejet de H0
+  6.597636e+00 0.000000e+00               Rejet de H0
+ -7.245030e-01 4.687570e-01           Non-rejet de H0
+  2.495533e+00 1.257700e-02               Rejet de H0
+ -1.853273e+00 6.384300e-02           Non-rejet de H0
+  2.894670e-01 7.722240e-01           Non-rejet de H0
+  4.674314e+00 3.000000e-06               Rejet de H0
+  1.436662e+00 1.508140e-01           Non-rejet de H0
+ -1.962864e+00 4.966200e-02               Rejet de H0
+  5.141970e-01 6.071140e-01           Non-rejet de H0
+  7.563262e+00 0.000000e+00               Rejet de H0
+ -1.299253e+00 1.938570e-01           Non-rejet de H0
+ -1.419231e+00 1.558320e-01           Non-rejet de H0
+ -1.365957e+00 1.719520e-01           Non-rejet de H0
+ -1.475506e+00 1.400770e-01           Non-rejet de H0
+ -4.962310e-01 6.197310e-01           Non-rejet de H0
+ -1.022215e+00 3.066790e-01           Non-rejet de H0
+ -8.838920e-01 3.767540e-01           Non-rejet de H0
+ -3.250270e-01 7.451610e-01           Non-rejet de H0
+  1.240730e-01 9.012570e-01           Non-rejet de H0
+ -1.952610e-01 8.451890e-01           Non-rejet de H0
+ -3.560610e-01 7.217950e-01           Non-rejet de H0
+ -1.786434e+00 7.402900e-02           Non-rejet de H0
+  5.200130e-01 6.030550e-01           Non-rejet de H0
+ -1.337765e+00 1.809730e-01           Non-rejet de H0
+ -1.186912e+00 2.352620e-01           Non-rejet de H0
+ -1.041555e+00 2.976180e-01           Non-rejet de H0
+  4.316360e-01 6.660060e-01           Non-rejet de H0
+ -1.787052e+00 7.392900e-02           Non-rejet de H0
+ -2.800590e-01 7.794320e-01           Non-rejet de H0
+ -3.846280e-01 7.005130e-01           Non-rejet de H0
+ -1.461885e+00 1.437730e-01           Non-rejet de H0
+  1.245070e+00 2.131060e-01           Non-rejet de H0
+ -1.068346e+00 2.853650e-01           Non-rejet de H0
+  7.756640e-01 4.379470e-01           Non-rejet de H0
+  1.502138e+00 1.330610e-01           Non-rejet de H0
+ -1.030863e+00 3.026050e-01           Non-rejet de H0
+ -1.398374e+00 1.620010e-01           Non-rejet de H0
+ -1.004560e+00 3.151090e-01           Non-rejet de H0
+  1.478743e+00 1.392090e-01           Non-rejet de H0
+  1.810443e+00 7.022700e-02           Non-rejet de H0
+  1.402217e+00 1.608500e-01           Non-rejet de H0
+  2.937673e+00 3.307000e-03               Rejet de H0
+  9.116390e-01 3.619590e-01           Non-rejet de H0
+  1.694110e-01 8.654730e-01           Non-rejet de H0
+  1.616349e+00 1.060190e-01           Non-rejet de H0
+  8.072550e-01 4.195200e-01           Non-rejet de H0
+ -1.772174e+00 7.636600e-02           Non-rejet de H0
+ -1.481065e+00 1.385890e-01           Non-rejet de H0
+ -1.358509e+00 1.743020e-01           Non-rejet de H0
+ -9.816350e-01 3.262790e-01           Non-rejet de H0
+ -8.757900e-02 9.302110e-01           Non-rejet de H0
+ -5.957980e-01 5.513100e-01           Non-rejet de H0
+ -1.970898e+00 4.873600e-02               Rejet de H0
+ -5.728510e-01 5.667460e-01           Non-rejet de H0
+  5.796690e-01 5.621380e-01           Non-rejet de H0
+  3.270400e-01 7.436380e-01           Non-rejet de H0
+ -1.052182e+00 2.927160e-01           Non-rejet de H0
+  6.904500e-01 4.899110e-01           Non-rejet de H0
+  1.628890e+00 1.033360e-01           Non-rejet de H0
+ -7.306300e-01 4.650050e-01           Non-rejet de H0
+ -4.551530e-01 6.489990e-01           Non-rejet de H0
+ -1.178727e+00 2.385070e-01           Non-rejet de H0
+  9.321770e-01 3.512450e-01           Non-rejet de H0
+ -7.122200e-02 9.432210e-01           Non-rejet de H0
+  4.092000e-02 9.673600e-01           Non-rejet de H0
+ -2.073260e-01 8.357550e-01           Non-rejet de H0
+  1.691130e-01 8.657070e-01           Non-rejet de H0
+ -9.499870e-01 3.421190e-01           Non-rejet de H0
+ -1.278349e+00 2.011270e-01           Non-rejet de H0
+ -1.111847e+00 2.662040e-01           Non-rejet de H0
+  1.386730e+00 1.655240e-01           Non-rejet de H0
+ -1.470398e+00 1.414540e-01           Non-rejet de H0
+  4.470400e-01 6.548460e-01           Non-rejet de H0
+ -1.889412e+00 5.883700e-02           Non-rejet de H0
+  1.599977e+00 1.096040e-01           Non-rejet de H0
+ -3.610870e-01 7.180340e-01           Non-rejet de H0
+ -1.863061e+00 6.245400e-02           Non-rejet de H0
+ -1.031407e+00 3.023500e-01           Non-rejet de H0
+  1.495391e+00 1.348120e-01           Non-rejet de H0
+ -1.401391e+00 1.610970e-01           Non-rejet de H0
+  1.386199e+00 1.656860e-01           Non-rejet de H0
+ -1.390841e+00 1.642740e-01           Non-rejet de H0
+  1.214154e+00 2.246890e-01           Non-rejet de H0
+  1.215527e+00 2.241650e-01           Non-rejet de H0
+  9.180910e-01 3.585710e-01           Non-rejet de H0
+  1.576847e+00 1.148310e-01           Non-rejet de H0
+  3.396200e+00 6.830000e-04               Rejet de H0
+  1.718718e+00 8.566600e-02           Non-rejet de H0
+  6.622250e-01 5.078270e-01           Non-rejet de H0
+ -2.517430e-01 8.012400e-01           Non-rejet de H0
+ -5.680350e-01 5.700110e-01           Non-rejet de H0
+ -1.391840e+00 1.639710e-01           Non-rejet de H0
+  3.744100e-02 9.701330e-01           Non-rejet de H0
+ -1.776648e+00 7.562600e-02           Non-rejet de H0
+ -2.390010e-01 8.111040e-01           Non-rejet de H0
+ -2.000810e+00 4.541300e-02               Rejet de H0
+ -3.163175e-01 7.517616e-01           Non-rejet de H0
+  8.735273e-01 3.823757e-01           Non-rejet de H0
+ -4.273281e-01 6.691404e-01           Non-rejet de H0
+ -7.876366e-01 4.309093e-01           Non-rejet de H0
+  1.790654e+00 7.334887e-02           Non-rejet de H0
+ -1.138337e+00 2.549796e-01           Non-rejet de H0
+  2.416457e-01 8.090547e-01           Non-rejet de H0
+  7.737319e-01 4.390894e-01           Non-rejet de H0
+  7.490945e-01 4.538003e-01           Non-rejet de H0
+ -9.729418e-01 3.305822e-01           Non-rejet de H0
+  1.147403e+00 2.512151e-01           Non-rejet de H0
+ -7.010864e+00 2.368504e-12               Rejet de H0
+ -7.372094e-01 4.609950e-01           Non-rejet de H0
+  7.889783e-02 9.371139e-01           Non-rejet de H0
+  2.309787e-01 8.173314e-01           Non-rejet de H0
+ -1.216790e-01 9.031532e-01           Non-rejet de H0
+  2.113159e-01 8.326408e-01           Non-rejet de H0
+ -3.205016e-01 7.485881e-01           Non-rejet de H0
+ -8.037759e-02 9.359369e-01           Non-rejet de H0
+  9.587373e-01 3.376911e-01           Non-rejet de H0
+  1.424195e+00 1.543901e-01           Non-rejet de H0
+  5.658542e-01 5.714929e-01           Non-rejet de H0
+  1.092946e+00 2.744174e-01           Non-rejet de H0
+ -1.129180e+00 2.588219e-01           Non-rejet de H0
+ -9.258966e-01 3.544997e-01           Non-rejet de H0
+  1.507221e+00 1.317541e-01           Non-rejet de H0
+  1.738768e+00 8.207556e-02           Non-rejet de H0
+ -1.737396e+00 8.231728e-02           Non-rejet de H0
+  1.898741e+00 5.759856e-02           Non-rejet de H0
+ -2.702822e-01 7.869432e-01           Non-rejet de H0
+ -1.752040e+00 7.976701e-02           Non-rejet de H0
+  3.667159e-01 7.138309e-01           Non-rejet de H0
+ -1.832004e+00 6.695082e-02           Non-rejet de H0
+ -1.042517e+00 2.971721e-01           Non-rejet de H0
+  1.001614e+00 3.165300e-01           Non-rejet de H0
+ -1.086016e+00 2.774720e-01           Non-rejet de H0
+ -1.889723e+00 5.879496e-02           Non-rejet de H0
+  1.593762e+00 1.109893e-01           Non-rejet de H0
+  1.523993e+00 1.275105e-01           Non-rejet de H0
+  1.377113e+00 1.684772e-01           Non-rejet de H0
+  1.494915e+00 1.349367e-01           Non-rejet de H0
+ -1.188946e+00 2.344607e-01           Non-rejet de H0
+ -3.315390e-01 7.402374e-01           Non-rejet de H0
+ -9.818633e-01 3.261672e-01           Non-rejet de H0
+  1.191232e+00 2.335624e-01           Non-rejet de H0
+  1.813226e-01 8.561144e-01           Non-rejet de H0
+ -1.554321e+00 1.201079e-01           Non-rejet de H0
+  1.406384e-01 8.881556e-01           Non-rejet de H0
+  1.647174e+00 9.952219e-02           Non-rejet de H0
+ -1.634704e+00 1.021111e-01           Non-rejet de H0
+  1.549176e+00 1.213395e-01           Non-rejet de H0
+  1.691965e+00 9.065267e-02           Non-rejet de H0
+  2.578580e-01 7.965165e-01           Non-rejet de H0
+  5.890892e-01 5.558014e-01           Non-rejet de H0
+ -1.575581e+00 1.151225e-01           Non-rejet de H0
+  1.372688e+00 1.698492e-01           Non-rejet de H0
+ -1.327817e+00 1.842386e-01           Non-rejet de H0
+ -1.684537e+00 9.207785e-02           Non-rejet de H0
+  1.776501e+00 7.565039e-02           Non-rejet de H0
+  4.376772e-01 6.616203e-01           Non-rejet de H0
+  9.294282e-02 9.259490e-01           Non-rejet de H0
+  1.978855e+00 4.783233e-02               Rejet de H0
+ -1.886388e+00 5.924265e-02           Non-rejet de H0
+ -2.007307e+00 4.471698e-02               Rejet de H0
+ -3.163175e-01 7.517616e-01           Non-rejet de H0
+  8.735273e-01 3.823757e-01           Non-rejet de H0
+ -4.273281e-01 6.691404e-01           Non-rejet de H0
+ -7.876366e-01 4.309093e-01           Non-rejet de H0
+  1.790654e+00 7.334887e-02           Non-rejet de H0
+ -1.138337e+00 2.549796e-01           Non-rejet de H0
+  2.416457e-01 8.090547e-01           Non-rejet de H0
+  7.737319e-01 4.390894e-01           Non-rejet de H0
+  7.490945e-01 4.538003e-01           Non-rejet de H0
+ -9.729418e-01 3.305822e-01           Non-rejet de H0
+  1.147403e+00 2.512151e-01           Non-rejet de H0
+ -7.010864e+00 2.368504e-12               Rejet de H0
+ -7.372094e-01 4.609950e-01           Non-rejet de H0
+  7.889783e-02 9.371139e-01           Non-rejet de H0
+  2.309787e-01 8.173314e-01           Non-rejet de H0
+ -1.216790e-01 9.031532e-01           Non-rejet de H0
+  2.113159e-01 8.326408e-01           Non-rejet de H0
+ -3.205016e-01 7.485881e-01           Non-rejet de H0
+ -8.037759e-02 9.359369e-01           Non-rejet de H0
+  9.587373e-01 3.376911e-01           Non-rejet de H0
+  1.424195e+00 1.543901e-01           Non-rejet de H0
+  5.658542e-01 5.714929e-01           Non-rejet de H0
+  1.092946e+00 2.744174e-01           Non-rejet de H0
+ -1.129180e+00 2.588219e-01           Non-rejet de H0
+ -9.258966e-01 3.544997e-01           Non-rejet de H0
+  1.507221e+00 1.317541e-01           Non-rejet de H0
+  1.738768e+00 8.207556e-02           Non-rejet de H0
+ -1.737396e+00 8.231728e-02           Non-rejet de H0
+  1.898741e+00 5.759856e-02           Non-rejet de H0
+ -2.702822e-01 7.869432e-01           Non-rejet de H0
+ -1.752040e+00 7.976701e-02           Non-rejet de H0
+  3.667159e-01 7.138309e-01           Non-rejet de H0
+ -1.832004e+00 6.695082e-02           Non-rejet de H0
+ -1.042517e+00 2.971721e-01           Non-rejet de H0
+  1.001614e+00 3.165300e-01           Non-rejet de H0
+ -1.086016e+00 2.774720e-01           Non-rejet de H0
+ -1.889723e+00 5.879496e-02           Non-rejet de H0
+  1.593762e+00 1.109893e-01           Non-rejet de H0
+  1.523993e+00 1.275105e-01           Non-rejet de H0
+  1.377113e+00 1.684772e-01           Non-rejet de H0
+  1.494915e+00 1.349367e-01           Non-rejet de H0
+ -1.188946e+00 2.344607e-01           Non-rejet de H0
+ -3.315390e-01 7.402374e-01           Non-rejet de H0
+ -9.818633e-01 3.261672e-01           Non-rejet de H0
+  1.191232e+00 2.335624e-01           Non-rejet de H0
+  1.813226e-01 8.561144e-01           Non-rejet de H0
+ -1.554321e+00 1.201079e-01           Non-rejet de H0
+  1.406384e-01 8.881556e-01           Non-rejet de H0
+  1.647174e+00 9.952219e-02           Non-rejet de H0
+ -1.634704e+00 1.021111e-01           Non-rejet de H0
+  1.549176e+00 1.213395e-01           Non-rejet de H0
+  1.691965e+00 9.065267e-02           Non-rejet de H0
+  2.578580e-01 7.965165e-01           Non-rejet de H0
+  5.890892e-01 5.558014e-01           Non-rejet de H0
+ -1.575581e+00 1.151225e-01           Non-rejet de H0
+  1.372688e+00 1.698492e-01           Non-rejet de H0
+ -1.327817e+00 1.842386e-01           Non-rejet de H0
+ -1.684537e+00 9.207785e-02           Non-rejet de H0
+  1.776501e+00 7.565039e-02           Non-rejet de H0
+  4.376772e-01 6.616203e-01           Non-rejet de H0
+  9.294282e-02 9.259490e-01           Non-rejet de H0
+  1.978855e+00 4.783233e-02               Rejet de H0
+ -1.886388e+00 5.924265e-02           Non-rejet de H0
+ -2.007307e+00 4.471698e-02               Rejet de H0
+ -1.199982e+00 2.301464e-01           Non-rejet de H0
+ -1.052747e-01 9.161578e-01           Non-rejet de H0
+ -1.493620e+00 1.352749e-01           Non-rejet de H0
+  2.431745e-01 8.078702e-01           Non-rejet de H0
+ -7.272278e-02 9.420267e-01           Non-rejet de H0
+  3.563618e-03 9.971567e-01           Non-rejet de H0
+ -4.321286e-01 6.656479e-01           Non-rejet de H0
+ -4.877125e-02 9.611016e-01           Non-rejet de H0
+ -8.253469e-01 4.091747e-01           Non-rejet de H0
+ -2.348495e-01 8.143255e-01           Non-rejet de H0
+ -2.397112e+00 1.652486e-02               Rejet de H0
+  1.882861e-01 8.506524e-01           Non-rejet de H0
+ -6.117963e-01 5.406726e-01           Non-rejet de H0
+ -3.180226e-03 9.974626e-01           Non-rejet de H0
+  9.493977e-06 9.999924e-01           Non-rejet de H0
+  1.843257e+00 6.529151e-02           Non-rejet de H0
+  1.449613e-01 8.847414e-01           Non-rejet de H0
+ -8.721872e-01 3.831062e-01           Non-rejet de H0
+ -7.175354e-02 9.427980e-01           Non-rejet de H0
+ -2.191620e-01 8.265238e-01           Non-rejet de H0
+ -9.972750e-02 9.205607e-01           Non-rejet de H0
+            NA           NA NON TESTABLE FORMELLEMENT
+            NA           NA NON TESTABLE FORMELLEMENT
+            NA           NA NON TESTABLE FORMELLEMENT

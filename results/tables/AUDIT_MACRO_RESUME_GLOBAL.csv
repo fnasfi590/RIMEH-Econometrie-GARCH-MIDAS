@@ -1,0 +1,5 @@
+variable,pays,observations,valid,missing
+Exchange_rate,11,3380,3380,0
+GDP_growth,11,286,286,0
+Inflation,11,3375,3262,113
+Interest_rate,10,2508,2508,0

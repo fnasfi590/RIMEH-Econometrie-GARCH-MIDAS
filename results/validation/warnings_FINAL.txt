@@ -1,0 +1,23 @@
+Warning messages:
+1: In adf.test(x) : p-value smaller than printed p-value
+2: In pp.test(x) : p-value smaller than printed p-value
+3: In adf.test(x) : p-value smaller than printed p-value
+4: In pp.test(x) : p-value smaller than printed p-value
+5: In adf.test(x) : p-value smaller than printed p-value
+6: In pp.test(x) : p-value smaller than printed p-value
+7: In adf.test(x) : p-value smaller than printed p-value
+8: In pp.test(x) : p-value smaller than printed p-value
+9: In adf.test(x) : p-value smaller than printed p-value
+10: In pp.test(x) : p-value smaller than printed p-value
+11: In adf.test(x) : p-value smaller than printed p-value
+12: In pp.test(x) : p-value smaller than printed p-value
+13: In adf.test(x) : p-value smaller than printed p-value
+14: In pp.test(x) : p-value smaller than printed p-value
+15: In adf.test(x) : p-value smaller than printed p-value
+16: In pp.test(x) : p-value smaller than printed p-value
+17: In adf.test(x) : p-value smaller than printed p-value
+18: In pp.test(x) : p-value smaller than printed p-value
+19: In adf.test(x) : p-value smaller than printed p-value
+20: In pp.test(x) : p-value smaller than printed p-value
+21: In adf.test(x) : p-value smaller than printed p-value
+22: In pp.test(x) : p-value smaller than printed p-value

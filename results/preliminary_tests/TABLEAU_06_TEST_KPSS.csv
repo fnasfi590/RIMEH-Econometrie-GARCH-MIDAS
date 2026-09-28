@@ -1,0 +1,8 @@
+"Variable","Statistic","P_Value","Decision_5pct"
+"GPRT",0.0659631252916944,0.1,"Stationnaire"
+"GPRA",0.0426939543339577,0.1,"Stationnaire"
+"SUP",0.00840237303457026,0.1,"Stationnaire"
+"DEM",0.0278735845872871,0.1,"Stationnaire"
+"PRE",0.00945332974511085,0.1,"Stationnaire"
+"VIX",0.0361691390563417,0.1,"Stationnaire"
+"inflation",3.17976558276954,0.01,"Non stationnaire / H0 rejetee"

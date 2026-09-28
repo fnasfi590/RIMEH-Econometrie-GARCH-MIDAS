@@ -1,0 +1,25 @@
+VALIDATION DES HYPOTHESES H1-H9
+================================
+
+L'analyse repose sur 572 coefficients issus de 76 estimations GARCH-MIDAS couvrant 11 pays et 7 specifications. Les hypotheses dont la formulation originale n'est pas présente dans les fichiers disponibles sont considérées comme reconstruites à partir du cadre empirique du projet.
+
+H1
+Pour H1, 1 coefficients associés à la classification VIX sont disponibles. 7 sont significatifs à 5 %, dont 4 positifs et 3 négatifs. Cette information constitue une validation descriptive fondée sur les tests individuels des coefficients; elle ne constitue pas un test agrégé indépendant entre modèles.
+
+H2
+Pour H2, 1 coefficients associés à la demande sont disponibles. 0 sont significatifs à 5 %, dont 0 positifs et 0 négatifs.
+
+H3
+Pour H3, 1 coefficients associés à l'offre sont disponibles. 6 sont significatifs à 5 %, dont 3 positifs et 3 négatifs.
+
+H4
+H4 ne peut pas être validée avec les données actuellement disponibles, car la base de coefficients ne contient pas la classification exportateur/importateur nécessaire à une comparaison entre groupes.
+
+H5-H6
+Pour H5, 11 paires theta1-theta2 peuvent être comparées pour la demande. Pour H6, 41 paires peuvent être comparées pour l'offre. Ces résultats permettent d'étudier les différences de coefficients entre composantes temporelles, mais l'absence de matrice de variance-covariance exploitable interdit de présenter ces différences comme des tests de Wald exacts.
+
+H7-H9
+Pour H7, 21 paires GPRT-GPRA sont disponibles. Pour H8, 0 paire est disponible pour la demande. Pour H9, 21 paires sont disponibles pour l'offre. Les différences GPRT-GPRA sont rapportées de manière descriptive. Une inférence formelle sur la différence nécessiterait la covariance entre les estimateurs comparés.
+
+CONCLUSION METHODOLOGIQUE
+Les résultats ne doivent pas être transformés en décisions « acceptée/rejetée » lorsque la comparaison formelle n'est pas identifiable. Une hypothèse non testable dans la spécification actuelle ne constitue pas un rejet. Aucune classification de pays, covariance ou erreur-type supplémentaire n'a été inventée.

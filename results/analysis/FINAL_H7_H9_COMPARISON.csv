@@ -1,0 +1,4 @@
+"Hypothesis","Target","N_GPRT","N_GPRA","Mean_GPRT","Mean_GPRA","Difference","Status"
+"H7","PRICE",34,13,0.00283842857142857,NA,NA,"DESCRIPTIVE - formal paired comparison required"
+"H8","DEMAND",35,13,-0.000375590909090909,NA,NA,"DESCRIPTIVE - formal paired comparison required"
+"H9","SUPPLY",34,34,-0.013581619047619,-0.0150555714285714,0.00147395238095238,"DESCRIPTIVE - formal paired comparison required"

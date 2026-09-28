@@ -1,0 +1,70 @@
+============================================================
+RIMEH — AUDIT VARIABLES DE CONTROLE ET HYPOTHESES H1-H9
+============================================================
+
+BASE MENSUELLE
+---------------
+Observations : 3131 
+Pays : 11 
+
+VARIABLES DE CONTROLE
+---------------------
+      Variable N_total N_valide N_manquant Pourcentage_valide
+     inflation    3131     3027        104           96.67838
+           GDP    3131        0       3131            0.00000
+ interest_rate    3131        0       3131            0.00000
+ exchange_rate    3131        0       3131            0.00000
+
+
+HYPOTHESES H1-H9
+----------------
+ Hypothese                                                              Objet
+        H1     Effet de GPRT sur la composante de long terme de la volatilité
+        H2     Effet de GPRA sur la composante de long terme de la volatilité
+        H3                Rôle des variables géopolitiques dans la volatilité
+        H4                 Différence entre pays exportateurs et importateurs
+        H5                                   Comparaison des paramètres MIDAS
+        H6                                   Comparaison des paramètres MIDAS
+        H7                                              Comparaison GPRT–GPRA
+        H8 Effet différencié / comparaison nécessitant une covariance commune
+        H9                                               Différence GPRT–GPRA
+                                  Statut   P_value             Decision_5pct
+      A TESTER AVEC RESULTAT STATISTIQUE        NA              A déterminer
+      A TESTER AVEC RESULTAT STATISTIQUE        NA              A déterminer
+      A TESTER AVEC RESULTAT STATISTIQUE        NA              A déterminer
+      NON TESTABLE AVEC LA BASE ACTUELLE        NA              Non testable
+                 COMPARAISON DESCRIPTIVE 0.1708231     Non significatif à 5%
+                 COMPARAISON DESCRIPTIVE        NA Pas de test de Wald exact
+                 COMPARAISON DESCRIPTIVE        NA Pas de test de Wald exact
+ NON TESTABLE AVEC LA STRUCTURE ACTUELLE        NA              Non testable
+                 COMPARAISON DESCRIPTIVE 0.1867965     Non significatif à 5%
+                                                           Precaution
+               Ne pas conclure à partir du seul signe du coefficient.
+               Ne pas conclure à partir du seul signe du coefficient.
+ Nécessite un test statistique correspondant à la formulation exacte.
+   Nécessite une classification documentée exportateurs/importateurs.
+                                 Covariance entre paramètres absente.
+                                 Covariance entre paramètres absente.
+                                        Covariance GPRT–GPRA absente.
+                                        Éléments nécessaires absents.
+                    Résultat disponible seulement avec approximation.
+                                   Conclusion
+ Aucune p-value exploitable — ne pas conclure
+ Aucune p-value exploitable — ne pas conclure
+ Aucune p-value exploitable — ne pas conclure
+                                 NON TESTABLE
+               Résultat non significatif à 5%
+ Aucune p-value exploitable — ne pas conclure
+ Aucune p-value exploitable — ne pas conclure
+ Aucune p-value exploitable — ne pas conclure
+               Résultat non significatif à 5%
+
+
+PRECAUTIONS METHODOLOGIQUES
+---------------------------
+1. Une hypothèse ne doit pas être déclarée confirmée sans résultat statistique approprié.
+2. Le signe d'un coefficient ne constitue pas à lui seul une validation.
+3. H4 nécessite une classification documentée exportateurs/importateurs.
+4. H5-H7 et H9 ne doivent pas être présentées comme des tests de Wald exacts lorsque la covariance commune manque.
+5. H8 reste non testable si les éléments nécessaires ne sont pas disponibles.
+6. Les variables de contrôle manquantes doivent être signalées explicitement plutôt que remplacées par des valeurs inventées.

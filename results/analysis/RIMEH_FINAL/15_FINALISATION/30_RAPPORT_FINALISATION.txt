@@ -1,0 +1,95 @@
+============================================================
+RIMEH - RAPPORT FINALISATION
+============================================================
+
+MODELES
+-------
+Nombre de modeles : 76 
+Diagnostics OK : 76 
+Erreurs : 0 
+
+DIAGNOSTICS
+-----------
+LB residus p<5% : 34 / 76 
+LB residus² p<5% : 32 / 76 
+ARCH-LM p<5% : 33 / 76 
+Mediane moyenne residus : 0.027178 
+Mediane SD residus : 0.9980227 
+
+PARAMETRES MIDAS
+----------------
+# A tibble: 10 × 10
+   Parametre     N      Min   Median     Mean    Max     SD Sig_10 Sig_05 Sig_01
+   <chr>     <int>    <dbl>    <dbl>    <dbl>  <dbl>  <dbl>  <int>  <int>  <int>
+ 1 alpha        76   0.0626  8.91e-2  0.103    0.332 0.0379     75     75     73
+ 2 beta         76   0.772   8.96e-1  0.885    0.943 0.0384     76     76     76
+ 3 m            76 -10.3     6.08e-1  0.349    2.72  1.71       39     34     25
+ 4 shape        64   2.82    6.94e+0  6.70     8.71  1.59       63     63     63
+ 5 theta        12  -0.0279  2.24e-2  0.0406   0.181 0.0710      5      4      2
+ 6 theta_1      64  -0.175  -3.30e-4 -0.00964  0.286 0.0684      8      5      2
+ 7 theta_2      64  -0.173  -3.48e-3 -0.0129   0.126 0.0514     14      5      3
+ 8 w2           12   1.00    1.23e+0  3.54    26.0   7.09        3      3      2
+ 9 w2_1         64   1.00    1.00e+0  3.71    22.0   5.70       21     20     16
+10 w2_2         64   1.00    1.40e+0  4.18    22.1   6.13       22     19     19
+
+
+DIAGNOSTICS PAR PAYS
+# A tibble: 11 × 7
+   Pays  Modeles LB_residus_sig LB_residus2_sig ARCH_LM_sig Mean_residus_median
+   <chr>   <int>          <int>           <int>       <int>               <dbl>
+ 1 DEU         7              0               4           5            0.0172  
+ 2 GBR         6              0               0           0            0.000423
+ 3 IND         7              7               0           0            0.0273  
+ 4 JPN         7              0               6           6            0.0124  
+ 5 KOR         7              0               6           6            0.0130  
+ 6 MEX         7              7               1           1            0.0271  
+ 7 NOR         7              0               7           7            0.0330  
+ 8 PAK         7              6               0           0            0.0692  
+ 9 SAU         7              7               7           7            0.0329  
+10 TUR         7              7               0           0            0.0491  
+11 USA         7              0               1           1            0.0292  
+# ℹ 1 more variable: SD_residus_median <dbl>
+
+
+DIAGNOSTICS PAR SPECIFICATION
+# A tibble: 7 × 7
+  Specification Modeles LB_residus_sig LB_residus2_sig ARCH_LM_sig
+  <chr>           <int>          <int>           <int>       <int>
+1 GPRA_SUP           11              5               4           4
+2 GPRT_DEM           11              4               5           5
+3 GPRT_PRE           11              5               5           5
+4 GPRT_SUP           11              5               6           6
+5 GPRT_VIX           11              5               4           4
+6 SUP_DEM            11              5               4           4
+7 SUP_PRE            10              5               4           5
+# ℹ 2 more variables: Mean_residus_median <dbl>, SD_residus_median <dbl>
+
+
+CAS ATYPIQUES
+        Modele Pays Specification N_modele N_daily N_valides Mean_residus
+1 PAK_GPRT_DEM  PAK      GPRT_DEM     4625    4625      4625   -0.1796681
+  SD_residus Min_residus Max_residus LB_residus_stat LB_residus_p
+1   15.29361   -1031.808    9.924544       0.4131669    0.9999999
+  LB_residus2_stat LB_residus2_p ARCH_LM_stat ARCH_LM_p    LogLik     AIC
+1      0.002539661             1  0.002485865         1 -4255.055 8526.11
+       BIC  MSE_pct    QLIKE Statut Erreur LB_sig LB2_sig ARCH_sig
+1 8577.624 1827.827 234.2288     OK     NA  FALSE   FALSE    FALSE
+
+
+ROBUSTESSE
+                      Test                        Statut
+1 Specification principale                       TERMINE
+2                MIDAS K=6                     A ESTIMER
+3               MIDAS K=12                     A ESTIMER
+4 Distribution alternative                     A ESTIMER
+5 Comparaison GPRT vs GPRA ANALYSE PRINCIPALE DISPONIBLE
+                           Specification
+1          K=3; Beta; Student-t; skew=NO
+2                                    K=6
+3                                   K=12
+4                A definir selon rumidas
+5 Comparaison des coefficients existants
+
+============================================================
+FIN
+============================================================

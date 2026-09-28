@@ -1,0 +1,12 @@
+country,inflation_valid,inflation_missing,interest_valid,interest_missing
+DEU,312,0,0,312
+GBR,312,0,312,0
+IND,220,92,312,0
+JPN,312,0,307,5
+KOR,312,0,312,0
+MEX,312,0,312,0
+NOR,154,158,312,0
+PAK,158,154,312,0
+SAU,312,0,312,0
+TUR,312,0,306,6
+USA,311,1,312,0

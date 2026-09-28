@@ -1,0 +1,480 @@
+
+============================================================
+FICHIER : C:\Users\clien\Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\scripts\19_analyse_complete_garch_midas.R
+LIGNE   : 276
+------------------------------------------------------------
+# 12. H1 : GPRT -> effet positif
+
+============================================================
+FICHIER : C:\Users\clien\Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\scripts\19_analyse_complete_garch_midas.R
+LIGNE   : 301
+------------------------------------------------------------
+# 13. H2 : GPRA -> effet positif
+
+============================================================
+FICHIER : C:\Users\clien\Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\scripts\19_analyse_complete_garch_midas.R
+LIGNE   : 321
+------------------------------------------------------------
+# 14. H3 : SUP
+
+============================================================
+FICHIER : C:\Users\clien\Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\scripts\19_analyse_complete_garch_midas.R
+LIGNE   : 346
+------------------------------------------------------------
+# 15. H4 : DEM
+
+============================================================
+FICHIER : C:\Users\clien\Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\scripts\19_analyse_complete_garch_midas.R
+LIGNE   : 367
+------------------------------------------------------------
+# 16. H5 : PRE
+
+============================================================
+FICHIER : C:\Users\clien\Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\scripts\19_analyse_complete_garch_midas.R
+LIGNE   : 390
+------------------------------------------------------------
+# 17. H6 : VIX
+
+============================================================
+FICHIER : C:\Users\clien\Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\scripts\19_analyse_complete_garch_midas.R
+LIGNE   : 410
+------------------------------------------------------------
+# 18. H7-H9 : NE PAS INVENTER
+
+============================================================
+FICHIER : C:\Users\clien\Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\scripts\19_analyse_complete_garch_midas.R
+LIGNE   : 691
+------------------------------------------------------------
+cat("\n[8] H1-H6 :\n")
+
+============================================================
+FICHIER : C:\Users\clien\Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\scripts\19_analyse_complete_garch_midas.R
+LIGNE   : 694
+------------------------------------------------------------
+cat("\n[9] H1-H9 :\n")
+
+============================================================
+FICHIER : C:\Users\clien\Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\scripts\20_RUN_ALL_AUTO.R
+LIGNE   : 254
+------------------------------------------------------------
+# H1 : effet positif du GPR sur la volatilité
+
+============================================================
+FICHIER : C:\Users\clien\Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\scripts\20_RUN_ALL_AUTO.R
+LIGNE   : 260
+------------------------------------------------------------
+# H2 : demande
+
+============================================================
+FICHIER : C:\Users\clien\Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\scripts\20_RUN_ALL_AUTO.R
+LIGNE   : 265
+------------------------------------------------------------
+# H3 : offre
+
+============================================================
+FICHIER : C:\Users\clien\Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\scripts\20_RUN_ALL_AUTO.R
+LIGNE   : 270
+------------------------------------------------------------
+# H4 : différences exportateurs/importateurs
+
+============================================================
+FICHIER : C:\Users\clien\Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\scripts\20_RUN_ALL_AUTO.R
+LIGNE   : 273
+------------------------------------------------------------
+# H5 : demande selon horizon
+
+============================================================
+FICHIER : C:\Users\clien\Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\scripts\20_RUN_ALL_AUTO.R
+LIGNE   : 276
+------------------------------------------------------------
+# H6 : offre selon horizon
+
+============================================================
+FICHIER : C:\Users\clien\Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\scripts\20_RUN_ALL_AUTO.R
+LIGNE   : 279
+------------------------------------------------------------
+# H7 : GPRT vs GPRA sur prix/volatilité
+
+============================================================
+FICHIER : C:\Users\clien\Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\scripts\20_RUN_ALL_AUTO.R
+LIGNE   : 285
+------------------------------------------------------------
+# H8 : GPRT vs GPRA sur demande
+
+============================================================
+FICHIER : C:\Users\clien\Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\scripts\20_RUN_ALL_AUTO.R
+LIGNE   : 291
+------------------------------------------------------------
+# H9 : GPRT vs GPRA sur offre
+
+============================================================
+FICHIER : C:\Users\clien\Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\scripts\20_RUN_ALL_AUTO.R
+LIGNE   : 315
+------------------------------------------------------------
+cat("[OK] H1-H9 :", nrow(final), "hypothèses.\n\n")
+
+============================================================
+FICHIER : C:\Users\clien\Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\scripts\21_FINAL_H1_H9_AUTO.R
+LIGNE   : 258
+------------------------------------------------------------
+# 12. H7-H9 : GPRT vs GPRA
+
+============================================================
+FICHIER : C:\Users\clien\Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\scripts\21_FINAL_H1_H9_AUTO.R
+LIGNE   : 452
+------------------------------------------------------------
+cat("\nH1 :\n")
+
+============================================================
+FICHIER : C:\Users\clien\Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\scripts\21_FINAL_H1_H9_AUTO.R
+LIGNE   : 456
+------------------------------------------------------------
+cat("\nH2 :\n")
+
+============================================================
+FICHIER : C:\Users\clien\Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\scripts\21_FINAL_H1_H9_AUTO.R
+LIGNE   : 459
+------------------------------------------------------------
+cat("\nH3 :\n")
+
+============================================================
+FICHIER : C:\Users\clien\Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\scripts\21_FINAL_H1_H9_AUTO.R
+LIGNE   : 462
+------------------------------------------------------------
+cat("\nH4 :\n")
+
+============================================================
+FICHIER : C:\Users\clien\Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\scripts\21_FINAL_H1_H9_AUTO.R
+LIGNE   : 466
+------------------------------------------------------------
+cat("\nH5 :\n")
+
+============================================================
+FICHIER : C:\Users\clien\Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\scripts\21_FINAL_H1_H9_AUTO.R
+LIGNE   : 470
+------------------------------------------------------------
+cat("\nH6 :\n")
+
+============================================================
+FICHIER : C:\Users\clien\Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\scripts\21_FINAL_H1_H9_AUTO.R
+LIGNE   : 474
+------------------------------------------------------------
+cat("\nH7 :\n")
+
+============================================================
+FICHIER : C:\Users\clien\Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\scripts\21_FINAL_H1_H9_AUTO.R
+LIGNE   : 478
+------------------------------------------------------------
+cat("\nH8 :\n")
+
+============================================================
+FICHIER : C:\Users\clien\Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\scripts\21_FINAL_H1_H9_AUTO.R
+LIGNE   : 481
+------------------------------------------------------------
+cat("\nH9 :\n")
+
+============================================================
+FICHIER : C:\Users\clien\Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\AUDIT_FINAL_H1_H9.R
+LIGNE   : 33
+------------------------------------------------------------
+# 3. H1-H3 : structure exacte
+
+============================================================
+FICHIER : C:\Users\clien\Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\AUDIT_FINAL_H1_H9.R
+LIGNE   : 37
+------------------------------------------------------------
+cat(" H1-H3 : STRUCTURE DES TESTS INDIVIDUELS\n")
+
+============================================================
+FICHIER : C:\Users\clien\Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\AUDIT_FINAL_H1_H9.R
+LIGNE   : 76
+------------------------------------------------------------
+cat(" H5-H6 : VERIFICATION DE LA DUPLICATION\n")
+
+============================================================
+FICHIER : C:\Users\clien\Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\AUDIT_FINAL_H1_H9.R
+LIGNE   : 82
+------------------------------------------------------------
+cat("\nNombre H5 :", nrow(h5), "\n")
+
+============================================================
+FICHIER : C:\Users\clien\Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\AUDIT_FINAL_H1_H9.R
+LIGNE   : 83
+------------------------------------------------------------
+cat("Nombre H6 :", nrow(h6), "\n")
+
+============================================================
+FICHIER : C:\Users\clien\Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\AUDIT_FINAL_H1_H9.R
+LIGNE   : 134
+------------------------------------------------------------
+cat("\nMod?les H5 :\n")
+
+============================================================
+FICHIER : C:\Users\clien\Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\AUDIT_FINAL_H1_H9.R
+LIGNE   : 139
+------------------------------------------------------------
+cat("\nPays H5 :\n")
+
+============================================================
+FICHIER : C:\Users\clien\Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\AUDIT_FINAL_H1_H9.R
+LIGNE   : 144
+------------------------------------------------------------
+cat("\nParam?tres H5 :\n")
+
+============================================================
+FICHIER : C:\Users\clien\Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\AUDIT_FINAL_H1_H9.R
+LIGNE   : 150
+------------------------------------------------------------
+cat("\nRejets H5 :", sum(pv < 0.05, na.rm=TRUE), "\n")
+
+============================================================
+FICHIER : C:\Users\clien\Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\AUDIT_FINAL_H1_H9.R
+LIGNE   : 151
+------------------------------------------------------------
+cat("P min H5 :", min(pv, na.rm=TRUE), "\n")
+
+============================================================
+FICHIER : C:\Users\clien\Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\AUDIT_FINAL_H1_H9.R
+LIGNE   : 152
+------------------------------------------------------------
+cat("P m?diane H5 :", median(pv, na.rm=TRUE), "\n")
+
+============================================================
+FICHIER : C:\Users\clien\Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\AUDIT_FINAL_H1_H9.R
+LIGNE   : 167
+------------------------------------------------------------
+cat("\nMod?les H6 :\n")
+
+============================================================
+FICHIER : C:\Users\clien\Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\AUDIT_FINAL_H1_H9.R
+LIGNE   : 172
+------------------------------------------------------------
+cat("\nPays H6 :\n")
+
+============================================================
+FICHIER : C:\Users\clien\Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\AUDIT_FINAL_H1_H9.R
+LIGNE   : 177
+------------------------------------------------------------
+cat("\nParam?tres H6 :\n")
+
+============================================================
+FICHIER : C:\Users\clien\Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\AUDIT_FINAL_H1_H9.R
+LIGNE   : 183
+------------------------------------------------------------
+cat("\nRejets H6 :", sum(pv < 0.05, na.rm=TRUE), "\n")
+
+============================================================
+FICHIER : C:\Users\clien\Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\AUDIT_FINAL_H1_H9.R
+LIGNE   : 184
+------------------------------------------------------------
+cat("P min H6 :", min(pv, na.rm=TRUE), "\n")
+
+============================================================
+FICHIER : C:\Users\clien\Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\AUDIT_FINAL_H1_H9.R
+LIGNE   : 185
+------------------------------------------------------------
+cat("P m?diane H6 :", median(pv, na.rm=TRUE), "\n")
+
+============================================================
+FICHIER : C:\Users\clien\Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\AUDIT_FINAL_H1_H9.R
+LIGNE   : 194
+------------------------------------------------------------
+cat(" H9 : VERIFICATION GPRT VS GPRA\n")
+
+============================================================
+FICHIER : C:\Users\clien\Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\AUDIT_FINAL_H1_H9.R
+LIGNE   : 199
+------------------------------------------------------------
+cat("Nombre de tests H9 :", nrow(h9), "\n")
+
+============================================================
+FICHIER : C:\Users\clien\Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\AUDIT_FINAL_H1_H9.R
+LIGNE   : 230
+------------------------------------------------------------
+cat(" H4 / H7 / H8 : VERIFICATION DES FICHIERS FORMELS\n")
+
+============================================================
+FICHIER : C:\Users\clien\Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\AUDIT_FINAL_H1_H9.R
+LIGNE   : 276
+------------------------------------------------------------
+cat("\nH1 : 13 tests individuels\n")
+
+============================================================
+FICHIER : C:\Users\clien\Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\AUDIT_FINAL_H1_H9.R
+LIGNE   : 277
+------------------------------------------------------------
+cat("H2 : 44 tests individuels\n")
+
+============================================================
+FICHIER : C:\Users\clien\Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\AUDIT_FINAL_H1_H9.R
+LIGNE   : 278
+------------------------------------------------------------
+cat("H3 : 42 tests individuels\n")
+
+============================================================
+FICHIER : C:\Users\clien\Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\AUDIT_FINAL_H1_H9.R
+LIGNE   : 279
+------------------------------------------------------------
+cat("H4 : v?rifier le fichier formel\n")
+
+============================================================
+FICHIER : C:\Users\clien\Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\AUDIT_FINAL_H1_H9.R
+LIGNE   : 280
+------------------------------------------------------------
+cat("H5 : 64 tests de diff?rence sous ind?pendance\n")
+
+============================================================
+FICHIER : C:\Users\clien\Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\AUDIT_FINAL_H1_H9.R
+LIGNE   : 281
+------------------------------------------------------------
+cat("H6 : 64 tests de diff?rence sous ind?pendance\n")
+
+============================================================
+FICHIER : C:\Users\clien\Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\AUDIT_FINAL_H1_H9.R
+LIGNE   : 282
+------------------------------------------------------------
+cat("H7 : non testable formellement\n")
+
+============================================================
+FICHIER : C:\Users\clien\Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\AUDIT_FINAL_H1_H9.R
+LIGNE   : 283
+------------------------------------------------------------
+cat("H8 : non testable formellement\n")
+
+============================================================
+FICHIER : C:\Users\clien\Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\AUDIT_FINAL_H1_H9.R
+LIGNE   : 284
+------------------------------------------------------------
+cat("H9 : 21 tests de diff?rence sous ind?pendance\n")
+
+============================================================
+FICHIER : C:\Users\clien\Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\AUDIT_FINAL_H1_H9_V2.R
+LIGNE   : 33
+------------------------------------------------------------
+cat(" H1-H3 : RECONSTRUCTION PAR MODELE\n")
+
+============================================================
+FICHIER : C:\Users\clien\Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\AUDIT_FINAL_H1_H9_V2.R
+LIGNE   : 36
+------------------------------------------------------------
+# H1 = GPRT_VIX
+
+============================================================
+FICHIER : C:\Users\clien\Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\AUDIT_FINAL_H1_H9_V2.R
+LIGNE   : 39
+------------------------------------------------------------
+# H2 = GPRT_DEM + SUP_DEM
+
+============================================================
+FICHIER : C:\Users\clien\Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\AUDIT_FINAL_H1_H9_V2.R
+LIGNE   : 42
+------------------------------------------------------------
+# H3 = GPRA_SUP + GPRT_SUP
+
+============================================================
+FICHIER : C:\Users\clien\Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\AUDIT_FINAL_H1_H9_V2.R
+LIGNE   : 90
+------------------------------------------------------------
+cat(" H5-H6 : AUDIT DU FICHIER PAIRED THETA\n")
+
+============================================================
+FICHIER : C:\Users\clien\Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\AUDIT_FINAL_H1_H9_V2.R
+LIGNE   : 164
+------------------------------------------------------------
+cat(" H9 : AUDIT GPRT VS GPRA\n")
+
+============================================================
+FICHIER : C:\Users\clien\Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\AUDIT_FINAL_H1_H9_V2.R
+LIGNE   : 224
+------------------------------------------------------------
+cat(" H4 : AUDIT\n")
+
+============================================================
+FICHIER : C:\Users\clien\Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\AUDIT_FINAL_H1_H9_V2.R
+LIGNE   : 251
+------------------------------------------------------------
+cat(" H7-H8 : AUDIT\n")
+
+============================================================
+FICHIER : C:\Users\clien\Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\AUDIT_FINAL_H1_H9_V2.R
+LIGNE   : 278
+------------------------------------------------------------
+cat(" H9 : VERIFICATION VERSION INDEPENDANCE\n")
+
+============================================================
+FICHIER : C:\Users\clien\Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\AUDIT_FINAL_H1_H9_V2.R
+LIGNE   : 325
+------------------------------------------------------------
+H1 : tests individuels sur GPRT_VIX
+
+============================================================
+FICHIER : C:\Users\clien\Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\AUDIT_FINAL_H1_H9_V2.R
+LIGNE   : 326
+------------------------------------------------------------
+H2 : tests individuels sur GPRT_DEM + SUP_DEM
+
+============================================================
+FICHIER : C:\Users\clien\Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\AUDIT_FINAL_H1_H9_V2.R
+LIGNE   : 327
+------------------------------------------------------------
+H3 : tests individuels sur GPRA_SUP + GPRT_SUP
+
+============================================================
+FICHIER : C:\Users\clien\Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\AUDIT_FINAL_H1_H9_V2.R
+LIGNE   : 329
+------------------------------------------------------------
+H5/H6 : fichier commun de 64 comparaisons theta_1 - theta_2.
+
+============================================================
+FICHIER : C:\Users\clien\Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\AUDIT_FINAL_H1_H9_V2.R
+LIGNE   : 333
+------------------------------------------------------------
+H9 : comparaison GPRT vs GPRA par pays et param?tre.
+
+============================================================
+FICHIER : C:\Users\clien\Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\BUILD_TABLEAU_FINAL_H1_H9.R
+LIGNE   : 25
+------------------------------------------------------------
+# H1 = GPRT_VIX
+
+============================================================
+FICHIER : C:\Users\clien\Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\BUILD_TABLEAU_FINAL_H1_H9.R
+LIGNE   : 29
+------------------------------------------------------------
+# H2 = DEMAND
+
+============================================================
+FICHIER : C:\Users\clien\Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\BUILD_TABLEAU_FINAL_H1_H9.R
+LIGNE   : 35
+------------------------------------------------------------
+# H3 = SUPPLY
+
+============================================================
+FICHIER : C:\Users\clien\Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\BUILD_TABLEAU_FINAL_H1_H9.R
+LIGNE   : 52
+------------------------------------------------------------
+H1=paste0(x$parameter," != 0"),
+
+============================================================
+FICHIER : C:\Users\clien\Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\BUILD_TABLEAU_FINAL_H1_H9.R
+LIGNE   : 101
+------------------------------------------------------------
+H1="theta_1 - theta_2 != 0",
+
+============================================================
+FICHIER : C:\Users\clien\Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\BUILD_TABLEAU_FINAL_H1_H9.R
+LIGNE   : 122
+------------------------------------------------------------
+H1="theta_1 - theta_2 != 0",
+
+============================================================
+FICHIER : C:\Users\clien\Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\BUILD_TABLEAU_FINAL_H1_H9.R
+LIGNE   : 166
+------------------------------------------------------------
+H1="beta_GPRT != beta_GPRA",
+
+============================================================
+FICHIER : C:\Users\clien\Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\BUILD_TABLEAU_FINAL_H1_H9.R
+LIGNE   : 204
+------------------------------------------------------------
+H1=c(

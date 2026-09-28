@@ -1,0 +1,7 @@
+"Hypothesis","N","Significant_5pct","Significant_10pct","Positive","Negative","Significant_Positive","Significant_Negative","Mean_Estimate","Median_Estimate","Mean_PValue","Status"
+"H1",34,1,2,12,9,1,0,0.00283842857142857,0.000775,0.476574619047619,"DESCRIPTIVE"
+"H2",35,0,3,9,13,0,0,-0.000375590909090909,-0.0016395,0.385108954545455,"DESCRIPTIVE"
+"H3",55,2,6,20,22,1,1,-0.0143185952380952,-0.0008685,0.38356880952381,"DESCRIPTIVE"
+"H4",140,NA,NA,NA,NA,NA,NA,NA,NA,NA,"NOT TESTABLE - exporter/importer classification required"
+"H5",35,0,3,9,13,0,0,-0.000375590909090909,-0.0016395,0.385108954545455,"DESCRIPTIVE - horizon comparison required"
+"H6",55,2,6,20,22,1,1,-0.0143185952380952,-0.0008685,0.38356880952381,"DESCRIPTIVE - horizon comparison required"

@@ -1,0 +1,7 @@
+"Variable","VIF","Interpretation"
+"GPRA",1.00648828330497,"Pas de multicollinearite importante"
+"SUP",1.0122198725301,"Pas de multicollinearite importante"
+"DEM",1.00814142067715,"Pas de multicollinearite importante"
+"PRE",1.0486310310487,"Pas de multicollinearite importante"
+"VIX",1.05839587431578,"Pas de multicollinearite importante"
+"inflation",1.00708135760643,"Pas de multicollinearite importante"

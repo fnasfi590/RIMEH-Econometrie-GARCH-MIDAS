@@ -1,0 +1,996 @@
+ Hypothese                              Parametre
+        H1                                theta_1
+        H1                                theta_2
+        H1                                theta_1
+        H1                                theta_2
+        H1                                  theta
+        H1                                  theta
+        H1                                  theta
+        H1                                  theta
+        H1                                  theta
+        H1                                  theta
+        H1                                  theta
+        H1                                  theta
+        H1                                  theta
+        H2                                theta_1
+        H2                                theta_2
+        H2                                theta_1
+        H2                                theta_2
+        H2                                theta_1
+        H2                                theta_2
+        H2                                theta_1
+        H2                                theta_2
+        H2                                theta_1
+        H2                                theta_2
+        H2                                theta_1
+        H2                                theta_2
+        H2                                theta_1
+        H2                                theta_2
+        H2                                theta_1
+        H2                                theta_2
+        H2                                theta_1
+        H2                                theta_2
+        H2                                theta_1
+        H2                                theta_2
+        H2                                theta_1
+        H2                                theta_2
+        H2                                theta_1
+        H2                                theta_2
+        H2                                theta_1
+        H2                                theta_2
+        H2                                theta_1
+        H2                                theta_2
+        H2                                theta_1
+        H2                                theta_2
+        H2                                theta_1
+        H2                                theta_2
+        H2                                theta_1
+        H2                                theta_2
+        H2                                theta_1
+        H2                                theta_2
+        H2                                theta_1
+        H2                                theta_2
+        H2                                theta_1
+        H2                                theta_2
+        H2                                theta_1
+        H2                                theta_2
+        H2                                theta_1
+        H2                                theta_2
+        H3                                theta_1
+        H3                                theta_2
+        H3                                theta_1
+        H3                                theta_2
+        H3                                theta_1
+        H3                                theta_2
+        H3                                theta_1
+        H3                                theta_2
+        H3                                theta_1
+        H3                                theta_2
+        H3                                theta_1
+        H3                                theta_2
+        H3                                theta_1
+        H3                                theta_2
+        H3                                theta_1
+        H3                                theta_2
+        H3                                theta_1
+        H3                                theta_2
+        H3                                theta_1
+        H3                                theta_2
+        H3                                theta_1
+        H3                                theta_2
+        H3                                theta_1
+        H3                                theta_2
+        H3                                theta_1
+        H3                                theta_2
+        H3                                theta_1
+        H3                                theta_2
+        H3                                  theta
+        H3                                  theta
+        H3                                theta_1
+        H3                                theta_2
+        H3                                theta_1
+        H3                                theta_2
+        H3                                theta_1
+        H3                                theta_2
+        H3                                theta_1
+        H3                                theta_2
+        H3                                theta_1
+        H3                                theta_2
+        H3                                theta_1
+        H3                                theta_2
+        H4 Différence exportateurs / importateurs
+        H5                      theta_1 - theta_2
+        H5                      theta_1 - theta_2
+        H5                      theta_1 - theta_2
+        H5                      theta_1 - theta_2
+        H5                      theta_1 - theta_2
+        H5                      theta_1 - theta_2
+        H5                      theta_1 - theta_2
+        H5                      theta_1 - theta_2
+        H5                      theta_1 - theta_2
+        H5                      theta_1 - theta_2
+        H5                      theta_1 - theta_2
+        H5                      theta_1 - theta_2
+        H5                      theta_1 - theta_2
+        H5                      theta_1 - theta_2
+        H5                      theta_1 - theta_2
+        H5                      theta_1 - theta_2
+        H5                      theta_1 - theta_2
+        H5                      theta_1 - theta_2
+        H5                      theta_1 - theta_2
+        H5                      theta_1 - theta_2
+        H5                      theta_1 - theta_2
+        H5                      theta_1 - theta_2
+        H6                      theta_1 - theta_2
+        H6                      theta_1 - theta_2
+        H6                      theta_1 - theta_2
+        H6                      theta_1 - theta_2
+        H6                      theta_1 - theta_2
+        H6                      theta_1 - theta_2
+        H6                      theta_1 - theta_2
+        H6                      theta_1 - theta_2
+        H6                      theta_1 - theta_2
+        H6                      theta_1 - theta_2
+        H6                      theta_1 - theta_2
+        H6                      theta_1 - theta_2
+        H6                      theta_1 - theta_2
+        H6                      theta_1 - theta_2
+        H6                      theta_1 - theta_2
+        H6                      theta_1 - theta_2
+        H6                      theta_1 - theta_2
+        H6                      theta_1 - theta_2
+        H6                      theta_1 - theta_2
+        H6                      theta_1 - theta_2
+        H7                   GPRT vs GPRA - PRICE
+        H8                  GPRT vs GPRA - DEMAND
+        H9                                theta_1
+        H9                                theta_2
+        H9                                theta_1
+        H9                                theta_2
+        H9                                theta_1
+        H9                                theta_2
+        H9                                theta_1
+        H9                                theta_2
+        H9                                theta_1
+        H9                                theta_2
+        H9                                theta_1
+        H9                                theta_2
+        H9                                theta_1
+        H9                                theta_2
+        H9                                  theta
+        H9                                theta_1
+        H9                                theta_2
+        H9                                theta_1
+        H9                                theta_2
+        H9                                theta_1
+        H9                                theta_2
+                                                   H0
+                                        Paramètre = 0
+                                        Paramètre = 0
+                                        Paramètre = 0
+                                        Paramètre = 0
+                                        Paramètre = 0
+                                        Paramètre = 0
+                                        Paramètre = 0
+                                        Paramètre = 0
+                                        Paramètre = 0
+                                        Paramètre = 0
+                                        Paramètre = 0
+                                        Paramètre = 0
+                                        Paramètre = 0
+                                        Paramètre = 0
+                                        Paramètre = 0
+                                        Paramètre = 0
+                                        Paramètre = 0
+                                        Paramètre = 0
+                                        Paramètre = 0
+                                        Paramètre = 0
+                                        Paramètre = 0
+                                        Paramètre = 0
+                                        Paramètre = 0
+                                        Paramètre = 0
+                                        Paramètre = 0
+                                        Paramètre = 0
+                                        Paramètre = 0
+                                        Paramètre = 0
+                                        Paramètre = 0
+                                        Paramètre = 0
+                                        Paramètre = 0
+                                        Paramètre = 0
+                                        Paramètre = 0
+                                        Paramètre = 0
+                                        Paramètre = 0
+                                        Paramètre = 0
+                                        Paramètre = 0
+                                        Paramètre = 0
+                                        Paramètre = 0
+                                        Paramètre = 0
+                                        Paramètre = 0
+                                        Paramètre = 0
+                                        Paramètre = 0
+                                        Paramètre = 0
+                                        Paramètre = 0
+                                        Paramètre = 0
+                                        Paramètre = 0
+                                        Paramètre = 0
+                                        Paramètre = 0
+                                        Paramètre = 0
+                                        Paramètre = 0
+                                        Paramètre = 0
+                                        Paramètre = 0
+                                        Paramètre = 0
+                                        Paramètre = 0
+                                        Paramètre = 0
+                                        Paramètre = 0
+                                        Paramètre = 0
+                                        Paramètre = 0
+                                        Paramètre = 0
+                                        Paramètre = 0
+                                        Paramètre = 0
+                                        Paramètre = 0
+                                        Paramètre = 0
+                                        Paramètre = 0
+                                        Paramètre = 0
+                                        Paramètre = 0
+                                        Paramètre = 0
+                                        Paramètre = 0
+                                        Paramètre = 0
+                                        Paramètre = 0
+                                        Paramètre = 0
+                                        Paramètre = 0
+                                        Paramètre = 0
+                                        Paramètre = 0
+                                        Paramètre = 0
+                                        Paramètre = 0
+                                        Paramètre = 0
+                                        Paramètre = 0
+                                        Paramètre = 0
+                                        Paramètre = 0
+                                        Paramètre = 0
+                                        Paramètre = 0
+                                        Paramètre = 0
+                                        Paramètre = 0
+                                        Paramètre = 0
+                                        Paramètre = 0
+                                        Paramètre = 0
+                                        Paramètre = 0
+                                        Paramètre = 0
+                                        Paramètre = 0
+                                        Paramètre = 0
+                                        Paramètre = 0
+                                        Paramètre = 0
+                                        Paramètre = 0
+                                        Paramètre = 0
+                                        Paramètre = 0
+                                        Paramètre = 0
+                                        Paramètre = 0
+ Pas de différence entre exportateurs et importateurs
+                                theta_1 - theta_2 = 0
+                                theta_1 - theta_2 = 0
+                                theta_1 - theta_2 = 0
+                                theta_1 - theta_2 = 0
+                                theta_1 - theta_2 = 0
+                                theta_1 - theta_2 = 0
+                                theta_1 - theta_2 = 0
+                                theta_1 - theta_2 = 0
+                                theta_1 - theta_2 = 0
+                                theta_1 - theta_2 = 0
+                                theta_1 - theta_2 = 0
+                                theta_1 - theta_2 = 0
+                                theta_1 - theta_2 = 0
+                                theta_1 - theta_2 = 0
+                                theta_1 - theta_2 = 0
+                                theta_1 - theta_2 = 0
+                                theta_1 - theta_2 = 0
+                                theta_1 - theta_2 = 0
+                                theta_1 - theta_2 = 0
+                                theta_1 - theta_2 = 0
+                                theta_1 - theta_2 = 0
+                                theta_1 - theta_2 = 0
+                                theta_1 - theta_2 = 0
+                                theta_1 - theta_2 = 0
+                                theta_1 - theta_2 = 0
+                                theta_1 - theta_2 = 0
+                                theta_1 - theta_2 = 0
+                                theta_1 - theta_2 = 0
+                                theta_1 - theta_2 = 0
+                                theta_1 - theta_2 = 0
+                                theta_1 - theta_2 = 0
+                                theta_1 - theta_2 = 0
+                                theta_1 - theta_2 = 0
+                                theta_1 - theta_2 = 0
+                                theta_1 - theta_2 = 0
+                                theta_1 - theta_2 = 0
+                                theta_1 - theta_2 = 0
+                                theta_1 - theta_2 = 0
+                                theta_1 - theta_2 = 0
+                                theta_1 - theta_2 = 0
+                                theta_1 - theta_2 = 0
+                                theta_1 - theta_2 = 0
+                              Effet GPRT = effet GPRA
+                              Effet GPRT = effet GPRA
+                              Effet GPRT = effet GPRA
+                              Effet GPRT = effet GPRA
+                              Effet GPRT = effet GPRA
+                              Effet GPRT = effet GPRA
+                              Effet GPRT = effet GPRA
+                              Effet GPRT = effet GPRA
+                              Effet GPRT = effet GPRA
+                              Effet GPRT = effet GPRA
+                              Effet GPRT = effet GPRA
+                              Effet GPRT = effet GPRA
+                              Effet GPRT = effet GPRA
+                              Effet GPRT = effet GPRA
+                              Effet GPRT = effet GPRA
+                              Effet GPRT = effet GPRA
+                              Effet GPRT = effet GPRA
+                              Effet GPRT = effet GPRA
+                              Effet GPRT = effet GPRA
+                              Effet GPRT = effet GPRA
+                              Effet GPRT = effet GPRA
+                              Effet GPRT = effet GPRA
+                              Effet GPRT = effet GPRA
+                                            H1
+                                Paramètre != 0
+                                Paramètre != 0
+                                Paramètre != 0
+                                Paramètre != 0
+                                Paramètre != 0
+                                Paramètre != 0
+                                Paramètre != 0
+                                Paramètre != 0
+                                Paramètre != 0
+                                Paramètre != 0
+                                Paramètre != 0
+                                Paramètre != 0
+                                Paramètre != 0
+                                Paramètre != 0
+                                Paramètre != 0
+                                Paramètre != 0
+                                Paramètre != 0
+                                Paramètre != 0
+                                Paramètre != 0
+                                Paramètre != 0
+                                Paramètre != 0
+                                Paramètre != 0
+                                Paramètre != 0
+                                Paramètre != 0
+                                Paramètre != 0
+                                Paramètre != 0
+                                Paramètre != 0
+                                Paramètre != 0
+                                Paramètre != 0
+                                Paramètre != 0
+                                Paramètre != 0
+                                Paramètre != 0
+                                Paramètre != 0
+                                Paramètre != 0
+                                Paramètre != 0
+                                Paramètre != 0
+                                Paramètre != 0
+                                Paramètre != 0
+                                Paramètre != 0
+                                Paramètre != 0
+                                Paramètre != 0
+                                Paramètre != 0
+                                Paramètre != 0
+                                Paramètre != 0
+                                Paramètre != 0
+                                Paramètre != 0
+                                Paramètre != 0
+                                Paramètre != 0
+                                Paramètre != 0
+                                Paramètre != 0
+                                Paramètre != 0
+                                Paramètre != 0
+                                Paramètre != 0
+                                Paramètre != 0
+                                Paramètre != 0
+                                Paramètre != 0
+                                Paramètre != 0
+                                Paramètre != 0
+                                Paramètre != 0
+                                Paramètre != 0
+                                Paramètre != 0
+                                Paramètre != 0
+                                Paramètre != 0
+                                Paramètre != 0
+                                Paramètre != 0
+                                Paramètre != 0
+                                Paramètre != 0
+                                Paramètre != 0
+                                Paramètre != 0
+                                Paramètre != 0
+                                Paramètre != 0
+                                Paramètre != 0
+                                Paramètre != 0
+                                Paramètre != 0
+                                Paramètre != 0
+                                Paramètre != 0
+                                Paramètre != 0
+                                Paramètre != 0
+                                Paramètre != 0
+                                Paramètre != 0
+                                Paramètre != 0
+                                Paramètre != 0
+                                Paramètre != 0
+                                Paramètre != 0
+                                Paramètre != 0
+                                Paramètre != 0
+                                Paramètre != 0
+                                Paramètre != 0
+                                Paramètre != 0
+                                Paramètre != 0
+                                Paramètre != 0
+                                Paramètre != 0
+                                Paramètre != 0
+                                Paramètre != 0
+                                Paramètre != 0
+                                Paramètre != 0
+                                Paramètre != 0
+                                Paramètre != 0
+                                Paramètre != 0
+ Différence entre exportateurs et importateurs
+                        theta_1 - theta_2 != 0
+                        theta_1 - theta_2 != 0
+                        theta_1 - theta_2 != 0
+                        theta_1 - theta_2 != 0
+                        theta_1 - theta_2 != 0
+                        theta_1 - theta_2 != 0
+                        theta_1 - theta_2 != 0
+                        theta_1 - theta_2 != 0
+                        theta_1 - theta_2 != 0
+                        theta_1 - theta_2 != 0
+                        theta_1 - theta_2 != 0
+                        theta_1 - theta_2 != 0
+                        theta_1 - theta_2 != 0
+                        theta_1 - theta_2 != 0
+                        theta_1 - theta_2 != 0
+                        theta_1 - theta_2 != 0
+                        theta_1 - theta_2 != 0
+                        theta_1 - theta_2 != 0
+                        theta_1 - theta_2 != 0
+                        theta_1 - theta_2 != 0
+                        theta_1 - theta_2 != 0
+                        theta_1 - theta_2 != 0
+                        theta_1 - theta_2 != 0
+                        theta_1 - theta_2 != 0
+                        theta_1 - theta_2 != 0
+                        theta_1 - theta_2 != 0
+                        theta_1 - theta_2 != 0
+                        theta_1 - theta_2 != 0
+                        theta_1 - theta_2 != 0
+                        theta_1 - theta_2 != 0
+                        theta_1 - theta_2 != 0
+                        theta_1 - theta_2 != 0
+                        theta_1 - theta_2 != 0
+                        theta_1 - theta_2 != 0
+                        theta_1 - theta_2 != 0
+                        theta_1 - theta_2 != 0
+                        theta_1 - theta_2 != 0
+                        theta_1 - theta_2 != 0
+                        theta_1 - theta_2 != 0
+                        theta_1 - theta_2 != 0
+                        theta_1 - theta_2 != 0
+                        theta_1 - theta_2 != 0
+                      Effet GPRT != effet GPRA
+                      Effet GPRT != effet GPRA
+                      Effet GPRT != effet GPRA
+                      Effet GPRT != effet GPRA
+                      Effet GPRT != effet GPRA
+                      Effet GPRT != effet GPRA
+                      Effet GPRT != effet GPRA
+                      Effet GPRT != effet GPRA
+                      Effet GPRT != effet GPRA
+                      Effet GPRT != effet GPRA
+                      Effet GPRT != effet GPRA
+                      Effet GPRT != effet GPRA
+                      Effet GPRT != effet GPRA
+                      Effet GPRT != effet GPRA
+                      Effet GPRT != effet GPRA
+                      Effet GPRT != effet GPRA
+                      Effet GPRT != effet GPRA
+                      Effet GPRT != effet GPRA
+                      Effet GPRT != effet GPRA
+                      Effet GPRT != effet GPRA
+                      Effet GPRT != effet GPRA
+                      Effet GPRT != effet GPRA
+                      Effet GPRT != effet GPRA
+                                             Test Estimation          SE
+       Test individuel du paramètre (GARCH-MIDAS)  -0.003641 0.002742000
+       Test individuel du paramètre (GARCH-MIDAS)  -0.025243 0.011748000
+       Test individuel du paramètre (GARCH-MIDAS)  -0.004591 0.001751000
+       Test individuel du paramètre (GARCH-MIDAS)   0.051701 0.007836000
+       Test individuel du paramètre (GARCH-MIDAS)  -0.022206 0.030651000
+       Test individuel du paramètre (GARCH-MIDAS)   0.026157 0.010482000
+       Test individuel du paramètre (GARCH-MIDAS)  -0.027913 0.015062000
+       Test individuel du paramètre (GARCH-MIDAS)   0.006737 0.023275000
+       Test individuel du paramètre (GARCH-MIDAS)   0.049238 0.010534000
+       Test individuel du paramètre (GARCH-MIDAS)   0.019556 0.013612000
+       Test individuel du paramètre (GARCH-MIDAS)  -0.021562 0.010985000
+       Test individuel du paramètre (GARCH-MIDAS)   0.008527 0.016583000
+       Test individuel du paramètre (GARCH-MIDAS)   0.061236 0.008096000
+       Test individuel du paramètre (GARCH-MIDAS)  -0.002223 0.001711000
+       Test individuel du paramètre (GARCH-MIDAS)  -0.006484 0.004568000
+       Test individuel du paramètre (GARCH-MIDAS)  -0.043625 0.031938000
+       Test individuel du paramètre (GARCH-MIDAS)  -0.006883 0.004665000
+       Test individuel du paramètre (GARCH-MIDAS)  -0.001056 0.002128000
+       Test individuel du paramètre (GARCH-MIDAS)  -0.005159 0.005047000
+       Test individuel du paramètre (GARCH-MIDAS)  -0.041417 0.046857000
+       Test individuel du paramètre (GARCH-MIDAS)  -0.005035 0.015490000
+       Test individuel du paramètre (GARCH-MIDAS)   0.001464 0.011802000
+       Test individuel du paramètre (GARCH-MIDAS)  -0.003233 0.016560000
+       Test individuel du paramètre (GARCH-MIDAS)  -0.031641 0.088865000
+       Test individuel du paramètre (GARCH-MIDAS)  -0.003154 0.001766000
+       Test individuel du paramètre (GARCH-MIDAS)   0.000827 0.001590000
+       Test individuel du paramètre (GARCH-MIDAS)  -0.003937 0.002943000
+       Test individuel du paramètre (GARCH-MIDAS)  -0.073293 0.061751000
+       Test individuel du paramètre (GARCH-MIDAS)  -0.003464 0.003325000
+       Test individuel du paramètre (GARCH-MIDAS)   0.001130 0.002619000
+       Test individuel du paramètre (GARCH-MIDAS)  -0.007341 0.004108000
+       Test individuel du paramètre (GARCH-MIDAS)  -0.146125 0.521763000
+       Test individuel du paramètre (GARCH-MIDAS)  -0.005057 0.013147000
+       Test individuel du paramètre (GARCH-MIDAS)  -0.002262 0.001547000
+       Test individuel du paramètre (GARCH-MIDAS)   0.003068 0.002464000
+       Test individuel du paramètre (GARCH-MIDAS)  -0.171566 0.160590000
+       Test individuel du paramètre (GARCH-MIDAS)   0.002884 0.003718000
+       Test individuel du paramètre (GARCH-MIDAS)   0.004015 0.002673000
+       Test individuel du paramètre (GARCH-MIDAS)  -0.006717 0.006515000
+       Test individuel du paramètre (GARCH-MIDAS)  -0.051061 0.036515000
+       Test individuel du paramètre (GARCH-MIDAS)  -0.006888 0.006856000
+       Test individuel du paramètre (GARCH-MIDAS)   0.006704 0.004533000
+       Test individuel du paramètre (GARCH-MIDAS)   0.016887 0.009328000
+       Test individuel du paramètre (GARCH-MIDAS)   0.179884 0.128286000
+       Test individuel du paramètre (GARCH-MIDAS)   0.026683 0.009083000
+       Test individuel du paramètre (GARCH-MIDAS)   0.005931 0.006506000
+       Test individuel du paramètre (GARCH-MIDAS)   0.003156 0.018628000
+       Test individuel du paramètre (GARCH-MIDAS)   0.116097 0.071827000
+       Test individuel du paramètre (GARCH-MIDAS)   0.004491 0.005564000
+       Test individuel du paramètre (GARCH-MIDAS)  -0.003436 0.001939000
+       Test individuel du paramètre (GARCH-MIDAS)  -0.006128 0.004138000
+       Test individuel du paramètre (GARCH-MIDAS)  -0.118467 0.087203000
+       Test individuel du paramètre (GARCH-MIDAS)  -0.002623 0.002673000
+       Test individuel du paramètre (GARCH-MIDAS)  -0.000324 0.003698000
+       Test individuel du paramètre (GARCH-MIDAS)  -0.003145 0.005279000
+       Test individuel du paramètre (GARCH-MIDAS)  -0.083604 0.042419000
+       Test individuel du paramètre (GARCH-MIDAS)  -0.002984 0.005210000
+       Test individuel du paramètre (GARCH-MIDAS)   0.001129 0.001948000
+       Test individuel du paramètre (GARCH-MIDAS)   0.034596 0.105784000
+       Test individuel du paramètre (GARCH-MIDAS)  -0.003346 0.003180000
+       Test individuel du paramètre (GARCH-MIDAS)   0.022924 0.033201000
+       Test individuel du paramètre (GARCH-MIDAS)   0.003842 0.002359000
+       Test individuel du paramètre (GARCH-MIDAS)  -0.064704 0.088560000
+       Test individuel du paramètre (GARCH-MIDAS)  -0.001022 0.002245000
+       Test individuel du paramètre (GARCH-MIDAS)  -0.041527 0.035230000
+       Test individuel du paramètre (GARCH-MIDAS)   0.002596 0.002785000
+       Test individuel du paramètre (GARCH-MIDAS)  -0.024079 0.338084000
+       Test individuel du paramètre (GARCH-MIDAS)   0.000930 0.022739000
+       Test individuel du paramètre (GARCH-MIDAS)  -0.022812 0.110028000
+       Test individuel du paramètre (GARCH-MIDAS)   0.000710 0.004196000
+       Test individuel du paramètre (GARCH-MIDAS)  -0.063324 0.066658000
+       Test individuel du paramètre (GARCH-MIDAS)  -0.001144 0.000895000
+       Test individuel du paramètre (GARCH-MIDAS)  -0.067728 0.060915000
+       Test individuel du paramètre (GARCH-MIDAS)   0.003168 0.002285000
+       Test individuel du paramètre (GARCH-MIDAS)  -0.124647 0.084771000
+       Test individuel du paramètre (GARCH-MIDAS)   0.000787 0.001761000
+       Test individuel du paramètre (GARCH-MIDAS)  -0.152102 0.080502000
+       Test individuel du paramètre (GARCH-MIDAS)   0.002704 0.001690000
+       Test individuel du paramètre (GARCH-MIDAS)  -0.173397 0.480208000
+       Test individuel du paramètre (GARCH-MIDAS)  -0.002352 0.001262000
+       Test individuel du paramètre (GARCH-MIDAS)  -0.081757 0.079267000
+       Test individuel du paramètre (GARCH-MIDAS)   0.007394 0.004945000
+       Test individuel du paramètre (GARCH-MIDAS)  -0.049895 0.035604000
+       Test individuel du paramètre (GARCH-MIDAS)   0.003911 0.002821000
+       Test individuel du paramètre (GARCH-MIDAS)  -0.050056 0.035990000
+       Test individuel du paramètre (GARCH-MIDAS)   0.180961 0.149042000
+       Test individuel du paramètre (GARCH-MIDAS)   0.180963 0.148876000
+       Test individuel du paramètre (GARCH-MIDAS)   0.001561 0.001701000
+       Test individuel du paramètre (GARCH-MIDAS)   0.111432 0.070667000
+       Test individuel du paramètre (GARCH-MIDAS)   0.006134 0.001806000
+       Test individuel du paramètre (GARCH-MIDAS)   0.126205 0.073429000
+       Test individuel du paramètre (GARCH-MIDAS)   0.002194 0.003313000
+       Test individuel du paramètre (GARCH-MIDAS)  -0.090177 0.358209000
+       Test individuel du paramètre (GARCH-MIDAS)  -0.001543 0.002717000
+       Test individuel du paramètre (GARCH-MIDAS)  -0.116573 0.083755000
+       Test individuel du paramètre (GARCH-MIDAS)   0.000076 0.002017000
+       Test individuel du paramètre (GARCH-MIDAS)  -0.078307 0.044076000
+       Test individuel du paramètre (GARCH-MIDAS)  -0.000715 0.002993000
+       Test individuel du paramètre (GARCH-MIDAS)  -0.084391 0.042179000
+     Test de différence exportateurs/importateurs         NA          NA
+ Test de difference sous hypothese d'independance   0.004261 0.004877924
+ Test de difference sous hypothese d'independance  -0.036742 0.032276897
+ Test de difference sous hypothese d'independance   0.004103 0.005477280
+ Test de difference sous hypothese d'independance  -0.036382 0.049350973
+ Test de difference sous hypothese d'independance   0.004697 0.020335211
+ Test de difference sous hypothese d'independance  -0.028487 0.088882546
+ Test de difference sous hypothese d'independance   0.004764 0.003345048
+ Test de difference sous hypothese d'independance  -0.069829 0.061840453
+ Test de difference sous hypothese d'independance   0.008471 0.004871840
+ Test de difference sous hypothese d'independance  -0.141068 0.521928608
+ Test de difference sous hypothese d'independance  -0.005330 0.002909382
+ Test de difference sous hypothese d'independance  -0.174450 0.160633034
+ Test de difference sous hypothese d'independance   0.010732 0.007042028
+ Test de difference sous hypothese d'independance  -0.044173 0.037153061
+ Test de difference sous hypothese d'independance  -0.010183 0.010371098
+ Test de difference sous hypothese d'independance   0.153201 0.128607149
+ Test de difference sous hypothese d'independance   0.002775 0.019731458
+ Test de difference sous hypothese d'independance   0.111606 0.072042182
+ Test de difference sous hypothese d'independance   0.002692 0.004569766
+ Test de difference sous hypothese d'independance  -0.115844 0.087243958
+ Test de difference sous hypothese d'independance   0.002821 0.006445389
+ Test de difference sous hypothese d'independance  -0.080620 0.042737755
+ Test de difference sous hypothese d'independance  -0.033467 0.105801935
+ Test de difference sous hypothese d'independance  -0.026270 0.033352943
+ Test de difference sous hypothese d'independance   0.068546 0.088591413
+ Test de difference sous hypothese d'independance   0.040505 0.035301458
+ Test de difference sous hypothese d'independance   0.026675 0.338095471
+ Test de difference sous hypothese d'independance   0.023742 0.112353117
+ Test de difference sous hypothese d'independance   0.064034 0.066789935
+ Test de difference sous hypothese d'independance   0.066584 0.060921575
+ Test de difference sous hypothese d'independance   0.127815 0.084801790
+ Test de difference sous hypothese d'independance   0.152889 0.080521259
+ Test de difference sous hypothese d'independance   0.176101 0.480210974
+ Test de difference sous hypothese d'independance   0.079405 0.079277045
+ Test de difference sous hypothese d'independance   0.057289 0.035945762
+ Test de difference sous hypothese d'independance   0.053967 0.036100390
+ Test de difference sous hypothese d'independance  -0.109871 0.070687469
+ Test de difference sous hypothese d'independance  -0.120071 0.073451206
+ Test de difference sous hypothese d'independance   0.092371 0.358224320
+ Test de difference sous hypothese d'independance   0.115030 0.083799058
+ Test de difference sous hypothese d'independance   0.078383 0.044122127
+ Test de difference sous hypothese d'independance   0.083676 0.042285058
+                         Comparaison GPRT vs GPRA         NA          NA
+                         Comparaison GPRT vs GPRA         NA          NA
+            Test formel approximatif GPRT vs GPRA  -0.004475 0.003729223
+            Test formel approximatif GPRT vs GPRA  -0.011672 0.110871823
+            Test formel approximatif GPRT vs GPRA  -0.004864 0.003256517
+            Test formel approximatif GPRT vs GPRA   0.023177 0.095310159
+            Test formel approximatif GPRT vs GPRA  -0.001666 0.022908914
+            Test formel approximatif GPRT vs GPRA   0.001267 0.355537553
+            Test formel approximatif GPRT vs GPRA  -0.001854 0.004290389
+            Test formel approximatif GPRT vs GPRA  -0.004404 0.090299093
+            Test formel approximatif GPRT vs GPRA  -0.002381 0.002884848
+            Test formel approximatif GPRT vs GPRA  -0.027455 0.116904638
+            Test formel approximatif GPRT vs GPRA  -0.005056 0.002109205
+            Test formel approximatif GPRT vs GPRA   0.091640 0.486706257
+            Test formel approximatif GPRT vs GPRA  -0.003483 0.005693072
+            Test formel approximatif GPRT vs GPRA  -0.000161 0.050625339
+            Test formel approximatif GPRT vs GPRA   0.000002 0.210659871
+            Test formel approximatif GPRT vs GPRA   0.004573 0.002480935
+            Test formel approximatif GPRT vs GPRA   0.014773 0.101909975
+            Test formel approximatif GPRT vs GPRA  -0.003737 0.004284630
+            Test formel approximatif GPRT vs GPRA  -0.026396 0.367870341
+            Test formel approximatif GPRT vs GPRA  -0.000791 0.003609202
+            Test formel approximatif GPRT vs GPRA  -0.006084 0.061006244
+   Statistique    P_value   Decision_5pct                     Statut
+ -1.327903e+00 0.18421000 Non-rejet de H0                   Testable
+ -2.148796e+00 0.03165100     Rejet de H0                   Testable
+ -2.621706e+00 0.00874900     Rejet de H0                   Testable
+  6.597636e+00 0.00000000     Rejet de H0                   Testable
+ -7.245030e-01 0.46875700 Non-rejet de H0                   Testable
+  2.495533e+00 0.01257700     Rejet de H0                   Testable
+ -1.853273e+00 0.06384300 Non-rejet de H0                   Testable
+  2.894670e-01 0.77222400 Non-rejet de H0                   Testable
+  4.674314e+00 0.00000300     Rejet de H0                   Testable
+  1.436662e+00 0.15081400 Non-rejet de H0                   Testable
+ -1.962864e+00 0.04966200     Rejet de H0                   Testable
+  5.141970e-01 0.60711400 Non-rejet de H0                   Testable
+  7.563262e+00 0.00000000     Rejet de H0                   Testable
+ -1.299253e+00 0.19385700 Non-rejet de H0                   Testable
+ -1.419231e+00 0.15583200 Non-rejet de H0                   Testable
+ -1.365957e+00 0.17195200 Non-rejet de H0                   Testable
+ -1.475506e+00 0.14007700 Non-rejet de H0                   Testable
+ -4.962310e-01 0.61973100 Non-rejet de H0                   Testable
+ -1.022215e+00 0.30667900 Non-rejet de H0                   Testable
+ -8.838920e-01 0.37675400 Non-rejet de H0                   Testable
+ -3.250270e-01 0.74516100 Non-rejet de H0                   Testable
+  1.240730e-01 0.90125700 Non-rejet de H0                   Testable
+ -1.952610e-01 0.84518900 Non-rejet de H0                   Testable
+ -3.560610e-01 0.72179500 Non-rejet de H0                   Testable
+ -1.786434e+00 0.07402900 Non-rejet de H0                   Testable
+  5.200130e-01 0.60305500 Non-rejet de H0                   Testable
+ -1.337765e+00 0.18097300 Non-rejet de H0                   Testable
+ -1.186912e+00 0.23526200 Non-rejet de H0                   Testable
+ -1.041555e+00 0.29761800 Non-rejet de H0                   Testable
+  4.316360e-01 0.66600600 Non-rejet de H0                   Testable
+ -1.787052e+00 0.07392900 Non-rejet de H0                   Testable
+ -2.800590e-01 0.77943200 Non-rejet de H0                   Testable
+ -3.846280e-01 0.70051300 Non-rejet de H0                   Testable
+ -1.461885e+00 0.14377300 Non-rejet de H0                   Testable
+  1.245070e+00 0.21310600 Non-rejet de H0                   Testable
+ -1.068346e+00 0.28536500 Non-rejet de H0                   Testable
+  7.756640e-01 0.43794700 Non-rejet de H0                   Testable
+  1.502138e+00 0.13306100 Non-rejet de H0                   Testable
+ -1.030863e+00 0.30260500 Non-rejet de H0                   Testable
+ -1.398374e+00 0.16200100 Non-rejet de H0                   Testable
+ -1.004560e+00 0.31510900 Non-rejet de H0                   Testable
+  1.478743e+00 0.13920900 Non-rejet de H0                   Testable
+  1.810443e+00 0.07022700 Non-rejet de H0                   Testable
+  1.402217e+00 0.16085000 Non-rejet de H0                   Testable
+  2.937673e+00 0.00330700     Rejet de H0                   Testable
+  9.116390e-01 0.36195900 Non-rejet de H0                   Testable
+  1.694110e-01 0.86547300 Non-rejet de H0                   Testable
+  1.616349e+00 0.10601900 Non-rejet de H0                   Testable
+  8.072550e-01 0.41952000 Non-rejet de H0                   Testable
+ -1.772174e+00 0.07636600 Non-rejet de H0                   Testable
+ -1.481065e+00 0.13858900 Non-rejet de H0                   Testable
+ -1.358509e+00 0.17430200 Non-rejet de H0                   Testable
+ -9.816350e-01 0.32627900 Non-rejet de H0                   Testable
+ -8.757900e-02 0.93021100 Non-rejet de H0                   Testable
+ -5.957980e-01 0.55131000 Non-rejet de H0                   Testable
+ -1.970898e+00 0.04873600     Rejet de H0                   Testable
+ -5.728510e-01 0.56674600 Non-rejet de H0                   Testable
+  5.796690e-01 0.56213800 Non-rejet de H0                   Testable
+  3.270400e-01 0.74363800 Non-rejet de H0                   Testable
+ -1.052182e+00 0.29271600 Non-rejet de H0                   Testable
+  6.904500e-01 0.48991100 Non-rejet de H0                   Testable
+  1.628890e+00 0.10333600 Non-rejet de H0                   Testable
+ -7.306300e-01 0.46500500 Non-rejet de H0                   Testable
+ -4.551530e-01 0.64899900 Non-rejet de H0                   Testable
+ -1.178727e+00 0.23850700 Non-rejet de H0                   Testable
+  9.321770e-01 0.35124500 Non-rejet de H0                   Testable
+ -7.122200e-02 0.94322100 Non-rejet de H0                   Testable
+  4.092000e-02 0.96736000 Non-rejet de H0                   Testable
+ -2.073260e-01 0.83575500 Non-rejet de H0                   Testable
+  1.691130e-01 0.86570700 Non-rejet de H0                   Testable
+ -9.499870e-01 0.34211900 Non-rejet de H0                   Testable
+ -1.278349e+00 0.20112700 Non-rejet de H0                   Testable
+ -1.111847e+00 0.26620400 Non-rejet de H0                   Testable
+  1.386730e+00 0.16552400 Non-rejet de H0                   Testable
+ -1.470398e+00 0.14145400 Non-rejet de H0                   Testable
+  4.470400e-01 0.65484600 Non-rejet de H0                   Testable
+ -1.889412e+00 0.05883700 Non-rejet de H0                   Testable
+  1.599977e+00 0.10960400 Non-rejet de H0                   Testable
+ -3.610870e-01 0.71803400 Non-rejet de H0                   Testable
+ -1.863061e+00 0.06245400 Non-rejet de H0                   Testable
+ -1.031407e+00 0.30235000 Non-rejet de H0                   Testable
+  1.495391e+00 0.13481200 Non-rejet de H0                   Testable
+ -1.401391e+00 0.16109700 Non-rejet de H0                   Testable
+  1.386199e+00 0.16568600 Non-rejet de H0                   Testable
+ -1.390841e+00 0.16427400 Non-rejet de H0                   Testable
+  1.214154e+00 0.22468900 Non-rejet de H0                   Testable
+  1.215527e+00 0.22416500 Non-rejet de H0                   Testable
+  9.180910e-01 0.35857100 Non-rejet de H0                   Testable
+  1.576847e+00 0.11483100 Non-rejet de H0                   Testable
+  3.396200e+00 0.00068300     Rejet de H0                   Testable
+  1.718718e+00 0.08566600 Non-rejet de H0                   Testable
+  6.622250e-01 0.50782700 Non-rejet de H0                   Testable
+ -2.517430e-01 0.80124000 Non-rejet de H0                   Testable
+ -5.680350e-01 0.57001100 Non-rejet de H0                   Testable
+ -1.391840e+00 0.16397100 Non-rejet de H0                   Testable
+  3.744100e-02 0.97013300 Non-rejet de H0                   Testable
+ -1.776648e+00 0.07562600 Non-rejet de H0                   Testable
+ -2.390010e-01 0.81110400 Non-rejet de H0                   Testable
+ -2.000810e+00 0.04541300     Rejet de H0                   Testable
+            NA         NA    Non testable               Non testable
+  8.735273e-01 0.38237573 Non-rejet de H0                   Testable
+ -1.138337e+00 0.25497961 Non-rejet de H0                   Testable
+  7.490945e-01 0.45380026 Non-rejet de H0                   Testable
+ -7.372094e-01 0.46099503 Non-rejet de H0                   Testable
+  2.309787e-01 0.81733137 Non-rejet de H0                   Testable
+ -3.205016e-01 0.74858810 Non-rejet de H0                   Testable
+  1.424195e+00 0.15439014 Non-rejet de H0                   Testable
+ -1.129180e+00 0.25882193 Non-rejet de H0                   Testable
+  1.738768e+00 0.08207556 Non-rejet de H0                   Testable
+ -2.702822e-01 0.78694318 Non-rejet de H0                   Testable
+ -1.832004e+00 0.06695082 Non-rejet de H0                   Testable
+ -1.086016e+00 0.27747204 Non-rejet de H0                   Testable
+  1.523993e+00 0.12751049 Non-rejet de H0                   Testable
+ -1.188946e+00 0.23446074 Non-rejet de H0                   Testable
+ -9.818633e-01 0.32616722 Non-rejet de H0                   Testable
+  1.191232e+00 0.23356237 Non-rejet de H0                   Testable
+  1.406384e-01 0.88815564 Non-rejet de H0                   Testable
+  1.549176e+00 0.12133948 Non-rejet de H0                   Testable
+  5.890892e-01 0.55580144 Non-rejet de H0                   Testable
+ -1.327817e+00 0.18423861 Non-rejet de H0                   Testable
+  4.376772e-01 0.66162030 Non-rejet de H0                   Testable
+ -1.886388e+00 0.05924265 Non-rejet de H0                   Testable
+ -3.163175e-01 0.75176155 Non-rejet de H0                   Testable
+ -7.876366e-01 0.43090927 Non-rejet de H0                   Testable
+  7.737319e-01 0.43908937 Non-rejet de H0                   Testable
+  1.147403e+00 0.25121509 Non-rejet de H0                   Testable
+  7.889783e-02 0.93711389 Non-rejet de H0                   Testable
+  2.113159e-01 0.83264078 Non-rejet de H0                   Testable
+  9.587373e-01 0.33769112 Non-rejet de H0                   Testable
+  1.092946e+00 0.27441745 Non-rejet de H0                   Testable
+  1.507221e+00 0.13175414 Non-rejet de H0                   Testable
+  1.898741e+00 0.05759856 Non-rejet de H0                   Testable
+  3.667159e-01 0.71383094 Non-rejet de H0                   Testable
+  1.001614e+00 0.31653005 Non-rejet de H0                   Testable
+  1.593762e+00 0.11098929 Non-rejet de H0                   Testable
+  1.494915e+00 0.13493673 Non-rejet de H0                   Testable
+ -1.554321e+00 0.12010793 Non-rejet de H0                   Testable
+ -1.634704e+00 0.10211106 Non-rejet de H0                   Testable
+  2.578580e-01 0.79651651 Non-rejet de H0                   Testable
+  1.372688e+00 0.16984922 Non-rejet de H0                   Testable
+  1.776501e+00 0.07565039 Non-rejet de H0                   Testable
+  1.978855e+00 0.04783233     Rejet de H0                   Testable
+            NA         NA    Non testable               Non testable
+            NA         NA    Non testable               Non testable
+ -1.199982e+00 0.23014638 Non-rejet de H0 Testable approximativement
+ -1.052747e-01 0.91615782 Non-rejet de H0 Testable approximativement
+ -1.493620e+00 0.13527494 Non-rejet de H0 Testable approximativement
+  2.431745e-01 0.80787022 Non-rejet de H0 Testable approximativement
+ -7.272278e-02 0.94202672 Non-rejet de H0 Testable approximativement
+  3.563618e-03 0.99715665 Non-rejet de H0 Testable approximativement
+ -4.321286e-01 0.66564794 Non-rejet de H0 Testable approximativement
+ -4.877125e-02 0.96110159 Non-rejet de H0 Testable approximativement
+ -8.253469e-01 0.40917469 Non-rejet de H0 Testable approximativement
+ -2.348495e-01 0.81432552 Non-rejet de H0 Testable approximativement
+ -2.397112e+00 0.01652486     Rejet de H0 Testable approximativement
+  1.882861e-01 0.85065242 Non-rejet de H0 Testable approximativement
+ -6.117963e-01 0.54067257 Non-rejet de H0 Testable approximativement
+ -3.180226e-03 0.99746255 Non-rejet de H0 Testable approximativement
+  9.493977e-06 0.99999242 Non-rejet de H0 Testable approximativement
+  1.843257e+00 0.06529151 Non-rejet de H0 Testable approximativement
+  1.449613e-01 0.88474145 Non-rejet de H0 Testable approximativement
+ -8.721872e-01 0.38310624 Non-rejet de H0 Testable approximativement
+ -7.175354e-02 0.94279805 Non-rejet de H0 Testable approximativement
+ -2.191620e-01 0.82652383 Non-rejet de H0 Testable approximativement
+ -9.972750e-02 0.92056067 Non-rejet de H0 Testable approximativement
+                                                       Justification
+                                          Pays DEU - modèle GPRT_VIX
+                                          Pays DEU - modèle GPRT_VIX
+                                          Pays GBR - modèle GPRT_VIX
+                                          Pays GBR - modèle GPRT_VIX
+                                          Pays IND - modèle GPRT_VIX
+                                          Pays JPN - modèle GPRT_VIX
+                                          Pays KOR - modèle GPRT_VIX
+                                          Pays MEX - modèle GPRT_VIX
+                                          Pays NOR - modèle GPRT_VIX
+                                          Pays PAK - modèle GPRT_VIX
+                                          Pays SAU - modèle GPRT_VIX
+                                          Pays TUR - modèle GPRT_VIX
+                                          Pays USA - modèle GPRT_VIX
+                                          Pays DEU - modèle GPRT_DEM
+                                          Pays DEU - modèle GPRT_DEM
+                                           Pays DEU - modèle SUP_DEM
+                                           Pays DEU - modèle SUP_DEM
+                                          Pays GBR - modèle GPRT_DEM
+                                          Pays GBR - modèle GPRT_DEM
+                                           Pays GBR - modèle SUP_DEM
+                                           Pays GBR - modèle SUP_DEM
+                                          Pays IND - modèle GPRT_DEM
+                                          Pays IND - modèle GPRT_DEM
+                                           Pays IND - modèle SUP_DEM
+                                           Pays IND - modèle SUP_DEM
+                                          Pays JPN - modèle GPRT_DEM
+                                          Pays JPN - modèle GPRT_DEM
+                                           Pays JPN - modèle SUP_DEM
+                                           Pays JPN - modèle SUP_DEM
+                                          Pays KOR - modèle GPRT_DEM
+                                          Pays KOR - modèle GPRT_DEM
+                                           Pays KOR - modèle SUP_DEM
+                                           Pays KOR - modèle SUP_DEM
+                                          Pays MEX - modèle GPRT_DEM
+                                          Pays MEX - modèle GPRT_DEM
+                                           Pays MEX - modèle SUP_DEM
+                                           Pays MEX - modèle SUP_DEM
+                                          Pays NOR - modèle GPRT_DEM
+                                          Pays NOR - modèle GPRT_DEM
+                                           Pays NOR - modèle SUP_DEM
+                                           Pays NOR - modèle SUP_DEM
+                                          Pays PAK - modèle GPRT_DEM
+                                          Pays PAK - modèle GPRT_DEM
+                                           Pays PAK - modèle SUP_DEM
+                                           Pays PAK - modèle SUP_DEM
+                                          Pays SAU - modèle GPRT_DEM
+                                          Pays SAU - modèle GPRT_DEM
+                                           Pays SAU - modèle SUP_DEM
+                                           Pays SAU - modèle SUP_DEM
+                                          Pays TUR - modèle GPRT_DEM
+                                          Pays TUR - modèle GPRT_DEM
+                                           Pays TUR - modèle SUP_DEM
+                                           Pays TUR - modèle SUP_DEM
+                                          Pays USA - modèle GPRT_DEM
+                                          Pays USA - modèle GPRT_DEM
+                                           Pays USA - modèle SUP_DEM
+                                           Pays USA - modèle SUP_DEM
+                                          Pays DEU - modèle GPRA_SUP
+                                          Pays DEU - modèle GPRA_SUP
+                                          Pays DEU - modèle GPRT_SUP
+                                          Pays DEU - modèle GPRT_SUP
+                                          Pays GBR - modèle GPRA_SUP
+                                          Pays GBR - modèle GPRA_SUP
+                                          Pays GBR - modèle GPRT_SUP
+                                          Pays GBR - modèle GPRT_SUP
+                                          Pays IND - modèle GPRA_SUP
+                                          Pays IND - modèle GPRA_SUP
+                                          Pays IND - modèle GPRT_SUP
+                                          Pays IND - modèle GPRT_SUP
+                                          Pays JPN - modèle GPRA_SUP
+                                          Pays JPN - modèle GPRA_SUP
+                                          Pays JPN - modèle GPRT_SUP
+                                          Pays JPN - modèle GPRT_SUP
+                                          Pays KOR - modèle GPRA_SUP
+                                          Pays KOR - modèle GPRA_SUP
+                                          Pays KOR - modèle GPRT_SUP
+                                          Pays KOR - modèle GPRT_SUP
+                                          Pays MEX - modèle GPRA_SUP
+                                          Pays MEX - modèle GPRA_SUP
+                                          Pays MEX - modèle GPRT_SUP
+                                          Pays MEX - modèle GPRT_SUP
+                                          Pays NOR - modèle GPRA_SUP
+                                          Pays NOR - modèle GPRA_SUP
+                                          Pays NOR - modèle GPRT_SUP
+                                          Pays NOR - modèle GPRT_SUP
+                                          Pays PAK - modèle GPRA_SUP
+                                          Pays PAK - modèle GPRT_SUP
+                                          Pays SAU - modèle GPRA_SUP
+                                          Pays SAU - modèle GPRA_SUP
+                                          Pays SAU - modèle GPRT_SUP
+                                          Pays SAU - modèle GPRT_SUP
+                                          Pays TUR - modèle GPRA_SUP
+                                          Pays TUR - modèle GPRA_SUP
+                                          Pays TUR - modèle GPRT_SUP
+                                          Pays TUR - modèle GPRT_SUP
+                                          Pays USA - modèle GPRA_SUP
+                                          Pays USA - modèle GPRA_SUP
+                                          Pays USA - modèle GPRT_SUP
+                                          Pays USA - modèle GPRT_SUP
+ Classification exportateur/importateur absente des données fournies
+                                          Pays DEU - modèle GPRT_DEM
+                                           Pays DEU - modèle SUP_DEM
+                                          Pays GBR - modèle GPRT_DEM
+                                           Pays GBR - modèle SUP_DEM
+                                          Pays IND - modèle GPRT_DEM
+                                           Pays IND - modèle SUP_DEM
+                                          Pays JPN - modèle GPRT_DEM
+                                           Pays JPN - modèle SUP_DEM
+                                          Pays KOR - modèle GPRT_DEM
+                                           Pays KOR - modèle SUP_DEM
+                                          Pays MEX - modèle GPRT_DEM
+                                           Pays MEX - modèle SUP_DEM
+                                          Pays NOR - modèle GPRT_DEM
+                                           Pays NOR - modèle SUP_DEM
+                                          Pays PAK - modèle GPRT_DEM
+                                           Pays PAK - modèle SUP_DEM
+                                          Pays SAU - modèle GPRT_DEM
+                                           Pays SAU - modèle SUP_DEM
+                                          Pays TUR - modèle GPRT_DEM
+                                           Pays TUR - modèle SUP_DEM
+                                          Pays USA - modèle GPRT_DEM
+                                           Pays USA - modèle SUP_DEM
+                                          Pays DEU - modèle GPRA_SUP
+                                          Pays DEU - modèle GPRT_SUP
+                                          Pays GBR - modèle GPRA_SUP
+                                          Pays GBR - modèle GPRT_SUP
+                                          Pays IND - modèle GPRA_SUP
+                                          Pays IND - modèle GPRT_SUP
+                                          Pays JPN - modèle GPRA_SUP
+                                          Pays JPN - modèle GPRT_SUP
+                                          Pays KOR - modèle GPRA_SUP
+                                          Pays KOR - modèle GPRT_SUP
+                                          Pays MEX - modèle GPRA_SUP
+                                          Pays MEX - modèle GPRT_SUP
+                                          Pays NOR - modèle GPRA_SUP
+                                          Pays NOR - modèle GPRT_SUP
+                                          Pays SAU - modèle GPRA_SUP
+                                          Pays SAU - modèle GPRT_SUP
+                                          Pays TUR - modèle GPRA_SUP
+                                          Pays TUR - modèle GPRT_SUP
+                                          Pays USA - modèle GPRA_SUP
+                                          Pays USA - modèle GPRT_SUP
+      GPRA_PRE absent : aucune paire GPRT/GPRA compatible pour PRICE
+     GPRA_DEM absent : aucune paire GPRT/GPRA compatible pour DEMAND
+               Pays DEU - covariance intra-estimation non disponible
+               Pays DEU - covariance intra-estimation non disponible
+               Pays GBR - covariance intra-estimation non disponible
+               Pays GBR - covariance intra-estimation non disponible
+               Pays IND - covariance intra-estimation non disponible
+               Pays IND - covariance intra-estimation non disponible
+               Pays JPN - covariance intra-estimation non disponible
+               Pays JPN - covariance intra-estimation non disponible
+               Pays KOR - covariance intra-estimation non disponible
+               Pays KOR - covariance intra-estimation non disponible
+               Pays MEX - covariance intra-estimation non disponible
+               Pays MEX - covariance intra-estimation non disponible
+               Pays NOR - covariance intra-estimation non disponible
+               Pays NOR - covariance intra-estimation non disponible
+               Pays PAK - covariance intra-estimation non disponible
+               Pays SAU - covariance intra-estimation non disponible
+               Pays SAU - covariance intra-estimation non disponible
+               Pays TUR - covariance intra-estimation non disponible
+               Pays TUR - covariance intra-estimation non disponible
+               Pays USA - covariance intra-estimation non disponible
+               Pays USA - covariance intra-estimation non disponible

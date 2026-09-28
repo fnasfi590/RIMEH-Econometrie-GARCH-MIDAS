@@ -1,0 +1,75 @@
+==========================================================================
+RIMEH - TABLEAU FINAL DES TESTS DES HYPOTHESES H1-H9
+==========================================================================
+
+ Hypothese                      Parametre
+        H1      Theta / coefficient MIDAS
+        H2      Theta / coefficient MIDAS
+        H3      Theta / coefficient MIDAS
+        H4                   Param?tre H4
+        H5                Theta1 - Theta2
+        H6                Theta1 - Theta2
+        H7  GPRT / GPRA ? structure PRICE
+        H8 GPRT / GPRA ? structure DEMAND
+        H9            GPRT_SUP - GPRA_SUP
+                                     H0
+                          Param?tre = 0
+                          Param?tre = 0
+                          Param?tre = 0
+                          Param?tre = 0
+                        Theta1 = Theta2
+                        Theta1 = Theta2
+ Relation nulle / absence de diff?rence
+ Relation nulle / absence de diff?rence
+                          ?GPRT = ?GPRA
+                                           H1
+ Param?tre ? 0 / effet conforme ? l'hypoth?se
+ Param?tre ? 0 / effet conforme ? l'hypoth?se
+ Param?tre ? 0 / effet conforme ? l'hypoth?se
+          Param?tre ? 0 / effet conforme ? H4
+                     Theta1 ? Theta2 selon H5
+                     Theta1 ? Theta2 selon H6
+              Relation conforme ? l'hypoth?se
+              Relation conforme ? l'hypoth?se
+                                ?GPRT ? ?GPRA
+                                                                 Test
+ Test de significativit? du coefficient (Wald / t-z selon estimation)
+ Test de significativit? du coefficient (Wald / t-z selon estimation)
+ Test de significativit? du coefficient (Wald / t-z selon estimation)
+                                       Test formel de significativit?
+        Test de diff?rence entre deux param?tres (approximation Wald)
+        Test de diff?rence entre deux param?tres (approximation Wald)
+                                           Test formel de comparaison
+                                           Test formel de comparaison
+                    Comparaison des coefficients ? covariance absente
+  Estimation         SE Statistique   P_value
+          NA         NA          NA        NA
+          NA         NA          NA        NA
+          NA         NA          NA        NA
+          NA         NA          NA        NA
+ 0.003220062 0.08892383 -0.03441107 0.3666797
+ 0.003220062 0.08892383 -0.03441107 0.3666797
+          NA         NA          NA        NA
+          NA         NA          NA        NA
+ 0.001473952         NA          NA        NA
+                       Decision_5pct
+ NON TESTABLE / p-value indisponible
+ NON TESTABLE / p-value indisponible
+ NON TESTABLE / p-value indisponible
+ NON TESTABLE / p-value indisponible
+                Non-rejet de H0 ? 5%
+                Non-rejet de H0 ? 5%
+                        NON TESTABLE
+                        NON TESTABLE
+           NON TESTABLE FORMELLEMENT
+
+
+==========================================================================
+REGLE DE DECISION
+==========================================================================
+Seuil de significativite : 5%
+Si p-value < 0.05 : rejet de H0.
+Si p-value >= 0.05 : non-rejet de H0.
+Une hypothese n'est pas declaree confirmee par le seul signe du coefficient.
+Les hypotheses H5/H6/H9 necessitent une comparaison formelle des parametres.
+==========================================================================

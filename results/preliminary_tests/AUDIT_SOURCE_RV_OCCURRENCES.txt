@@ -1,0 +1,639 @@
+﻿
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\results\analysis\SOURCE_MODELS_COMPLETE.txt:810:   58: 
+  group_by(country) %>%
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\results\analysis\SOURCE_MODELS_COMPLETE.txt:830:   58: 
+  group_by(country) %>%
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\results\analysis\SOURCE_MODELS_COMPLETE.txt:851:   58: 
+  group_by(country) %>%
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\results\analysis\SOURCE_MODELS_COMPLETE.txt:865:   58: 
+  group_by(country) %>%
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\results\analysis\SOURCE_MODELS_COMPLETE.txt:882:   58: 
+  group_by(country) %>%
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\results\analysis\SOURCE_MODELS_COMPLETE.txt:898:   58: 
+  group_by(country) %>%
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\results\preliminary_tests\AUDIT_SOURCE_RV_OCCURRENCES.t
+xt:3:  group_by(country) %>%
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\results\preliminary_tests\AUDIT_SOURCE_RV_OCCURRENCES.t
+xt:5:  group_by(country) %>%
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\results\preliminary_tests\AUDIT_SOURCE_RV_OCCURRENCES.t
+xt:7:  group_by(country) %>%
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\results\preliminary_tests\AUDIT_SOURCE_RV_OCCURRENCES.t
+xt:9:  group_by(country) %>%
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\results\preliminary_tests\AUDIT_SOURCE_RV_OCCURRENCES.t
+xt:11:  group_by(country) %>%
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\results\preliminary_tests\AUDIT_SOURCE_RV_OCCURRENCES.t
+xt:13:  group_by(country) %>%
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\results\preliminary_tests\AUDIT_SOURCE_RV_OCCURRENCES.t
+xt:15:xt:3:  group_by(country) %>%
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\results\preliminary_tests\AUDIT_SOURCE_RV_OCCURRENCES.t
+xt:17:xt:5:  group_by(country) %>%
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\results\preliminary_tests\AUDIT_SOURCE_RV_OCCURRENCES.t
+xt:19:xt:7:  group_by(country) %>%
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\results\preliminary_tests\AUDIT_SOURCE_RV_OCCURRENCES.t
+xt:21:xt:9:  group_by(country) %>%
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\results\preliminary_tests\AUDIT_SOURCE_RV_OCCURRENCES.t
+xt:23:xt:11:  group_by(country) %>%
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\results\preliminary_tests\AUDIT_SOURCE_RV_OCCURRENCES.t
+xt:25:xt:13:  group_by(country) %>%
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\results\preliminary_tests\AUDIT_SOURCE_RV_OCCURRENCES.t
+xt:27:xt:15:xt:3:  group_by(country) %>%
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\results\preliminary_tests\AUDIT_SOURCE_RV_OCCURRENCES.t
+xt:29:xt:17:xt:5:  group_by(country) %>%
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\results\preliminary_tests\AUDIT_SOURCE_RV_OCCURRENCES.t
+xt:31:xt:19:xt:7:  group_by(country) %>%
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\results\preliminary_tests\AUDIT_SOURCE_RV_OCCURRENCES.t
+xt:33:xt:21:xt:9:  group_by(country) %>%
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\results\preliminary_tests\AUDIT_SOURCE_RV_OCCURRENCES.t
+xt:35:xt:23:xt:11:  group_by(country) %>%
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\results\preliminary_tests\AUDIT_SOURCE_RV_OCCURRENCES.t
+xt:37:xt:25:xt:13:  group_by(country) %>%
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\results\preliminary_tests\AUDIT_SOURCE_RV_OCCURRENCES.t
+xt:39:xt:27:xt:15:xt:3:  group_by(country) %>%
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\results\preliminary_tests\AUDIT_SOURCE_RV_OCCURRENCES.t
+xt:41:xt:29:xt:17:xt:5:  group_by(country) %>%
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\results\preliminary_tests\AUDIT_SOURCE_RV_OCCURRENCES.t
+xt:43:xt:31:xt:19:xt:7:  group_by(country) %>%
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\results\preliminary_tests\AUDIT_SOURCE_RV_OCCURRENCES.t
+xt:45:xt:33:xt:21:xt:9:  group_by(country) %>%
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\results\preliminary_tests\AUDIT_SOURCE_RV_OCCURRENCES.t
+xt:47:xt:35:xt:23:xt:11:  group_by(country) %>%
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\results\preliminary_tests\AUDIT_SOURCE_RV_OCCURRENCES.t
+xt:49:xt:37:xt:25:xt:13:  group_by(country) %>%
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\results\preliminary_tests\AUDIT_SOURCE_RV_OCCURRENCES.t
+xt:51:xt:39:xt:27:xt:15:xt:3:  group_by(country) %>%
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\results\preliminary_tests\AUDIT_SOURCE_RV_OCCURRENCES.t
+xt:53:xt:41:xt:29:xt:17:xt:5:  group_by(country) %>%
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\results\preliminary_tests\AUDIT_SOURCE_RV_OCCURRENCES.t
+xt:55:xt:43:xt:31:xt:19:xt:7:  group_by(country) %>%
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\results\preliminary_tests\AUDIT_SOURCE_RV_OCCURRENCES.t
+xt:57:xt:45:xt:33:xt:21:xt:9:  group_by(country) %>%
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\results\preliminary_tests\AUDIT_SOURCE_RV_OCCURRENCES.t
+xt:59:xt:47:xt:35:xt:23:xt:11:  group_by(country) %>%
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\results\preliminary_tests\AUDIT_SOURCE_RV_OCCURRENCES.t
+xt:61:xt:49:xt:37:xt:25:xt:13:  group_by(country) %>%
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\results\preliminary_tests\AUDIT_SOURCE_RV_OCCURRENCES.t
+xt:63:xt:51:xt:39:xt:27:xt:15:xt:3:  group_by(country) %>%
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\results\preliminary_tests\AUDIT_SOURCE_RV_OCCURRENCES.t
+xt:65:xt:53:xt:41:xt:29:xt:17:xt:5:  group_by(country) %>%
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\results\preliminary_tests\AUDIT_SOURCE_RV_OCCURRENCES.t
+xt:67:xt:55:xt:43:xt:31:xt:19:xt:7:  group_by(country) %>%
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\results\preliminary_tests\AUDIT_SOURCE_RV_OCCURRENCES.t
+xt:69:xt:57:xt:45:xt:33:xt:21:xt:9:  group_by(country) %>%
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\results\preliminary_tests\AUDIT_SOURCE_RV_OCCURRENCES.t
+xt:71:xt:59:xt:47:xt:35:xt:23:xt:11:  group_by(country) %>%
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\results\preliminary_tests\AUDIT_SOURCE_RV_OCCURRENCES.t
+xt:73:xt:61:xt:49:xt:37:xt:25:xt:13:  group_by(country) %>%
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\results\preliminary_tests\AUDIT_SOURCE_RV_OCCURRENCES.t
+xt:75:xt:63:xt:51:xt:39:xt:27:xt:15:xt:3:  group_by(country) %>%
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\results\preliminary_tests\AUDIT_SOURCE_RV_OCCURRENCES.t
+xt:77:xt:65:xt:53:xt:41:xt:29:xt:17:xt:5:  group_by(country) %>%
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\results\preliminary_tests\AUDIT_SOURCE_RV_OCCURRENCES.t
+xt:79:xt:67:xt:55:xt:43:xt:31:xt:19:xt:7:  group_by(country) %>%
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\results\preliminary_tests\AUDIT_SOURCE_RV_OCCURRENCES.t
+xt:81:xt:69:xt:57:xt:45:xt:33:xt:21:xt:9:  group_by(country) %>%
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\results\preliminary_tests\AUDIT_SOURCE_RV_OCCURRENCES.t
+xt:83:xt:71:xt:59:xt:47:xt:35:xt:23:xt:11:  group_by(country) %>%
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\results\preliminary_tests\AUDIT_SOURCE_RV_OCCURRENCES.t
+xt:85:xt:73:xt:61:xt:49:xt:37:xt:25:xt:13:  group_by(country) %>%
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\results\preliminary_tests\AUDIT_SOURCE_RV_OCCURRENCES.t
+xt:87:xt:75:xt:63:xt:51:xt:39:xt:27:xt:15:xt:3:  group_by(country) %>%
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\results\preliminary_tests\AUDIT_SOURCE_RV_OCCURRENCES.t
+xt:89:xt:77:xt:65:xt:53:xt:41:xt:29:xt:17:xt:5:  group_by(country) %>%
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\results\preliminary_tests\AUDIT_SOURCE_RV_OCCURRENCES.t
+xt:91:xt:79:xt:67:xt:55:xt:43:xt:31:xt:19:xt:7:  group_by(country) %>%
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\results\preliminary_tests\AUDIT_SOURCE_RV_OCCURRENCES.t
+xt:93:xt:81:xt:69:xt:57:xt:45:xt:33:xt:21:xt:9:  group_by(country) %>%
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\results\preliminary_tests\AUDIT_SOURCE_RV_OCCURRENCES.t
+xt:95:xt:83:xt:71:xt:59:xt:47:xt:35:xt:23:xt:11:  group_by(country) %>%
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\results\preliminary_tests\AUDIT_SOURCE_RV_OCCURRENCES.t
+xt:97:xt:85:xt:73:xt:61:xt:49:xt:37:xt:25:xt:13:  group_by(country) %>%
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\results\preliminary_tests\AUDIT_SOURCE_RV_OCCURRENCES.t
+xt:99:xt:87:xt:75:xt:63:xt:51:xt:39:xt:27:xt:15:xt:3:  group_by(country) %>%
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\results\preliminary_tests\AUDIT_SOURCE_RV_OCCURRENCES.t
+xt:101:xt:89:xt:77:xt:65:xt:53:xt:41:xt:29:xt:17:xt:5:  group_by(country) %>%
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\results\preliminary_tests\AUDIT_SOURCE_RV_OCCURRENCES.t
+xt:103:xt:91:xt:79:xt:67:xt:55:xt:43:xt:31:xt:19:xt:7:  group_by(country) %>%
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\results\preliminary_tests\AUDIT_SOURCE_RV_OCCURRENCES.t
+xt:105:xt:93:xt:81:xt:69:xt:57:xt:45:xt:33:xt:21:xt:9:  group_by(country) %>%
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\results\preliminary_tests\AUDIT_SOURCE_RV_OCCURRENCES.t
+xt:107:xt:95:xt:83:xt:71:xt:59:xt:47:xt:35:xt:23:xt:11:  group_by(country) %>%
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\results\preliminary_tests\AUDIT_SOURCE_RV_OCCURRENCES.t
+xt:109:xt:97:xt:85:xt:73:xt:61:xt:49:xt:37:xt:25:xt:13:  group_by(country) %>%
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\results\preliminary_tests\AUDIT_SOURCE_RV_OCCURRENCES.t
+xt:111:xt:99:xt:87:xt:75:xt:63:xt:51:xt:39:xt:27:xt:15:xt:3:  group_by(country) %>%
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\results\preliminary_tests\AUDIT_SOURCE_RV_OCCURRENCES.t
+xt:113:xt:101:xt:89:xt:77:xt:65:xt:53:xt:41:xt:29:xt:17:xt:5:  group_by(country) %>%
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\results\preliminary_tests\AUDIT_SOURCE_RV_OCCURRENCES.t
+xt:115:xt:103:xt:91:xt:79:xt:67:xt:55:xt:43:xt:31:xt:19:xt:7:  group_by(country) %>%
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\results\preliminary_tests\AUDIT_SOURCE_RV_OCCURRENCES.t
+xt:117:xt:105:xt:93:xt:81:xt:69:xt:57:xt:45:xt:33:xt:21:xt:9:  group_by(country) %>%
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\results\preliminary_tests\AUDIT_SOURCE_RV_OCCURRENCES.t
+xt:119:xt:107:xt:95:xt:83:xt:71:xt:59:xt:47:xt:35:xt:23:xt:11:  group_by(country) %>%
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\results\preliminary_tests\AUDIT_SOURCE_RV_OCCURRENCES.t
+xt:121:xt:109:xt:97:xt:85:xt:73:xt:61:xt:49:xt:37:xt:25:xt:13:  group_by(country) %>%
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\results\preliminary_tests\AUDIT_SOURCE_RV_OCCURRENCES.t
+xt:123:xt:111:xt:99:xt:87:xt:75:xt:63:xt:51:xt:39:xt:27:xt:15:xt:3:  group_by(country) %>%
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\results\preliminary_tests\AUDIT_SOURCE_RV_OCCURRENCES.t
+xt:125:xt:113:xt:101:xt:89:xt:77:xt:65:xt:53:xt:41:xt:29:xt:17:xt:5:  group_by(country) %>%
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\results\preliminary_tests\AUDIT_SOURCE_RV_OCCURRENCES.t
+xt:127:xt:115:xt:103:xt:91:xt:79:xt:67:xt:55:xt:43:xt:31:xt:19:xt:7:  group_by(country) %>%
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\results\preliminary_tests\AUDIT_SOURCE_RV_OCCURRENCES.t
+xt:129:xt:117:xt:105:xt:93:xt:81:xt:69:xt:57:xt:45:xt:33:xt:21:xt:9:  group_by(country) %>%
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\results\preliminary_tests\AUDIT_SOURCE_RV_OCCURRENCES.t
+xt:131:xt:119:xt:107:xt:95:xt:83:xt:71:xt:59:xt:47:xt:35:xt:23:xt:11:  group_by(country) %>%
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\results\preliminary_tests\AUDIT_SOURCE_RV_OCCURRENCES.t
+xt:133:xt:121:xt:109:xt:97:xt:85:xt:73:xt:61:xt:49:xt:37:xt:25:xt:13:  group_by(country) %>%
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\results\preliminary_tests\AUDIT_SOURCE_RV_OCCURRENCES.t
+xt:135:xt:123:xt:111:xt:99:xt:87:xt:75:xt:63:xt:51:xt:39:xt:27:xt:15:xt:3:  group_by(country) %>%
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\results\preliminary_tests\AUDIT_SOURCE_RV_OCCURRENCES.t
+xt:137:xt:125:xt:113:xt:101:xt:89:xt:77:xt:65:xt:53:xt:41:xt:29:xt:17:xt:5:  group_by(country) %>%
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\results\preliminary_tests\AUDIT_SOURCE_RV_OCCURRENCES.t
+xt:139:xt:127:xt:115:xt:103:xt:91:xt:79:xt:67:xt:55:xt:43:xt:31:xt:19:xt:7:  group_by(country) %>%
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\results\preliminary_tests\AUDIT_SOURCE_RV_OCCURRENCES.t
+xt:141:xt:129:xt:117:xt:105:xt:93:xt:81:xt:69:xt:57:xt:45:xt:33:xt:21:xt:9:  group_by(country) %>%
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\results\preliminary_tests\AUDIT_SOURCE_RV_OCCURRENCES.t
+xt:143:xt:131:xt:119:xt:107:xt:95:xt:83:xt:71:xt:59:xt:47:xt:35:xt:23:xt:11:  group_by(country) %>%
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\results\preliminary_tests\AUDIT_SOURCE_RV_OCCURRENCES.t
+xt:145:xt:133:xt:121:xt:109:xt:97:xt:85:xt:73:xt:61:xt:49:xt:37:xt:25:xt:13:  group_by(country) %>%
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\results\preliminary_tests\AUDIT_SOURCE_RV_OCCURRENCES.t
+xt:147:xt:135:xt:123:xt:111:xt:99:xt:87:xt:75:xt:63:xt:51:xt:39:xt:27:xt:15:xt:3:  group_by(country) %>%
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\results\preliminary_tests\AUDIT_SOURCE_RV_OCCURRENCES.t
+xt:149:xt:137:xt:125:xt:113:xt:101:xt:89:xt:77:xt:65:xt:53:xt:41:xt:29:xt:17:xt:5:  group_by(country) %>%
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\results\preliminary_tests\AUDIT_SOURCE_RV_OCCURRENCES.t
+xt:151:xt:139:xt:127:xt:115:xt:103:xt:91:xt:79:xt:67:xt:55:xt:43:xt:31:xt:19:xt:7:  group_by(country) %>%
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\results\preliminary_tests\AUDIT_SOURCE_RV_OCCURRENCES.t
+xt:153:xt:141:xt:129:xt:117:xt:105:xt:93:xt:81:xt:69:xt:57:xt:45:xt:33:xt:21:xt:9:  group_by(country) %>%
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\results\preliminary_tests\AUDIT_SOURCE_RV_OCCURRENCES.t
+xt:155:xt:143:xt:131:xt:119:xt:107:xt:95:xt:83:xt:71:xt:59:xt:47:xt:35:xt:23:xt:11:  group_by(country) %>%
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\results\preliminary_tests\AUDIT_SOURCE_RV_OCCURRENCES.t
+xt:157:xt:145:xt:133:xt:121:xt:109:xt:97:xt:85:xt:73:xt:61:xt:49:xt:37:xt:25:xt:13:  group_by(country) %>%
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\results\preliminary_tests\AUDIT_SOURCE_RV_OCCURRENCES.t
+xt:159:xt:147:xt:135:xt:123:xt:111:xt:99:xt:87:xt:75:xt:63:xt:51:xt:39:xt:27:xt:15:xt:3:  group_by(country) %>%
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\results\preliminary_tests\AUDIT_SOURCE_RV_OCCURRENCES.t
+xt:161:xt:149:xt:137:xt:125:xt:113:xt:101:xt:89:xt:77:xt:65:xt:53:xt:41:xt:29:xt:17:xt:5:  group_by(country) %>%
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\results\preliminary_tests\AUDIT_SOURCE_RV_OCCURRENCES.t
+xt:163:xt:151:xt:139:xt:127:xt:115:xt:103:xt:91:xt:79:xt:67:xt:55:xt:43:xt:31:xt:19:xt:7:  group_by(country) %>%
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\results\preliminary_tests\AUDIT_SOURCE_RV_OCCURRENCES.t
+xt:165:xt:153:xt:141:xt:129:xt:117:xt:105:xt:93:xt:81:xt:69:xt:57:xt:45:xt:33:xt:21:xt:9:  group_by(country) %>%
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\results\preliminary_tests\AUDIT_SOURCE_RV_OCCURRENCES.t
+xt:167:xt:155:xt:143:xt:131:xt:119:xt:107:xt:95:xt:83:xt:71:xt:59:xt:47:xt:35:xt:23:xt:11:  group_by(country) %>%
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\results\preliminary_tests\AUDIT_SOURCE_RV_OCCURRENCES.t
+xt:169:xt:157:xt:145:xt:133:xt:121:xt:109:xt:97:xt:85:xt:73:xt:61:xt:49:xt:37:xt:25:xt:13:  group_by(country) %>%
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\results\preliminary_tests\AUDIT_SOURCE_RV_OCCURRENCES.t
+xt:171:xt:159:xt:147:xt:135:xt:123:xt:111:xt:99:xt:87:xt:75:xt:63:xt:51:xt:39:xt:27:xt:15:xt:3:  group_by(country) %>%
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\results\preliminary_tests\AUDIT_SOURCE_RV_OCCURRENCES.t
+xt:173:xt:161:xt:149:xt:137:xt:125:xt:113:xt:101:xt:89:xt:77:xt:65:xt:53:xt:41:xt:29:xt:17:xt:5:  group_by(country) %>%
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\results\preliminary_tests\AUDIT_SOURCE_RV_OCCURRENCES.t
+xt:175:xt:163:xt:151:xt:139:xt:127:xt:115:xt:103:xt:91:xt:79:xt:67:xt:55:xt:43:xt:31:xt:19:xt:7:  group_by(country) %>%
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\results\preliminary_tests\AUDIT_SOURCE_RV_OCCURRENCES.t
+xt:177:xt:165:xt:153:xt:141:xt:129:xt:117:xt:105:xt:93:xt:81:xt:69:xt:57:xt:45:xt:33:xt:21:xt:9:  group_by(country) %>%
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\results\preliminary_tests\AUDIT_SOURCE_RV_OCCURRENCES.t
+xt:179:xt:167:xt:155:xt:143:xt:131:xt:119:xt:107:xt:95:xt:83:xt:71:xt:59:xt:47:xt:35:xt:23:xt:11:  group_by(country) 
+%>%
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\results\preliminary_tests\AUDIT_SOURCE_RV_OCCURRENCES.t
+xt:181:xt:169:xt:157:xt:145:xt:133:xt:121:xt:109:xt:97:xt:85:xt:73:xt:61:xt:49:xt:37:xt:25:xt:13:  group_by(country) 
+%>%
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\results\preliminary_tests\AUDIT_SOURCE_RV_OCCURRENCES.t
+xt:183:xt:171:xt:159:xt:147:xt:135:xt:123:xt:111:xt:99:xt:87:xt:75:xt:63:xt:51:xt:39:xt:27:xt:15:xt:3:  
+group_by(country) %>%
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\results\preliminary_tests\AUDIT_SOURCE_RV_OCCURRENCES.t
+xt:185:xt:173:xt:161:xt:149:xt:137:xt:125:xt:113:xt:101:xt:89:xt:77:xt:65:xt:53:xt:41:xt:29:xt:17:xt:5:  
+group_by(country) %>%
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\results\preliminary_tests\AUDIT_SOURCE_RV_OCCURRENCES.t
+xt:187:xt:175:xt:163:xt:151:xt:139:xt:127:xt:115:xt:103:xt:91:xt:79:xt:67:xt:55:xt:43:xt:31:xt:19:xt:7:  
+group_by(country) %>%
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\results\preliminary_tests\AUDIT_SOURCE_RV_OCCURRENCES.t
+xt:189:xt:177:xt:165:xt:153:xt:141:xt:129:xt:117:xt:105:xt:93:xt:81:xt:69:xt:57:xt:45:xt:33:xt:21:xt:9:  
+group_by(country) %>%
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\results\preliminary_tests\AUDIT_SOURCE_RV_OCCURRENCES.t
+xt:191:xt:179:xt:167:xt:155:xt:143:xt:131:xt:119:xt:107:xt:95:xt:83:xt:71:xt:59:xt:47:xt:35:xt:23:xt:11:  
+group_by(country) 
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\results\preliminary_tests\AUDIT_SOURCE_RV_OCCURRENCES.t
+xt:194:xt:181:xt:169:xt:157:xt:145:xt:133:xt:121:xt:109:xt:97:xt:85:xt:73:xt:61:xt:49:xt:37:xt:25:xt:13:  
+group_by(country) 
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\results\preliminary_tests\AUDIT_SOURCE_RV_OCCURRENCES.t
+xt:198:group_by(country) %>%
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\results\preliminary_tests\AUDIT_SOURCE_RV_OCCURRENCES.t
+xt:201:group_by(country) %>%
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\results\preliminary_tests\AUDIT_SOURCE_RV_OCCURRENCES.t
+xt:204:group_by(country) %>%
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\results\preliminary_tests\AUDIT_SOURCE_RV_OCCURRENCES.t
+xt:207:group_by(country) %>%
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\results\preliminary_tests\AUDIT_SOURCE_RV_OCCURRENCES.t
+xt:210:group_by(country) 
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\results\preliminary_tests\AUDIT_SOURCE_RV_OCCURRENCES.t
+xt:213:group_by(country) 
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\results\preliminary_tests\AUDIT_SOURCE_RV_OCCURRENCES.t
+xt:215:xt:198:group_by(country) %>%
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\results\preliminary_tests\AUDIT_SOURCE_RV_OCCURRENCES.t
+xt:217:xt:201:group_by(country) %>%
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\results\preliminary_tests\AUDIT_SOURCE_RV_OCCURRENCES.t
+xt:219:xt:204:group_by(country) %>%
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\results\preliminary_tests\AUDIT_SOURCE_RV_OCCURRENCES.t
+xt:221:xt:207:group_by(country) %>%
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\results\preliminary_tests\AUDIT_SOURCE_RV_OCCURRENCES.t
+xt:223:xt:210:group_by(country) 
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\results\preliminary_tests\AUDIT_SOURCE_RV_OCCURRENCES.t
+xt:225:xt:213:group_by(country) 
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\results\preliminary_tests\AUDIT_SOURCE_RV_OCCURRENCES.t
+xt:227:xt:215:xt:198:group_by(country) %>%
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\results\preliminary_tests\AUDIT_SOURCE_RV_OCCURRENCES.t
+xt:229:xt:217:xt:201:group_by(country) %>%
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\results\preliminary_tests\AUDIT_SOURCE_RV_OCCURRENCES.t
+xt:231:xt:219:xt:204:group_by(country) %>%
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\results\preliminary_tests\AUDIT_SOURCE_RV_OCCURRENCES.t
+xt:233:xt:221:xt:207:group_by(country) %>%
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\results\preliminary_tests\AUDIT_SOURCE_RV_OCCURRENCES.t
+xt:235:xt:223:xt:210:group_by(country) 
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\results\preliminary_tests\AUDIT_SOURCE_RV_OCCURRENCES.t
+xt:237:xt:225:xt:213:group_by(country) 
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\results\preliminary_tests\AUDIT_SOURCE_RV_OCCURRENCES.t
+xt:239:xt:227:xt:215:xt:198:group_by(country) %>%
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\results\preliminary_tests\AUDIT_SOURCE_RV_OCCURRENCES.t
+xt:241:xt:229:xt:217:xt:201:group_by(country) %>%
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\results\preliminary_tests\AUDIT_SOURCE_RV_OCCURRENCES.t
+xt:243:xt:231:xt:219:xt:204:group_by(country) %>%
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\results\preliminary_tests\AUDIT_SOURCE_RV_OCCURRENCES.t
+xt:245:xt:233:xt:221:xt:207:group_by(country) %>%
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\results\preliminary_tests\AUDIT_SOURCE_RV_OCCURRENCES.t
+xt:247:xt:235:xt:223:xt:210:group_by(country) 
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\results\preliminary_tests\AUDIT_SOURCE_RV_OCCURRENCES.t
+xt:249:xt:237:xt:225:xt:213:group_by(country) 
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\results\preliminary_tests\AUDIT_SOURCE_RV_OCCURRENCES.t
+xt:251:xt:239:xt:227:xt:215:xt:198:group_by(country) %>%
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\results\preliminary_tests\AUDIT_SOURCE_RV_OCCURRENCES.t
+xt:253:xt:241:xt:229:xt:217:xt:201:group_by(country) %>%
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\results\preliminary_tests\AUDIT_SOURCE_RV_OCCURRENCES.t
+xt:255:xt:243:xt:231:xt:219:xt:204:group_by(country) %>%
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\results\preliminary_tests\AUDIT_SOURCE_RV_OCCURRENCES.t
+xt:257:xt:245:xt:233:xt:221:xt:207:group_by(country) %>%
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\results\preliminary_tests\AUDIT_SOURCE_RV_OCCURRENCES.t
+xt:259:xt:247:xt:235:xt:223:xt:210:group_by(country) 
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\results\preliminary_tests\AUDIT_SOURCE_RV_OCCURRENCES.t
+xt:261:xt:249:xt:237:xt:225:xt:213:group_by(country) 
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\results\preliminary_tests\AUDIT_SOURCE_RV_OCCURRENCES.t
+xt:263:xt:251:xt:239:xt:227:xt:215:xt:198:group_by(country) %>%
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\results\preliminary_tests\AUDIT_SOURCE_RV_OCCURRENCES.t
+xt:265:xt:253:xt:241:xt:229:xt:217:xt:201:group_by(country) %>%
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\results\preliminary_tests\AUDIT_SOURCE_RV_OCCURRENCES.t
+xt:267:xt:255:xt:243:xt:231:xt:219:xt:204:group_by(country) %>%
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\results\preliminary_tests\AUDIT_SOURCE_RV_OCCURRENCES.t
+xt:269:xt:257:xt:245:xt:233:xt:221:xt:207:group_by(country) %>%
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\results\preliminary_tests\AUDIT_SOURCE_RV_OCCURRENCES.t
+xt:271:xt:259:xt:247:xt:235:xt:223:xt:210:group_by(country) 
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\results\preliminary_tests\AUDIT_SOURCE_RV_OCCURRENCES.t
+xt:273:xt:261:xt:249:xt:237:xt:225:xt:213:group_by(country) 
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\results\preliminary_tests\AUDIT_SOURCE_RV_OCCURRENCES.t
+xt:275:xt:263:xt:251:xt:239:xt:227:xt:215:xt:198:group_by(country) %>%
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\results\preliminary_tests\AUDIT_SOURCE_RV_OCCURRENCES.t
+xt:277:xt:265:xt:253:xt:241:xt:229:xt:217:xt:201:group_by(country) %>%
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\results\preliminary_tests\AUDIT_SOURCE_RV_OCCURRENCES.t
+xt:279:xt:267:xt:255:xt:243:xt:231:xt:219:xt:204:group_by(country) %>%
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\results\preliminary_tests\AUDIT_SOURCE_RV_OCCURRENCES.t
+xt:281:xt:269:xt:257:xt:245:xt:233:xt:221:xt:207:group_by(country) %>%
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\results\preliminary_tests\AUDIT_SOURCE_RV_OCCURRENCES.t
+xt:283:xt:271:xt:259:xt:247:xt:235:xt:223:xt:210:group_by(country) 
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\results\preliminary_tests\AUDIT_SOURCE_RV_OCCURRENCES.t
+xt:285:xt:273:xt:261:xt:249:xt:237:xt:225:xt:213:group_by(country) 
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\results\preliminary_tests\AUDIT_SOURCE_RV_OCCURRENCES.t
+xt:287:xt:275:xt:263:xt:251:xt:239:xt:227:xt:215:xt:198:group_by(country) %>%
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\results\preliminary_tests\AUDIT_SOURCE_RV_OCCURRENCES.t
+xt:289:xt:277:xt:265:xt:253:xt:241:xt:229:xt:217:xt:201:group_by(country) %>%
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\results\preliminary_tests\AUDIT_SOURCE_RV_OCCURRENCES.t
+xt:291:xt:279:xt:267:xt:255:xt:243:xt:231:xt:219:xt:204:group_by(country) %>%
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\results\preliminary_tests\AUDIT_SOURCE_RV_OCCURRENCES.t
+xt:293:xt:281:xt:269:xt:257:xt:245:xt:233:xt:221:xt:207:group_by(country) %>%
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\results\preliminary_tests\AUDIT_SOURCE_RV_OCCURRENCES.t
+xt:295:xt:283:xt:271:xt:259:xt:247:xt:235:xt:223:xt:210:group_by(country) 
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\results\preliminary_tests\AUDIT_SOURCE_RV_OCCURRENCES.t
+xt:297:xt:285:xt:273:xt:261:xt:249:xt:237:xt:225:xt:213:group_by(country) 
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\results\preliminary_tests\AUDIT_SOURCE_RV_OCCURRENCES.t
+xt:299:xt:287:xt:275:xt:263:xt:251:xt:239:xt:227:xt:215:xt:198:group_by(country) %>%
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\results\preliminary_tests\AUDIT_SOURCE_RV_OCCURRENCES.t
+xt:301:xt:289:xt:277:xt:265:xt:253:xt:241:xt:229:xt:217:xt:201:group_by(country) %>%
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\results\preliminary_tests\AUDIT_SOURCE_RV_OCCURRENCES.t
+xt:303:xt:291:xt:279:xt:267:xt:255:xt:243:xt:231:xt:219:xt:204:group_by(country) %>%
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\results\preliminary_tests\AUDIT_SOURCE_RV_OCCURRENCES.t
+xt:305:xt:293:xt:281:xt:269:xt:257:xt:245:xt:233:xt:221:xt:207:group_by(country) %>%
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\results\preliminary_tests\AUDIT_SOURCE_RV_OCCURRENCES.t
+xt:307:xt:295:xt:283:xt:271:xt:259:xt:247:xt:235:xt:223:xt:210:group_by(country) 
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\results\preliminary_tests\AUDIT_SOURCE_RV_OCCURRENCES.t
+xt:309:xt:297:xt:285:xt:273:xt:261:xt:249:xt:237:xt:225:xt:213:group_by(country) 
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\results\preliminary_tests\AUDIT_SOURCE_RV_OCCURRENCES.t
+xt:311:xt:299:xt:287:xt:275:xt:263:xt:251:xt:239:xt:227:xt:215:xt:198:group_by(country) %>%
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\results\preliminary_tests\AUDIT_SOURCE_RV_OCCURRENCES.t
+xt:313:xt:301:xt:289:xt:277:xt:265:xt:253:xt:241:xt:229:xt:217:xt:201:group_by(country) %>%
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\results\preliminary_tests\AUDIT_SOURCE_RV_OCCURRENCES.t
+xt:315:xt:303:xt:291:xt:279:xt:267:xt:255:xt:243:xt:231:xt:219:xt:204:group_by(country) %>%
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\results\preliminary_tests\AUDIT_SOURCE_RV_OCCURRENCES.t
+xt:317:xt:305:xt:293:xt:281:xt:269:xt:257:xt:245:xt:233:xt:221:xt:207:group_by(country) %>%
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\results\preliminary_tests\AUDIT_SOURCE_RV_OCCURRENCES.t
+xt:319:xt:307:xt:295:xt:283:xt:271:xt:259:xt:247:xt:235:xt:223:xt:210:group_by(country) 
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\results\preliminary_tests\AUDIT_SOURCE_RV_OCCURRENCES.t
+xt:321:xt:309:xt:297:xt:285:xt:273:xt:261:xt:249:xt:237:xt:225:xt:213:group_by(country) 
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\results\preliminary_tests\AUDIT_SOURCE_RV_OCCURRENCES.t
+xt:323:xt:311:xt:299:xt:287:xt:275:xt:263:xt:251:xt:239:xt:227:xt:215:xt:198:group_by(country) %>%
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\results\preliminary_tests\AUDIT_SOURCE_RV_OCCURRENCES.t
+xt:325:xt:313:xt:301:xt:289:xt:277:xt:265:xt:253:xt:241:xt:229:xt:217:xt:201:group_by(country) %>%
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\results\preliminary_tests\AUDIT_SOURCE_RV_OCCURRENCES.t
+xt:327:xt:315:xt:303:xt:291:xt:279:xt:267:xt:255:xt:243:xt:231:xt:219:xt:204:group_by(country) %>%
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\results\preliminary_tests\AUDIT_SOURCE_RV_OCCURRENCES.t
+xt:329:xt:317:xt:305:xt:293:xt:281:xt:269:xt:257:xt:245:xt:233:xt:221:xt:207:group_by(country) %>%
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\results\preliminary_tests\AUDIT_SOURCE_RV_OCCURRENCES.t
+xt:331:xt:319:xt:307:xt:295:xt:283:xt:271:xt:259:xt:247:xt:235:xt:223:xt:210:group_by(country) 
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\results\preliminary_tests\AUDIT_SOURCE_RV_OCCURRENCES.t
+xt:333:xt:321:xt:309:xt:297:xt:285:xt:273:xt:261:xt:249:xt:237:xt:225:xt:213:group_by(country) 
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\results\preliminary_tests\AUDIT_SOURCE_RV_OCCURRENCES.t
+xt:335:xt:323:xt:311:xt:299:xt:287:xt:275:xt:263:xt:251:xt:239:xt:227:xt:215:xt:198:group_by(country) %>%
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\results\preliminary_tests\AUDIT_SOURCE_RV_OCCURRENCES.t
+xt:337:xt:325:xt:313:xt:301:xt:289:xt:277:xt:265:xt:253:xt:241:xt:229:xt:217:xt:201:group_by(country) %>%
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\results\preliminary_tests\AUDIT_SOURCE_RV_OCCURRENCES.t
+xt:339:xt:327:xt:315:xt:303:xt:291:xt:279:xt:267:xt:255:xt:243:xt:231:xt:219:xt:204:group_by(country) %>%
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\results\preliminary_tests\AUDIT_SOURCE_RV_OCCURRENCES.t
+xt:341:xt:329:xt:317:xt:305:xt:293:xt:281:xt:269:xt:257:xt:245:xt:233:xt:221:xt:207:group_by(country) %>%
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\results\preliminary_tests\AUDIT_SOURCE_RV_OCCURRENCES.t
+xt:343:xt:331:xt:319:xt:307:xt:295:xt:283:xt:271:xt:259:xt:247:xt:235:xt:223:xt:210:group_by(country) 
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\results\preliminary_tests\AUDIT_SOURCE_RV_OCCURRENCES.t
+xt:345:xt:333:xt:321:xt:309:xt:297:xt:285:xt:273:xt:261:xt:249:xt:237:xt:225:xt:213:group_by(country) 
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\results\preliminary_tests\AUDIT_SOURCE_RV_OCCURRENCES.t
+xt:347:xt:335:xt:323:xt:311:xt:299:xt:287:xt:275:xt:263:xt:251:xt:239:xt:227:xt:215:xt:198:group_by(country) %>%
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\results\preliminary_tests\AUDIT_SOURCE_RV_OCCURRENCES.t
+xt:349:xt:337:xt:325:xt:313:xt:301:xt:289:xt:277:xt:265:xt:253:xt:241:xt:229:xt:217:xt:201:group_by(country) %>%
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\results\preliminary_tests\AUDIT_SOURCE_RV_OCCURRENCES.t
+xt:351:xt:339:xt:327:xt:315:xt:303:xt:291:xt:279:xt:267:xt:255:xt:243:xt:231:xt:219:xt:204:group_by(country) %>%
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\results\preliminary_tests\AUDIT_SOURCE_RV_OCCURRENCES.t
+xt:353:xt:341:xt:329:xt:317:xt:305:xt:293:xt:281:xt:269:xt:257:xt:245:xt:233:xt:221:xt:207:group_by(country) %>%
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\results\preliminary_tests\AUDIT_SOURCE_RV_OCCURRENCES.t
+xt:355:xt:343:xt:331:xt:319:xt:307:xt:295:xt:283:xt:271:xt:259:xt:247:xt:235:xt:223:xt:210:group_by(country) 
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\results\preliminary_tests\AUDIT_SOURCE_RV_OCCURRENCES.t
+xt:357:xt:345:xt:333:xt:321:xt:309:xt:297:xt:285:xt:273:xt:261:xt:249:xt:237:xt:225:xt:213:group_by(country) 
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\results\preliminary_tests\AUDIT_SOURCE_RV_OCCURRENCES.t
+xt:359:xt:347:xt:335:xt:323:xt:311:xt:299:xt:287:xt:275:xt:263:xt:251:xt:239:xt:227:xt:215:xt:198:group_by(country) %>%
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\results\preliminary_tests\AUDIT_SOURCE_RV_OCCURRENCES.t
+xt:361:xt:349:xt:337:xt:325:xt:313:xt:301:xt:289:xt:277:xt:265:xt:253:xt:241:xt:229:xt:217:xt:201:group_by(country) %>%
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\results\preliminary_tests\AUDIT_SOURCE_RV_OCCURRENCES.t
+xt:363:xt:351:xt:339:xt:327:xt:315:xt:303:xt:291:xt:279:xt:267:xt:255:xt:243:xt:231:xt:219:xt:204:group_by(country) %>%
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\results\preliminary_tests\AUDIT_SOURCE_RV_OCCURRENCES.t
+xt:365:xt:353:xt:341:xt:329:xt:317:xt:305:xt:293:xt:281:xt:269:xt:257:xt:245:xt:233:xt:221:xt:207:group_by(country) %>%
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\results\preliminary_tests\AUDIT_SOURCE_RV_OCCURRENCES.t
+xt:367:xt:355:xt:343:xt:331:xt:319:xt:307:xt:295:xt:283:xt:271:xt:259:xt:247:xt:235:xt:223:xt:210:group_by(country) 
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\results\preliminary_tests\AUDIT_SOURCE_RV_OCCURRENCES.t
+xt:369:xt:357:xt:345:xt:333:xt:321:xt:309:xt:297:xt:285:xt:273:xt:261:xt:249:xt:237:xt:225:xt:213:group_by(country) 
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\results\preliminary_tests\AUDIT_SOURCE_RV_OCCURRENCES.t
+xt:371:xt:359:xt:347:xt:335:xt:323:xt:311:xt:299:xt:287:xt:275:xt:263:xt:251:xt:239:xt:227:xt:215:xt:198:group_by(count
+ry) %>%
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\results\preliminary_tests\AUDIT_SOURCE_RV_OCCURRENCES.t
+xt:373:xt:361:xt:349:xt:337:xt:325:xt:313:xt:301:xt:289:xt:277:xt:265:xt:253:xt:241:xt:229:xt:217:xt:201:group_by(count
+ry) %>%
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\results\preliminary_tests\AUDIT_SOURCE_RV_OCCURRENCES.t
+xt:375:xt:363:xt:351:xt:339:xt:327:xt:315:xt:303:xt:291:xt:279:xt:267:xt:255:xt:243:xt:231:xt:219:xt:204:group_by(count
+ry) %>%
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\results\preliminary_tests\AUDIT_SOURCE_RV_OCCURRENCES.t
+xt:377:xt:365:xt:353:xt:341:xt:329:xt:317:xt:305:xt:293:xt:281:xt:269:xt:257:xt:245:xt:233:xt:221:xt:207:group_by(count
+ry) %>%
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\results\preliminary_tests\AUDIT_SOURCE_RV_OCCURRENCES.t
+xt:379:xt:367:xt:355:xt:343:xt:331:xt:319:xt:307:xt:295:xt:283:xt:271:xt:259:xt:247:xt:235:xt:223:xt:210:group_by(count
+ry) 
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\results\preliminary_tests\AUDIT_SOURCE_RV_OCCURRENCES.t
+xt:381:xt:369:xt:357:xt:345:xt:333:xt:321:xt:309:xt:297:xt:285:xt:273:xt:261:xt:249:xt:237:xt:225:xt:213:group_by(count
+ry) 
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\results\RUN_ETAPES_3_7.R:71:  "RV.x"
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\results\RUN_ETAPES_3_7.R:408:  "RV.x"
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\results\RUN_ETAPE_5_1_RV_AUDIT.R:361:if ("RV.x" %in% 
+names(df)) {
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\results\RUN_ETAPE_5_1_RV_AUDIT.R:362:  rv_name <- 
+"RV.x"
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\results\RUN_ETAPE_5_1_RV_AUDIT.R:365:} else if ("RV.y" 
+%in% names(df)) {
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\results\RUN_ETAPE_5_1_RV_AUDIT.R:366:  rv_name <- 
+"RV.y"
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\results\RUN_ETAPE_5_1_RV_AUDIT.R:467:      
+group_by(country) %>%
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\results\RUN_ETAPE_5_1_RV_AUDIT.R:603:      
+group_by(country) %>%
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\results\RUN_ETAPE_5_1_RV_AUDIT.R:694:  # Présence RV.y
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\results\RUN_ETAPE_5_1_RV_AUDIT.R:698:  
+cat("VERIFICATION RV.x / RV.y\n")
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\results\RUN_ETAPE_5_1_RV_AUDIT.R:701:  if ("RV.x" %in% 
+names(df)) {
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\results\RUN_ETAPE_5_1_RV_AUDIT.R:702:    cat("RV.x : 
+PRESENTE\n")
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\results\RUN_ETAPE_5_1_RV_AUDIT.R:704:    cat("RV.x : 
+ABSENTE\n")
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\results\RUN_ETAPE_5_1_RV_AUDIT.R:707:  if ("RV.y" %in% 
+names(df)) {
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\results\RUN_ETAPE_5_1_RV_AUDIT.R:708:    cat("RV.y : 
+PRESENTE\n")
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\results\RUN_ETAPE_5_1_RV_AUDIT.R:711:      
+as.numeric(df[["RV.y"]])
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\results\RUN_ETAPE_5_1_RV_AUDIT.R:715:      "RV.y 
+valides :",
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\results\RUN_ETAPE_5_1_RV_AUDIT.R:720:    if ("RV.x" 
+%in% names(df)) {
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\results\RUN_ETAPE_5_1_RV_AUDIT.R:723:        
+as.numeric(df[["RV.x"]])
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\results\RUN_ETAPE_5_1_RV_AUDIT.R:731:          "RV.x 
+et RV.y simultanément valides :",
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\results\RUN_ETAPE_5_1_RV_AUDIT.R:747:    cat("RV.y : 
+ABSENTE\n")
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\results\RUN_ETAPE_5_1_RV_AUDIT.R:796:      
+group_by(country) %>%
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\results\RUN_RV_AUDIT_SUITE.R:33:rv_name <- if ("RV.x" 
+%in% names(df)) {
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\results\RUN_RV_AUDIT_SUITE.R:34:  "RV.x"
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\results\RUN_RV_AUDIT_SUITE.R:37:} else if ("RV.y" %in% 
+names(df)) {
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\results\RUN_RV_AUDIT_SUITE.R:38:  "RV.y"
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\results\RUN_RV_AUDIT_SUITE.R:163:    group_by(country) 
+%>%
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\results\RUN_RV_AUDIT_SUITE.R:270:# 5. RV.x / RV.y
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\results\RUN_RV_AUDIT_SUITE.R:274:cat(" COMPARAISON 
+RV.x / RV.y\n")
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\results\RUN_RV_AUDIT_SUITE.R:277:if ("RV.x" %in% 
+names(df) &&
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\results\RUN_RV_AUDIT_SUITE.R:278:    "RV.y" %in% 
+names(df)) {
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\results\RUN_RV_AUDIT_SUITE.R:281:    
+as.numeric(df[["RV.x"]])
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\results\RUN_RV_AUDIT_SUITE.R:285:    
+as.numeric(df[["RV.y"]])
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\results\RUN_RV_AUDIT_SUITE.R:291:  cat("RV.x valides 
+:", sum(is.finite(rvx)), "\n")
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\results\RUN_RV_AUDIT_SUITE.R:292:  cat("RV.y valides 
+:", sum(is.finite(rvy)), "\n")
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\results\RUN_RV_AUDIT_SUITE.R:352:  cat("RV.x et/ou 
+RV.y absent.\n")
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\results\RUN_RV_AUDIT_SUITE.R:355:    "RV.x present :",
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\results\RUN_RV_AUDIT_SUITE.R:356:    "RV.x" %in% 
+names(df),
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\results\RUN_RV_AUDIT_SUITE.R:361:    "RV.y present :",
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\results\RUN_RV_AUDIT_SUITE.R:362:    "RV.y" %in% 
+names(df),
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\results\RUN_RV_AUDIT_SUITE.R:409:      
+group_by(country) %>%
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\scripts\00_download_data.R:252:  group_by(country) %>%
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\scripts\00_download_data.R:274:  
+group_by(country,month) %>%
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\scripts\00_download_data.R:276:    
+RV=sum(return^2,na.rm=TRUE),
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\scripts\00_download_data.R:277:    
+n_obs=sum(!is.na(return)),
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\scripts\01_download_clean_real_data.R:91:    
+group_by(country, iso3, group, month) %>%
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\scripts\01_download_clean_real_data.R:92:    
+summarise(RV=sum(return^2, na.rm=TRUE),
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\scripts\01_download_clean_real_data.R:93:              
+n_daily=sum(!is.na(return)), .groups="drop")
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\scripts\01_download_clean_real_data.R:103:write.csv(mon
+thly_rv, file.path(DIR_RAW,"monthly_realized_volatility.csv"), row.names=FALSE, na="")
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\scripts\01_download_clean_real_data.R:246:cat(" - 
+data/raw/monthly_realized_volatility.csv\n")
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\scripts\01_prepare_data.R:23:  group_by(country) %>%
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\scripts\01_prepare_data.R:29:  group_by(country,month) 
+%>%
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\scripts\01_prepare_data.R:31:    
+RV=sum(return^2,na.rm=TRUE),
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\scripts\01_prepare_data.R:32:    
+n_obs=sum(!is.na(return)),
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\scripts\01_prepare_data.R:57:  group_by(country) %>%
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\scripts\06_prepare_part3_data.R:58:  group_by(country) 
+%>%
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\scripts\15_extract_garch_midas_results.R:134:  
+dplyr::group_by(country, model) |>
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\scripts\17_extract_garch_midas_correct.R:89:  
+dplyr::group_by(country, model) %>%
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\scripts\18_extract_garch_midas_final.R:86:  
+group_by(country, model) %>%
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\scripts\19_analyse_complete_garch_midas.R:137:  
+group_by(country, parameter) %>%
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\scripts\19_analyse_complete_garch_midas.R:244:  
+group_by(country) %>%
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\scripts\19_analyse_complete_garch_midas.R:262:  
+group_by(country) %>%
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\AUDIT_SOURCE_RV_SAU.R:110:  cat("\nSomme return^2 =", 
+sum(r[is.finite(r)]^2), "\n")
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\AUDIT_SOURCE_RV_SAU_FIX.R:96:    "\nSomme return^2 =",
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\AUDIT_SOURCE_RV_SAU_FIX.R:113:cat(" MONTHLY SAU - RV.x 
+/ RV.y\n")
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\AUDIT_SOURCE_RV_SAU_FIX.R:123:cat("RV.x N :", 
+sum(is.finite(rvx)), "\n")
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\AUDIT_SOURCE_RV_SAU_FIX.R:124:cat("RV.y N :", 
+sum(is.finite(rvy)), "\n")
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\AUDIT_SOURCE_RV_SAU_FIX.R:126:cat("RV.x mean :", 
+mean(rvx, na.rm=TRUE), "\n")
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\AUDIT_SOURCE_RV_SAU_FIX.R:127:cat("RV.y mean :", 
+mean(rvy, na.rm=TRUE), "\n")
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\AUDIT_SOURCE_RV_SAU_FIX.R:129:cat("RV.x median :", 
+median(rvx, na.rm=TRUE), "\n")
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\AUDIT_SOURCE_RV_SAU_FIX.R:130:cat("RV.y median :", 
+median(rvy, na.rm=TRUE), "\n")
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\AUDIT_SOURCE_RV_SAU_FIX.R:133:  "Correlation RV.x/RV.y 
+:",
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\AUDIT_SOURCE_RV_SAU_FIX.R:141:  c("date", "country", 
+"RV.x", "RV.y", "n_daily", "n_obs"),
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\AUDIT_SOURCE_RV_SAU_FIX.R:207:# TEST RV.x PAR RAPPORT 
+AUX RENDEMENTS SAU
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\AUDIT_SOURCE_RV_SAU_FIX.R:211:cat(" TEST DIRECT RV.x = 
+SOMME(return^2)\n")
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\AUDIT_SOURCE_RV_SAU_FIX.R:219:    N = 
+sum(is.finite(return_num)),
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\AUDIT_SOURCE_RV_SAU_FIX.R:220:    RV_direct = 
+sum(return_num[is.finite(return_num)]^2),
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\DIAGNOSTIC_RV_SAU_PAK.R:30:rv_calc <- daily %>%
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\DIAGNOSTIC_RV_SAU_PAK.R:31:  group_by(country, year, 
+month) %>%
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\DIAGNOSTIC_RV_SAU_PAK.R:33:    N_daily = 
+sum(is.finite(return)),
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\DIAGNOSTIC_RV_SAU_PAK.R:34:    RV_calc = 
+sum(return[is.finite(return)]^2),
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\DIAGNOSTIC_RV_SAU_PAK.R:40:  select(country, date, 
+N_daily, RV_calc)
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\DIAGNOSTIC_RV_SAU_PAK.R:43:  left_join(rv_calc, by = 
+c("country", "date")) %>%
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\DIAGNOSTIC_RV_SAU_PAK.R:45:    difference = RV_x - 
+RV_calc,
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\DIAGNOSTIC_RV_SAU_PAK.R:47:    ratio = RV_x / RV_calc
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\DIAGNOSTIC_RV_SAU_PAK.R:63:cat("Correlation =", 
+cor(sau$RV_x, sau$RV_calc), "\n")
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\DIAGNOSTIC_RV_SAU_PAK.R:64:cat("Mean RV.x =", 
+mean(sau$RV_x), "\n")
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\DIAGNOSTIC_RV_SAU_PAK.R:65:cat("Mean RV_calc =", 
+mean(sau$RV_calc), "\n")
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\DIAGNOSTIC_RV_SAU_PAK.R:72:  select(country, date, 
+N_daily, RV_x, RV_calc, difference, ratio) %>%
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\DIAGNOSTIC_RV_SAU_PAK.R:93:cat("Correlation =", 
+cor(pak$RV_x, pak$RV_calc), "\n")
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\DIAGNOSTIC_RV_SAU_PAK.R:94:cat("Mean RV.x =", 
+mean(pak$RV_x), "\n")
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\DIAGNOSTIC_RV_SAU_PAK.R:95:cat("Mean RV_calc =", 
+mean(pak$RV_calc), "\n")
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\DIAGNOSTIC_RV_SAU_PAK.R:102:  select(country, date, 
+N_daily, RV_x, RV_calc, difference, ratio) %>%
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\DIAGNOSTIC_RV_SAU_PAK.R:120:  select(country, date, 
+N_daily, RV_x, RV_calc, difference, ratio) %>%
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\DIAGNOSTIC_RV_SAU_PAK.R:133:cat(" RATIO RV.x / RV_calc 
+PAR PAYS\n")
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\DIAGNOSTIC_RV_SAU_PAK.R:137:  group_by(country) %>%
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\DIAGNOSTIC_RV_SAU_PAK.R:161:  group_by(country) %>%
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\REPAIR_PART3_FINAL.R:116:    group_by(country, month) 
+%>%
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\RUN_DAILY_AUDIT_FIX.R:101:  group_by(country) %>%
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\RUN_DAILY_AUDIT_FIX.R:178:  group_by(country) %>%
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\RUN_DAILY_AUDIT_FIX.R:182:    Return_valid = 
+sum(is.finite(return)),
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\RUN_PART5_CONTINUE.R:92:  group_by(country) |>
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\RUN_PART5_FINAL.R:196:  group_by(country) |>
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\VALIDATION_RV_MATHEMATIQUE.R:8:cat(" RIMEH - 
+VALIDATION MATHEMATIQUE DE RV.x\n")
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\VALIDATION_RV_MATHEMATIQUE.R:23:rv_month  <- 
+as.numeric(m[[7]])   # RV.x
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\VALIDATION_RV_MATHEMATIQUE.R:45:rv_calc <- daily %>%
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\VALIDATION_RV_MATHEMATIQUE.R:46:  group_by(country, 
+year, month) %>%
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\VALIDATION_RV_MATHEMATIQUE.R:48:    N_daily = 
+sum(is.finite(return)),
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\VALIDATION_RV_MATHEMATIQUE.R:49:    RV_calc = 
+sum(return[is.finite(return)]^2),
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\VALIDATION_RV_MATHEMATIQUE.R:57:rv_calc$date <- 
+as.Date(
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\VALIDATION_RV_MATHEMATIQUE.R:58:  
+sprintf("%04d-%02d-01", rv_calc$year, rv_calc$month)
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\VALIDATION_RV_MATHEMATIQUE.R:74:    rv_calc %>% 
+select(country, date, N_daily, RV_calc),
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\VALIDATION_RV_MATHEMATIQUE.R:78:    difference = RV_x 
+- RV_calc,
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\VALIDATION_RV_MATHEMATIQUE.R:80:    ratio = RV_x / 
+RV_calc,
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\VALIDATION_RV_MATHEMATIQUE.R:81:    relative_error = 
+abs_difference / abs(RV_calc)
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\VALIDATION_RV_MATHEMATIQUE.R:87:    is.finite(RV_calc),
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\VALIDATION_RV_MATHEMATIQUE.R:88:    RV_calc > 0
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\VALIDATION_RV_MATHEMATIQUE.R:96:cat("RV.x valide :", 
+sum(is.finite(cmp$RV_x)), "\n")
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\VALIDATION_RV_MATHEMATIQUE.R:97:cat("RV recalculable 
+:", sum(is.finite(cmp$RV_calc)), "\n")
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\VALIDATION_RV_MATHEMATIQUE.R:101:    cor(valid$RV_x, 
+valid$RV_calc, method="pearson"),
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\VALIDATION_RV_MATHEMATIQUE.R:105:    cor(valid$RV_x, 
+valid$RV_calc, method="spearman"),
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\VALIDATION_RV_MATHEMATIQUE.R:124:cat("\nRatio RV.x / 
+RV_calc :\n")
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\VALIDATION_RV_MATHEMATIQUE.R:128:# REGRESSION RV.x sur 
+RV_calc
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\VALIDATION_RV_MATHEMATIQUE.R:132:cat(" REGRESSION RV.x 
+~ RV_calc\n")
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\VALIDATION_RV_MATHEMATIQUE.R:135:fit <- lm(RV_x ~ 
+RV_calc, data = valid)
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\VALIDATION_RV_MATHEMATIQUE.R:152:  group_by(country) 
+%>%
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\VALIDATION_RV_MATHEMATIQUE.R:155:    Correlation = 
+cor(RV_x, RV_calc),
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\VALIDATION_RV_MATHEMATIQUE.R:157:    Mean_RV_calc = 
+mean(RV_calc),
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\VALIDATION_RV_MATHEMATIQUE.R:183:    RV_calc,
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\VALIDATION_RV_MATHEMATIQUE.R:201:  
+filter(!is.finite(RV_calc))
+Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\VALIDATION_RV_MATHEMATIQUE.R:208:      select(country, 
+date, RV_x, RV_calc) %>%
+
+

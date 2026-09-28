@@ -1,0 +1,3 @@
+"Hypothesis","N_pairs","Mean_Difference","Positive_Differences","Negative_Differences","Status"
+"H5",11,0.00270936363636364,9,2,"DESCRIPTIF - pas de Wald exact sans VCOV"
+"H6",41,0.00579092682926829,21,20,"DESCRIPTIF - pas de Wald exact sans VCOV"

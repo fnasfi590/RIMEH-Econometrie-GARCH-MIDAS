@@ -1,0 +1,271 @@
+============================================================
+RIMEH - RAPPORT FINAL DES TESTS H1-H9
+============================================================
+
+Date d'execution : 2026-09-22 16:46:12.746994 
+
+Seuil principal : alpha = 5%
+Regle : rejet de H0 si p-value < 0.05
+
+IMPORTANT :
+- Un coefficient positif ne suffit pas pour confirmer une hypothese.
+- Une significativite statistique ne suffit pas si elle ne correspond
+  pas au test exact defini par l'hypothese.
+- Les tests t calcules ici sur les Theta sont complementaires et ne
+  remplacent pas un test de Wald realise dans le modele GARCH-MIDAS.
+- Les hypotheses directionnelles doivent etre interpretees selon leur
+  formulation theorique exacte.
+
+============================================================
+TABLEAU FINAL
+============================================================
+
+# A tibble: 9 × 11
+  Hypothesis
+  <chr>     
+1 H1        
+2 H2        
+3 H3        
+4 H4        
+5 H5        
+6 H6        
+7 H7        
+8 H8        
+9 H9        
+  Null                                                                 
+  <chr>                                                                
+1 H0 : l'effet testé est nul                                           
+2 H0 : l'effet testé est nul                                           
+3 H0 : l'effet testé est nul                                           
+4 H0 : aucune différence/effet spécifique selon la définition du modèle
+5 H0 : les effets comparés sont égaux                                  
+6 H0 : les effets comparés sont égaux                                  
+7 H0 : le paramètre testé est nul                                      
+8 H0 : aucune différence/effet spécifique selon la définition du modèle
+9 H0 : les effets GPRT et GPRA sont égaux                              
+  Alternative                                                 Alpha
+  <chr>                                                       <dbl>
+1 H1 : l'effet testé est différent de zéro dans le sens prévu  0.05
+2 H1 : l'effet testé est différent de zéro dans le sens prévu  0.05
+3 H1 : l'effet testé est différent de zéro dans le sens prévu  0.05
+4 H1 : l'effet/différence spécifique est présent               0.05
+5 H1 : les deux effets diffèrent                               0.05
+6 H1 : les deux effets diffèrent                               0.05
+7 H1 : le paramètre est différent de zéro dans le sens prévu   0.05
+8 H1 : l'effet/différence spécifique est présent               0.05
+9 H1 : les effets GPRT et GPRA diffèrent                       0.05
+  Result_Source            Test_Type                  Estimate P_value
+  <chr>                    <chr>                         <dbl>   <dbl>
+1 FINAL_H1_H3_CORRECTED    Significance du parametre  0.00284    0.477
+2 FINAL_H1_H3_CORRECTED    Significance du parametre -0.0108     0.357
+3 FINAL_H1_H3_CORRECTED    Significance du parametre -0.0134     0.368
+4 FINAL_H4 / FORMAL_H4     Test formel spécifique    -0.00680    0.369
+5 FINAL_H5_DETAIL / PAIRED Comparaison Theta         -0.0108     0.357
+6 FINAL_H6_DETAIL / PAIRED Comparaison Theta         -0.0134     0.368
+7 FINAL_H7_DETAIL_ROBUST   Test du parametre          0.00284    0.477
+8 FINAL_H7_H8              Test formel spécifique    -0.000376   0.385
+9 H9_GPRT_VS_GPRA          Comparaison GPRT vs GPRA  -0.0143     0.384
+  Decision_5pct        Interpretation           Sign   
+  <chr>                <chr>                    <chr>  
+1 NON-REJET DE H0 A 5% Voir résultats détaillés POSITIF
+2 NON-REJET DE H0 A 5% Voir résultats détaillés NEGATIF
+3 NON-REJET DE H0 A 5% Voir résultats détaillés NEGATIF
+4 NON-REJET DE H0 A 5% Voir résultats détaillés NEGATIF
+5 NON-REJET DE H0 A 5% Voir résultats détaillés NEGATIF
+6 NON-REJET DE H0 A 5% Voir résultats détaillés NEGATIF
+7 NON-REJET DE H0 A 5% Voir résultats détaillés POSITIF
+8 NON-REJET DE H0 A 5% Voir résultats détaillés NEGATIF
+9 NON-REJET DE H0 A 5% Voir résultats détaillés NEGATIF
+
+
+============================================================
+DETAIL DES RESULTATS EXTRAITS
+============================================================
+
+# A tibble: 91 × 9
+   Source           Estimate P_value Observations Country Model Sign   
+   <chr>               <dbl>   <dbl>        <dbl> <chr>   <chr> <chr>  
+ 1 H1_H9_FINAL      0.00284    0.477           21 <NA>    H1    POSITIF
+ 2 H1_H9_FINAL     -0.0108     0.357           44 <NA>    H2    NEGATIF
+ 3 H1_H9_FINAL     -0.0134     0.368           84 <NA>    H3    NEGATIF
+ 4 H1_H9_FINAL     -0.00680    0.369          140 <NA>    H4    NEGATIF
+ 5 H1_H9_FINAL     -0.0108     0.357           44 <NA>    H5    NEGATIF
+ 6 H1_H9_FINAL     -0.0134     0.368           84 <NA>    H6    NEGATIF
+ 7 H1_H9_FINAL      0.00284    0.477           21 <NA>    H7    POSITIF
+ 8 H1_H9_FINAL     -0.000376   0.385           22 <NA>    H8    NEGATIF
+ 9 H1_H9_FINAL     -0.0143     0.384           42 <NA>    H9    NEGATIF
+10 H1_H9_AUDIT     NA         NA               NA <NA>    <NA>  <NA>   
+11 H1_H9_AUDIT     NA         NA               NA <NA>    <NA>  <NA>   
+12 H1_H9_AUDIT     NA         NA               NA <NA>    <NA>  <NA>   
+13 H1_H9_AUDIT     NA         NA               NA <NA>    <NA>  <NA>   
+14 H1_H9_AUDIT     NA          0.171           NA <NA>    <NA>  <NA>   
+15 H1_H9_AUDIT     NA         NA               NA <NA>    <NA>  <NA>   
+16 H1_H9_AUDIT     NA         NA               NA <NA>    <NA>  <NA>   
+17 H1_H9_AUDIT     NA         NA               NA <NA>    <NA>  <NA>   
+18 H1_H9_AUDIT     NA          0.187           NA <NA>    <NA>  <NA>   
+19 H1_H3_CORRECTED 13         NA               NA <NA>    H1    POSITIF
+20 H1_H3_CORRECTED 44         NA               NA <NA>    H2    POSITIF
+21 H1_H3_CORRECTED 42         NA               NA <NA>    H3    POSITIF
+22 H1_H3_ROBUST    NA          0.181           13 <NA>    H1    <NA>   
+23 H1_H3_ROBUST    NA          0.385           22 <NA>    H2    <NA>   
+24 H1_H3_ROBUST    NA          0.368           84 <NA>    H3    <NA>   
+25 H4_FINAL        NA         NA               NA <NA>    <NA>  <NA>   
+26 H4_FORMAL       NA         NA               NA <NA>    <NA>  <NA>   
+27 H7_ROBUST        1         NA               NA DEU     H7    POSITIF
+28 H7_ROBUST        2         NA               NA DEU     H7    POSITIF
+29 H7_ROBUST        1         NA               NA GBR     H7    POSITIF
+30 H7_ROBUST        2         NA               NA GBR     H7    POSITIF
+31 H7_ROBUST        1         NA               NA IND     H7    POSITIF
+32 H7_ROBUST        2         NA               NA IND     H7    POSITIF
+33 H7_ROBUST        1         NA               NA JPN     H7    POSITIF
+34 H7_ROBUST        2         NA               NA JPN     H7    POSITIF
+35 H7_ROBUST        1         NA               NA KOR     H7    POSITIF
+36 H7_ROBUST        2         NA               NA KOR     H7    POSITIF
+37 H7_ROBUST        1         NA               NA MEX     H7    POSITIF
+38 H7_ROBUST        2         NA               NA MEX     H7    POSITIF
+39 H7_ROBUST        1         NA               NA NOR     H7    POSITIF
+40 H7_ROBUST        2         NA               NA NOR     H7    POSITIF
+41 H7_ROBUST        1         NA               NA PAK     H7    POSITIF
+42 H7_ROBUST        1         NA               NA SAU     H7    POSITIF
+43 H7_ROBUST        2         NA               NA SAU     H7    POSITIF
+44 H7_ROBUST        1         NA               NA TUR     H7    POSITIF
+45 H7_ROBUST        2         NA               NA TUR     H7    POSITIF
+46 H7_ROBUST        1         NA               NA USA     H7    POSITIF
+47 H7_ROBUST        2         NA               NA USA     H7    POSITIF
+48 H8_FINAL        NA         NA               NA <NA>    <NA>  <NA>   
+49 H8_FINAL        NA         NA               NA <NA>    <NA>  <NA>   
+50 H9_DETAIL        1         NA               NA DEU     H9    POSITIF
+51 H9_DETAIL        2         NA               NA DEU     H9    POSITIF
+52 H9_DETAIL        1         NA               NA GBR     H9    POSITIF
+53 H9_DETAIL        2         NA               NA GBR     H9    POSITIF
+54 H9_DETAIL        1         NA               NA IND     H9    POSITIF
+55 H9_DETAIL        2         NA               NA IND     H9    POSITIF
+56 H9_DETAIL        1         NA               NA JPN     H9    POSITIF
+57 H9_DETAIL        2         NA               NA JPN     H9    POSITIF
+58 H9_DETAIL        1         NA               NA KOR     H9    POSITIF
+59 H9_DETAIL        2         NA               NA KOR     H9    POSITIF
+60 H9_DETAIL        1         NA               NA MEX     H9    POSITIF
+61 H9_DETAIL        2         NA               NA MEX     H9    POSITIF
+62 H9_DETAIL        1         NA               NA NOR     H9    POSITIF
+63 H9_DETAIL        2         NA               NA NOR     H9    POSITIF
+64 H9_DETAIL       NA         NA               NA PAK     H9    <NA>   
+65 H9_DETAIL        1         NA               NA SAU     H9    POSITIF
+66 H9_DETAIL        2         NA               NA SAU     H9    POSITIF
+67 H9_DETAIL        1         NA               NA TUR     H9    POSITIF
+68 H9_DETAIL        2         NA               NA TUR     H9    POSITIF
+69 H9_DETAIL        1         NA               NA USA     H9    POSITIF
+70 H9_DETAIL        2         NA               NA USA     H9    POSITIF
+71 H9_ROBUST        1         NA               NA DEU     H9    POSITIF
+72 H9_ROBUST        2         NA               NA DEU     H9    POSITIF
+73 H9_ROBUST        1         NA               NA GBR     H9    POSITIF
+74 H9_ROBUST        2         NA               NA GBR     H9    POSITIF
+75 H9_ROBUST        1         NA               NA IND     H9    POSITIF
+76 H9_ROBUST        2         NA               NA IND     H9    POSITIF
+77 H9_ROBUST        1         NA               NA JPN     H9    POSITIF
+78 H9_ROBUST        2         NA               NA JPN     H9    POSITIF
+79 H9_ROBUST        1         NA               NA KOR     H9    POSITIF
+80 H9_ROBUST        2         NA               NA KOR     H9    POSITIF
+81 H9_ROBUST        1         NA               NA MEX     H9    POSITIF
+82 H9_ROBUST        2         NA               NA MEX     H9    POSITIF
+83 H9_ROBUST        1         NA               NA NOR     H9    POSITIF
+84 H9_ROBUST        2         NA               NA NOR     H9    POSITIF
+85 H9_ROBUST        1         NA               NA PAK     H9    POSITIF
+86 H9_ROBUST        1         NA               NA SAU     H9    POSITIF
+87 H9_ROBUST        2         NA               NA SAU     H9    POSITIF
+88 H9_ROBUST        1         NA               NA TUR     H9    POSITIF
+89 H9_ROBUST        2         NA               NA TUR     H9    POSITIF
+90 H9_ROBUST        1         NA               NA USA     H9    POSITIF
+91 H9_ROBUST        2         NA               NA USA     H9    POSITIF
+   Significant_5  Significant_10
+   <chr>          <chr>         
+ 1 NON            NON           
+ 2 NON            NON           
+ 3 NON            NON           
+ 4 NON            NON           
+ 5 NON            NON           
+ 6 NON            NON           
+ 7 NON            NON           
+ 8 NON            NON           
+ 9 NON            NON           
+10 NON DISPONIBLE NON DISPONIBLE
+11 NON DISPONIBLE NON DISPONIBLE
+12 NON DISPONIBLE NON DISPONIBLE
+13 NON DISPONIBLE NON DISPONIBLE
+14 NON            NON           
+15 NON DISPONIBLE NON DISPONIBLE
+16 NON DISPONIBLE NON DISPONIBLE
+17 NON DISPONIBLE NON DISPONIBLE
+18 NON            NON           
+19 NON DISPONIBLE NON DISPONIBLE
+20 NON DISPONIBLE NON DISPONIBLE
+21 NON DISPONIBLE NON DISPONIBLE
+22 NON            NON           
+23 NON            NON           
+24 NON            NON           
+25 NON DISPONIBLE NON DISPONIBLE
+26 NON DISPONIBLE NON DISPONIBLE
+27 NON DISPONIBLE NON DISPONIBLE
+28 NON DISPONIBLE NON DISPONIBLE
+29 NON DISPONIBLE NON DISPONIBLE
+30 NON DISPONIBLE NON DISPONIBLE
+31 NON DISPONIBLE NON DISPONIBLE
+32 NON DISPONIBLE NON DISPONIBLE
+33 NON DISPONIBLE NON DISPONIBLE
+34 NON DISPONIBLE NON DISPONIBLE
+35 NON DISPONIBLE NON DISPONIBLE
+36 NON DISPONIBLE NON DISPONIBLE
+37 NON DISPONIBLE NON DISPONIBLE
+38 NON DISPONIBLE NON DISPONIBLE
+39 NON DISPONIBLE NON DISPONIBLE
+40 NON DISPONIBLE NON DISPONIBLE
+41 NON DISPONIBLE NON DISPONIBLE
+42 NON DISPONIBLE NON DISPONIBLE
+43 NON DISPONIBLE NON DISPONIBLE
+44 NON DISPONIBLE NON DISPONIBLE
+45 NON DISPONIBLE NON DISPONIBLE
+46 NON DISPONIBLE NON DISPONIBLE
+47 NON DISPONIBLE NON DISPONIBLE
+48 NON DISPONIBLE NON DISPONIBLE
+49 NON DISPONIBLE NON DISPONIBLE
+50 NON DISPONIBLE NON DISPONIBLE
+51 NON DISPONIBLE NON DISPONIBLE
+52 NON DISPONIBLE NON DISPONIBLE
+53 NON DISPONIBLE NON DISPONIBLE
+54 NON DISPONIBLE NON DISPONIBLE
+55 NON DISPONIBLE NON DISPONIBLE
+56 NON DISPONIBLE NON DISPONIBLE
+57 NON DISPONIBLE NON DISPONIBLE
+58 NON DISPONIBLE NON DISPONIBLE
+59 NON DISPONIBLE NON DISPONIBLE
+60 NON DISPONIBLE NON DISPONIBLE
+61 NON DISPONIBLE NON DISPONIBLE
+62 NON DISPONIBLE NON DISPONIBLE
+63 NON DISPONIBLE NON DISPONIBLE
+64 NON DISPONIBLE NON DISPONIBLE
+65 NON DISPONIBLE NON DISPONIBLE
+66 NON DISPONIBLE NON DISPONIBLE
+67 NON DISPONIBLE NON DISPONIBLE
+68 NON DISPONIBLE NON DISPONIBLE
+69 NON DISPONIBLE NON DISPONIBLE
+70 NON DISPONIBLE NON DISPONIBLE
+71 NON DISPONIBLE NON DISPONIBLE
+72 NON DISPONIBLE NON DISPONIBLE
+73 NON DISPONIBLE NON DISPONIBLE
+74 NON DISPONIBLE NON DISPONIBLE
+75 NON DISPONIBLE NON DISPONIBLE
+76 NON DISPONIBLE NON DISPONIBLE
+77 NON DISPONIBLE NON DISPONIBLE
+78 NON DISPONIBLE NON DISPONIBLE
+79 NON DISPONIBLE NON DISPONIBLE
+80 NON DISPONIBLE NON DISPONIBLE
+81 NON DISPONIBLE NON DISPONIBLE
+82 NON DISPONIBLE NON DISPONIBLE
+83 NON DISPONIBLE NON DISPONIBLE
+84 NON DISPONIBLE NON DISPONIBLE
+85 NON DISPONIBLE NON DISPONIBLE
+86 NON DISPONIBLE NON DISPONIBLE
+87 NON DISPONIBLE NON DISPONIBLE
+88 NON DISPONIBLE NON DISPONIBLE
+89 NON DISPONIBLE NON DISPONIBLE
+90 NON DISPONIBLE NON DISPONIBLE
+91 NON DISPONIBLE NON DISPONIBLE

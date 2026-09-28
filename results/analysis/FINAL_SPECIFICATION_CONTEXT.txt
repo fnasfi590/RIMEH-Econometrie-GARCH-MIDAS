@@ -1,0 +1,3530 @@
+RIMEH - CONTEXTE SOURCE DES 7 SPECIFICATIONS
+==============================================
+
+IMPORTANT :
+Le mapping H1-H9 n'est jamais base uniquement
+sur les suffixes DEM/SUP/PRE/VIX.
+
+Les resultats generes precedemment sont exclus
+de la recherche des hypotheses originales.
+
+
+============================================================
+SPECIFICATION : GPRA_SUP
+============================================================
+FICHIER : C:/Users/clien/Downloads/RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS/RIMEH_ECONOMETRIE/scripts/06_prepare_part3_data.R
+LIGNE : 39
+SOURCE :     GPRA_SUP = as.numeric(as.character(GPRA)) * as.numeric(as.character(SUP)),
+CONTEXTE :
+0024: 
+0025: # Global monthly variables are common to all countries; country-level controls may be present.
+0026: global_monthly <- monthly %>%
+0027:   dplyr::select(date, any_of(c("GPRT","GPRA","VIX","dlog_real_oil_price","IGREA","real_wti"))) %>%
+0028:   distinct(date, .keep_all=TRUE) %>%
+0029:   left_join(shocks %>% distinct(date, .keep_all=TRUE), by="date")
+0030: 
+0031: country_monthly <- monthly %>%
+0032:   dplyr::select(country, date, any_of(c("interest_rate","exchange_rate","GDP","inflation","RV","n_obs"))) %>%
+0033:   left_join(classif %>% dplyr::select(country, exporter), by="country") %>%
+0034:   left_join(global_monthly, by="date") %>%
+0035:   mutate(
+0036:     exporter=as.integer(exporter),
+0037:     GPR_SUP = as.numeric(as.character(GPRT)) * as.numeric(as.character(SUP)),
+0038:     GPRT_SUP = as.numeric(as.character(GPRT)) * as.numeric(as.character(SUP)),
+0039:     GPRA_SUP = as.numeric(as.character(GPRA)) * as.numeric(as.character(SUP)),
+0040:     SUP_EXPORTER=SUP*exporter,
+0041:     SUP_positive=pmax(SUP,0),
+0042:     SUP_negative=pmin(SUP,0),
+0043:     DEM_EXPORTER=DEM*exporter,
+0044:     PRE_EXPORTER=PRE*exporter
+0045:   ) %>% arrange(country,date)
+0046: 
+0047: # If monthly GPR/controls were not already present, preserve explicit NA rather than fabricate.
+0048: write_csv(country_monthly, "data/processed/monthly_model_data.csv")
+0049: 
+0050: # Daily returns with monthly key; this is the input for GARCH/GARCH-MIDAS.
+0051: daily_model <- daily %>%
+0052:   dplyr::select(country,date,month,any_of(c("stock_price","return","exporter"))) %>%
+0053:   left_join(country_monthly, by=c("country","month"="date"))
+0054: write_csv(daily_model, "data/processed/daily_model_data.csv")
+
+FICHIER : C:/Users/clien/Downloads/RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS/RIMEH_ECONOMETRIE/scripts/08_garch_midas_models.R
+LIGNE : 142
+SOURCE :   GPRA_SUP = c("GPRA", "SUP"),
+CONTEXTE :
+0127:       mv_m_2 = mm[[2]],
+0128:       K = K,
+0129:       K_2 = K,
+0130:       lag_fun = "Beta",
+0131:       R = 50
+0132:     )
+0133:   } else {
+0134:     stop("Only one or two MIDAS variables are supported")
+0135:   }
+0136: 
+0137:   do.call(rumidas::ugmfit, args)
+0138: }
+0139: countries <- sort(unique(daily[["country"]]))
+0140: specs <- list(
+0141:   GPRT_SUP = c("GPRT", "SUP"),
+0142:   GPRA_SUP = c("GPRA", "SUP"),
+0143:   GPRT_DEM = c("GPRT", "DEM"),
+0144:   GPRT_PRE = c("GPRT", "PRE"),
+0145:   GPRT_VIX = c("GPRT", "VIX"),
+0146:   SUP_DEM = c("SUP", "DEM"),
+0147:   SUP_PRE = c("SUP", "PRE")
+0148: )
+0149: summary_rows <- list()
+0150: model_count <- 0
+0151: for (cc in countries) {
+0152:   for (nm in names(specs)) {
+0153:     vars <- specs[[nm]]
+0154:     fit <- tryCatch(fit_pair(cc, vars, K=3), error=function(e){message("MIDAS failed ",cc,"/",nm,": ",e$message); NULL})
+0155:     if (!is.null(fit)) {
+0156:       saveRDS(fit, file.path("results/models/garch_midas", paste0(cc,"_",nm,".rds")))
+0157:       txt <- capture.output(summary(fit))
+
+FICHIER : C:/Users/clien/Downloads/RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS/RIMEH_ECONOMETRIE/scripts/08_garch_midas_models_backup_20260916_041841.R
+LIGNE : 138
+SOURCE :   GPRA_SUP = c("GPRA", "SUP"),
+CONTEXTE :
+0123:       mv_m_2 = mm[[2]],
+0124:       K = K,
+0125:       K_2 = K,
+0126:       lag_fun = "Beta",
+0127:       R = 50
+0128:     )
+0129:   } else {
+0130:     stop("Only one or two MIDAS variables are supported")
+0131:   }
+0132: 
+0133:   do.call(rumidas::ugmfit, args)
+0134: }
+0135: countries <- sort(unique(daily[["country"]]))
+0136: specs <- list(
+0137:   GPRT_SUP = c("GPRT", "SUP"),
+0138:   GPRA_SUP = c("GPRA", "SUP"),
+0139:   GPRT_DEM = c("GPRT", "DEM"),
+0140:   GPRT_PRE = c("GPRT", "PRE"),
+0141:   GPRT_VIX = c("GPRT", "VIX"),
+0142:   SUP_DEM = c("SUP", "DEM"),
+0143:   SUP_PRE = c("SUP", "PRE")
+0144: )
+0145: summary_rows <- list()
+0146: model_count <- 0
+0147: for (cc in countries) {
+0148:   for (nm in names(specs)) {
+0149:     vars <- specs[[nm]]
+0150:     fit <- tryCatch(fit_pair(cc, vars, K=3), error=function(e){message("MIDAS failed ",cc,"/",nm,": ",e$message); NULL})
+0151:     if (!is.null(fit)) {
+0152:       saveRDS(fit, file.path("results/models/garch_midas", paste0(cc,"_",nm,".rds")))
+0153:       txt <- capture.output(summary(fit))
+
+FICHIER : C:/Users/clien/Downloads/RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS/RIMEH_ECONOMETRIE/scripts/08_garch_midas_models_BACKUP_AUTO.R
+LIGNE : 69
+SOURCE :   GPRA_SUP=c("GPRA","SUP"),
+CONTEXTE :
+0054:     mm <- lapply(
+0055:       mats,
+0056:       function(z) rumidas::mv_into_mat(r, z, K=K_use, type="monthly")
+0057:     )
+0058: }
+0059:   args <- list(model="GM2M", skew="NO", distribution="std", daily_ret=r,
+0060:                mv_m=mm[[1]], K=K, lag_fun="Beta", R=50)
+0061:   if (length(mm)>=2) args$mv_m_2 <- mm[[2]]
+0062:   do.call(rumidas::ugmfit, args)
+0063: }
+0064: 
+0065: countries <- sort(unique(daily$country))
+0066: # Main parsimonious specifications. The full multivariate long-run equation is handled separately in 09_panel_long_run.R.
+0067: specs <- list(
+0068:   GPRT_SUP=c("GPRT","SUP"),
+0069:   GPRA_SUP=c("GPRA","SUP"),
+0070:   GPRT_DEM=c("GPRT","DEM"),
+0071:   GPRT_PRE=c("GPRT","PRE"),
+0072:   GPRT_VIX=c("GPRT","VIX"),
+0073:   SUP_DEM=c("SUP","DEM"),
+0074:   SUP_PRE=c("SUP","PRE")
+0075: )
+0076: 
+0077: summary_rows <- list(); model_count <- 0
+0078: for (cc in countries) {
+0079:   for (nm in names(specs)) {
+0080:     vars <- specs[[nm]]
+0081:     fit <- tryCatch(fit_pair(cc, vars, K=3), error=function(e){message("MIDAS failed ",cc,"/",nm,": ",e$message); NULL})
+0082:     if (!is.null(fit)) {
+0083:       saveRDS(fit, file.path("results/models/garch_midas", paste0(cc,"_",nm,".rds")))
+0084:       txt <- capture.output(summary(fit))
+
+FICHIER : C:/Users/clien/Downloads/RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS/RIMEH_ECONOMETRIE/scripts/08_garch_midas_models_BACKUP_FIX2.R
+LIGNE : 69
+SOURCE :   GPRA_SUP=c("GPRA","SUP"),
+CONTEXTE :
+0054:     mm <- lapply(
+0055:       mats,
+0056:       function(z) rumidas::mv_into_mat(r, z, K=K_use, type="monthly")
+0057:     )
+0058: }
+0059:   args <- list(model="GM2M", skew="NO", distribution="std", daily_ret=r,
+0060:                mv_m=mm[[1]], K=K, lag_fun="Beta", R=50)
+0061:   if (length(mm)>=2) args$mv_m_2 <- mm[[2]]
+0062:   do.call(rumidas::ugmfit, args)
+0063: }
+0064: 
+0065: countries <- sort(unique(daily$country))
+0066: # Main parsimonious specifications. The full multivariate long-run equation is handled separately in 09_panel_long_run.R.
+0067: specs <- list(
+0068:   GPRT_SUP=c("GPRT","SUP"),
+0069:   GPRA_SUP=c("GPRA","SUP"),
+0070:   GPRT_DEM=c("GPRT","DEM"),
+0071:   GPRT_PRE=c("GPRT","PRE"),
+0072:   GPRT_VIX=c("GPRT","VIX"),
+0073:   SUP_DEM=c("SUP","DEM"),
+0074:   SUP_PRE=c("SUP","PRE")
+0075: )
+0076: 
+0077: summary_rows <- list(); model_count <- 0
+0078: for (cc in countries) {
+0079:   for (nm in names(specs)) {
+0080:     vars <- specs[[nm]]
+0081:     fit <- tryCatch(fit_pair(cc, vars, K=3), error=function(e){message("MIDAS failed ",cc,"/",nm,": ",e$message); NULL})
+0082:     if (!is.null(fit)) {
+0083:       saveRDS(fit, file.path("results/models/garch_midas", paste0(cc,"_",nm,".rds")))
+0084:       txt <- capture.output(summary(fit))
+
+FICHIER : C:/Users/clien/Downloads/RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS/RIMEH_ECONOMETRIE/scripts/09_garch_midas_resume.R
+LIGNE : 17
+SOURCE :   GPRA_SUP = c("GPRA","SUP"),
+CONTEXTE :
+0002: 
+0003: marker <- 'countries <- sort(unique(daily[["country"]]))'
+0004: cut <- which(trimws(lines) == marker)[1]
+0005: 
+0006: if (is.na(cut)) {
+0007:   stop("Impossible de trouver le d?but de la boucle principale.")
+0008: }
+0009: 
+0010: eval(parse(text = paste(lines[1:(cut - 1)], collapse = "\n")),
+0011:      envir = .GlobalEnv)
+0012: 
+0013: countries <- sort(unique(daily[["country"]]))
+0014: 
+0015: specs <- list(
+0016:   GPRT_SUP = c("GPRT","SUP"),
+0017:   GPRA_SUP = c("GPRA","SUP"),
+0018:   GPRT_DEM = c("GPRT","DEM"),
+0019:   GPRT_PRE = c("GPRT","PRE"),
+0020:   GPRT_VIX = c("GPRT","VIX"),
+0021:   SUP_DEM = c("SUP","DEM"),
+0022:   SUP_PRE = c("SUP","PRE")
+0023: )
+0024: 
+0025: audit_file <- "results/tables/garch_midas_run_audit.csv"
+0026: 
+0027: audit_rows <- list()
+0028: 
+0029: for (cc in countries) {
+0030:   for (nm in names(specs)) {
+0031: 
+0032:     vars <- specs[[nm]]
+
+FICHIER : C:/Users/clien/Downloads/RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS/RIMEH_ECONOMETRIE/scripts/10_diagnose_failed_midas.R
+LIGNE : 12
+SOURCE :   c("USA","GPRA_SUP")
+CONTEXTE :
+0001: lines <- readLines("scripts/08_garch_midas_models.R", warn = FALSE)
+0002: marker <- 'countries <- sort(unique(daily[["country"]]))'
+0003: cut <- which(trimws(lines) == marker)[1]
+0004: 
+0005: eval(parse(text = paste(lines[1:(cut - 1)], collapse = "\n")),
+0006:      envir = .GlobalEnv)
+0007: 
+0008: tests <- list(
+0009:   c("GBR","SUP_PRE"),
+0010:   c("MEX","GPRT_SUP"),
+0011:   c("NOR","SUP_PRE"),
+0012:   c("USA","GPRA_SUP")
+0013: )
+0014: 
+0015: for (x in tests) {
+0016:   cc <- x[1]
+0017:   nm <- x[2]
+0018:   vars <- switch(
+0019:     nm,
+0020:     SUP_PRE = c("SUP","PRE"),
+0021:     GPRT_SUP = c("GPRT","SUP"),
+0022:     GPRA_SUP = c("GPRA","SUP")
+0023:   )
+0024: 
+0025:   cat("\n========================================\n")
+0026:   cat(cc, "/", nm, "\n")
+0027:   cat("========================================\n")
+
+FICHIER : C:/Users/clien/Downloads/RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS/RIMEH_ECONOMETRIE/scripts/10_diagnose_failed_midas.R
+LIGNE : 22
+SOURCE :     GPRA_SUP = c("GPRA","SUP")
+CONTEXTE :
+0007: 
+0008: tests <- list(
+0009:   c("GBR","SUP_PRE"),
+0010:   c("MEX","GPRT_SUP"),
+0011:   c("NOR","SUP_PRE"),
+0012:   c("USA","GPRA_SUP")
+0013: )
+0014: 
+0015: for (x in tests) {
+0016:   cc <- x[1]
+0017:   nm <- x[2]
+0018:   vars <- switch(
+0019:     nm,
+0020:     SUP_PRE = c("SUP","PRE"),
+0021:     GPRT_SUP = c("GPRT","SUP"),
+0022:     GPRA_SUP = c("GPRA","SUP")
+0023:   )
+0024: 
+0025:   cat("\n========================================\n")
+0026:   cat(cc, "/", nm, "\n")
+0027:   cat("========================================\n")
+0028: 
+0029:   m <- monthly %>%
+0030:     dplyr::filter(country == cc) %>%
+0031:     dplyr::arrange(date)
+0032: 
+0033:   for (v in vars) {
+0034:     z <- m %>%
+0035:       dplyr::select(date, value = dplyr::all_of(v)) %>%
+0036:       tidyr::drop_na()
+0037: 
+
+FICHIER : C:/Users/clien/Downloads/RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS/RIMEH_ECONOMETRIE/scripts/11_test_failed_midas_k2.R
+LIGNE : 12
+SOURCE :   c("USA","GPRA_SUP")
+CONTEXTE :
+0001: lines <- readLines("scripts/08_garch_midas_models.R", warn = FALSE)
+0002: marker <- 'countries <- sort(unique(daily[["country"]]))'
+0003: cut <- which(trimws(lines) == marker)[1]
+0004: 
+0005: eval(parse(text = paste(lines[1:(cut - 1)], collapse = "\n")),
+0006:      envir = .GlobalEnv)
+0007: 
+0008: tests <- list(
+0009:   c("GBR","SUP_PRE"),
+0010:   c("MEX","GPRT_SUP"),
+0011:   c("NOR","SUP_PRE"),
+0012:   c("USA","GPRA_SUP")
+0013: )
+0014: 
+0015: for (x in tests) {
+0016:   cc <- x[1]
+0017:   nm <- x[2]
+0018: 
+0019:   vars <- switch(
+0020:     nm,
+0021:     SUP_PRE = c("SUP","PRE"),
+0022:     GPRT_SUP = c("GPRT","SUP"),
+0023:     GPRA_SUP = c("GPRA","SUP")
+0024:   )
+0025: 
+0026:   cat("\n========================================\n")
+0027:   cat("TEST K=2 :", cc, "/", nm, "\n")
+
+FICHIER : C:/Users/clien/Downloads/RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS/RIMEH_ECONOMETRIE/scripts/11_test_failed_midas_k2.R
+LIGNE : 23
+SOURCE :     GPRA_SUP = c("GPRA","SUP")
+CONTEXTE :
+0008: tests <- list(
+0009:   c("GBR","SUP_PRE"),
+0010:   c("MEX","GPRT_SUP"),
+0011:   c("NOR","SUP_PRE"),
+0012:   c("USA","GPRA_SUP")
+0013: )
+0014: 
+0015: for (x in tests) {
+0016:   cc <- x[1]
+0017:   nm <- x[2]
+0018: 
+0019:   vars <- switch(
+0020:     nm,
+0021:     SUP_PRE = c("SUP","PRE"),
+0022:     GPRT_SUP = c("GPRT","SUP"),
+0023:     GPRA_SUP = c("GPRA","SUP")
+0024:   )
+0025: 
+0026:   cat("\n========================================\n")
+0027:   cat("TEST K=2 :", cc, "/", nm, "\n")
+0028:   cat("========================================\n")
+0029: 
+0030:   fit <- tryCatch(
+0031:     fit_pair(cc, vars, K = 2),
+0032:     error = function(e) {
+0033:       cat("FAILED K=2:", e$message, "\n")
+0034:       NULL
+0035:     }
+0036:   )
+0037: 
+0038:   if (!is.null(fit)) {
+
+FICHIER : C:/Users/clien/Downloads/RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS/RIMEH_ECONOMETRIE/scripts/13_save_recovered_midas.R
+LIGNE : 11
+SOURCE :   USA_GPRA_SUP = c("USA","GPRA_SUP")
+CONTEXTE :
+0001: lines <- readLines("scripts/08_garch_midas_models.R", warn = FALSE)
+0002: marker <- 'countries <- sort(unique(daily[["country"]]))'
+0003: cut <- which(trimws(lines) == marker)[1]
+0004: 
+0005: eval(parse(text = paste(lines[1:(cut - 1)], collapse = "\n")),
+0006:      envir = .GlobalEnv)
+0007: 
+0008: tests <- list(
+0009:   MEX_GPRT_SUP = c("MEX","GPRT_SUP"),
+0010:   NOR_SUP_PRE  = c("NOR","SUP_PRE"),
+0011:   USA_GPRA_SUP = c("USA","GPRA_SUP")
+0012: )
+0013: 
+0014: for (nm_test in names(tests)) {
+0015: 
+0016:   cc <- tests[[nm_test]][1]
+0017:   nm <- tests[[nm_test]][2]
+0018: 
+0019:   vars <- switch(
+0020:     nm,
+0021:     GPRT_SUP = c("GPRT","SUP"),
+0022:     SUP_PRE  = c("SUP","PRE"),
+0023:     GPRA_SUP = c("GPRA","SUP")
+0024:   )
+0025: 
+0026:   cat("\n========================================\n")
+
+FICHIER : C:/Users/clien/Downloads/RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS/RIMEH_ECONOMETRIE/scripts/13_save_recovered_midas.R
+LIGNE : 23
+SOURCE :     GPRA_SUP = c("GPRA","SUP")
+CONTEXTE :
+0008: tests <- list(
+0009:   MEX_GPRT_SUP = c("MEX","GPRT_SUP"),
+0010:   NOR_SUP_PRE  = c("NOR","SUP_PRE"),
+0011:   USA_GPRA_SUP = c("USA","GPRA_SUP")
+0012: )
+0013: 
+0014: for (nm_test in names(tests)) {
+0015: 
+0016:   cc <- tests[[nm_test]][1]
+0017:   nm <- tests[[nm_test]][2]
+0018: 
+0019:   vars <- switch(
+0020:     nm,
+0021:     GPRT_SUP = c("GPRT","SUP"),
+0022:     SUP_PRE  = c("SUP","PRE"),
+0023:     GPRA_SUP = c("GPRA","SUP")
+0024:   )
+0025: 
+0026:   cat("\n========================================\n")
+0027:   cat("FINAL K=2 ESTIMATION:", cc, "/", nm, "\n")
+0028:   cat("========================================\n")
+0029: 
+0030:   fit <- tryCatch(
+0031:     fit_pair(cc, vars, K = 2),
+0032:     error = function(e) {
+0033:       cat("FAILED:", cc, "/", nm, ":", e$message, "\n")
+0034:       NULL
+0035:     }
+0036:   )
+0037: 
+0038:   if (!is.null(fit)) {
+
+FICHIER : C:/Users/clien/Downloads/RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS/RIMEH_ECONOMETRIE/scripts/14_finalize_midas_audit.R
+LIGNE : 10
+SOURCE :       country == "USA" & model == "GPRA_SUP" ~ "OK",
+CONTEXTE :
+0001: audit_file <- "results/tables/garch_midas_run_audit.csv"
+0002: 
+0003: audit <- readr::read_csv(audit_file, show_col_types = FALSE)
+0004: 
+0005: audit <- audit |>
+0006:   dplyr::mutate(
+0007:     status = dplyr::case_when(
+0008:       country == "MEX" & model == "GPRT_SUP" ~ "OK",
+0009:       country == "NOR" & model == "SUP_PRE"  ~ "OK",
+0010:       country == "USA" & model == "GPRA_SUP" ~ "OK",
+0011:       country == "GBR" & model == "SUP_PRE"  ~ "FAILED_NUMERICAL",
+0012:       TRUE ~ status
+0013:     )
+0014:   )
+0015: 
+0016: readr::write_csv(audit, audit_file)
+0017: 
+0018: cat("\n========================================\n")
+0019: cat("FINAL GARCH-MIDAS AUDIT\n")
+0020: cat("========================================\n")
+0021: print(table(audit$status))
+0022: cat("\nTotal models:", nrow(audit), "\n")
+0023: cat("Successful:", sum(audit$status %in% c("OK","EXISTING")), "\n")
+0024: cat("Numerical failure:", sum(audit$status == "FAILED_NUMERICAL"), "\n")
+0025: cat("\nGBR/SUP_PRE status:\n")
+
+FICHIER : C:/Users/clien/Downloads/RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS/RIMEH_ECONOMETRIE/scripts/19_analyse_complete_garch_midas.R
+LIGNE : 161
+SOURCE :       "GPRA_SUP",
+CONTEXTE :
+0146:   )
+0147: 
+0148: write_csv(
+0149:   country_stats,
+0150:   "results/analysis/table_statistiques_par_pays.csv"
+0151: )
+0152: 
+0153: # ============================================================
+0154: # 7. COMPARAISON GPRT / GPRA
+0155: # ============================================================
+0156: 
+0157: gpr_comparison <- coef_analysis %>%
+0158:   filter(
+0159:     model %in% c(
+0160:       "GPRT_SUP",
+0161:       "GPRA_SUP",
+0162:       "GPRT_DEM",
+0163:       "GPRT_PRE",
+0164:       "GPRT_VIX"
+0165:     ),
+0166:     parameter %in% c("theta_1", "theta_2")
+0167:   ) %>%
+0168:   mutate(
+0169:     GPR_type = case_when(
+0170:       grepl("^GPRT", model) ~ "GPRT",
+0171:       grepl("^GPRA", model) ~ "GPRA",
+0172:       TRUE ~ "OTHER"
+0173:     )
+0174:   ) %>%
+0175:   select(
+0176:     country, model, GPR_type,
+
+FICHIER : C:/Users/clien/Downloads/RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS/RIMEH_ECONOMETRIE/scripts/19_analyse_complete_garch_midas.R
+LIGNE : 306
+SOURCE :     model == "GPRA_SUP",
+CONTEXTE :
+0291:     expected_sign = "POSITIF",
+0292:     statistical_result = case_when(
+0293:       p_value < 0.05 & Estimate > 0 ~ "CONFIRMATION_STATISTIQUE",
+0294:       p_value < 0.05 & Estimate < 0 ~ "EFFET_SIGNIFICATIF_OPPOSE",
+0295:       p_value >= 0.05 ~ "NON_SIGNIFICATIF",
+0296:       TRUE ~ "NON_DETERMINE"
+0297:     )
+0298:   )
+0299: 
+0300: # ============================================================
+0301: # 13. H2 : GPRA -> effet positif
+0302: # ============================================================
+0303: 
+0304: h2 <- coef_analysis %>%
+0305:   filter(
+0306:     model == "GPRA_SUP",
+0307:     parameter == "theta_1"
+0308:   ) %>%
+0309:   mutate(
+0310:     hypothesis = "H2",
+0311:     expected_sign = "POSITIF",
+0312:     statistical_result = case_when(
+0313:       p_value < 0.05 & Estimate > 0 ~ "CONFIRMATION_STATISTIQUE",
+0314:       p_value < 0.05 & Estimate < 0 ~ "EFFET_SIGNIFICATIF_OPPOSE",
+0315:       p_value >= 0.05 ~ "NON_SIGNIFICATIF",
+0316:       TRUE ~ "NON_DETERMINE"
+0317:     )
+0318:   )
+0319: 
+0320: # ============================================================
+0321: # 14. H3 : SUP
+
+FICHIER : C:/Users/clien/Downloads/RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS/RIMEH_ECONOMETRIE/scripts/19_analyse_complete_garch_midas.R
+LIGNE : 328
+SOURCE :       "GPRA_SUP",
+CONTEXTE :
+0313:       p_value < 0.05 & Estimate > 0 ~ "CONFIRMATION_STATISTIQUE",
+0314:       p_value < 0.05 & Estimate < 0 ~ "EFFET_SIGNIFICATIF_OPPOSE",
+0315:       p_value >= 0.05 ~ "NON_SIGNIFICATIF",
+0316:       TRUE ~ "NON_DETERMINE"
+0317:     )
+0318:   )
+0319: 
+0320: # ============================================================
+0321: # 14. H3 : SUP
+0322: # ============================================================
+0323: 
+0324: h3 <- coef_analysis %>%
+0325:   filter(
+0326:     model %in% c(
+0327:       "GPRT_SUP",
+0328:       "GPRA_SUP",
+0329:       "SUP_DEM",
+0330:       "SUP_PRE"
+0331:     ),
+0332:     parameter %in% c("theta_1", "theta_2")
+0333:   ) %>%
+0334:   mutate(
+0335:     hypothesis = "H3",
+0336:     expected_sign = "POSITIF",
+0337:     statistical_result = case_when(
+0338:       p_value < 0.05 & Estimate > 0 ~ "CONFIRMATION_STATISTIQUE",
+0339:       p_value < 0.05 & Estimate < 0 ~ "EFFET_SIGNIFICATIF_OPPOSE",
+0340:       p_value >= 0.05 ~ "NON_SIGNIFICATIF",
+0341:       TRUE ~ "NON_DETERMINE"
+0342:     )
+0343:   )
+
+
+============================================================
+SPECIFICATION : GPRT_DEM
+============================================================
+FICHIER : C:/Users/clien/Downloads/RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS/RIMEH_ECONOMETRIE/scripts/08_garch_midas_models.R
+LIGNE : 143
+SOURCE :   GPRT_DEM = c("GPRT", "DEM"),
+CONTEXTE :
+0128:       K = K,
+0129:       K_2 = K,
+0130:       lag_fun = "Beta",
+0131:       R = 50
+0132:     )
+0133:   } else {
+0134:     stop("Only one or two MIDAS variables are supported")
+0135:   }
+0136: 
+0137:   do.call(rumidas::ugmfit, args)
+0138: }
+0139: countries <- sort(unique(daily[["country"]]))
+0140: specs <- list(
+0141:   GPRT_SUP = c("GPRT", "SUP"),
+0142:   GPRA_SUP = c("GPRA", "SUP"),
+0143:   GPRT_DEM = c("GPRT", "DEM"),
+0144:   GPRT_PRE = c("GPRT", "PRE"),
+0145:   GPRT_VIX = c("GPRT", "VIX"),
+0146:   SUP_DEM = c("SUP", "DEM"),
+0147:   SUP_PRE = c("SUP", "PRE")
+0148: )
+0149: summary_rows <- list()
+0150: model_count <- 0
+0151: for (cc in countries) {
+0152:   for (nm in names(specs)) {
+0153:     vars <- specs[[nm]]
+0154:     fit <- tryCatch(fit_pair(cc, vars, K=3), error=function(e){message("MIDAS failed ",cc,"/",nm,": ",e$message); NULL})
+0155:     if (!is.null(fit)) {
+0156:       saveRDS(fit, file.path("results/models/garch_midas", paste0(cc,"_",nm,".rds")))
+0157:       txt <- capture.output(summary(fit))
+0158:       writeLines(txt, file.path("results/tables", paste0("GARCH_MIDAS_",cc,"_",nm,".txt")))
+
+FICHIER : C:/Users/clien/Downloads/RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS/RIMEH_ECONOMETRIE/scripts/08_garch_midas_models_backup_20260916_041841.R
+LIGNE : 139
+SOURCE :   GPRT_DEM = c("GPRT", "DEM"),
+CONTEXTE :
+0124:       K = K,
+0125:       K_2 = K,
+0126:       lag_fun = "Beta",
+0127:       R = 50
+0128:     )
+0129:   } else {
+0130:     stop("Only one or two MIDAS variables are supported")
+0131:   }
+0132: 
+0133:   do.call(rumidas::ugmfit, args)
+0134: }
+0135: countries <- sort(unique(daily[["country"]]))
+0136: specs <- list(
+0137:   GPRT_SUP = c("GPRT", "SUP"),
+0138:   GPRA_SUP = c("GPRA", "SUP"),
+0139:   GPRT_DEM = c("GPRT", "DEM"),
+0140:   GPRT_PRE = c("GPRT", "PRE"),
+0141:   GPRT_VIX = c("GPRT", "VIX"),
+0142:   SUP_DEM = c("SUP", "DEM"),
+0143:   SUP_PRE = c("SUP", "PRE")
+0144: )
+0145: summary_rows <- list()
+0146: model_count <- 0
+0147: for (cc in countries) {
+0148:   for (nm in names(specs)) {
+0149:     vars <- specs[[nm]]
+0150:     fit <- tryCatch(fit_pair(cc, vars, K=3), error=function(e){message("MIDAS failed ",cc,"/",nm,": ",e$message); NULL})
+0151:     if (!is.null(fit)) {
+0152:       saveRDS(fit, file.path("results/models/garch_midas", paste0(cc,"_",nm,".rds")))
+0153:       txt <- capture.output(summary(fit))
+0154:       writeLines(txt, file.path("results/tables", paste0("GARCH_MIDAS_",cc,"_",nm,".txt")))
+
+FICHIER : C:/Users/clien/Downloads/RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS/RIMEH_ECONOMETRIE/scripts/08_garch_midas_models_BACKUP_AUTO.R
+LIGNE : 70
+SOURCE :   GPRT_DEM=c("GPRT","DEM"),
+CONTEXTE :
+0055:       mats,
+0056:       function(z) rumidas::mv_into_mat(r, z, K=K_use, type="monthly")
+0057:     )
+0058: }
+0059:   args <- list(model="GM2M", skew="NO", distribution="std", daily_ret=r,
+0060:                mv_m=mm[[1]], K=K, lag_fun="Beta", R=50)
+0061:   if (length(mm)>=2) args$mv_m_2 <- mm[[2]]
+0062:   do.call(rumidas::ugmfit, args)
+0063: }
+0064: 
+0065: countries <- sort(unique(daily$country))
+0066: # Main parsimonious specifications. The full multivariate long-run equation is handled separately in 09_panel_long_run.R.
+0067: specs <- list(
+0068:   GPRT_SUP=c("GPRT","SUP"),
+0069:   GPRA_SUP=c("GPRA","SUP"),
+0070:   GPRT_DEM=c("GPRT","DEM"),
+0071:   GPRT_PRE=c("GPRT","PRE"),
+0072:   GPRT_VIX=c("GPRT","VIX"),
+0073:   SUP_DEM=c("SUP","DEM"),
+0074:   SUP_PRE=c("SUP","PRE")
+0075: )
+0076: 
+0077: summary_rows <- list(); model_count <- 0
+0078: for (cc in countries) {
+0079:   for (nm in names(specs)) {
+0080:     vars <- specs[[nm]]
+0081:     fit <- tryCatch(fit_pair(cc, vars, K=3), error=function(e){message("MIDAS failed ",cc,"/",nm,": ",e$message); NULL})
+0082:     if (!is.null(fit)) {
+0083:       saveRDS(fit, file.path("results/models/garch_midas", paste0(cc,"_",nm,".rds")))
+0084:       txt <- capture.output(summary(fit))
+0085:       writeLines(txt, file.path("results/tables", paste0("GARCH_MIDAS_",cc,"_",nm,".txt")))
+
+FICHIER : C:/Users/clien/Downloads/RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS/RIMEH_ECONOMETRIE/scripts/08_garch_midas_models_BACKUP_FIX2.R
+LIGNE : 70
+SOURCE :   GPRT_DEM=c("GPRT","DEM"),
+CONTEXTE :
+0055:       mats,
+0056:       function(z) rumidas::mv_into_mat(r, z, K=K_use, type="monthly")
+0057:     )
+0058: }
+0059:   args <- list(model="GM2M", skew="NO", distribution="std", daily_ret=r,
+0060:                mv_m=mm[[1]], K=K, lag_fun="Beta", R=50)
+0061:   if (length(mm)>=2) args$mv_m_2 <- mm[[2]]
+0062:   do.call(rumidas::ugmfit, args)
+0063: }
+0064: 
+0065: countries <- sort(unique(daily$country))
+0066: # Main parsimonious specifications. The full multivariate long-run equation is handled separately in 09_panel_long_run.R.
+0067: specs <- list(
+0068:   GPRT_SUP=c("GPRT","SUP"),
+0069:   GPRA_SUP=c("GPRA","SUP"),
+0070:   GPRT_DEM=c("GPRT","DEM"),
+0071:   GPRT_PRE=c("GPRT","PRE"),
+0072:   GPRT_VIX=c("GPRT","VIX"),
+0073:   SUP_DEM=c("SUP","DEM"),
+0074:   SUP_PRE=c("SUP","PRE")
+0075: )
+0076: 
+0077: summary_rows <- list(); model_count <- 0
+0078: for (cc in countries) {
+0079:   for (nm in names(specs)) {
+0080:     vars <- specs[[nm]]
+0081:     fit <- tryCatch(fit_pair(cc, vars, K=3), error=function(e){message("MIDAS failed ",cc,"/",nm,": ",e$message); NULL})
+0082:     if (!is.null(fit)) {
+0083:       saveRDS(fit, file.path("results/models/garch_midas", paste0(cc,"_",nm,".rds")))
+0084:       txt <- capture.output(summary(fit))
+0085:       writeLines(txt, file.path("results/tables", paste0("GARCH_MIDAS_",cc,"_",nm,".txt")))
+
+FICHIER : C:/Users/clien/Downloads/RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS/RIMEH_ECONOMETRIE/scripts/09_garch_midas_resume.R
+LIGNE : 18
+SOURCE :   GPRT_DEM = c("GPRT","DEM"),
+CONTEXTE :
+0003: marker <- 'countries <- sort(unique(daily[["country"]]))'
+0004: cut <- which(trimws(lines) == marker)[1]
+0005: 
+0006: if (is.na(cut)) {
+0007:   stop("Impossible de trouver le d?but de la boucle principale.")
+0008: }
+0009: 
+0010: eval(parse(text = paste(lines[1:(cut - 1)], collapse = "\n")),
+0011:      envir = .GlobalEnv)
+0012: 
+0013: countries <- sort(unique(daily[["country"]]))
+0014: 
+0015: specs <- list(
+0016:   GPRT_SUP = c("GPRT","SUP"),
+0017:   GPRA_SUP = c("GPRA","SUP"),
+0018:   GPRT_DEM = c("GPRT","DEM"),
+0019:   GPRT_PRE = c("GPRT","PRE"),
+0020:   GPRT_VIX = c("GPRT","VIX"),
+0021:   SUP_DEM = c("SUP","DEM"),
+0022:   SUP_PRE = c("SUP","PRE")
+0023: )
+0024: 
+0025: audit_file <- "results/tables/garch_midas_run_audit.csv"
+0026: 
+0027: audit_rows <- list()
+0028: 
+0029: for (cc in countries) {
+0030:   for (nm in names(specs)) {
+0031: 
+0032:     vars <- specs[[nm]]
+0033:     rds_file <- file.path(
+
+FICHIER : C:/Users/clien/Downloads/RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS/RIMEH_ECONOMETRIE/scripts/19_analyse_complete_garch_midas.R
+LIGNE : 162
+SOURCE :       "GPRT_DEM",
+CONTEXTE :
+0147: 
+0148: write_csv(
+0149:   country_stats,
+0150:   "results/analysis/table_statistiques_par_pays.csv"
+0151: )
+0152: 
+0153: # ============================================================
+0154: # 7. COMPARAISON GPRT / GPRA
+0155: # ============================================================
+0156: 
+0157: gpr_comparison <- coef_analysis %>%
+0158:   filter(
+0159:     model %in% c(
+0160:       "GPRT_SUP",
+0161:       "GPRA_SUP",
+0162:       "GPRT_DEM",
+0163:       "GPRT_PRE",
+0164:       "GPRT_VIX"
+0165:     ),
+0166:     parameter %in% c("theta_1", "theta_2")
+0167:   ) %>%
+0168:   mutate(
+0169:     GPR_type = case_when(
+0170:       grepl("^GPRT", model) ~ "GPRT",
+0171:       grepl("^GPRA", model) ~ "GPRA",
+0172:       TRUE ~ "OTHER"
+0173:     )
+0174:   ) %>%
+0175:   select(
+0176:     country, model, GPR_type,
+0177:     parameter, Estimate,
+
+FICHIER : C:/Users/clien/Downloads/RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS/RIMEH_ECONOMETRIE/scripts/19_analyse_complete_garch_midas.R
+LIGNE : 194
+SOURCE :       "GPRT_DEM",
+CONTEXTE :
+0179:   )
+0180: 
+0181: write_csv(
+0182:   gpr_comparison,
+0183:   "results/analysis/table_comparaison_GPRT_GPRA.csv"
+0184: )
+0185: 
+0186: # ============================================================
+0187: # 8. COMPARAISON SUP / DEM / PRE
+0188: # ============================================================
+0189: 
+0190: shock_comparison <- coef_analysis %>%
+0191:   filter(
+0192:     model %in% c(
+0193:       "GPRT_SUP",
+0194:       "GPRT_DEM",
+0195:       "GPRT_PRE",
+0196:       "SUP_DEM",
+0197:       "SUP_PRE"
+0198:     ),
+0199:     parameter %in% c("theta_1", "theta_2")
+0200:   ) %>%
+0201:   mutate(
+0202:     shock_type = case_when(
+0203:       grepl("SUP", model) ~ "SUP",
+0204:       grepl("DEM", model) ~ "DEM",
+0205:       grepl("PRE", model) ~ "PRE",
+0206:       TRUE ~ "OTHER"
+0207:     )
+0208:   ) %>%
+0209:   select(
+
+FICHIER : C:/Users/clien/Downloads/RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS/RIMEH_ECONOMETRIE/scripts/19_analyse_complete_garch_midas.R
+LIGNE : 283
+SOURCE :       "GPRT_DEM",
+CONTEXTE :
+0268:   ungroup()
+0269: 
+0270: write_csv(
+0271:   best_aic_country,
+0272:   "results/analysis/table_AIC_min_par_pays.csv"
+0273: )
+0274: 
+0275: # ============================================================
+0276: # 12. H1 : GPRT -> effet positif
+0277: # ============================================================
+0278: 
+0279: h1 <- coef_analysis %>%
+0280:   filter(
+0281:     model %in% c(
+0282:       "GPRT_SUP",
+0283:       "GPRT_DEM",
+0284:       "GPRT_PRE",
+0285:       "GPRT_VIX"
+0286:     ),
+0287:     parameter == "theta_1"
+0288:   ) %>%
+0289:   mutate(
+0290:     hypothesis = "H1",
+0291:     expected_sign = "POSITIF",
+0292:     statistical_result = case_when(
+0293:       p_value < 0.05 & Estimate > 0 ~ "CONFIRMATION_STATISTIQUE",
+0294:       p_value < 0.05 & Estimate < 0 ~ "EFFET_SIGNIFICATIF_OPPOSE",
+0295:       p_value >= 0.05 ~ "NON_SIGNIFICATIF",
+0296:       TRUE ~ "NON_DETERMINE"
+0297:     )
+0298:   )
+
+FICHIER : C:/Users/clien/Downloads/RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS/RIMEH_ECONOMETRIE/scripts/19_analyse_complete_garch_midas.R
+LIGNE : 352
+SOURCE :       "GPRT_DEM",
+CONTEXTE :
+0337:     statistical_result = case_when(
+0338:       p_value < 0.05 & Estimate > 0 ~ "CONFIRMATION_STATISTIQUE",
+0339:       p_value < 0.05 & Estimate < 0 ~ "EFFET_SIGNIFICATIF_OPPOSE",
+0340:       p_value >= 0.05 ~ "NON_SIGNIFICATIF",
+0341:       TRUE ~ "NON_DETERMINE"
+0342:     )
+0343:   )
+0344: 
+0345: # ============================================================
+0346: # 15. H4 : DEM
+0347: # ============================================================
+0348: 
+0349: h4 <- coef_analysis %>%
+0350:   filter(
+0351:     model %in% c(
+0352:       "GPRT_DEM",
+0353:       "SUP_DEM"
+0354:     ),
+0355:     parameter %in% c("theta_1", "theta_2")
+0356:   ) %>%
+0357:   mutate(
+0358:     hypothesis = "H4",
+0359:     expected_sign = "DIFFERENCIE",
+0360:     statistical_result = case_when(
+0361:       p_value < 0.05 ~ "EFFET_SIGNIFICATIF",
+0362:       TRUE ~ "NON_SIGNIFICATIF"
+0363:     )
+0364:   )
+0365: 
+0366: # ============================================================
+0367: # 16. H5 : PRE
+
+
+============================================================
+SPECIFICATION : GPRT_PRE
+============================================================
+FICHIER : C:/Users/clien/Downloads/RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS/RIMEH_ECONOMETRIE/scripts/08_garch_midas_models.R
+LIGNE : 144
+SOURCE :   GPRT_PRE = c("GPRT", "PRE"),
+CONTEXTE :
+0129:       K_2 = K,
+0130:       lag_fun = "Beta",
+0131:       R = 50
+0132:     )
+0133:   } else {
+0134:     stop("Only one or two MIDAS variables are supported")
+0135:   }
+0136: 
+0137:   do.call(rumidas::ugmfit, args)
+0138: }
+0139: countries <- sort(unique(daily[["country"]]))
+0140: specs <- list(
+0141:   GPRT_SUP = c("GPRT", "SUP"),
+0142:   GPRA_SUP = c("GPRA", "SUP"),
+0143:   GPRT_DEM = c("GPRT", "DEM"),
+0144:   GPRT_PRE = c("GPRT", "PRE"),
+0145:   GPRT_VIX = c("GPRT", "VIX"),
+0146:   SUP_DEM = c("SUP", "DEM"),
+0147:   SUP_PRE = c("SUP", "PRE")
+0148: )
+0149: summary_rows <- list()
+0150: model_count <- 0
+0151: for (cc in countries) {
+0152:   for (nm in names(specs)) {
+0153:     vars <- specs[[nm]]
+0154:     fit <- tryCatch(fit_pair(cc, vars, K=3), error=function(e){message("MIDAS failed ",cc,"/",nm,": ",e$message); NULL})
+0155:     if (!is.null(fit)) {
+0156:       saveRDS(fit, file.path("results/models/garch_midas", paste0(cc,"_",nm,".rds")))
+0157:       txt <- capture.output(summary(fit))
+0158:       writeLines(txt, file.path("results/tables", paste0("GARCH_MIDAS_",cc,"_",nm,".txt")))
+0159:       # Store the printed summary as an auditable text result; package object is the authoritative estimate.
+
+FICHIER : C:/Users/clien/Downloads/RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS/RIMEH_ECONOMETRIE/scripts/08_garch_midas_models_backup_20260916_041841.R
+LIGNE : 140
+SOURCE :   GPRT_PRE = c("GPRT", "PRE"),
+CONTEXTE :
+0125:       K_2 = K,
+0126:       lag_fun = "Beta",
+0127:       R = 50
+0128:     )
+0129:   } else {
+0130:     stop("Only one or two MIDAS variables are supported")
+0131:   }
+0132: 
+0133:   do.call(rumidas::ugmfit, args)
+0134: }
+0135: countries <- sort(unique(daily[["country"]]))
+0136: specs <- list(
+0137:   GPRT_SUP = c("GPRT", "SUP"),
+0138:   GPRA_SUP = c("GPRA", "SUP"),
+0139:   GPRT_DEM = c("GPRT", "DEM"),
+0140:   GPRT_PRE = c("GPRT", "PRE"),
+0141:   GPRT_VIX = c("GPRT", "VIX"),
+0142:   SUP_DEM = c("SUP", "DEM"),
+0143:   SUP_PRE = c("SUP", "PRE")
+0144: )
+0145: summary_rows <- list()
+0146: model_count <- 0
+0147: for (cc in countries) {
+0148:   for (nm in names(specs)) {
+0149:     vars <- specs[[nm]]
+0150:     fit <- tryCatch(fit_pair(cc, vars, K=3), error=function(e){message("MIDAS failed ",cc,"/",nm,": ",e$message); NULL})
+0151:     if (!is.null(fit)) {
+0152:       saveRDS(fit, file.path("results/models/garch_midas", paste0(cc,"_",nm,".rds")))
+0153:       txt <- capture.output(summary(fit))
+0154:       writeLines(txt, file.path("results/tables", paste0("GARCH_MIDAS_",cc,"_",nm,".txt")))
+0155:       # Store the printed summary as an auditable text result; package object is the authoritative estimate.
+
+FICHIER : C:/Users/clien/Downloads/RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS/RIMEH_ECONOMETRIE/scripts/08_garch_midas_models_BACKUP_AUTO.R
+LIGNE : 71
+SOURCE :   GPRT_PRE=c("GPRT","PRE"),
+CONTEXTE :
+0056:       function(z) rumidas::mv_into_mat(r, z, K=K_use, type="monthly")
+0057:     )
+0058: }
+0059:   args <- list(model="GM2M", skew="NO", distribution="std", daily_ret=r,
+0060:                mv_m=mm[[1]], K=K, lag_fun="Beta", R=50)
+0061:   if (length(mm)>=2) args$mv_m_2 <- mm[[2]]
+0062:   do.call(rumidas::ugmfit, args)
+0063: }
+0064: 
+0065: countries <- sort(unique(daily$country))
+0066: # Main parsimonious specifications. The full multivariate long-run equation is handled separately in 09_panel_long_run.R.
+0067: specs <- list(
+0068:   GPRT_SUP=c("GPRT","SUP"),
+0069:   GPRA_SUP=c("GPRA","SUP"),
+0070:   GPRT_DEM=c("GPRT","DEM"),
+0071:   GPRT_PRE=c("GPRT","PRE"),
+0072:   GPRT_VIX=c("GPRT","VIX"),
+0073:   SUP_DEM=c("SUP","DEM"),
+0074:   SUP_PRE=c("SUP","PRE")
+0075: )
+0076: 
+0077: summary_rows <- list(); model_count <- 0
+0078: for (cc in countries) {
+0079:   for (nm in names(specs)) {
+0080:     vars <- specs[[nm]]
+0081:     fit <- tryCatch(fit_pair(cc, vars, K=3), error=function(e){message("MIDAS failed ",cc,"/",nm,": ",e$message); NULL})
+0082:     if (!is.null(fit)) {
+0083:       saveRDS(fit, file.path("results/models/garch_midas", paste0(cc,"_",nm,".rds")))
+0084:       txt <- capture.output(summary(fit))
+0085:       writeLines(txt, file.path("results/tables", paste0("GARCH_MIDAS_",cc,"_",nm,".txt")))
+0086:       # Store the printed summary as an auditable text result; package object is the authoritative estimate.
+
+FICHIER : C:/Users/clien/Downloads/RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS/RIMEH_ECONOMETRIE/scripts/08_garch_midas_models_BACKUP_FIX2.R
+LIGNE : 71
+SOURCE :   GPRT_PRE=c("GPRT","PRE"),
+CONTEXTE :
+0056:       function(z) rumidas::mv_into_mat(r, z, K=K_use, type="monthly")
+0057:     )
+0058: }
+0059:   args <- list(model="GM2M", skew="NO", distribution="std", daily_ret=r,
+0060:                mv_m=mm[[1]], K=K, lag_fun="Beta", R=50)
+0061:   if (length(mm)>=2) args$mv_m_2 <- mm[[2]]
+0062:   do.call(rumidas::ugmfit, args)
+0063: }
+0064: 
+0065: countries <- sort(unique(daily$country))
+0066: # Main parsimonious specifications. The full multivariate long-run equation is handled separately in 09_panel_long_run.R.
+0067: specs <- list(
+0068:   GPRT_SUP=c("GPRT","SUP"),
+0069:   GPRA_SUP=c("GPRA","SUP"),
+0070:   GPRT_DEM=c("GPRT","DEM"),
+0071:   GPRT_PRE=c("GPRT","PRE"),
+0072:   GPRT_VIX=c("GPRT","VIX"),
+0073:   SUP_DEM=c("SUP","DEM"),
+0074:   SUP_PRE=c("SUP","PRE")
+0075: )
+0076: 
+0077: summary_rows <- list(); model_count <- 0
+0078: for (cc in countries) {
+0079:   for (nm in names(specs)) {
+0080:     vars <- specs[[nm]]
+0081:     fit <- tryCatch(fit_pair(cc, vars, K=3), error=function(e){message("MIDAS failed ",cc,"/",nm,": ",e$message); NULL})
+0082:     if (!is.null(fit)) {
+0083:       saveRDS(fit, file.path("results/models/garch_midas", paste0(cc,"_",nm,".rds")))
+0084:       txt <- capture.output(summary(fit))
+0085:       writeLines(txt, file.path("results/tables", paste0("GARCH_MIDAS_",cc,"_",nm,".txt")))
+0086:       # Store the printed summary as an auditable text result; package object is the authoritative estimate.
+
+FICHIER : C:/Users/clien/Downloads/RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS/RIMEH_ECONOMETRIE/scripts/09_garch_midas_resume.R
+LIGNE : 19
+SOURCE :   GPRT_PRE = c("GPRT","PRE"),
+CONTEXTE :
+0004: cut <- which(trimws(lines) == marker)[1]
+0005: 
+0006: if (is.na(cut)) {
+0007:   stop("Impossible de trouver le d?but de la boucle principale.")
+0008: }
+0009: 
+0010: eval(parse(text = paste(lines[1:(cut - 1)], collapse = "\n")),
+0011:      envir = .GlobalEnv)
+0012: 
+0013: countries <- sort(unique(daily[["country"]]))
+0014: 
+0015: specs <- list(
+0016:   GPRT_SUP = c("GPRT","SUP"),
+0017:   GPRA_SUP = c("GPRA","SUP"),
+0018:   GPRT_DEM = c("GPRT","DEM"),
+0019:   GPRT_PRE = c("GPRT","PRE"),
+0020:   GPRT_VIX = c("GPRT","VIX"),
+0021:   SUP_DEM = c("SUP","DEM"),
+0022:   SUP_PRE = c("SUP","PRE")
+0023: )
+0024: 
+0025: audit_file <- "results/tables/garch_midas_run_audit.csv"
+0026: 
+0027: audit_rows <- list()
+0028: 
+0029: for (cc in countries) {
+0030:   for (nm in names(specs)) {
+0031: 
+0032:     vars <- specs[[nm]]
+0033:     rds_file <- file.path(
+0034:       "results/models/garch_midas",
+
+FICHIER : C:/Users/clien/Downloads/RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS/RIMEH_ECONOMETRIE/scripts/19_analyse_complete_garch_midas.R
+LIGNE : 163
+SOURCE :       "GPRT_PRE",
+CONTEXTE :
+0148: write_csv(
+0149:   country_stats,
+0150:   "results/analysis/table_statistiques_par_pays.csv"
+0151: )
+0152: 
+0153: # ============================================================
+0154: # 7. COMPARAISON GPRT / GPRA
+0155: # ============================================================
+0156: 
+0157: gpr_comparison <- coef_analysis %>%
+0158:   filter(
+0159:     model %in% c(
+0160:       "GPRT_SUP",
+0161:       "GPRA_SUP",
+0162:       "GPRT_DEM",
+0163:       "GPRT_PRE",
+0164:       "GPRT_VIX"
+0165:     ),
+0166:     parameter %in% c("theta_1", "theta_2")
+0167:   ) %>%
+0168:   mutate(
+0169:     GPR_type = case_when(
+0170:       grepl("^GPRT", model) ~ "GPRT",
+0171:       grepl("^GPRA", model) ~ "GPRA",
+0172:       TRUE ~ "OTHER"
+0173:     )
+0174:   ) %>%
+0175:   select(
+0176:     country, model, GPR_type,
+0177:     parameter, Estimate,
+0178:     p_value, significance
+
+FICHIER : C:/Users/clien/Downloads/RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS/RIMEH_ECONOMETRIE/scripts/19_analyse_complete_garch_midas.R
+LIGNE : 195
+SOURCE :       "GPRT_PRE",
+CONTEXTE :
+0180: 
+0181: write_csv(
+0182:   gpr_comparison,
+0183:   "results/analysis/table_comparaison_GPRT_GPRA.csv"
+0184: )
+0185: 
+0186: # ============================================================
+0187: # 8. COMPARAISON SUP / DEM / PRE
+0188: # ============================================================
+0189: 
+0190: shock_comparison <- coef_analysis %>%
+0191:   filter(
+0192:     model %in% c(
+0193:       "GPRT_SUP",
+0194:       "GPRT_DEM",
+0195:       "GPRT_PRE",
+0196:       "SUP_DEM",
+0197:       "SUP_PRE"
+0198:     ),
+0199:     parameter %in% c("theta_1", "theta_2")
+0200:   ) %>%
+0201:   mutate(
+0202:     shock_type = case_when(
+0203:       grepl("SUP", model) ~ "SUP",
+0204:       grepl("DEM", model) ~ "DEM",
+0205:       grepl("PRE", model) ~ "PRE",
+0206:       TRUE ~ "OTHER"
+0207:     )
+0208:   ) %>%
+0209:   select(
+0210:     country, model, shock_type,
+
+FICHIER : C:/Users/clien/Downloads/RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS/RIMEH_ECONOMETRIE/scripts/19_analyse_complete_garch_midas.R
+LIGNE : 284
+SOURCE :       "GPRT_PRE",
+CONTEXTE :
+0269: 
+0270: write_csv(
+0271:   best_aic_country,
+0272:   "results/analysis/table_AIC_min_par_pays.csv"
+0273: )
+0274: 
+0275: # ============================================================
+0276: # 12. H1 : GPRT -> effet positif
+0277: # ============================================================
+0278: 
+0279: h1 <- coef_analysis %>%
+0280:   filter(
+0281:     model %in% c(
+0282:       "GPRT_SUP",
+0283:       "GPRT_DEM",
+0284:       "GPRT_PRE",
+0285:       "GPRT_VIX"
+0286:     ),
+0287:     parameter == "theta_1"
+0288:   ) %>%
+0289:   mutate(
+0290:     hypothesis = "H1",
+0291:     expected_sign = "POSITIF",
+0292:     statistical_result = case_when(
+0293:       p_value < 0.05 & Estimate > 0 ~ "CONFIRMATION_STATISTIQUE",
+0294:       p_value < 0.05 & Estimate < 0 ~ "EFFET_SIGNIFICATIF_OPPOSE",
+0295:       p_value >= 0.05 ~ "NON_SIGNIFICATIF",
+0296:       TRUE ~ "NON_DETERMINE"
+0297:     )
+0298:   )
+0299: 
+
+FICHIER : C:/Users/clien/Downloads/RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS/RIMEH_ECONOMETRIE/scripts/19_analyse_complete_garch_midas.R
+LIGNE : 373
+SOURCE :       "GPRT_PRE",
+CONTEXTE :
+0358:     hypothesis = "H4",
+0359:     expected_sign = "DIFFERENCIE",
+0360:     statistical_result = case_when(
+0361:       p_value < 0.05 ~ "EFFET_SIGNIFICATIF",
+0362:       TRUE ~ "NON_SIGNIFICATIF"
+0363:     )
+0364:   )
+0365: 
+0366: # ============================================================
+0367: # 16. H5 : PRE
+0368: # ============================================================
+0369: 
+0370: h5 <- coef_analysis %>%
+0371:   filter(
+0372:     model %in% c(
+0373:       "GPRT_PRE",
+0374:       "SUP_PRE"
+0375:     ),
+0376:     parameter %in% c("theta_1", "theta_2")
+0377:   ) %>%
+0378:   mutate(
+0379:     hypothesis = "H5",
+0380:     expected_sign = "POSITIF",
+0381:     statistical_result = case_when(
+0382:       p_value < 0.05 & Estimate > 0 ~ "CONFIRMATION_STATISTIQUE",
+0383:       p_value < 0.05 & Estimate < 0 ~ "EFFET_SIGNIFICATIF_OPPOSE",
+0384:       p_value >= 0.05 ~ "NON_SIGNIFICATIF",
+0385:       TRUE ~ "NON_DETERMINE"
+0386:     )
+0387:   )
+0388: 
+
+
+============================================================
+SPECIFICATION : GPRT_SUP
+============================================================
+FICHIER : C:/Users/clien/Downloads/RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS/RIMEH_ECONOMETRIE/scripts/06_prepare_part3_data.R
+LIGNE : 38
+SOURCE :     GPRT_SUP = as.numeric(as.character(GPRT)) * as.numeric(as.character(SUP)),
+CONTEXTE :
+0023: classif <- readr::read_csv("data/raw/country_classification.csv", show_col_types=FALSE)
+0024: 
+0025: # Global monthly variables are common to all countries; country-level controls may be present.
+0026: global_monthly <- monthly %>%
+0027:   dplyr::select(date, any_of(c("GPRT","GPRA","VIX","dlog_real_oil_price","IGREA","real_wti"))) %>%
+0028:   distinct(date, .keep_all=TRUE) %>%
+0029:   left_join(shocks %>% distinct(date, .keep_all=TRUE), by="date")
+0030: 
+0031: country_monthly <- monthly %>%
+0032:   dplyr::select(country, date, any_of(c("interest_rate","exchange_rate","GDP","inflation","RV","n_obs"))) %>%
+0033:   left_join(classif %>% dplyr::select(country, exporter), by="country") %>%
+0034:   left_join(global_monthly, by="date") %>%
+0035:   mutate(
+0036:     exporter=as.integer(exporter),
+0037:     GPR_SUP = as.numeric(as.character(GPRT)) * as.numeric(as.character(SUP)),
+0038:     GPRT_SUP = as.numeric(as.character(GPRT)) * as.numeric(as.character(SUP)),
+0039:     GPRA_SUP = as.numeric(as.character(GPRA)) * as.numeric(as.character(SUP)),
+0040:     SUP_EXPORTER=SUP*exporter,
+0041:     SUP_positive=pmax(SUP,0),
+0042:     SUP_negative=pmin(SUP,0),
+0043:     DEM_EXPORTER=DEM*exporter,
+0044:     PRE_EXPORTER=PRE*exporter
+0045:   ) %>% arrange(country,date)
+0046: 
+0047: # If monthly GPR/controls were not already present, preserve explicit NA rather than fabricate.
+0048: write_csv(country_monthly, "data/processed/monthly_model_data.csv")
+0049: 
+0050: # Daily returns with monthly key; this is the input for GARCH/GARCH-MIDAS.
+0051: daily_model <- daily %>%
+0052:   dplyr::select(country,date,month,any_of(c("stock_price","return","exporter"))) %>%
+0053:   left_join(country_monthly, by=c("country","month"="date"))
+
+FICHIER : C:/Users/clien/Downloads/RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS/RIMEH_ECONOMETRIE/scripts/08_garch_midas_models.R
+LIGNE : 141
+SOURCE :   GPRT_SUP = c("GPRT", "SUP"),
+CONTEXTE :
+0126:       mv_m = mm[[1]],
+0127:       mv_m_2 = mm[[2]],
+0128:       K = K,
+0129:       K_2 = K,
+0130:       lag_fun = "Beta",
+0131:       R = 50
+0132:     )
+0133:   } else {
+0134:     stop("Only one or two MIDAS variables are supported")
+0135:   }
+0136: 
+0137:   do.call(rumidas::ugmfit, args)
+0138: }
+0139: countries <- sort(unique(daily[["country"]]))
+0140: specs <- list(
+0141:   GPRT_SUP = c("GPRT", "SUP"),
+0142:   GPRA_SUP = c("GPRA", "SUP"),
+0143:   GPRT_DEM = c("GPRT", "DEM"),
+0144:   GPRT_PRE = c("GPRT", "PRE"),
+0145:   GPRT_VIX = c("GPRT", "VIX"),
+0146:   SUP_DEM = c("SUP", "DEM"),
+0147:   SUP_PRE = c("SUP", "PRE")
+0148: )
+0149: summary_rows <- list()
+0150: model_count <- 0
+0151: for (cc in countries) {
+0152:   for (nm in names(specs)) {
+0153:     vars <- specs[[nm]]
+0154:     fit <- tryCatch(fit_pair(cc, vars, K=3), error=function(e){message("MIDAS failed ",cc,"/",nm,": ",e$message); NULL})
+0155:     if (!is.null(fit)) {
+0156:       saveRDS(fit, file.path("results/models/garch_midas", paste0(cc,"_",nm,".rds")))
+
+FICHIER : C:/Users/clien/Downloads/RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS/RIMEH_ECONOMETRIE/scripts/08_garch_midas_models_backup_20260916_041841.R
+LIGNE : 137
+SOURCE :   GPRT_SUP = c("GPRT", "SUP"),
+CONTEXTE :
+0122:       mv_m = mm[[1]],
+0123:       mv_m_2 = mm[[2]],
+0124:       K = K,
+0125:       K_2 = K,
+0126:       lag_fun = "Beta",
+0127:       R = 50
+0128:     )
+0129:   } else {
+0130:     stop("Only one or two MIDAS variables are supported")
+0131:   }
+0132: 
+0133:   do.call(rumidas::ugmfit, args)
+0134: }
+0135: countries <- sort(unique(daily[["country"]]))
+0136: specs <- list(
+0137:   GPRT_SUP = c("GPRT", "SUP"),
+0138:   GPRA_SUP = c("GPRA", "SUP"),
+0139:   GPRT_DEM = c("GPRT", "DEM"),
+0140:   GPRT_PRE = c("GPRT", "PRE"),
+0141:   GPRT_VIX = c("GPRT", "VIX"),
+0142:   SUP_DEM = c("SUP", "DEM"),
+0143:   SUP_PRE = c("SUP", "PRE")
+0144: )
+0145: summary_rows <- list()
+0146: model_count <- 0
+0147: for (cc in countries) {
+0148:   for (nm in names(specs)) {
+0149:     vars <- specs[[nm]]
+0150:     fit <- tryCatch(fit_pair(cc, vars, K=3), error=function(e){message("MIDAS failed ",cc,"/",nm,": ",e$message); NULL})
+0151:     if (!is.null(fit)) {
+0152:       saveRDS(fit, file.path("results/models/garch_midas", paste0(cc,"_",nm,".rds")))
+
+FICHIER : C:/Users/clien/Downloads/RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS/RIMEH_ECONOMETRIE/scripts/08_garch_midas_models_BACKUP_AUTO.R
+LIGNE : 68
+SOURCE :   GPRT_SUP=c("GPRT","SUP"),
+CONTEXTE :
+0053:     cat("  daily observations =", NROW(r), "\n")
+0054:     mm <- lapply(
+0055:       mats,
+0056:       function(z) rumidas::mv_into_mat(r, z, K=K_use, type="monthly")
+0057:     )
+0058: }
+0059:   args <- list(model="GM2M", skew="NO", distribution="std", daily_ret=r,
+0060:                mv_m=mm[[1]], K=K, lag_fun="Beta", R=50)
+0061:   if (length(mm)>=2) args$mv_m_2 <- mm[[2]]
+0062:   do.call(rumidas::ugmfit, args)
+0063: }
+0064: 
+0065: countries <- sort(unique(daily$country))
+0066: # Main parsimonious specifications. The full multivariate long-run equation is handled separately in 09_panel_long_run.R.
+0067: specs <- list(
+0068:   GPRT_SUP=c("GPRT","SUP"),
+0069:   GPRA_SUP=c("GPRA","SUP"),
+0070:   GPRT_DEM=c("GPRT","DEM"),
+0071:   GPRT_PRE=c("GPRT","PRE"),
+0072:   GPRT_VIX=c("GPRT","VIX"),
+0073:   SUP_DEM=c("SUP","DEM"),
+0074:   SUP_PRE=c("SUP","PRE")
+0075: )
+0076: 
+0077: summary_rows <- list(); model_count <- 0
+0078: for (cc in countries) {
+0079:   for (nm in names(specs)) {
+0080:     vars <- specs[[nm]]
+0081:     fit <- tryCatch(fit_pair(cc, vars, K=3), error=function(e){message("MIDAS failed ",cc,"/",nm,": ",e$message); NULL})
+0082:     if (!is.null(fit)) {
+0083:       saveRDS(fit, file.path("results/models/garch_midas", paste0(cc,"_",nm,".rds")))
+
+FICHIER : C:/Users/clien/Downloads/RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS/RIMEH_ECONOMETRIE/scripts/08_garch_midas_models_BACKUP_FIX2.R
+LIGNE : 68
+SOURCE :   GPRT_SUP=c("GPRT","SUP"),
+CONTEXTE :
+0053:     cat("  daily observations =", NROW(r), "\n")
+0054:     mm <- lapply(
+0055:       mats,
+0056:       function(z) rumidas::mv_into_mat(r, z, K=K_use, type="monthly")
+0057:     )
+0058: }
+0059:   args <- list(model="GM2M", skew="NO", distribution="std", daily_ret=r,
+0060:                mv_m=mm[[1]], K=K, lag_fun="Beta", R=50)
+0061:   if (length(mm)>=2) args$mv_m_2 <- mm[[2]]
+0062:   do.call(rumidas::ugmfit, args)
+0063: }
+0064: 
+0065: countries <- sort(unique(daily$country))
+0066: # Main parsimonious specifications. The full multivariate long-run equation is handled separately in 09_panel_long_run.R.
+0067: specs <- list(
+0068:   GPRT_SUP=c("GPRT","SUP"),
+0069:   GPRA_SUP=c("GPRA","SUP"),
+0070:   GPRT_DEM=c("GPRT","DEM"),
+0071:   GPRT_PRE=c("GPRT","PRE"),
+0072:   GPRT_VIX=c("GPRT","VIX"),
+0073:   SUP_DEM=c("SUP","DEM"),
+0074:   SUP_PRE=c("SUP","PRE")
+0075: )
+0076: 
+0077: summary_rows <- list(); model_count <- 0
+0078: for (cc in countries) {
+0079:   for (nm in names(specs)) {
+0080:     vars <- specs[[nm]]
+0081:     fit <- tryCatch(fit_pair(cc, vars, K=3), error=function(e){message("MIDAS failed ",cc,"/",nm,": ",e$message); NULL})
+0082:     if (!is.null(fit)) {
+0083:       saveRDS(fit, file.path("results/models/garch_midas", paste0(cc,"_",nm,".rds")))
+
+FICHIER : C:/Users/clien/Downloads/RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS/RIMEH_ECONOMETRIE/scripts/09_garch_midas_resume.R
+LIGNE : 16
+SOURCE :   GPRT_SUP = c("GPRT","SUP"),
+CONTEXTE :
+0001: lines <- readLines("scripts/08_garch_midas_models.R", warn = FALSE)
+0002: 
+0003: marker <- 'countries <- sort(unique(daily[["country"]]))'
+0004: cut <- which(trimws(lines) == marker)[1]
+0005: 
+0006: if (is.na(cut)) {
+0007:   stop("Impossible de trouver le d?but de la boucle principale.")
+0008: }
+0009: 
+0010: eval(parse(text = paste(lines[1:(cut - 1)], collapse = "\n")),
+0011:      envir = .GlobalEnv)
+0012: 
+0013: countries <- sort(unique(daily[["country"]]))
+0014: 
+0015: specs <- list(
+0016:   GPRT_SUP = c("GPRT","SUP"),
+0017:   GPRA_SUP = c("GPRA","SUP"),
+0018:   GPRT_DEM = c("GPRT","DEM"),
+0019:   GPRT_PRE = c("GPRT","PRE"),
+0020:   GPRT_VIX = c("GPRT","VIX"),
+0021:   SUP_DEM = c("SUP","DEM"),
+0022:   SUP_PRE = c("SUP","PRE")
+0023: )
+0024: 
+0025: audit_file <- "results/tables/garch_midas_run_audit.csv"
+0026: 
+0027: audit_rows <- list()
+0028: 
+0029: for (cc in countries) {
+0030:   for (nm in names(specs)) {
+0031: 
+
+FICHIER : C:/Users/clien/Downloads/RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS/RIMEH_ECONOMETRIE/scripts/09_panel_long_run.R
+LIGNE : 26
+SOURCE :   M3 = "log1p(RV) ~ GPRT + GPRA + SUP + DEM + PRE + VIX + interest_rate + exchange_rate + GDP + inflation + GPRT_SUP + SUP_EXPORTER | country",
+CONTEXTE :
+0011: if (!file.exists("data/processed/monthly_model_data.csv")) stop("Run script 06 first.")
+0012: 
+0013: d <- readr::read_csv("data/processed/monthly_model_data.csv", show_col_types=FALSE) %>%
+0014:   mutate(date=as.Date(date)) %>%
+0015:   filter(date >= as.Date("2000-01-01"), date <= as.Date("2025-12-01"))
+0016: 
+0017: dir.create("results/models", recursive=TRUE, showWarnings=FALSE)
+0018: dir.create("results/tables", recursive=TRUE, showWarnings=FALSE)
+0019: 
+0020: # log1p(RV) is used because RV is non-negative and may contain zeros.
+0021: # Model ladder mirrors the thesis hypotheses.
+0022: models <- list(
+0023:   M0 = "log1p(RV) ~ SUP + DEM + PRE | country",
+0024:   M1 = "log1p(RV) ~ GPRT + GPRA + SUP + DEM + PRE | country",
+0025:   M2 = "log1p(RV) ~ GPRT + GPRA + SUP + DEM + PRE + VIX + interest_rate + exchange_rate + GDP + inflation | country",
+0026:   M3 = "log1p(RV) ~ GPRT + GPRA + SUP + DEM + PRE + VIX + interest_rate + exchange_rate + GDP + inflation + GPRT_SUP + SUP_EXPORTER | country",
+0027:   M4 = "log1p(RV) ~ GPRT + GPRA + SUP_positive + SUP_negative + DEM + PRE + VIX + interest_rate + exchange_rate + GDP + inflation + GPRT_SUP + SUP_EXPORTER | country"
+0028: )
+0029: 
+0030: fits <- list(); out <- list()
+0031: for (nm in names(models)) {
+0032:   f <- tryCatch(fixest::feols(as.formula(models[[nm]]), data=d, cluster=~country), error=function(e){message(nm,": ",e$message); NULL})
+0033:   fits[[nm]] <- f
+0034:   if (!is.null(f)) out[[nm]] <- broom::tidy(f) %>% mutate(model=nm)
+0035: }
+0036: saveRDS(fits, "results/models/panel_long_run_models.rds")
+0037: if (length(out)) readr::write_csv(dplyr::bind_rows(out), "results/tables/panel_long_run_coefficients.csv")
+0038: 
+0039: # Export a compact model comparison table if modelsummary is available.
+0040: if (requireNamespace("modelsummary", quietly=TRUE)) {
+0041:   try(modelsummary::modelsummary(fits, output="results/tables/panel_long_run_comparison.html"), silent=TRUE)
+
+FICHIER : C:/Users/clien/Downloads/RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS/RIMEH_ECONOMETRIE/scripts/09_panel_long_run.R
+LIGNE : 27
+SOURCE :   M4 = "log1p(RV) ~ GPRT + GPRA + SUP_positive + SUP_negative + DEM + PRE + VIX + interest_rate + exchange_rate + GDP + inflation + GPRT_SUP + SUP_EXPORTER | country"
+CONTEXTE :
+0012: 
+0013: d <- readr::read_csv("data/processed/monthly_model_data.csv", show_col_types=FALSE) %>%
+0014:   mutate(date=as.Date(date)) %>%
+0015:   filter(date >= as.Date("2000-01-01"), date <= as.Date("2025-12-01"))
+0016: 
+0017: dir.create("results/models", recursive=TRUE, showWarnings=FALSE)
+0018: dir.create("results/tables", recursive=TRUE, showWarnings=FALSE)
+0019: 
+0020: # log1p(RV) is used because RV is non-negative and may contain zeros.
+0021: # Model ladder mirrors the thesis hypotheses.
+0022: models <- list(
+0023:   M0 = "log1p(RV) ~ SUP + DEM + PRE | country",
+0024:   M1 = "log1p(RV) ~ GPRT + GPRA + SUP + DEM + PRE | country",
+0025:   M2 = "log1p(RV) ~ GPRT + GPRA + SUP + DEM + PRE + VIX + interest_rate + exchange_rate + GDP + inflation | country",
+0026:   M3 = "log1p(RV) ~ GPRT + GPRA + SUP + DEM + PRE + VIX + interest_rate + exchange_rate + GDP + inflation + GPRT_SUP + SUP_EXPORTER | country",
+0027:   M4 = "log1p(RV) ~ GPRT + GPRA + SUP_positive + SUP_negative + DEM + PRE + VIX + interest_rate + exchange_rate + GDP + inflation + GPRT_SUP + SUP_EXPORTER | country"
+0028: )
+0029: 
+0030: fits <- list(); out <- list()
+0031: for (nm in names(models)) {
+0032:   f <- tryCatch(fixest::feols(as.formula(models[[nm]]), data=d, cluster=~country), error=function(e){message(nm,": ",e$message); NULL})
+0033:   fits[[nm]] <- f
+0034:   if (!is.null(f)) out[[nm]] <- broom::tidy(f) %>% mutate(model=nm)
+0035: }
+0036: saveRDS(fits, "results/models/panel_long_run_models.rds")
+0037: if (length(out)) readr::write_csv(dplyr::bind_rows(out), "results/tables/panel_long_run_coefficients.csv")
+0038: 
+0039: # Export a compact model comparison table if modelsummary is available.
+0040: if (requireNamespace("modelsummary", quietly=TRUE)) {
+0041:   try(modelsummary::modelsummary(fits, output="results/tables/panel_long_run_comparison.html"), silent=TRUE)
+0042: }
+
+FICHIER : C:/Users/clien/Downloads/RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS/RIMEH_ECONOMETRIE/scripts/10_diagnose_failed_midas.R
+LIGNE : 10
+SOURCE :   c("MEX","GPRT_SUP"),
+CONTEXTE :
+0001: lines <- readLines("scripts/08_garch_midas_models.R", warn = FALSE)
+0002: marker <- 'countries <- sort(unique(daily[["country"]]))'
+0003: cut <- which(trimws(lines) == marker)[1]
+0004: 
+0005: eval(parse(text = paste(lines[1:(cut - 1)], collapse = "\n")),
+0006:      envir = .GlobalEnv)
+0007: 
+0008: tests <- list(
+0009:   c("GBR","SUP_PRE"),
+0010:   c("MEX","GPRT_SUP"),
+0011:   c("NOR","SUP_PRE"),
+0012:   c("USA","GPRA_SUP")
+0013: )
+0014: 
+0015: for (x in tests) {
+0016:   cc <- x[1]
+0017:   nm <- x[2]
+0018:   vars <- switch(
+0019:     nm,
+0020:     SUP_PRE = c("SUP","PRE"),
+0021:     GPRT_SUP = c("GPRT","SUP"),
+0022:     GPRA_SUP = c("GPRA","SUP")
+0023:   )
+0024: 
+0025:   cat("\n========================================\n")
+
+FICHIER : C:/Users/clien/Downloads/RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS/RIMEH_ECONOMETRIE/scripts/10_diagnose_failed_midas.R
+LIGNE : 21
+SOURCE :     GPRT_SUP = c("GPRT","SUP"),
+CONTEXTE :
+0006:      envir = .GlobalEnv)
+0007: 
+0008: tests <- list(
+0009:   c("GBR","SUP_PRE"),
+0010:   c("MEX","GPRT_SUP"),
+0011:   c("NOR","SUP_PRE"),
+0012:   c("USA","GPRA_SUP")
+0013: )
+0014: 
+0015: for (x in tests) {
+0016:   cc <- x[1]
+0017:   nm <- x[2]
+0018:   vars <- switch(
+0019:     nm,
+0020:     SUP_PRE = c("SUP","PRE"),
+0021:     GPRT_SUP = c("GPRT","SUP"),
+0022:     GPRA_SUP = c("GPRA","SUP")
+0023:   )
+0024: 
+0025:   cat("\n========================================\n")
+0026:   cat(cc, "/", nm, "\n")
+0027:   cat("========================================\n")
+0028: 
+0029:   m <- monthly %>%
+0030:     dplyr::filter(country == cc) %>%
+0031:     dplyr::arrange(date)
+0032: 
+0033:   for (v in vars) {
+0034:     z <- m %>%
+0035:       dplyr::select(date, value = dplyr::all_of(v)) %>%
+0036:       tidyr::drop_na()
+
+FICHIER : C:/Users/clien/Downloads/RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS/RIMEH_ECONOMETRIE/scripts/10_robustness.R
+LIGNE : 17
+SOURCE :   interaction = safe_fe(log1p(RV) ~ GPRT + GPRA + SUP + DEM + PRE + VIX + GPRT_SUP + SUP_EXPORTER | country),
+CONTEXTE :
+0002: # RIMEH - PARTIE 3D
+0003: # Robustness and hypothesis tests based on the complementary panel.
+0004: # ============================================================
+0005: rm(list = ls())
+0006: source("scripts/00_packages.R")
+0007: 
+0008: if (!file.exists("data/processed/monthly_model_data.csv")) stop("Run script 06 first.")
+0009: d <- readr::read_csv("data/processed/monthly_model_data.csv", show_col_types=FALSE)
+0010: 
+0011: dir.create("results/tables", recursive=TRUE, showWarnings=FALSE)
+0012: 
+0013: safe_fe <- function(f) tryCatch(fixest::feols(f, data=d, cluster=~country), error=function(e) NULL)
+0014: 
+0015: robust <- list(
+0016:   baseline = safe_fe(log1p(RV) ~ GPRT + GPRA + SUP + DEM + PRE + VIX | country),
+0017:   interaction = safe_fe(log1p(RV) ~ GPRT + GPRA + SUP + DEM + PRE + VIX + GPRT_SUP + SUP_EXPORTER | country),
+0018:   asymmetry = safe_fe(log1p(RV) ~ GPRT + GPRA + SUP_positive + SUP_negative + DEM + PRE + VIX | country),
+0019:   importer_only = tryCatch(fixest::feols(log1p(RV) ~ GPRT + GPRA + SUP + DEM + PRE + VIX | country, data=d[d$exporter==0, ], cluster=~country), error=function(e) NULL),
+0020:   exporter_only = tryCatch(fixest::feols(log1p(RV) ~ GPRT + GPRA + SUP + DEM + PRE + VIX | country, data=d[d$exporter==1, ], cluster=~country), error=function(e) NULL)
+0021: )
+0022: 
+0023: coef_out <- purrr::imap_dfr(robust, function(fit,nm){ if(is.null(fit)) return(tibble::tibble()); broom::tidy(fit) %>% mutate(model=nm) })
+0024: readr::write_csv(coef_out, "results/tables/robustness_coefficients.csv")
+0025: writeLines(capture.output(lapply(robust, summary)), "results/tables/robustness_summaries.txt")
+0026: 
+0027: # Wald test for exporter difference in the interaction model when estimable.
+0028: if (!is.null(robust$interaction)) {
+0029:   wt <- tryCatch(fixest::wald(robust$interaction, "SUP_EXPORTER = 0"), error=function(e) NULL)
+0030:   if (!is.null(wt)) writeLines(capture.output(wt), "results/tables/test_SUP_exporter.txt")
+0031: }
+0032: 
+
+FICHIER : C:/Users/clien/Downloads/RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS/RIMEH_ECONOMETRIE/scripts/11_test_failed_midas_k2.R
+LIGNE : 10
+SOURCE :   c("MEX","GPRT_SUP"),
+CONTEXTE :
+0001: lines <- readLines("scripts/08_garch_midas_models.R", warn = FALSE)
+0002: marker <- 'countries <- sort(unique(daily[["country"]]))'
+0003: cut <- which(trimws(lines) == marker)[1]
+0004: 
+0005: eval(parse(text = paste(lines[1:(cut - 1)], collapse = "\n")),
+0006:      envir = .GlobalEnv)
+0007: 
+0008: tests <- list(
+0009:   c("GBR","SUP_PRE"),
+0010:   c("MEX","GPRT_SUP"),
+0011:   c("NOR","SUP_PRE"),
+0012:   c("USA","GPRA_SUP")
+0013: )
+0014: 
+0015: for (x in tests) {
+0016:   cc <- x[1]
+0017:   nm <- x[2]
+0018: 
+0019:   vars <- switch(
+0020:     nm,
+0021:     SUP_PRE = c("SUP","PRE"),
+0022:     GPRT_SUP = c("GPRT","SUP"),
+0023:     GPRA_SUP = c("GPRA","SUP")
+0024:   )
+0025: 
+
+FICHIER : C:/Users/clien/Downloads/RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS/RIMEH_ECONOMETRIE/scripts/11_test_failed_midas_k2.R
+LIGNE : 22
+SOURCE :     GPRT_SUP = c("GPRT","SUP"),
+CONTEXTE :
+0007: 
+0008: tests <- list(
+0009:   c("GBR","SUP_PRE"),
+0010:   c("MEX","GPRT_SUP"),
+0011:   c("NOR","SUP_PRE"),
+0012:   c("USA","GPRA_SUP")
+0013: )
+0014: 
+0015: for (x in tests) {
+0016:   cc <- x[1]
+0017:   nm <- x[2]
+0018: 
+0019:   vars <- switch(
+0020:     nm,
+0021:     SUP_PRE = c("SUP","PRE"),
+0022:     GPRT_SUP = c("GPRT","SUP"),
+0023:     GPRA_SUP = c("GPRA","SUP")
+0024:   )
+0025: 
+0026:   cat("\n========================================\n")
+0027:   cat("TEST K=2 :", cc, "/", nm, "\n")
+0028:   cat("========================================\n")
+0029: 
+0030:   fit <- tryCatch(
+0031:     fit_pair(cc, vars, K = 2),
+0032:     error = function(e) {
+0033:       cat("FAILED K=2:", e$message, "\n")
+0034:       NULL
+0035:     }
+0036:   )
+0037: 
+
+FICHIER : C:/Users/clien/Downloads/RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS/RIMEH_ECONOMETRIE/scripts/13_save_recovered_midas.R
+LIGNE : 9
+SOURCE :   MEX_GPRT_SUP = c("MEX","GPRT_SUP"),
+CONTEXTE :
+0001: lines <- readLines("scripts/08_garch_midas_models.R", warn = FALSE)
+0002: marker <- 'countries <- sort(unique(daily[["country"]]))'
+0003: cut <- which(trimws(lines) == marker)[1]
+0004: 
+0005: eval(parse(text = paste(lines[1:(cut - 1)], collapse = "\n")),
+0006:      envir = .GlobalEnv)
+0007: 
+0008: tests <- list(
+0009:   MEX_GPRT_SUP = c("MEX","GPRT_SUP"),
+0010:   NOR_SUP_PRE  = c("NOR","SUP_PRE"),
+0011:   USA_GPRA_SUP = c("USA","GPRA_SUP")
+0012: )
+0013: 
+0014: for (nm_test in names(tests)) {
+0015: 
+0016:   cc <- tests[[nm_test]][1]
+0017:   nm <- tests[[nm_test]][2]
+0018: 
+0019:   vars <- switch(
+0020:     nm,
+0021:     GPRT_SUP = c("GPRT","SUP"),
+0022:     SUP_PRE  = c("SUP","PRE"),
+0023:     GPRA_SUP = c("GPRA","SUP")
+0024:   )
+
+FICHIER : C:/Users/clien/Downloads/RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS/RIMEH_ECONOMETRIE/scripts/13_save_recovered_midas.R
+LIGNE : 21
+SOURCE :     GPRT_SUP = c("GPRT","SUP"),
+CONTEXTE :
+0006:      envir = .GlobalEnv)
+0007: 
+0008: tests <- list(
+0009:   MEX_GPRT_SUP = c("MEX","GPRT_SUP"),
+0010:   NOR_SUP_PRE  = c("NOR","SUP_PRE"),
+0011:   USA_GPRA_SUP = c("USA","GPRA_SUP")
+0012: )
+0013: 
+0014: for (nm_test in names(tests)) {
+0015: 
+0016:   cc <- tests[[nm_test]][1]
+0017:   nm <- tests[[nm_test]][2]
+0018: 
+0019:   vars <- switch(
+0020:     nm,
+0021:     GPRT_SUP = c("GPRT","SUP"),
+0022:     SUP_PRE  = c("SUP","PRE"),
+0023:     GPRA_SUP = c("GPRA","SUP")
+0024:   )
+0025: 
+0026:   cat("\n========================================\n")
+0027:   cat("FINAL K=2 ESTIMATION:", cc, "/", nm, "\n")
+0028:   cat("========================================\n")
+0029: 
+0030:   fit <- tryCatch(
+0031:     fit_pair(cc, vars, K = 2),
+0032:     error = function(e) {
+0033:       cat("FAILED:", cc, "/", nm, ":", e$message, "\n")
+0034:       NULL
+0035:     }
+0036:   )
+
+FICHIER : C:/Users/clien/Downloads/RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS/RIMEH_ECONOMETRIE/scripts/14_finalize_midas_audit.R
+LIGNE : 8
+SOURCE :       country == "MEX" & model == "GPRT_SUP" ~ "OK",
+CONTEXTE :
+0001: audit_file <- "results/tables/garch_midas_run_audit.csv"
+0002: 
+0003: audit <- readr::read_csv(audit_file, show_col_types = FALSE)
+0004: 
+0005: audit <- audit |>
+0006:   dplyr::mutate(
+0007:     status = dplyr::case_when(
+0008:       country == "MEX" & model == "GPRT_SUP" ~ "OK",
+0009:       country == "NOR" & model == "SUP_PRE"  ~ "OK",
+0010:       country == "USA" & model == "GPRA_SUP" ~ "OK",
+0011:       country == "GBR" & model == "SUP_PRE"  ~ "FAILED_NUMERICAL",
+0012:       TRUE ~ status
+0013:     )
+0014:   )
+0015: 
+0016: readr::write_csv(audit, audit_file)
+0017: 
+0018: cat("\n========================================\n")
+0019: cat("FINAL GARCH-MIDAS AUDIT\n")
+0020: cat("========================================\n")
+0021: print(table(audit$status))
+0022: cat("\nTotal models:", nrow(audit), "\n")
+0023: cat("Successful:", sum(audit$status %in% c("OK","EXISTING")), "\n")
+
+FICHIER : C:/Users/clien/Downloads/RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS/RIMEH_ECONOMETRIE/scripts/16_inspect_garch_midas_object.R
+LIGNE : 1
+SOURCE : fit <- readRDS("results/models/garch_midas/DEU_GPRT_SUP.rds")
+CONTEXTE :
+0001: fit <- readRDS("results/models/garch_midas/DEU_GPRT_SUP.rds")
+0002: 
+0003: cat("========================================\n")
+0004: cat("INSPECTION OBJET RUMIDAS\n")
+0005: cat("========================================\n\n")
+0006: 
+0007: cat("CLASS:\n")
+0008: print(class(fit))
+0009: 
+0010: cat("\nNAMES:\n")
+0011: print(names(fit))
+0012: 
+0013: cat("\nSTRUCTURE:\n")
+0014: str(fit, max.level = 2)
+0015: 
+0016: cat("\n========================================\n")
+
+FICHIER : C:/Users/clien/Downloads/RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS/RIMEH_ECONOMETRIE/scripts/19_analyse_complete_garch_midas.R
+LIGNE : 160
+SOURCE :       "GPRT_SUP",
+CONTEXTE :
+0145:     .groups = "drop"
+0146:   )
+0147: 
+0148: write_csv(
+0149:   country_stats,
+0150:   "results/analysis/table_statistiques_par_pays.csv"
+0151: )
+0152: 
+0153: # ============================================================
+0154: # 7. COMPARAISON GPRT / GPRA
+0155: # ============================================================
+0156: 
+0157: gpr_comparison <- coef_analysis %>%
+0158:   filter(
+0159:     model %in% c(
+0160:       "GPRT_SUP",
+0161:       "GPRA_SUP",
+0162:       "GPRT_DEM",
+0163:       "GPRT_PRE",
+0164:       "GPRT_VIX"
+0165:     ),
+0166:     parameter %in% c("theta_1", "theta_2")
+0167:   ) %>%
+0168:   mutate(
+0169:     GPR_type = case_when(
+0170:       grepl("^GPRT", model) ~ "GPRT",
+0171:       grepl("^GPRA", model) ~ "GPRA",
+0172:       TRUE ~ "OTHER"
+0173:     )
+0174:   ) %>%
+0175:   select(
+
+FICHIER : C:/Users/clien/Downloads/RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS/RIMEH_ECONOMETRIE/scripts/19_analyse_complete_garch_midas.R
+LIGNE : 193
+SOURCE :       "GPRT_SUP",
+CONTEXTE :
+0178:     p_value, significance
+0179:   )
+0180: 
+0181: write_csv(
+0182:   gpr_comparison,
+0183:   "results/analysis/table_comparaison_GPRT_GPRA.csv"
+0184: )
+0185: 
+0186: # ============================================================
+0187: # 8. COMPARAISON SUP / DEM / PRE
+0188: # ============================================================
+0189: 
+0190: shock_comparison <- coef_analysis %>%
+0191:   filter(
+0192:     model %in% c(
+0193:       "GPRT_SUP",
+0194:       "GPRT_DEM",
+0195:       "GPRT_PRE",
+0196:       "SUP_DEM",
+0197:       "SUP_PRE"
+0198:     ),
+0199:     parameter %in% c("theta_1", "theta_2")
+0200:   ) %>%
+0201:   mutate(
+0202:     shock_type = case_when(
+0203:       grepl("SUP", model) ~ "SUP",
+0204:       grepl("DEM", model) ~ "DEM",
+0205:       grepl("PRE", model) ~ "PRE",
+0206:       TRUE ~ "OTHER"
+0207:     )
+0208:   ) %>%
+
+FICHIER : C:/Users/clien/Downloads/RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS/RIMEH_ECONOMETRIE/scripts/19_analyse_complete_garch_midas.R
+LIGNE : 282
+SOURCE :       "GPRT_SUP",
+CONTEXTE :
+0267:   ) %>%
+0268:   ungroup()
+0269: 
+0270: write_csv(
+0271:   best_aic_country,
+0272:   "results/analysis/table_AIC_min_par_pays.csv"
+0273: )
+0274: 
+0275: # ============================================================
+0276: # 12. H1 : GPRT -> effet positif
+0277: # ============================================================
+0278: 
+0279: h1 <- coef_analysis %>%
+0280:   filter(
+0281:     model %in% c(
+0282:       "GPRT_SUP",
+0283:       "GPRT_DEM",
+0284:       "GPRT_PRE",
+0285:       "GPRT_VIX"
+0286:     ),
+0287:     parameter == "theta_1"
+0288:   ) %>%
+0289:   mutate(
+0290:     hypothesis = "H1",
+0291:     expected_sign = "POSITIF",
+0292:     statistical_result = case_when(
+0293:       p_value < 0.05 & Estimate > 0 ~ "CONFIRMATION_STATISTIQUE",
+0294:       p_value < 0.05 & Estimate < 0 ~ "EFFET_SIGNIFICATIF_OPPOSE",
+0295:       p_value >= 0.05 ~ "NON_SIGNIFICATIF",
+0296:       TRUE ~ "NON_DETERMINE"
+0297:     )
+
+FICHIER : C:/Users/clien/Downloads/RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS/RIMEH_ECONOMETRIE/scripts/19_analyse_complete_garch_midas.R
+LIGNE : 327
+SOURCE :       "GPRT_SUP",
+CONTEXTE :
+0312:     statistical_result = case_when(
+0313:       p_value < 0.05 & Estimate > 0 ~ "CONFIRMATION_STATISTIQUE",
+0314:       p_value < 0.05 & Estimate < 0 ~ "EFFET_SIGNIFICATIF_OPPOSE",
+0315:       p_value >= 0.05 ~ "NON_SIGNIFICATIF",
+0316:       TRUE ~ "NON_DETERMINE"
+0317:     )
+0318:   )
+0319: 
+0320: # ============================================================
+0321: # 14. H3 : SUP
+0322: # ============================================================
+0323: 
+0324: h3 <- coef_analysis %>%
+0325:   filter(
+0326:     model %in% c(
+0327:       "GPRT_SUP",
+0328:       "GPRA_SUP",
+0329:       "SUP_DEM",
+0330:       "SUP_PRE"
+0331:     ),
+0332:     parameter %in% c("theta_1", "theta_2")
+0333:   ) %>%
+0334:   mutate(
+0335:     hypothesis = "H3",
+0336:     expected_sign = "POSITIF",
+0337:     statistical_result = case_when(
+0338:       p_value < 0.05 & Estimate > 0 ~ "CONFIRMATION_STATISTIQUE",
+0339:       p_value < 0.05 & Estimate < 0 ~ "EFFET_SIGNIFICATIF_OPPOSE",
+0340:       p_value >= 0.05 ~ "NON_SIGNIFICATIF",
+0341:       TRUE ~ "NON_DETERMINE"
+0342:     )
+
+
+============================================================
+SPECIFICATION : GPRT_VIX
+============================================================
+FICHIER : C:/Users/clien/Downloads/RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS/RIMEH_ECONOMETRIE/scripts/08_garch_midas_models.R
+LIGNE : 145
+SOURCE :   GPRT_VIX = c("GPRT", "VIX"),
+CONTEXTE :
+0130:       lag_fun = "Beta",
+0131:       R = 50
+0132:     )
+0133:   } else {
+0134:     stop("Only one or two MIDAS variables are supported")
+0135:   }
+0136: 
+0137:   do.call(rumidas::ugmfit, args)
+0138: }
+0139: countries <- sort(unique(daily[["country"]]))
+0140: specs <- list(
+0141:   GPRT_SUP = c("GPRT", "SUP"),
+0142:   GPRA_SUP = c("GPRA", "SUP"),
+0143:   GPRT_DEM = c("GPRT", "DEM"),
+0144:   GPRT_PRE = c("GPRT", "PRE"),
+0145:   GPRT_VIX = c("GPRT", "VIX"),
+0146:   SUP_DEM = c("SUP", "DEM"),
+0147:   SUP_PRE = c("SUP", "PRE")
+0148: )
+0149: summary_rows <- list()
+0150: model_count <- 0
+0151: for (cc in countries) {
+0152:   for (nm in names(specs)) {
+0153:     vars <- specs[[nm]]
+0154:     fit <- tryCatch(fit_pair(cc, vars, K=3), error=function(e){message("MIDAS failed ",cc,"/",nm,": ",e$message); NULL})
+0155:     if (!is.null(fit)) {
+0156:       saveRDS(fit, file.path("results/models/garch_midas", paste0(cc,"_",nm,".rds")))
+0157:       txt <- capture.output(summary(fit))
+0158:       writeLines(txt, file.path("results/tables", paste0("GARCH_MIDAS_",cc,"_",nm,".txt")))
+0159:       # Store the printed summary as an auditable text result; package object is the authoritative estimate.
+0160:       summary_rows[[paste(cc,nm)]] <- tibble::tibble(country=cc, model=nm, var1=vars[1], var2=vars[2], status="OK")
+
+FICHIER : C:/Users/clien/Downloads/RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS/RIMEH_ECONOMETRIE/scripts/08_garch_midas_models_backup_20260916_041841.R
+LIGNE : 141
+SOURCE :   GPRT_VIX = c("GPRT", "VIX"),
+CONTEXTE :
+0126:       lag_fun = "Beta",
+0127:       R = 50
+0128:     )
+0129:   } else {
+0130:     stop("Only one or two MIDAS variables are supported")
+0131:   }
+0132: 
+0133:   do.call(rumidas::ugmfit, args)
+0134: }
+0135: countries <- sort(unique(daily[["country"]]))
+0136: specs <- list(
+0137:   GPRT_SUP = c("GPRT", "SUP"),
+0138:   GPRA_SUP = c("GPRA", "SUP"),
+0139:   GPRT_DEM = c("GPRT", "DEM"),
+0140:   GPRT_PRE = c("GPRT", "PRE"),
+0141:   GPRT_VIX = c("GPRT", "VIX"),
+0142:   SUP_DEM = c("SUP", "DEM"),
+0143:   SUP_PRE = c("SUP", "PRE")
+0144: )
+0145: summary_rows <- list()
+0146: model_count <- 0
+0147: for (cc in countries) {
+0148:   for (nm in names(specs)) {
+0149:     vars <- specs[[nm]]
+0150:     fit <- tryCatch(fit_pair(cc, vars, K=3), error=function(e){message("MIDAS failed ",cc,"/",nm,": ",e$message); NULL})
+0151:     if (!is.null(fit)) {
+0152:       saveRDS(fit, file.path("results/models/garch_midas", paste0(cc,"_",nm,".rds")))
+0153:       txt <- capture.output(summary(fit))
+0154:       writeLines(txt, file.path("results/tables", paste0("GARCH_MIDAS_",cc,"_",nm,".txt")))
+0155:       # Store the printed summary as an auditable text result; package object is the authoritative estimate.
+0156:       summary_rows[[paste(cc,nm)]] <- tibble::tibble(country=cc, model=nm, var1=vars[1], var2=vars[2], status="OK")
+
+FICHIER : C:/Users/clien/Downloads/RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS/RIMEH_ECONOMETRIE/scripts/08_garch_midas_models_BACKUP_AUTO.R
+LIGNE : 72
+SOURCE :   GPRT_VIX=c("GPRT","VIX"),
+CONTEXTE :
+0057:     )
+0058: }
+0059:   args <- list(model="GM2M", skew="NO", distribution="std", daily_ret=r,
+0060:                mv_m=mm[[1]], K=K, lag_fun="Beta", R=50)
+0061:   if (length(mm)>=2) args$mv_m_2 <- mm[[2]]
+0062:   do.call(rumidas::ugmfit, args)
+0063: }
+0064: 
+0065: countries <- sort(unique(daily$country))
+0066: # Main parsimonious specifications. The full multivariate long-run equation is handled separately in 09_panel_long_run.R.
+0067: specs <- list(
+0068:   GPRT_SUP=c("GPRT","SUP"),
+0069:   GPRA_SUP=c("GPRA","SUP"),
+0070:   GPRT_DEM=c("GPRT","DEM"),
+0071:   GPRT_PRE=c("GPRT","PRE"),
+0072:   GPRT_VIX=c("GPRT","VIX"),
+0073:   SUP_DEM=c("SUP","DEM"),
+0074:   SUP_PRE=c("SUP","PRE")
+0075: )
+0076: 
+0077: summary_rows <- list(); model_count <- 0
+0078: for (cc in countries) {
+0079:   for (nm in names(specs)) {
+0080:     vars <- specs[[nm]]
+0081:     fit <- tryCatch(fit_pair(cc, vars, K=3), error=function(e){message("MIDAS failed ",cc,"/",nm,": ",e$message); NULL})
+0082:     if (!is.null(fit)) {
+0083:       saveRDS(fit, file.path("results/models/garch_midas", paste0(cc,"_",nm,".rds")))
+0084:       txt <- capture.output(summary(fit))
+0085:       writeLines(txt, file.path("results/tables", paste0("GARCH_MIDAS_",cc,"_",nm,".txt")))
+0086:       # Store the printed summary as an auditable text result; package object is the authoritative estimate.
+0087:       summary_rows[[paste(cc,nm)]] <- tibble::tibble(country=cc, model=nm, var1=vars[1], var2=vars[2], status="OK")
+
+FICHIER : C:/Users/clien/Downloads/RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS/RIMEH_ECONOMETRIE/scripts/08_garch_midas_models_BACKUP_FIX2.R
+LIGNE : 72
+SOURCE :   GPRT_VIX=c("GPRT","VIX"),
+CONTEXTE :
+0057:     )
+0058: }
+0059:   args <- list(model="GM2M", skew="NO", distribution="std", daily_ret=r,
+0060:                mv_m=mm[[1]], K=K, lag_fun="Beta", R=50)
+0061:   if (length(mm)>=2) args$mv_m_2 <- mm[[2]]
+0062:   do.call(rumidas::ugmfit, args)
+0063: }
+0064: 
+0065: countries <- sort(unique(daily$country))
+0066: # Main parsimonious specifications. The full multivariate long-run equation is handled separately in 09_panel_long_run.R.
+0067: specs <- list(
+0068:   GPRT_SUP=c("GPRT","SUP"),
+0069:   GPRA_SUP=c("GPRA","SUP"),
+0070:   GPRT_DEM=c("GPRT","DEM"),
+0071:   GPRT_PRE=c("GPRT","PRE"),
+0072:   GPRT_VIX=c("GPRT","VIX"),
+0073:   SUP_DEM=c("SUP","DEM"),
+0074:   SUP_PRE=c("SUP","PRE")
+0075: )
+0076: 
+0077: summary_rows <- list(); model_count <- 0
+0078: for (cc in countries) {
+0079:   for (nm in names(specs)) {
+0080:     vars <- specs[[nm]]
+0081:     fit <- tryCatch(fit_pair(cc, vars, K=3), error=function(e){message("MIDAS failed ",cc,"/",nm,": ",e$message); NULL})
+0082:     if (!is.null(fit)) {
+0083:       saveRDS(fit, file.path("results/models/garch_midas", paste0(cc,"_",nm,".rds")))
+0084:       txt <- capture.output(summary(fit))
+0085:       writeLines(txt, file.path("results/tables", paste0("GARCH_MIDAS_",cc,"_",nm,".txt")))
+0086:       # Store the printed summary as an auditable text result; package object is the authoritative estimate.
+0087:       summary_rows[[paste(cc,nm)]] <- tibble::tibble(country=cc, model=nm, var1=vars[1], var2=vars[2], status="OK")
+
+FICHIER : C:/Users/clien/Downloads/RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS/RIMEH_ECONOMETRIE/scripts/09_garch_midas_resume.R
+LIGNE : 20
+SOURCE :   GPRT_VIX = c("GPRT","VIX"),
+CONTEXTE :
+0005: 
+0006: if (is.na(cut)) {
+0007:   stop("Impossible de trouver le d?but de la boucle principale.")
+0008: }
+0009: 
+0010: eval(parse(text = paste(lines[1:(cut - 1)], collapse = "\n")),
+0011:      envir = .GlobalEnv)
+0012: 
+0013: countries <- sort(unique(daily[["country"]]))
+0014: 
+0015: specs <- list(
+0016:   GPRT_SUP = c("GPRT","SUP"),
+0017:   GPRA_SUP = c("GPRA","SUP"),
+0018:   GPRT_DEM = c("GPRT","DEM"),
+0019:   GPRT_PRE = c("GPRT","PRE"),
+0020:   GPRT_VIX = c("GPRT","VIX"),
+0021:   SUP_DEM = c("SUP","DEM"),
+0022:   SUP_PRE = c("SUP","PRE")
+0023: )
+0024: 
+0025: audit_file <- "results/tables/garch_midas_run_audit.csv"
+0026: 
+0027: audit_rows <- list()
+0028: 
+0029: for (cc in countries) {
+0030:   for (nm in names(specs)) {
+0031: 
+0032:     vars <- specs[[nm]]
+0033:     rds_file <- file.path(
+0034:       "results/models/garch_midas",
+0035:       paste0(cc, "_", nm, ".rds")
+
+FICHIER : C:/Users/clien/Downloads/RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS/RIMEH_ECONOMETRIE/scripts/19_analyse_complete_garch_midas.R
+LIGNE : 164
+SOURCE :       "GPRT_VIX"
+CONTEXTE :
+0149:   country_stats,
+0150:   "results/analysis/table_statistiques_par_pays.csv"
+0151: )
+0152: 
+0153: # ============================================================
+0154: # 7. COMPARAISON GPRT / GPRA
+0155: # ============================================================
+0156: 
+0157: gpr_comparison <- coef_analysis %>%
+0158:   filter(
+0159:     model %in% c(
+0160:       "GPRT_SUP",
+0161:       "GPRA_SUP",
+0162:       "GPRT_DEM",
+0163:       "GPRT_PRE",
+0164:       "GPRT_VIX"
+0165:     ),
+0166:     parameter %in% c("theta_1", "theta_2")
+0167:   ) %>%
+0168:   mutate(
+0169:     GPR_type = case_when(
+0170:       grepl("^GPRT", model) ~ "GPRT",
+0171:       grepl("^GPRA", model) ~ "GPRA",
+0172:       TRUE ~ "OTHER"
+0173:     )
+0174:   ) %>%
+0175:   select(
+0176:     country, model, GPR_type,
+0177:     parameter, Estimate,
+0178:     p_value, significance
+0179:   )
+
+FICHIER : C:/Users/clien/Downloads/RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS/RIMEH_ECONOMETRIE/scripts/19_analyse_complete_garch_midas.R
+LIGNE : 285
+SOURCE :       "GPRT_VIX"
+CONTEXTE :
+0270: write_csv(
+0271:   best_aic_country,
+0272:   "results/analysis/table_AIC_min_par_pays.csv"
+0273: )
+0274: 
+0275: # ============================================================
+0276: # 12. H1 : GPRT -> effet positif
+0277: # ============================================================
+0278: 
+0279: h1 <- coef_analysis %>%
+0280:   filter(
+0281:     model %in% c(
+0282:       "GPRT_SUP",
+0283:       "GPRT_DEM",
+0284:       "GPRT_PRE",
+0285:       "GPRT_VIX"
+0286:     ),
+0287:     parameter == "theta_1"
+0288:   ) %>%
+0289:   mutate(
+0290:     hypothesis = "H1",
+0291:     expected_sign = "POSITIF",
+0292:     statistical_result = case_when(
+0293:       p_value < 0.05 & Estimate > 0 ~ "CONFIRMATION_STATISTIQUE",
+0294:       p_value < 0.05 & Estimate < 0 ~ "EFFET_SIGNIFICATIF_OPPOSE",
+0295:       p_value >= 0.05 ~ "NON_SIGNIFICATIF",
+0296:       TRUE ~ "NON_DETERMINE"
+0297:     )
+0298:   )
+0299: 
+0300: # ============================================================
+
+FICHIER : C:/Users/clien/Downloads/RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS/RIMEH_ECONOMETRIE/scripts/19_analyse_complete_garch_midas.R
+LIGNE : 395
+SOURCE :     model == "GPRT_VIX",
+CONTEXTE :
+0380:     expected_sign = "POSITIF",
+0381:     statistical_result = case_when(
+0382:       p_value < 0.05 & Estimate > 0 ~ "CONFIRMATION_STATISTIQUE",
+0383:       p_value < 0.05 & Estimate < 0 ~ "EFFET_SIGNIFICATIF_OPPOSE",
+0384:       p_value >= 0.05 ~ "NON_SIGNIFICATIF",
+0385:       TRUE ~ "NON_DETERMINE"
+0386:     )
+0387:   )
+0388: 
+0389: # ============================================================
+0390: # 17. H6 : VIX
+0391: # ============================================================
+0392: 
+0393: h6 <- coef_analysis %>%
+0394:   filter(
+0395:     model == "GPRT_VIX",
+0396:     parameter %in% c("theta_1", "theta_2")
+0397:   ) %>%
+0398:   mutate(
+0399:     hypothesis = "H6",
+0400:     expected_sign = "POSITIF",
+0401:     statistical_result = case_when(
+0402:       p_value < 0.05 & Estimate > 0 ~ "CONFIRMATION_STATISTIQUE",
+0403:       p_value < 0.05 & Estimate < 0 ~ "EFFET_SIGNIFICATIF_OPPOSE",
+0404:       p_value >= 0.05 ~ "NON_SIGNIFICATIF",
+0405:       TRUE ~ "NON_DETERMINE"
+0406:     )
+0407:   )
+0408: 
+0409: # ============================================================
+0410: # 18. H7-H9 : NE PAS INVENTER
+
+
+============================================================
+SPECIFICATION : SUP_DEM
+============================================================
+FICHIER : C:/Users/clien/Downloads/RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS/RIMEH_ECONOMETRIE/scripts/08_garch_midas_models.R
+LIGNE : 146
+SOURCE :   SUP_DEM = c("SUP", "DEM"),
+CONTEXTE :
+0131:       R = 50
+0132:     )
+0133:   } else {
+0134:     stop("Only one or two MIDAS variables are supported")
+0135:   }
+0136: 
+0137:   do.call(rumidas::ugmfit, args)
+0138: }
+0139: countries <- sort(unique(daily[["country"]]))
+0140: specs <- list(
+0141:   GPRT_SUP = c("GPRT", "SUP"),
+0142:   GPRA_SUP = c("GPRA", "SUP"),
+0143:   GPRT_DEM = c("GPRT", "DEM"),
+0144:   GPRT_PRE = c("GPRT", "PRE"),
+0145:   GPRT_VIX = c("GPRT", "VIX"),
+0146:   SUP_DEM = c("SUP", "DEM"),
+0147:   SUP_PRE = c("SUP", "PRE")
+0148: )
+0149: summary_rows <- list()
+0150: model_count <- 0
+0151: for (cc in countries) {
+0152:   for (nm in names(specs)) {
+0153:     vars <- specs[[nm]]
+0154:     fit <- tryCatch(fit_pair(cc, vars, K=3), error=function(e){message("MIDAS failed ",cc,"/",nm,": ",e$message); NULL})
+0155:     if (!is.null(fit)) {
+0156:       saveRDS(fit, file.path("results/models/garch_midas", paste0(cc,"_",nm,".rds")))
+0157:       txt <- capture.output(summary(fit))
+0158:       writeLines(txt, file.path("results/tables", paste0("GARCH_MIDAS_",cc,"_",nm,".txt")))
+0159:       # Store the printed summary as an auditable text result; package object is the authoritative estimate.
+0160:       summary_rows[[paste(cc,nm)]] <- tibble::tibble(country=cc, model=nm, var1=vars[1], var2=vars[2], status="OK")
+0161:       model_count <- model_count+1
+
+FICHIER : C:/Users/clien/Downloads/RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS/RIMEH_ECONOMETRIE/scripts/08_garch_midas_models_backup_20260916_041841.R
+LIGNE : 142
+SOURCE :   SUP_DEM = c("SUP", "DEM"),
+CONTEXTE :
+0127:       R = 50
+0128:     )
+0129:   } else {
+0130:     stop("Only one or two MIDAS variables are supported")
+0131:   }
+0132: 
+0133:   do.call(rumidas::ugmfit, args)
+0134: }
+0135: countries <- sort(unique(daily[["country"]]))
+0136: specs <- list(
+0137:   GPRT_SUP = c("GPRT", "SUP"),
+0138:   GPRA_SUP = c("GPRA", "SUP"),
+0139:   GPRT_DEM = c("GPRT", "DEM"),
+0140:   GPRT_PRE = c("GPRT", "PRE"),
+0141:   GPRT_VIX = c("GPRT", "VIX"),
+0142:   SUP_DEM = c("SUP", "DEM"),
+0143:   SUP_PRE = c("SUP", "PRE")
+0144: )
+0145: summary_rows <- list()
+0146: model_count <- 0
+0147: for (cc in countries) {
+0148:   for (nm in names(specs)) {
+0149:     vars <- specs[[nm]]
+0150:     fit <- tryCatch(fit_pair(cc, vars, K=3), error=function(e){message("MIDAS failed ",cc,"/",nm,": ",e$message); NULL})
+0151:     if (!is.null(fit)) {
+0152:       saveRDS(fit, file.path("results/models/garch_midas", paste0(cc,"_",nm,".rds")))
+0153:       txt <- capture.output(summary(fit))
+0154:       writeLines(txt, file.path("results/tables", paste0("GARCH_MIDAS_",cc,"_",nm,".txt")))
+0155:       # Store the printed summary as an auditable text result; package object is the authoritative estimate.
+0156:       summary_rows[[paste(cc,nm)]] <- tibble::tibble(country=cc, model=nm, var1=vars[1], var2=vars[2], status="OK")
+0157:       model_count <- model_count+1
+
+FICHIER : C:/Users/clien/Downloads/RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS/RIMEH_ECONOMETRIE/scripts/08_garch_midas_models_BACKUP_AUTO.R
+LIGNE : 73
+SOURCE :   SUP_DEM=c("SUP","DEM"),
+CONTEXTE :
+0058: }
+0059:   args <- list(model="GM2M", skew="NO", distribution="std", daily_ret=r,
+0060:                mv_m=mm[[1]], K=K, lag_fun="Beta", R=50)
+0061:   if (length(mm)>=2) args$mv_m_2 <- mm[[2]]
+0062:   do.call(rumidas::ugmfit, args)
+0063: }
+0064: 
+0065: countries <- sort(unique(daily$country))
+0066: # Main parsimonious specifications. The full multivariate long-run equation is handled separately in 09_panel_long_run.R.
+0067: specs <- list(
+0068:   GPRT_SUP=c("GPRT","SUP"),
+0069:   GPRA_SUP=c("GPRA","SUP"),
+0070:   GPRT_DEM=c("GPRT","DEM"),
+0071:   GPRT_PRE=c("GPRT","PRE"),
+0072:   GPRT_VIX=c("GPRT","VIX"),
+0073:   SUP_DEM=c("SUP","DEM"),
+0074:   SUP_PRE=c("SUP","PRE")
+0075: )
+0076: 
+0077: summary_rows <- list(); model_count <- 0
+0078: for (cc in countries) {
+0079:   for (nm in names(specs)) {
+0080:     vars <- specs[[nm]]
+0081:     fit <- tryCatch(fit_pair(cc, vars, K=3), error=function(e){message("MIDAS failed ",cc,"/",nm,": ",e$message); NULL})
+0082:     if (!is.null(fit)) {
+0083:       saveRDS(fit, file.path("results/models/garch_midas", paste0(cc,"_",nm,".rds")))
+0084:       txt <- capture.output(summary(fit))
+0085:       writeLines(txt, file.path("results/tables", paste0("GARCH_MIDAS_",cc,"_",nm,".txt")))
+0086:       # Store the printed summary as an auditable text result; package object is the authoritative estimate.
+0087:       summary_rows[[paste(cc,nm)]] <- tibble::tibble(country=cc, model=nm, var1=vars[1], var2=vars[2], status="OK")
+0088:       model_count <- model_count+1
+
+FICHIER : C:/Users/clien/Downloads/RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS/RIMEH_ECONOMETRIE/scripts/08_garch_midas_models_BACKUP_FIX2.R
+LIGNE : 73
+SOURCE :   SUP_DEM=c("SUP","DEM"),
+CONTEXTE :
+0058: }
+0059:   args <- list(model="GM2M", skew="NO", distribution="std", daily_ret=r,
+0060:                mv_m=mm[[1]], K=K, lag_fun="Beta", R=50)
+0061:   if (length(mm)>=2) args$mv_m_2 <- mm[[2]]
+0062:   do.call(rumidas::ugmfit, args)
+0063: }
+0064: 
+0065: countries <- sort(unique(daily$country))
+0066: # Main parsimonious specifications. The full multivariate long-run equation is handled separately in 09_panel_long_run.R.
+0067: specs <- list(
+0068:   GPRT_SUP=c("GPRT","SUP"),
+0069:   GPRA_SUP=c("GPRA","SUP"),
+0070:   GPRT_DEM=c("GPRT","DEM"),
+0071:   GPRT_PRE=c("GPRT","PRE"),
+0072:   GPRT_VIX=c("GPRT","VIX"),
+0073:   SUP_DEM=c("SUP","DEM"),
+0074:   SUP_PRE=c("SUP","PRE")
+0075: )
+0076: 
+0077: summary_rows <- list(); model_count <- 0
+0078: for (cc in countries) {
+0079:   for (nm in names(specs)) {
+0080:     vars <- specs[[nm]]
+0081:     fit <- tryCatch(fit_pair(cc, vars, K=3), error=function(e){message("MIDAS failed ",cc,"/",nm,": ",e$message); NULL})
+0082:     if (!is.null(fit)) {
+0083:       saveRDS(fit, file.path("results/models/garch_midas", paste0(cc,"_",nm,".rds")))
+0084:       txt <- capture.output(summary(fit))
+0085:       writeLines(txt, file.path("results/tables", paste0("GARCH_MIDAS_",cc,"_",nm,".txt")))
+0086:       # Store the printed summary as an auditable text result; package object is the authoritative estimate.
+0087:       summary_rows[[paste(cc,nm)]] <- tibble::tibble(country=cc, model=nm, var1=vars[1], var2=vars[2], status="OK")
+0088:       model_count <- model_count+1
+
+FICHIER : C:/Users/clien/Downloads/RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS/RIMEH_ECONOMETRIE/scripts/09_garch_midas_resume.R
+LIGNE : 21
+SOURCE :   SUP_DEM = c("SUP","DEM"),
+CONTEXTE :
+0006: if (is.na(cut)) {
+0007:   stop("Impossible de trouver le d?but de la boucle principale.")
+0008: }
+0009: 
+0010: eval(parse(text = paste(lines[1:(cut - 1)], collapse = "\n")),
+0011:      envir = .GlobalEnv)
+0012: 
+0013: countries <- sort(unique(daily[["country"]]))
+0014: 
+0015: specs <- list(
+0016:   GPRT_SUP = c("GPRT","SUP"),
+0017:   GPRA_SUP = c("GPRA","SUP"),
+0018:   GPRT_DEM = c("GPRT","DEM"),
+0019:   GPRT_PRE = c("GPRT","PRE"),
+0020:   GPRT_VIX = c("GPRT","VIX"),
+0021:   SUP_DEM = c("SUP","DEM"),
+0022:   SUP_PRE = c("SUP","PRE")
+0023: )
+0024: 
+0025: audit_file <- "results/tables/garch_midas_run_audit.csv"
+0026: 
+0027: audit_rows <- list()
+0028: 
+0029: for (cc in countries) {
+0030:   for (nm in names(specs)) {
+0031: 
+0032:     vars <- specs[[nm]]
+0033:     rds_file <- file.path(
+0034:       "results/models/garch_midas",
+0035:       paste0(cc, "_", nm, ".rds")
+0036:     )
+
+FICHIER : C:/Users/clien/Downloads/RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS/RIMEH_ECONOMETRIE/scripts/19_analyse_complete_garch_midas.R
+LIGNE : 196
+SOURCE :       "SUP_DEM",
+CONTEXTE :
+0181: write_csv(
+0182:   gpr_comparison,
+0183:   "results/analysis/table_comparaison_GPRT_GPRA.csv"
+0184: )
+0185: 
+0186: # ============================================================
+0187: # 8. COMPARAISON SUP / DEM / PRE
+0188: # ============================================================
+0189: 
+0190: shock_comparison <- coef_analysis %>%
+0191:   filter(
+0192:     model %in% c(
+0193:       "GPRT_SUP",
+0194:       "GPRT_DEM",
+0195:       "GPRT_PRE",
+0196:       "SUP_DEM",
+0197:       "SUP_PRE"
+0198:     ),
+0199:     parameter %in% c("theta_1", "theta_2")
+0200:   ) %>%
+0201:   mutate(
+0202:     shock_type = case_when(
+0203:       grepl("SUP", model) ~ "SUP",
+0204:       grepl("DEM", model) ~ "DEM",
+0205:       grepl("PRE", model) ~ "PRE",
+0206:       TRUE ~ "OTHER"
+0207:     )
+0208:   ) %>%
+0209:   select(
+0210:     country, model, shock_type,
+0211:     parameter, Estimate,
+
+FICHIER : C:/Users/clien/Downloads/RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS/RIMEH_ECONOMETRIE/scripts/19_analyse_complete_garch_midas.R
+LIGNE : 217
+SOURCE :   "results/analysis/table_SUP_DEM_PRE.csv"
+CONTEXTE :
+0202:     shock_type = case_when(
+0203:       grepl("SUP", model) ~ "SUP",
+0204:       grepl("DEM", model) ~ "DEM",
+0205:       grepl("PRE", model) ~ "PRE",
+0206:       TRUE ~ "OTHER"
+0207:     )
+0208:   ) %>%
+0209:   select(
+0210:     country, model, shock_type,
+0211:     parameter, Estimate,
+0212:     p_value, significance
+0213:   )
+0214: 
+0215: write_csv(
+0216:   shock_comparison,
+0217:   "results/analysis/table_SUP_DEM_PRE.csv"
+0218: )
+0219: 
+0220: # ============================================================
+0221: # 9. PERFORMANCES DES MODELES
+0222: # ============================================================
+0223: 
+0224: performance <- model_summary %>%
+0225:   select(
+0226:     country, model,
+0227:     observations,
+0228:     start_date, end_date,
+0229:     loglik, AIC, BIC,
+0230:     MSE_percent, QLIKE
+0231:   )
+0232: 
+
+FICHIER : C:/Users/clien/Downloads/RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS/RIMEH_ECONOMETRIE/scripts/19_analyse_complete_garch_midas.R
+LIGNE : 329
+SOURCE :       "SUP_DEM",
+CONTEXTE :
+0314:       p_value < 0.05 & Estimate < 0 ~ "EFFET_SIGNIFICATIF_OPPOSE",
+0315:       p_value >= 0.05 ~ "NON_SIGNIFICATIF",
+0316:       TRUE ~ "NON_DETERMINE"
+0317:     )
+0318:   )
+0319: 
+0320: # ============================================================
+0321: # 14. H3 : SUP
+0322: # ============================================================
+0323: 
+0324: h3 <- coef_analysis %>%
+0325:   filter(
+0326:     model %in% c(
+0327:       "GPRT_SUP",
+0328:       "GPRA_SUP",
+0329:       "SUP_DEM",
+0330:       "SUP_PRE"
+0331:     ),
+0332:     parameter %in% c("theta_1", "theta_2")
+0333:   ) %>%
+0334:   mutate(
+0335:     hypothesis = "H3",
+0336:     expected_sign = "POSITIF",
+0337:     statistical_result = case_when(
+0338:       p_value < 0.05 & Estimate > 0 ~ "CONFIRMATION_STATISTIQUE",
+0339:       p_value < 0.05 & Estimate < 0 ~ "EFFET_SIGNIFICATIF_OPPOSE",
+0340:       p_value >= 0.05 ~ "NON_SIGNIFICATIF",
+0341:       TRUE ~ "NON_DETERMINE"
+0342:     )
+0343:   )
+0344: 
+
+FICHIER : C:/Users/clien/Downloads/RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS/RIMEH_ECONOMETRIE/scripts/19_analyse_complete_garch_midas.R
+LIGNE : 353
+SOURCE :       "SUP_DEM"
+CONTEXTE :
+0338:       p_value < 0.05 & Estimate > 0 ~ "CONFIRMATION_STATISTIQUE",
+0339:       p_value < 0.05 & Estimate < 0 ~ "EFFET_SIGNIFICATIF_OPPOSE",
+0340:       p_value >= 0.05 ~ "NON_SIGNIFICATIF",
+0341:       TRUE ~ "NON_DETERMINE"
+0342:     )
+0343:   )
+0344: 
+0345: # ============================================================
+0346: # 15. H4 : DEM
+0347: # ============================================================
+0348: 
+0349: h4 <- coef_analysis %>%
+0350:   filter(
+0351:     model %in% c(
+0352:       "GPRT_DEM",
+0353:       "SUP_DEM"
+0354:     ),
+0355:     parameter %in% c("theta_1", "theta_2")
+0356:   ) %>%
+0357:   mutate(
+0358:     hypothesis = "H4",
+0359:     expected_sign = "DIFFERENCIE",
+0360:     statistical_result = case_when(
+0361:       p_value < 0.05 ~ "EFFET_SIGNIFICATIF",
+0362:       TRUE ~ "NON_SIGNIFICATIF"
+0363:     )
+0364:   )
+0365: 
+0366: # ============================================================
+0367: # 16. H5 : PRE
+0368: # ============================================================
+
+FICHIER : C:/Users/clien/Downloads/RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS/RIMEH_ECONOMETRIE/scripts/19_analyse_complete_garch_midas.R
+LIGNE : 686
+SOURCE : cat("results/analysis/table_SUP_DEM_PRE.csv\n")
+CONTEXTE :
+0671: cat("results/analysis/garch_midas_coefficients_analysis.csv\n")
+0672: 
+0673: cat("\n[2] Parametres principaux :\n")
+0674: cat("results/analysis/table_parameters_principaux.csv\n")
+0675: 
+0676: cat("\n[3] Alpha/Beta :\n")
+0677: cat("results/analysis/table_alpha_beta.csv\n")
+0678: 
+0679: cat("\n[4] Theta MIDAS :\n")
+0680: cat("results/analysis/table_theta_MIDAS.csv\n")
+0681: 
+0682: cat("\n[5] GPRT vs GPRA :\n")
+0683: cat("results/analysis/table_comparaison_GPRT_GPRA.csv\n")
+0684: 
+0685: cat("\n[6] SUP/DEM/PRE :\n")
+0686: cat("results/analysis/table_SUP_DEM_PRE.csv\n")
+0687: 
+0688: cat("\n[7] Performances :\n")
+0689: cat("results/analysis/table_performance_modeles.csv\n")
+0690: 
+0691: cat("\n[8] H1-H6 :\n")
+0692: cat("results/analysis/table_tests_H1_H6.csv\n")
+0693: 
+0694: cat("\n[9] H1-H9 :\n")
+0695: cat("results/analysis/table_synthese_H1_H9.csv\n")
+0696: 
+0697: cat("\n[10] Rapport texte :\n")
+0698: cat("results/analysis/garch_midas_analysis_report.txt\n")
+0699: 
+0700: cat("\n[11] Graphiques :\n")
+0701: cat("results/figures/beta_par_pays.png\n")
+
+FICHIER : C:/Users/clien/Downloads/RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS/RIMEH_ECONOMETRIE/scripts/21_FINAL_H1_H9_AUTO.R
+LIGNE : 105
+SOURCE : # cas SUP_DEM / SUP_PRE
+CONTEXTE :
+0090: # ============================================================
+0091: # 4. IDENTIFICATION DU TYPE DE MODELE
+0092: # ============================================================
+0093: 
+0094: theta$SHOCK <- NA_character_
+0095: theta$TARGET <- NA_character_
+0096: 
+0097: theta$SHOCK[grepl("^GPRT",theta$MODEL,ignore.case=TRUE)] <- "GPRT"
+0098: theta$SHOCK[grepl("^GPRA",theta$MODEL,ignore.case=TRUE)] <- "GPRA"
+0099: theta$SHOCK[grepl("^SUP",theta$MODEL,ignore.case=TRUE)] <- "SUP"
+0100: 
+0101: theta$TARGET[grepl("PRE$",theta$MODEL,ignore.case=TRUE)] <- "PRICE"
+0102: theta$TARGET[grepl("DEM$",theta$MODEL,ignore.case=TRUE)] <- "DEMAND"
+0103: theta$TARGET[grepl("SUP$",theta$MODEL,ignore.case=TRUE)] <- "SUPPLY"
+0104: 
+0105: # cas SUP_DEM / SUP_PRE
+0106: theta$TARGET[
+0107:   grepl("^SUP_DEM",theta$MODEL,ignore.case=TRUE)
+0108: ] <- "DEMAND"
+0109: 
+0110: theta$TARGET[
+0111:   grepl("^SUP_PRE",theta$MODEL,ignore.case=TRUE)
+0112: ] <- "PRICE"
+0113: 
+0114: # ============================================================
+0115: # 5. FONCTION DE RESUME
+0116: # ============================================================
+0117: 
+0118: summary_effect <- function(d,label) {
+0119: 
+0120:   if(nrow(d)==0) {
+
+FICHIER : C:/Users/clien/Downloads/RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS/RIMEH_ECONOMETRIE/scripts/21_FINAL_H1_H9_AUTO.R
+LIGNE : 107
+SOURCE :   grepl("^SUP_DEM",theta$MODEL,ignore.case=TRUE)
+CONTEXTE :
+0092: # ============================================================
+0093: 
+0094: theta$SHOCK <- NA_character_
+0095: theta$TARGET <- NA_character_
+0096: 
+0097: theta$SHOCK[grepl("^GPRT",theta$MODEL,ignore.case=TRUE)] <- "GPRT"
+0098: theta$SHOCK[grepl("^GPRA",theta$MODEL,ignore.case=TRUE)] <- "GPRA"
+0099: theta$SHOCK[grepl("^SUP",theta$MODEL,ignore.case=TRUE)] <- "SUP"
+0100: 
+0101: theta$TARGET[grepl("PRE$",theta$MODEL,ignore.case=TRUE)] <- "PRICE"
+0102: theta$TARGET[grepl("DEM$",theta$MODEL,ignore.case=TRUE)] <- "DEMAND"
+0103: theta$TARGET[grepl("SUP$",theta$MODEL,ignore.case=TRUE)] <- "SUPPLY"
+0104: 
+0105: # cas SUP_DEM / SUP_PRE
+0106: theta$TARGET[
+0107:   grepl("^SUP_DEM",theta$MODEL,ignore.case=TRUE)
+0108: ] <- "DEMAND"
+0109: 
+0110: theta$TARGET[
+0111:   grepl("^SUP_PRE",theta$MODEL,ignore.case=TRUE)
+0112: ] <- "PRICE"
+0113: 
+0114: # ============================================================
+0115: # 5. FONCTION DE RESUME
+0116: # ============================================================
+0117: 
+0118: summary_effect <- function(d,label) {
+0119: 
+0120:   if(nrow(d)==0) {
+0121:     return(data.frame(
+0122:       Hypothesis=label,
+
+
+============================================================
+SPECIFICATION : SUP_PRE
+============================================================
+FICHIER : C:/Users/clien/Downloads/RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS/RIMEH_ECONOMETRIE/scripts/08_garch_midas_models.R
+LIGNE : 147
+SOURCE :   SUP_PRE = c("SUP", "PRE")
+CONTEXTE :
+0132:     )
+0133:   } else {
+0134:     stop("Only one or two MIDAS variables are supported")
+0135:   }
+0136: 
+0137:   do.call(rumidas::ugmfit, args)
+0138: }
+0139: countries <- sort(unique(daily[["country"]]))
+0140: specs <- list(
+0141:   GPRT_SUP = c("GPRT", "SUP"),
+0142:   GPRA_SUP = c("GPRA", "SUP"),
+0143:   GPRT_DEM = c("GPRT", "DEM"),
+0144:   GPRT_PRE = c("GPRT", "PRE"),
+0145:   GPRT_VIX = c("GPRT", "VIX"),
+0146:   SUP_DEM = c("SUP", "DEM"),
+0147:   SUP_PRE = c("SUP", "PRE")
+0148: )
+0149: summary_rows <- list()
+0150: model_count <- 0
+0151: for (cc in countries) {
+0152:   for (nm in names(specs)) {
+0153:     vars <- specs[[nm]]
+0154:     fit <- tryCatch(fit_pair(cc, vars, K=3), error=function(e){message("MIDAS failed ",cc,"/",nm,": ",e$message); NULL})
+0155:     if (!is.null(fit)) {
+0156:       saveRDS(fit, file.path("results/models/garch_midas", paste0(cc,"_",nm,".rds")))
+0157:       txt <- capture.output(summary(fit))
+0158:       writeLines(txt, file.path("results/tables", paste0("GARCH_MIDAS_",cc,"_",nm,".txt")))
+0159:       # Store the printed summary as an auditable text result; package object is the authoritative estimate.
+0160:       summary_rows[[paste(cc,nm)]] <- tibble::tibble(country=cc, model=nm, var1=vars[1], var2=vars[2], status="OK")
+0161:       model_count <- model_count+1
+0162:     }
+
+FICHIER : C:/Users/clien/Downloads/RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS/RIMEH_ECONOMETRIE/scripts/08_garch_midas_models_backup_20260916_041841.R
+LIGNE : 143
+SOURCE :   SUP_PRE = c("SUP", "PRE")
+CONTEXTE :
+0128:     )
+0129:   } else {
+0130:     stop("Only one or two MIDAS variables are supported")
+0131:   }
+0132: 
+0133:   do.call(rumidas::ugmfit, args)
+0134: }
+0135: countries <- sort(unique(daily[["country"]]))
+0136: specs <- list(
+0137:   GPRT_SUP = c("GPRT", "SUP"),
+0138:   GPRA_SUP = c("GPRA", "SUP"),
+0139:   GPRT_DEM = c("GPRT", "DEM"),
+0140:   GPRT_PRE = c("GPRT", "PRE"),
+0141:   GPRT_VIX = c("GPRT", "VIX"),
+0142:   SUP_DEM = c("SUP", "DEM"),
+0143:   SUP_PRE = c("SUP", "PRE")
+0144: )
+0145: summary_rows <- list()
+0146: model_count <- 0
+0147: for (cc in countries) {
+0148:   for (nm in names(specs)) {
+0149:     vars <- specs[[nm]]
+0150:     fit <- tryCatch(fit_pair(cc, vars, K=3), error=function(e){message("MIDAS failed ",cc,"/",nm,": ",e$message); NULL})
+0151:     if (!is.null(fit)) {
+0152:       saveRDS(fit, file.path("results/models/garch_midas", paste0(cc,"_",nm,".rds")))
+0153:       txt <- capture.output(summary(fit))
+0154:       writeLines(txt, file.path("results/tables", paste0("GARCH_MIDAS_",cc,"_",nm,".txt")))
+0155:       # Store the printed summary as an auditable text result; package object is the authoritative estimate.
+0156:       summary_rows[[paste(cc,nm)]] <- tibble::tibble(country=cc, model=nm, var1=vars[1], var2=vars[2], status="OK")
+0157:       model_count <- model_count+1
+0158:     }
+
+FICHIER : C:/Users/clien/Downloads/RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS/RIMEH_ECONOMETRIE/scripts/08_garch_midas_models_BACKUP_AUTO.R
+LIGNE : 74
+SOURCE :   SUP_PRE=c("SUP","PRE")
+CONTEXTE :
+0059:   args <- list(model="GM2M", skew="NO", distribution="std", daily_ret=r,
+0060:                mv_m=mm[[1]], K=K, lag_fun="Beta", R=50)
+0061:   if (length(mm)>=2) args$mv_m_2 <- mm[[2]]
+0062:   do.call(rumidas::ugmfit, args)
+0063: }
+0064: 
+0065: countries <- sort(unique(daily$country))
+0066: # Main parsimonious specifications. The full multivariate long-run equation is handled separately in 09_panel_long_run.R.
+0067: specs <- list(
+0068:   GPRT_SUP=c("GPRT","SUP"),
+0069:   GPRA_SUP=c("GPRA","SUP"),
+0070:   GPRT_DEM=c("GPRT","DEM"),
+0071:   GPRT_PRE=c("GPRT","PRE"),
+0072:   GPRT_VIX=c("GPRT","VIX"),
+0073:   SUP_DEM=c("SUP","DEM"),
+0074:   SUP_PRE=c("SUP","PRE")
+0075: )
+0076: 
+0077: summary_rows <- list(); model_count <- 0
+0078: for (cc in countries) {
+0079:   for (nm in names(specs)) {
+0080:     vars <- specs[[nm]]
+0081:     fit <- tryCatch(fit_pair(cc, vars, K=3), error=function(e){message("MIDAS failed ",cc,"/",nm,": ",e$message); NULL})
+0082:     if (!is.null(fit)) {
+0083:       saveRDS(fit, file.path("results/models/garch_midas", paste0(cc,"_",nm,".rds")))
+0084:       txt <- capture.output(summary(fit))
+0085:       writeLines(txt, file.path("results/tables", paste0("GARCH_MIDAS_",cc,"_",nm,".txt")))
+0086:       # Store the printed summary as an auditable text result; package object is the authoritative estimate.
+0087:       summary_rows[[paste(cc,nm)]] <- tibble::tibble(country=cc, model=nm, var1=vars[1], var2=vars[2], status="OK")
+0088:       model_count <- model_count+1
+0089:     }
+
+FICHIER : C:/Users/clien/Downloads/RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS/RIMEH_ECONOMETRIE/scripts/08_garch_midas_models_BACKUP_FIX2.R
+LIGNE : 74
+SOURCE :   SUP_PRE=c("SUP","PRE")
+CONTEXTE :
+0059:   args <- list(model="GM2M", skew="NO", distribution="std", daily_ret=r,
+0060:                mv_m=mm[[1]], K=K, lag_fun="Beta", R=50)
+0061:   if (length(mm)>=2) args$mv_m_2 <- mm[[2]]
+0062:   do.call(rumidas::ugmfit, args)
+0063: }
+0064: 
+0065: countries <- sort(unique(daily$country))
+0066: # Main parsimonious specifications. The full multivariate long-run equation is handled separately in 09_panel_long_run.R.
+0067: specs <- list(
+0068:   GPRT_SUP=c("GPRT","SUP"),
+0069:   GPRA_SUP=c("GPRA","SUP"),
+0070:   GPRT_DEM=c("GPRT","DEM"),
+0071:   GPRT_PRE=c("GPRT","PRE"),
+0072:   GPRT_VIX=c("GPRT","VIX"),
+0073:   SUP_DEM=c("SUP","DEM"),
+0074:   SUP_PRE=c("SUP","PRE")
+0075: )
+0076: 
+0077: summary_rows <- list(); model_count <- 0
+0078: for (cc in countries) {
+0079:   for (nm in names(specs)) {
+0080:     vars <- specs[[nm]]
+0081:     fit <- tryCatch(fit_pair(cc, vars, K=3), error=function(e){message("MIDAS failed ",cc,"/",nm,": ",e$message); NULL})
+0082:     if (!is.null(fit)) {
+0083:       saveRDS(fit, file.path("results/models/garch_midas", paste0(cc,"_",nm,".rds")))
+0084:       txt <- capture.output(summary(fit))
+0085:       writeLines(txt, file.path("results/tables", paste0("GARCH_MIDAS_",cc,"_",nm,".txt")))
+0086:       # Store the printed summary as an auditable text result; package object is the authoritative estimate.
+0087:       summary_rows[[paste(cc,nm)]] <- tibble::tibble(country=cc, model=nm, var1=vars[1], var2=vars[2], status="OK")
+0088:       model_count <- model_count+1
+0089:     }
+
+FICHIER : C:/Users/clien/Downloads/RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS/RIMEH_ECONOMETRIE/scripts/09_garch_midas_resume.R
+LIGNE : 22
+SOURCE :   SUP_PRE = c("SUP","PRE")
+CONTEXTE :
+0007:   stop("Impossible de trouver le d?but de la boucle principale.")
+0008: }
+0009: 
+0010: eval(parse(text = paste(lines[1:(cut - 1)], collapse = "\n")),
+0011:      envir = .GlobalEnv)
+0012: 
+0013: countries <- sort(unique(daily[["country"]]))
+0014: 
+0015: specs <- list(
+0016:   GPRT_SUP = c("GPRT","SUP"),
+0017:   GPRA_SUP = c("GPRA","SUP"),
+0018:   GPRT_DEM = c("GPRT","DEM"),
+0019:   GPRT_PRE = c("GPRT","PRE"),
+0020:   GPRT_VIX = c("GPRT","VIX"),
+0021:   SUP_DEM = c("SUP","DEM"),
+0022:   SUP_PRE = c("SUP","PRE")
+0023: )
+0024: 
+0025: audit_file <- "results/tables/garch_midas_run_audit.csv"
+0026: 
+0027: audit_rows <- list()
+0028: 
+0029: for (cc in countries) {
+0030:   for (nm in names(specs)) {
+0031: 
+0032:     vars <- specs[[nm]]
+0033:     rds_file <- file.path(
+0034:       "results/models/garch_midas",
+0035:       paste0(cc, "_", nm, ".rds")
+0036:     )
+0037: 
+
+FICHIER : C:/Users/clien/Downloads/RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS/RIMEH_ECONOMETRIE/scripts/10_diagnose_failed_midas.R
+LIGNE : 9
+SOURCE :   c("GBR","SUP_PRE"),
+CONTEXTE :
+0001: lines <- readLines("scripts/08_garch_midas_models.R", warn = FALSE)
+0002: marker <- 'countries <- sort(unique(daily[["country"]]))'
+0003: cut <- which(trimws(lines) == marker)[1]
+0004: 
+0005: eval(parse(text = paste(lines[1:(cut - 1)], collapse = "\n")),
+0006:      envir = .GlobalEnv)
+0007: 
+0008: tests <- list(
+0009:   c("GBR","SUP_PRE"),
+0010:   c("MEX","GPRT_SUP"),
+0011:   c("NOR","SUP_PRE"),
+0012:   c("USA","GPRA_SUP")
+0013: )
+0014: 
+0015: for (x in tests) {
+0016:   cc <- x[1]
+0017:   nm <- x[2]
+0018:   vars <- switch(
+0019:     nm,
+0020:     SUP_PRE = c("SUP","PRE"),
+0021:     GPRT_SUP = c("GPRT","SUP"),
+0022:     GPRA_SUP = c("GPRA","SUP")
+0023:   )
+0024: 
+
+FICHIER : C:/Users/clien/Downloads/RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS/RIMEH_ECONOMETRIE/scripts/10_diagnose_failed_midas.R
+LIGNE : 11
+SOURCE :   c("NOR","SUP_PRE"),
+CONTEXTE :
+0001: lines <- readLines("scripts/08_garch_midas_models.R", warn = FALSE)
+0002: marker <- 'countries <- sort(unique(daily[["country"]]))'
+0003: cut <- which(trimws(lines) == marker)[1]
+0004: 
+0005: eval(parse(text = paste(lines[1:(cut - 1)], collapse = "\n")),
+0006:      envir = .GlobalEnv)
+0007: 
+0008: tests <- list(
+0009:   c("GBR","SUP_PRE"),
+0010:   c("MEX","GPRT_SUP"),
+0011:   c("NOR","SUP_PRE"),
+0012:   c("USA","GPRA_SUP")
+0013: )
+0014: 
+0015: for (x in tests) {
+0016:   cc <- x[1]
+0017:   nm <- x[2]
+0018:   vars <- switch(
+0019:     nm,
+0020:     SUP_PRE = c("SUP","PRE"),
+0021:     GPRT_SUP = c("GPRT","SUP"),
+0022:     GPRA_SUP = c("GPRA","SUP")
+0023:   )
+0024: 
+0025:   cat("\n========================================\n")
+0026:   cat(cc, "/", nm, "\n")
+
+FICHIER : C:/Users/clien/Downloads/RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS/RIMEH_ECONOMETRIE/scripts/10_diagnose_failed_midas.R
+LIGNE : 20
+SOURCE :     SUP_PRE = c("SUP","PRE"),
+CONTEXTE :
+0005: eval(parse(text = paste(lines[1:(cut - 1)], collapse = "\n")),
+0006:      envir = .GlobalEnv)
+0007: 
+0008: tests <- list(
+0009:   c("GBR","SUP_PRE"),
+0010:   c("MEX","GPRT_SUP"),
+0011:   c("NOR","SUP_PRE"),
+0012:   c("USA","GPRA_SUP")
+0013: )
+0014: 
+0015: for (x in tests) {
+0016:   cc <- x[1]
+0017:   nm <- x[2]
+0018:   vars <- switch(
+0019:     nm,
+0020:     SUP_PRE = c("SUP","PRE"),
+0021:     GPRT_SUP = c("GPRT","SUP"),
+0022:     GPRA_SUP = c("GPRA","SUP")
+0023:   )
+0024: 
+0025:   cat("\n========================================\n")
+0026:   cat(cc, "/", nm, "\n")
+0027:   cat("========================================\n")
+0028: 
+0029:   m <- monthly %>%
+0030:     dplyr::filter(country == cc) %>%
+0031:     dplyr::arrange(date)
+0032: 
+0033:   for (v in vars) {
+0034:     z <- m %>%
+0035:       dplyr::select(date, value = dplyr::all_of(v)) %>%
+
+FICHIER : C:/Users/clien/Downloads/RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS/RIMEH_ECONOMETRIE/scripts/11_test_failed_midas_k2.R
+LIGNE : 9
+SOURCE :   c("GBR","SUP_PRE"),
+CONTEXTE :
+0001: lines <- readLines("scripts/08_garch_midas_models.R", warn = FALSE)
+0002: marker <- 'countries <- sort(unique(daily[["country"]]))'
+0003: cut <- which(trimws(lines) == marker)[1]
+0004: 
+0005: eval(parse(text = paste(lines[1:(cut - 1)], collapse = "\n")),
+0006:      envir = .GlobalEnv)
+0007: 
+0008: tests <- list(
+0009:   c("GBR","SUP_PRE"),
+0010:   c("MEX","GPRT_SUP"),
+0011:   c("NOR","SUP_PRE"),
+0012:   c("USA","GPRA_SUP")
+0013: )
+0014: 
+0015: for (x in tests) {
+0016:   cc <- x[1]
+0017:   nm <- x[2]
+0018: 
+0019:   vars <- switch(
+0020:     nm,
+0021:     SUP_PRE = c("SUP","PRE"),
+0022:     GPRT_SUP = c("GPRT","SUP"),
+0023:     GPRA_SUP = c("GPRA","SUP")
+0024:   )
+
+FICHIER : C:/Users/clien/Downloads/RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS/RIMEH_ECONOMETRIE/scripts/11_test_failed_midas_k2.R
+LIGNE : 11
+SOURCE :   c("NOR","SUP_PRE"),
+CONTEXTE :
+0001: lines <- readLines("scripts/08_garch_midas_models.R", warn = FALSE)
+0002: marker <- 'countries <- sort(unique(daily[["country"]]))'
+0003: cut <- which(trimws(lines) == marker)[1]
+0004: 
+0005: eval(parse(text = paste(lines[1:(cut - 1)], collapse = "\n")),
+0006:      envir = .GlobalEnv)
+0007: 
+0008: tests <- list(
+0009:   c("GBR","SUP_PRE"),
+0010:   c("MEX","GPRT_SUP"),
+0011:   c("NOR","SUP_PRE"),
+0012:   c("USA","GPRA_SUP")
+0013: )
+0014: 
+0015: for (x in tests) {
+0016:   cc <- x[1]
+0017:   nm <- x[2]
+0018: 
+0019:   vars <- switch(
+0020:     nm,
+0021:     SUP_PRE = c("SUP","PRE"),
+0022:     GPRT_SUP = c("GPRT","SUP"),
+0023:     GPRA_SUP = c("GPRA","SUP")
+0024:   )
+0025: 
+0026:   cat("\n========================================\n")
+
+FICHIER : C:/Users/clien/Downloads/RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS/RIMEH_ECONOMETRIE/scripts/11_test_failed_midas_k2.R
+LIGNE : 21
+SOURCE :     SUP_PRE = c("SUP","PRE"),
+CONTEXTE :
+0006:      envir = .GlobalEnv)
+0007: 
+0008: tests <- list(
+0009:   c("GBR","SUP_PRE"),
+0010:   c("MEX","GPRT_SUP"),
+0011:   c("NOR","SUP_PRE"),
+0012:   c("USA","GPRA_SUP")
+0013: )
+0014: 
+0015: for (x in tests) {
+0016:   cc <- x[1]
+0017:   nm <- x[2]
+0018: 
+0019:   vars <- switch(
+0020:     nm,
+0021:     SUP_PRE = c("SUP","PRE"),
+0022:     GPRT_SUP = c("GPRT","SUP"),
+0023:     GPRA_SUP = c("GPRA","SUP")
+0024:   )
+0025: 
+0026:   cat("\n========================================\n")
+0027:   cat("TEST K=2 :", cc, "/", nm, "\n")
+0028:   cat("========================================\n")
+0029: 
+0030:   fit <- tryCatch(
+0031:     fit_pair(cc, vars, K = 2),
+0032:     error = function(e) {
+0033:       cat("FAILED K=2:", e$message, "\n")
+0034:       NULL
+0035:     }
+0036:   )
+
+FICHIER : C:/Users/clien/Downloads/RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS/RIMEH_ECONOMETRIE/scripts/12_test_gbr_k1.R
+LIGNE : 9
+SOURCE : cat("TEST K=1 : GBR / SUP_PRE\n")
+CONTEXTE :
+0001: lines <- readLines("scripts/08_garch_midas_models.R", warn = FALSE)
+0002: marker <- 'countries <- sort(unique(daily[["country"]]))'
+0003: cut <- which(trimws(lines) == marker)[1]
+0004: 
+0005: eval(parse(text = paste(lines[1:(cut - 1)], collapse = "\n")),
+0006:      envir = .GlobalEnv)
+0007: 
+0008: cat("\n========================================\n")
+0009: cat("TEST K=1 : GBR / SUP_PRE\n")
+0010: cat("========================================\n")
+0011: 
+0012: fit <- tryCatch(
+0013:   fit_pair("GBR", c("SUP","PRE"), K = 1),
+0014:   error = function(e) {
+0015:     cat("FAILED K=1:", e$message, "\n")
+0016:     NULL
+0017:   }
+0018: )
+0019: 
+0020: if (!is.null(fit)) {
+0021:   cat("SUCCESS K=1: GBR / SUP_PRE\n")
+0022: }
+
+FICHIER : C:/Users/clien/Downloads/RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS/RIMEH_ECONOMETRIE/scripts/12_test_gbr_k1.R
+LIGNE : 21
+SOURCE :   cat("SUCCESS K=1: GBR / SUP_PRE\n")
+CONTEXTE :
+0006:      envir = .GlobalEnv)
+0007: 
+0008: cat("\n========================================\n")
+0009: cat("TEST K=1 : GBR / SUP_PRE\n")
+0010: cat("========================================\n")
+0011: 
+0012: fit <- tryCatch(
+0013:   fit_pair("GBR", c("SUP","PRE"), K = 1),
+0014:   error = function(e) {
+0015:     cat("FAILED K=1:", e$message, "\n")
+0016:     NULL
+0017:   }
+0018: )
+0019: 
+0020: if (!is.null(fit)) {
+0021:   cat("SUCCESS K=1: GBR / SUP_PRE\n")
+0022: }
+
+FICHIER : C:/Users/clien/Downloads/RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS/RIMEH_ECONOMETRIE/scripts/13_save_recovered_midas.R
+LIGNE : 10
+SOURCE :   NOR_SUP_PRE  = c("NOR","SUP_PRE"),
+CONTEXTE :
+0001: lines <- readLines("scripts/08_garch_midas_models.R", warn = FALSE)
+0002: marker <- 'countries <- sort(unique(daily[["country"]]))'
+0003: cut <- which(trimws(lines) == marker)[1]
+0004: 
+0005: eval(parse(text = paste(lines[1:(cut - 1)], collapse = "\n")),
+0006:      envir = .GlobalEnv)
+0007: 
+0008: tests <- list(
+0009:   MEX_GPRT_SUP = c("MEX","GPRT_SUP"),
+0010:   NOR_SUP_PRE  = c("NOR","SUP_PRE"),
+0011:   USA_GPRA_SUP = c("USA","GPRA_SUP")
+0012: )
+0013: 
+0014: for (nm_test in names(tests)) {
+0015: 
+0016:   cc <- tests[[nm_test]][1]
+0017:   nm <- tests[[nm_test]][2]
+0018: 
+0019:   vars <- switch(
+0020:     nm,
+0021:     GPRT_SUP = c("GPRT","SUP"),
+0022:     SUP_PRE  = c("SUP","PRE"),
+0023:     GPRA_SUP = c("GPRA","SUP")
+0024:   )
+0025: 
+
+FICHIER : C:/Users/clien/Downloads/RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS/RIMEH_ECONOMETRIE/scripts/13_save_recovered_midas.R
+LIGNE : 22
+SOURCE :     SUP_PRE  = c("SUP","PRE"),
+CONTEXTE :
+0007: 
+0008: tests <- list(
+0009:   MEX_GPRT_SUP = c("MEX","GPRT_SUP"),
+0010:   NOR_SUP_PRE  = c("NOR","SUP_PRE"),
+0011:   USA_GPRA_SUP = c("USA","GPRA_SUP")
+0012: )
+0013: 
+0014: for (nm_test in names(tests)) {
+0015: 
+0016:   cc <- tests[[nm_test]][1]
+0017:   nm <- tests[[nm_test]][2]
+0018: 
+0019:   vars <- switch(
+0020:     nm,
+0021:     GPRT_SUP = c("GPRT","SUP"),
+0022:     SUP_PRE  = c("SUP","PRE"),
+0023:     GPRA_SUP = c("GPRA","SUP")
+0024:   )
+0025: 
+0026:   cat("\n========================================\n")
+0027:   cat("FINAL K=2 ESTIMATION:", cc, "/", nm, "\n")
+0028:   cat("========================================\n")
+0029: 
+0030:   fit <- tryCatch(
+0031:     fit_pair(cc, vars, K = 2),
+0032:     error = function(e) {
+0033:       cat("FAILED:", cc, "/", nm, ":", e$message, "\n")
+0034:       NULL
+0035:     }
+0036:   )
+0037: 
+
+FICHIER : C:/Users/clien/Downloads/RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS/RIMEH_ECONOMETRIE/scripts/14_finalize_midas_audit.R
+LIGNE : 9
+SOURCE :       country == "NOR" & model == "SUP_PRE"  ~ "OK",
+CONTEXTE :
+0001: audit_file <- "results/tables/garch_midas_run_audit.csv"
+0002: 
+0003: audit <- readr::read_csv(audit_file, show_col_types = FALSE)
+0004: 
+0005: audit <- audit |>
+0006:   dplyr::mutate(
+0007:     status = dplyr::case_when(
+0008:       country == "MEX" & model == "GPRT_SUP" ~ "OK",
+0009:       country == "NOR" & model == "SUP_PRE"  ~ "OK",
+0010:       country == "USA" & model == "GPRA_SUP" ~ "OK",
+0011:       country == "GBR" & model == "SUP_PRE"  ~ "FAILED_NUMERICAL",
+0012:       TRUE ~ status
+0013:     )
+0014:   )
+0015: 
+0016: readr::write_csv(audit, audit_file)
+0017: 
+0018: cat("\n========================================\n")
+0019: cat("FINAL GARCH-MIDAS AUDIT\n")
+0020: cat("========================================\n")
+0021: print(table(audit$status))
+0022: cat("\nTotal models:", nrow(audit), "\n")
+0023: cat("Successful:", sum(audit$status %in% c("OK","EXISTING")), "\n")
+0024: cat("Numerical failure:", sum(audit$status == "FAILED_NUMERICAL"), "\n")
+
+FICHIER : C:/Users/clien/Downloads/RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS/RIMEH_ECONOMETRIE/scripts/14_finalize_midas_audit.R
+LIGNE : 11
+SOURCE :       country == "GBR" & model == "SUP_PRE"  ~ "FAILED_NUMERICAL",
+CONTEXTE :
+0001: audit_file <- "results/tables/garch_midas_run_audit.csv"
+0002: 
+0003: audit <- readr::read_csv(audit_file, show_col_types = FALSE)
+0004: 
+0005: audit <- audit |>
+0006:   dplyr::mutate(
+0007:     status = dplyr::case_when(
+0008:       country == "MEX" & model == "GPRT_SUP" ~ "OK",
+0009:       country == "NOR" & model == "SUP_PRE"  ~ "OK",
+0010:       country == "USA" & model == "GPRA_SUP" ~ "OK",
+0011:       country == "GBR" & model == "SUP_PRE"  ~ "FAILED_NUMERICAL",
+0012:       TRUE ~ status
+0013:     )
+0014:   )
+0015: 
+0016: readr::write_csv(audit, audit_file)
+0017: 
+0018: cat("\n========================================\n")
+0019: cat("FINAL GARCH-MIDAS AUDIT\n")
+0020: cat("========================================\n")
+0021: print(table(audit$status))
+0022: cat("\nTotal models:", nrow(audit), "\n")
+0023: cat("Successful:", sum(audit$status %in% c("OK","EXISTING")), "\n")
+0024: cat("Numerical failure:", sum(audit$status == "FAILED_NUMERICAL"), "\n")
+0025: cat("\nGBR/SUP_PRE status:\n")
+0026: print(audit[audit$country == "GBR" & audit$model == "SUP_PRE", ])
+
+FICHIER : C:/Users/clien/Downloads/RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS/RIMEH_ECONOMETRIE/scripts/14_finalize_midas_audit.R
+LIGNE : 25
+SOURCE : cat("\nGBR/SUP_PRE status:\n")
+CONTEXTE :
+0010:       country == "USA" & model == "GPRA_SUP" ~ "OK",
+0011:       country == "GBR" & model == "SUP_PRE"  ~ "FAILED_NUMERICAL",
+0012:       TRUE ~ status
+0013:     )
+0014:   )
+0015: 
+0016: readr::write_csv(audit, audit_file)
+0017: 
+0018: cat("\n========================================\n")
+0019: cat("FINAL GARCH-MIDAS AUDIT\n")
+0020: cat("========================================\n")
+0021: print(table(audit$status))
+0022: cat("\nTotal models:", nrow(audit), "\n")
+0023: cat("Successful:", sum(audit$status %in% c("OK","EXISTING")), "\n")
+0024: cat("Numerical failure:", sum(audit$status == "FAILED_NUMERICAL"), "\n")
+0025: cat("\nGBR/SUP_PRE status:\n")
+0026: print(audit[audit$country == "GBR" & audit$model == "SUP_PRE", ])
+
+FICHIER : C:/Users/clien/Downloads/RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS/RIMEH_ECONOMETRIE/scripts/14_finalize_midas_audit.R
+LIGNE : 26
+SOURCE : print(audit[audit$country == "GBR" & audit$model == "SUP_PRE", ])
+CONTEXTE :
+0011:       country == "GBR" & model == "SUP_PRE"  ~ "FAILED_NUMERICAL",
+0012:       TRUE ~ status
+0013:     )
+0014:   )
+0015: 
+0016: readr::write_csv(audit, audit_file)
+0017: 
+0018: cat("\n========================================\n")
+0019: cat("FINAL GARCH-MIDAS AUDIT\n")
+0020: cat("========================================\n")
+0021: print(table(audit$status))
+0022: cat("\nTotal models:", nrow(audit), "\n")
+0023: cat("Successful:", sum(audit$status %in% c("OK","EXISTING")), "\n")
+0024: cat("Numerical failure:", sum(audit$status == "FAILED_NUMERICAL"), "\n")
+0025: cat("\nGBR/SUP_PRE status:\n")
+0026: print(audit[audit$country == "GBR" & audit$model == "SUP_PRE", ])
+
+FICHIER : C:/Users/clien/Downloads/RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS/RIMEH_ECONOMETRIE/scripts/19_analyse_complete_garch_midas.R
+LIGNE : 197
+SOURCE :       "SUP_PRE"
+CONTEXTE :
+0182:   gpr_comparison,
+0183:   "results/analysis/table_comparaison_GPRT_GPRA.csv"
+0184: )
+0185: 
+0186: # ============================================================
+0187: # 8. COMPARAISON SUP / DEM / PRE
+0188: # ============================================================
+0189: 
+0190: shock_comparison <- coef_analysis %>%
+0191:   filter(
+0192:     model %in% c(
+0193:       "GPRT_SUP",
+0194:       "GPRT_DEM",
+0195:       "GPRT_PRE",
+0196:       "SUP_DEM",
+0197:       "SUP_PRE"
+0198:     ),
+0199:     parameter %in% c("theta_1", "theta_2")
+0200:   ) %>%
+0201:   mutate(
+0202:     shock_type = case_when(
+0203:       grepl("SUP", model) ~ "SUP",
+0204:       grepl("DEM", model) ~ "DEM",
+0205:       grepl("PRE", model) ~ "PRE",
+0206:       TRUE ~ "OTHER"
+0207:     )
+0208:   ) %>%
+0209:   select(
+0210:     country, model, shock_type,
+0211:     parameter, Estimate,
+0212:     p_value, significance
+
+FICHIER : C:/Users/clien/Downloads/RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS/RIMEH_ECONOMETRIE/scripts/19_analyse_complete_garch_midas.R
+LIGNE : 330
+SOURCE :       "SUP_PRE"
+CONTEXTE :
+0315:       p_value >= 0.05 ~ "NON_SIGNIFICATIF",
+0316:       TRUE ~ "NON_DETERMINE"
+0317:     )
+0318:   )
+0319: 
+0320: # ============================================================
+0321: # 14. H3 : SUP
+0322: # ============================================================
+0323: 
+0324: h3 <- coef_analysis %>%
+0325:   filter(
+0326:     model %in% c(
+0327:       "GPRT_SUP",
+0328:       "GPRA_SUP",
+0329:       "SUP_DEM",
+0330:       "SUP_PRE"
+0331:     ),
+0332:     parameter %in% c("theta_1", "theta_2")
+0333:   ) %>%
+0334:   mutate(
+0335:     hypothesis = "H3",
+0336:     expected_sign = "POSITIF",
+0337:     statistical_result = case_when(
+0338:       p_value < 0.05 & Estimate > 0 ~ "CONFIRMATION_STATISTIQUE",
+0339:       p_value < 0.05 & Estimate < 0 ~ "EFFET_SIGNIFICATIF_OPPOSE",
+0340:       p_value >= 0.05 ~ "NON_SIGNIFICATIF",
+0341:       TRUE ~ "NON_DETERMINE"
+0342:     )
+0343:   )
+0344: 
+0345: # ============================================================
+
+FICHIER : C:/Users/clien/Downloads/RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS/RIMEH_ECONOMETRIE/scripts/19_analyse_complete_garch_midas.R
+LIGNE : 374
+SOURCE :       "SUP_PRE"
+CONTEXTE :
+0359:     expected_sign = "DIFFERENCIE",
+0360:     statistical_result = case_when(
+0361:       p_value < 0.05 ~ "EFFET_SIGNIFICATIF",
+0362:       TRUE ~ "NON_SIGNIFICATIF"
+0363:     )
+0364:   )
+0365: 
+0366: # ============================================================
+0367: # 16. H5 : PRE
+0368: # ============================================================
+0369: 
+0370: h5 <- coef_analysis %>%
+0371:   filter(
+0372:     model %in% c(
+0373:       "GPRT_PRE",
+0374:       "SUP_PRE"
+0375:     ),
+0376:     parameter %in% c("theta_1", "theta_2")
+0377:   ) %>%
+0378:   mutate(
+0379:     hypothesis = "H5",
+0380:     expected_sign = "POSITIF",
+0381:     statistical_result = case_when(
+0382:       p_value < 0.05 & Estimate > 0 ~ "CONFIRMATION_STATISTIQUE",
+0383:       p_value < 0.05 & Estimate < 0 ~ "EFFET_SIGNIFICATIF_OPPOSE",
+0384:       p_value >= 0.05 ~ "NON_SIGNIFICATIF",
+0385:       TRUE ~ "NON_DETERMINE"
+0386:     )
+0387:   )
+0388: 
+0389: # ============================================================
+
+FICHIER : C:/Users/clien/Downloads/RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS/RIMEH_ECONOMETRIE/scripts/20_RUN_ALL_AUTO.R
+LIGNE : 410
+SOURCE : cat("Il ne ré-estime pas automatiquement le modèle GBR/SUP_PRE.\n")
+CONTEXTE :
+0395: # ------------------------------------------------------------
+0396: # 10. Résumé final
+0397: # ------------------------------------------------------------
+0398: 
+0399: cat("\n[8/8] TERMINE\n")
+0400: cat("============================================================\n")
+0401: cat("FICHIERS CREES :\n")
+0402: cat(" - results/analysis/H1_H9_FINAL.csv\n")
+0403: cat(" - results/analysis/H1_H9_THETA_DETAIL.csv\n")
+0404: cat(" - results/analysis/H1_H9_AUTO_REPORT.txt\n")
+0405: cat(" - results/analysis/AUTO_AUDIT.csv\n")
+0406: cat("============================================================\n")
+0407: 
+0408: cat("\nATTENTION :\n")
+0409: cat("Ce script analyse les résultats existants.\n")
+0410: cat("Il ne ré-estime pas automatiquement le modèle GBR/SUP_PRE.\n")
+0411: cat("Ce modèle doit être traité séparément si nécessaire.\n\n")
+0412: 
+0413: cat("FIN DU WORKFLOW.\n")
+0414: 
+
+FICHIER : C:/Users/clien/Downloads/RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS/RIMEH_ECONOMETRIE/scripts/21_FINAL_H1_H9_AUTO.R
+LIGNE : 105
+SOURCE : # cas SUP_DEM / SUP_PRE
+CONTEXTE :
+0090: # ============================================================
+0091: # 4. IDENTIFICATION DU TYPE DE MODELE
+0092: # ============================================================
+0093: 
+0094: theta$SHOCK <- NA_character_
+0095: theta$TARGET <- NA_character_
+0096: 
+0097: theta$SHOCK[grepl("^GPRT",theta$MODEL,ignore.case=TRUE)] <- "GPRT"
+0098: theta$SHOCK[grepl("^GPRA",theta$MODEL,ignore.case=TRUE)] <- "GPRA"
+0099: theta$SHOCK[grepl("^SUP",theta$MODEL,ignore.case=TRUE)] <- "SUP"
+0100: 
+0101: theta$TARGET[grepl("PRE$",theta$MODEL,ignore.case=TRUE)] <- "PRICE"
+0102: theta$TARGET[grepl("DEM$",theta$MODEL,ignore.case=TRUE)] <- "DEMAND"
+0103: theta$TARGET[grepl("SUP$",theta$MODEL,ignore.case=TRUE)] <- "SUPPLY"
+0104: 
+0105: # cas SUP_DEM / SUP_PRE
+0106: theta$TARGET[
+0107:   grepl("^SUP_DEM",theta$MODEL,ignore.case=TRUE)
+0108: ] <- "DEMAND"
+0109: 
+0110: theta$TARGET[
+0111:   grepl("^SUP_PRE",theta$MODEL,ignore.case=TRUE)
+0112: ] <- "PRICE"
+0113: 
+0114: # ============================================================
+0115: # 5. FONCTION DE RESUME
+0116: # ============================================================
+0117: 
+0118: summary_effect <- function(d,label) {
+0119: 
+0120:   if(nrow(d)==0) {
+
+FICHIER : C:/Users/clien/Downloads/RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS/RIMEH_ECONOMETRIE/scripts/21_FINAL_H1_H9_AUTO.R
+LIGNE : 111
+SOURCE :   grepl("^SUP_PRE",theta$MODEL,ignore.case=TRUE)
+CONTEXTE :
+0096: 
+0097: theta$SHOCK[grepl("^GPRT",theta$MODEL,ignore.case=TRUE)] <- "GPRT"
+0098: theta$SHOCK[grepl("^GPRA",theta$MODEL,ignore.case=TRUE)] <- "GPRA"
+0099: theta$SHOCK[grepl("^SUP",theta$MODEL,ignore.case=TRUE)] <- "SUP"
+0100: 
+0101: theta$TARGET[grepl("PRE$",theta$MODEL,ignore.case=TRUE)] <- "PRICE"
+0102: theta$TARGET[grepl("DEM$",theta$MODEL,ignore.case=TRUE)] <- "DEMAND"
+0103: theta$TARGET[grepl("SUP$",theta$MODEL,ignore.case=TRUE)] <- "SUPPLY"
+0104: 
+0105: # cas SUP_DEM / SUP_PRE
+0106: theta$TARGET[
+0107:   grepl("^SUP_DEM",theta$MODEL,ignore.case=TRUE)
+0108: ] <- "DEMAND"
+0109: 
+0110: theta$TARGET[
+0111:   grepl("^SUP_PRE",theta$MODEL,ignore.case=TRUE)
+0112: ] <- "PRICE"
+0113: 
+0114: # ============================================================
+0115: # 5. FONCTION DE RESUME
+0116: # ============================================================
+0117: 
+0118: summary_effect <- function(d,label) {
+0119: 
+0120:   if(nrow(d)==0) {
+0121:     return(data.frame(
+0122:       Hypothesis=label,
+0123:       N=0,
+0124:       Significant_5pct=0,
+0125:       Significant_10pct=0,
+0126:       Positive=0,
+
+FICHIER : C:/Users/clien/Downloads/RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS/RIMEH_ECONOMETRIE/scripts/21_FINAL_H1_H9_AUTO.R
+LIGNE : 486
+SOURCE : cat("GBR / SUP_PRE reste un échec numérique dans l'estimation initiale.\n")
+CONTEXTE :
+0471: cat("Une analyse descriptive est disponible, mais une comparaison formelle des horizons\n")
+0472: cat("doit être définie à partir de la spécification exacte des theta.\n")
+0473: 
+0474: cat("\nH7 :\n")
+0475: cat("GPRT vs GPRA - comparaison descriptive générée.\n")
+0476: cat("Une différence de moyennes ne constitue PAS à elle seule un test statistique.\n")
+0477: 
+0478: cat("\nH8 :\n")
+0479: cat("GPRT vs GPRA pour DEMAND - comparaison descriptive générée.\n")
+0480: 
+0481: cat("\nH9 :\n")
+0482: cat("GPRT vs GPRA pour SUPPLY - comparaison descriptive générée.\n")
+0483: 
+0484: cat("\n\nMODELE EN ECHEC CONNU\n")
+0485: cat("======================\n")
+0486: cat("GBR / SUP_PRE reste un échec numérique dans l'estimation initiale.\n")
+0487: cat("Il n'est pas remplacé artificiellement dans les résultats.\n")
+0488: 
+0489: cat("\n\nIMPORTANT SUR LES HYPOTHESES\n")
+0490: cat("============================\n")
+0491: cat("Les formulations H1-H9 utilisées dans le workflow sont une reconstruction\n")
+0492: cat("analytique et ne doivent pas être présentées comme les formulations originales\n")
+0493: cat("des hypothèses sans le document source correspondant.\n")
+0494: 
+0495: sink()
+0496: 
+0497: # ============================================================
+0498: # 18. FIN
+0499: # ============================================================
+0500: 
+0501: cat("\n============================================================\n")
+
+FICHIER : C:/Users/clien/Downloads/RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS/RIMEH_ECONOMETRIE/scripts/21_FINAL_H1_H9_AUTO.R
+LIGNE : 515
+SOURCE : cat("\nLe modèle GBR/SUP_PRE reste séparé et non inventé.\n")
+CONTEXTE :
+0500: 
+0501: cat("\n============================================================\n")
+0502: cat(" ANALYSE FINALE TERMINEE\n")
+0503: cat("============================================================\n")
+0504: 
+0505: cat("\nFichiers créés :\n")
+0506: cat("1. results/analysis/FINAL_AUDIT.csv\n")
+0507: cat("2. results/analysis/FINAL_ALL_COEFFICIENTS_AUDIT.csv\n")
+0508: cat("3. results/analysis/FINAL_THETA_DETAIL.csv\n")
+0509: cat("4. results/analysis/FINAL_H1_H6_TABLE.csv\n")
+0510: cat("5. results/analysis/FINAL_H7_H9_COMPARISON.csv\n")
+0511: cat("6. results/analysis/FINAL_HYPOTHESES_DETAIL_BY_COUNTRY.csv\n")
+0512: cat("7. results/analysis/FINAL_MODEL_THETA_SUMMARY.csv\n")
+0513: cat("8. results/analysis/FINAL_H1_H9_REPORT.txt\n")
+0514: 
+0515: cat("\nLe modèle GBR/SUP_PRE reste séparé et non inventé.\n")
+0516: cat("============================================================\n")
+

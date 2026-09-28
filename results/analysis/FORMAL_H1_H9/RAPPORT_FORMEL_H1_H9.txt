@@ -1,0 +1,57 @@
+============================================================
+RIMEH - RAPPORT FORMEL H1-H9
+============================================================
+
+Source : C:/Users/clien/Downloads/RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS/RIMEH_ECONOMETRIE/results/tables/garch_midas_all_results.csv 
+Coefficients utilisés : 572 
+Theta utilisés : 140 
+Pays : 11 
+Modèles : 7 
+
+H1-H3 : test cross-sectionnel sur une observation moyenne par pays.
+  H N_country         Mean         SD          t    p_ttest     CI_low_t
+ H1        11 0.0058158864 0.01061282 1.81752958 0.09917618 -0.001313903
+ H2        11 0.0033002121 0.01080413 1.01309060 0.33490142 -0.003958103
+ H3        11 0.0001951818 0.02825837 0.02290807 0.98217427 -0.018789051
+  CI_high_t Bootstrap_SE p_boot   CI_low_boot CI_high_boot
+ 0.01294568  0.003040526 0.0540 -8.503788e-05  0.011768251
+ 0.01055853  0.003085727 0.2898 -2.767409e-03  0.009407219
+ 0.01917941  0.008261495 0.9470 -1.344957e-02  0.018438748
+
+H4 :
+  H       Status
+ H4 NON TESTABLE
+                                                                    Reason Test
+ Classification exportateur/importateur absente du fichier de coefficients   NA
+ p_value
+      NA
+
+H5-H6 : comparaison appariée theta_1 - theta_2.
+  H  N   Mean_Diff         SE         t         p      CI_low    CI_high
+ H5 22 -0.01968114 0.01531709 -1.284913 0.2128149 -0.05153478 0.01217250
+ H6 30  0.02334053 0.01807701  1.291172 0.2068417 -0.01363110 0.06031216
+
+H7-H9 : comparaison GPRT vs GPRA.
+  H  N   Mean_Diff          SE         t         p       CI_low    CI_high
+ H7 NA          NA          NA        NA        NA           NA         NA
+ H8 NA          NA          NA        NA        NA           NA         NA
+ H9 21 0.001473952 0.005089964 0.2895801 0.7751182 -0.009143526 0.01209143
+                                                                            Status
+                              NON TESTABLE FORMELLEMENT avec la structure actuelle
+                              NON TESTABLE FORMELLEMENT avec la structure actuelle
+ TEST APPARIE APPROXIMATIF; covariance intra-estimation non disponible dans le CSV
+
+ROBUSTESSE WILCOXON
+  H  N   V         p
+ H5 22  87 0.2054557
+ H6 30 295 0.2022254
+ H9 21  73 0.1443392
+
+LIMITES METHODologiques IMPORTANTES
+1. H1-H9 sont une reconstruction analytique, pas les formulations originales documentees.
+2. H4 exige une classification exportateurs/importateurs documentee.
+3. H5-H6 utilisent les paires pays x modele.
+4. Pour les differences, la covariance exacte theta_1/theta_2 ou GPRT/GPRA n'est pas disponible dans le CSV;
+   les SE de difference sont donc une approximation independante. Un test de Wald exact doit utiliser
+   la matrice variance-covariance des objets RDS si elle est disponible.
+5. GBR/SUP_PRE reste exclu car il s'agit d'un echec numerique initial.

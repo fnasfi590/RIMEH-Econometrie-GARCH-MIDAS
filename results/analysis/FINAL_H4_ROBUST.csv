@@ -1,0 +1,2 @@
+"Hypothesis","Status","Reason","Required"
+"H4","NOT TESTABLE","La classification exportateur/importateur n'est pas présente dans le fichier de coefficients.","Ajouter une variable exportateur/importateur puis comparer les groupes."

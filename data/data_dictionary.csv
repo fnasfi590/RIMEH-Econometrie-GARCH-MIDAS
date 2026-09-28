@@ -1,0 +1,17 @@
+variable,type,definition
+date,date,Date d'observation
+country,character,Code pays ISO3
+stock_price,numeric,Indice boursier de référence
+return,numeric,"100*log(P_t/P_t-1), calculé par R"
+RV,numeric,Somme mensuelle des rendements quotidiens au carré
+GPRT,numeric,Geopolitical Threats
+GPRA,numeric,Geopolitical Acts
+SUP,numeric,Choc structurel d'offre pétrolière
+DEM,numeric,Choc de demande globale
+PRE,numeric,Choc de demande spécifique/précaution
+VIX,numeric,Indice VIX
+interest_rate,numeric,Taux directeur/de référence
+exchange_rate,numeric,Taux de change retenu
+GDP,numeric,Croissance PIB ou proxy d'activité retenu
+inflation,numeric,Inflation
+exporter,0/1,"1 exportateur, 0 importateur"

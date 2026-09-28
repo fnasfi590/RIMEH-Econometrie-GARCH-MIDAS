@@ -1,0 +1,38 @@
+============================================================
+ RIMEH - RAPPORT FINAL H1-H9 CORRIGE
+============================================================
+
+Base : 572 coefficients, 11 pays, 7 specifications, 140 coefficients theta.
+
+H1
+N = 13; significatifs 5% = 7; significatifs 10% = 8; positifs = 7; negatifs = 6.
+Interpretation : validation descriptive des coefficients disponibles; aucun test agrege n'est revendique.
+
+H2
+N = 44; significatifs 5% = 2; significatifs 10% = 6; positifs = 14; negatifs = 30.
+Interpretation : validation descriptive des coefficients de demande.
+
+H3
+N = 42; significatifs 5% = 2; significatifs 10% = 6; positifs = 20; negatifs = 22.
+Interpretation : validation descriptive des coefficients d'offre.
+
+H4
+NON TESTABLE : aucune classification exportateur/importateur n'est disponible dans la base actuelle.
+
+H5
+22 paires theta1-theta2 pour la demande. Comparaison descriptive uniquement; aucune statistique de Wald exacte sans VCOV.
+
+H6
+22 paires theta1-theta2 pour l'offre. Comparaison descriptive uniquement; aucune statistique de Wald exacte sans VCOV.
+
+H7
+0 paires GPRT-GPRA disponibles pour VIX. Comparaison descriptive uniquement.
+
+H8
+0 paire GPRT-GPRA disponible pour DEMAND. H8 est donc non testable avec les specifications actuelles.
+
+H9
+21 paires GPRT-GPRA disponibles pour SUPPLY. Comparaison descriptive uniquement; aucune covariance commune n'a été inventée.
+
+NOTE METHODOLOGIQUE
+Les formulations H1-H9 sont considérées comme reconstruites lorsque leur formulation originale n'est pas explicitement présente dans les fichiers disponibles. Les résultats descriptifs ne sont pas transformés en acceptation/rejet lorsque le test formel n'est pas identifiable. Aucune VCOV, classification de pays ou erreur-type supplémentaire n'a été inventée.

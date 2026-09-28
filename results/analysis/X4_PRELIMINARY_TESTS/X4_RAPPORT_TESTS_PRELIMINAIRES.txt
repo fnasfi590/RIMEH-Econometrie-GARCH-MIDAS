@@ -1,0 +1,362 @@
+============================================================
+ RIMEH - RAPPORT DES TESTS ECONOMETRIQUES PRELIMINAIRES
+============================================================
+
+Nombre d'observations mensuelles : 3131 
+Nombre d'observations journalieres : 64011 
+Nombre de pays : 11 
+
+------------------------------------------------------------
+STATIONNARITE DES VARIABLES MENSUELLES
+------------------------------------------------------------
+               country  variable   N ADF_statistic ADF_pvalue PP_statistic
+statistic...1      DEU      GPRT 312     -4.393701 0.01000000    -84.96957
+statistic...2      DEU      GPRA 312     -4.698274 0.01000000    -77.89132
+statistic...3      DEU       SUP 261     -6.076689 0.01000000   -259.04244
+statistic...4      DEU       DEM 261     -6.309098 0.01000000   -258.17231
+statistic...5      DEU       PRE 261     -5.934892 0.01000000   -259.09573
+statistic...6      DEU       VIX 312     -3.669261 0.02675956    -49.21288
+statistic...7      DEU inflation 312     -5.803674 0.01000000   -377.01287
+statistic...8      GBR      GPRT 312     -4.393701 0.01000000    -84.96957
+statistic...9      GBR      GPRA 312     -4.698274 0.01000000    -77.89132
+statistic...10     GBR       SUP 261     -6.076689 0.01000000   -259.04244
+statistic...11     GBR       DEM 261     -6.309098 0.01000000   -258.17231
+statistic...12     GBR       PRE 261     -5.934892 0.01000000   -259.09573
+statistic...13     GBR       VIX 312     -3.669261 0.02675956    -49.21288
+statistic...14     GBR inflation 312     -4.001428 0.01000000   -306.10638
+statistic...15     IND      GPRT 220     -4.535355 0.01000000    -92.58523
+statistic...16     IND      GPRA 220     -2.917710 0.19082921    -65.89455
+statistic...17     IND       SUP 194     -5.359400 0.01000000   -199.42170
+statistic...18     IND       DEM 194     -6.766662 0.01000000   -188.55309
+statistic...19     IND       PRE 194     -5.589434 0.01000000   -185.54438
+statistic...20     IND       VIX 220     -3.334616 0.06658629    -41.52723
+statistic...21     IND inflation 220     -9.715763 0.01000000   -148.78375
+statistic...22     JPN      GPRT 312     -4.393701 0.01000000    -84.96957
+statistic...23     JPN      GPRA 312     -4.698274 0.01000000    -77.89132
+statistic...24     JPN       SUP 261     -6.076689 0.01000000   -259.04244
+statistic...25     JPN       DEM 261     -6.309098 0.01000000   -258.17231
+statistic...26     JPN       PRE 261     -5.934892 0.01000000   -259.09573
+statistic...27     JPN       VIX 312     -3.669261 0.02675956    -49.21288
+statistic...28     JPN inflation 312     -5.973179 0.01000000   -249.42803
+statistic...29     KOR      GPRT 312     -4.393701 0.01000000    -84.96957
+statistic...30     KOR      GPRA 312     -4.698274 0.01000000    -77.89132
+statistic...31     KOR       SUP 261     -6.076689 0.01000000   -259.04244
+statistic...32     KOR       DEM 261     -6.309098 0.01000000   -258.17231
+statistic...33     KOR       PRE 261     -5.934892 0.01000000   -259.09573
+statistic...34     KOR       VIX 312     -3.669261 0.02675956    -49.21288
+statistic...35     KOR inflation 312     -5.526643 0.01000000   -173.04062
+statistic...36     MEX      GPRT 312     -4.393701 0.01000000    -84.96957
+statistic...37     MEX      GPRA 312     -4.698274 0.01000000    -77.89132
+statistic...38     MEX       SUP 261     -6.076689 0.01000000   -259.04244
+statistic...39     MEX       DEM 261     -6.309098 0.01000000   -258.17231
+statistic...40     MEX       PRE 261     -5.934892 0.01000000   -259.09573
+statistic...41     MEX       VIX 312     -3.669261 0.02675956    -49.21288
+statistic...42     MEX inflation 312     -8.462032 0.01000000   -165.20943
+statistic...43     NOR      GPRT 154     -4.008910 0.01065698    -63.82234
+statistic...44     NOR      GPRA 154     -2.641993 0.30879024    -44.52574
+statistic...45     NOR       SUP 128     -4.084304 0.01000000   -131.91939
+statistic...46     NOR       DEM 128     -5.524154 0.01000000   -146.68034
+statistic...47     NOR       PRE 128     -4.394732 0.01000000   -105.55443
+statistic...48     NOR       VIX 154     -2.855890 0.21963871    -45.17010
+statistic...49     NOR inflation 154     -5.428849 0.01000000   -186.63086
+statistic...50     PAK      GPRT 261     -4.219817 0.01000000    -75.77753
+statistic...51     PAK      GPRA 261     -4.897556 0.01000000    -69.88644
+statistic...52     PAK       SUP 236     -5.683763 0.01000000   -239.26115
+statistic...53     PAK       DEM 236     -6.068255 0.01000000   -232.02274
+statistic...54     PAK       PRE 236     -5.809890 0.01000000   -231.95071
+statistic...55     PAK       VIX 261     -3.298462 0.07188552    -40.49133
+statistic...56     PAK inflation 158     -4.363569 0.01000000   -155.32004
+statistic...57     SAU      GPRT 312     -4.393701 0.01000000    -84.96957
+statistic...58     SAU      GPRA 312     -4.698274 0.01000000    -77.89132
+statistic...59     SAU       SUP 261     -6.076689 0.01000000   -259.04244
+statistic...60     SAU       DEM 261     -6.309098 0.01000000   -258.17231
+statistic...61     SAU       PRE 261     -5.934892 0.01000000   -259.09573
+statistic...62     SAU       VIX 312     -3.669261 0.02675956    -49.21288
+statistic...63     SAU inflation 312     -4.981834 0.01000000   -316.05286
+statistic...64     TUR      GPRT 312     -4.393701 0.01000000    -84.96957
+statistic...65     TUR      GPRA 312     -4.698274 0.01000000    -77.89132
+statistic...66     TUR       SUP 261     -6.076689 0.01000000   -259.04244
+statistic...67     TUR       DEM 261     -6.309098 0.01000000   -258.17231
+statistic...68     TUR       PRE 261     -5.934892 0.01000000   -259.09573
+statistic...69     TUR       VIX 312     -3.669261 0.02675956    -49.21288
+statistic...70     TUR inflation 312     -3.579419 0.03539817   -100.22901
+statistic...71     USA      GPRT 312     -4.393701 0.01000000    -84.96957
+statistic...72     USA      GPRA 312     -4.698274 0.01000000    -77.89132
+statistic...73     USA       SUP 261     -6.076689 0.01000000   -259.04244
+statistic...74     USA       DEM 261     -6.309098 0.01000000   -258.17231
+statistic...75     USA       PRE 261     -5.934892 0.01000000   -259.09573
+statistic...76     USA       VIX 312     -3.669261 0.02675956    -49.21288
+statistic...77     USA inflation 311     -6.788317 0.01000000   -136.21570
+               PP_pvalue KPSS_statistic KPSS_pvalue ADF_stationary_5pct
+statistic...1       0.01     0.94124245  0.01000000                TRUE
+statistic...2       0.01     0.71289330  0.01237334                TRUE
+statistic...3       0.01     0.08594763  0.10000000                TRUE
+statistic...4       0.01     0.37997454  0.08578683                TRUE
+statistic...5       0.01     0.06807098  0.10000000                TRUE
+statistic...6       0.01     0.33266205  0.10000000                TRUE
+statistic...7       0.01     0.43715640  0.06113948                TRUE
+statistic...8       0.01     0.94124245  0.01000000                TRUE
+statistic...9       0.01     0.71289330  0.01237334                TRUE
+statistic...10      0.01     0.08594763  0.10000000                TRUE
+statistic...11      0.01     0.37997454  0.08578683                TRUE
+statistic...12      0.01     0.06807098  0.10000000                TRUE
+statistic...13      0.01     0.33266205  0.10000000                TRUE
+statistic...14      0.01     0.82239558  0.01000000                TRUE
+statistic...15      0.01     2.23588491  0.01000000                TRUE
+statistic...16      0.01     0.59019979  0.02352729               FALSE
+statistic...17      0.01     0.13234299  0.10000000                TRUE
+statistic...18      0.01     0.06866397  0.10000000                TRUE
+statistic...19      0.01     0.06855194  0.10000000                TRUE
+statistic...20      0.01     0.65210228  0.01789979               FALSE
+statistic...21      0.01     0.67728584  0.01561038                TRUE
+statistic...22      0.01     0.94124245  0.01000000                TRUE
+statistic...23      0.01     0.71289330  0.01237334                TRUE
+statistic...24      0.01     0.08594763  0.10000000                TRUE
+statistic...25      0.01     0.37997454  0.08578683                TRUE
+statistic...26      0.01     0.06807098  0.10000000                TRUE
+statistic...27      0.01     0.33266205  0.10000000                TRUE
+statistic...28      0.01     1.36069052  0.01000000                TRUE
+statistic...29      0.01     0.94124245  0.01000000                TRUE
+statistic...30      0.01     0.71289330  0.01237334                TRUE
+statistic...31      0.01     0.08594763  0.10000000                TRUE
+statistic...32      0.01     0.37997454  0.08578683                TRUE
+statistic...33      0.01     0.06807098  0.10000000                TRUE
+statistic...34      0.01     0.33266205  0.10000000                TRUE
+statistic...35      0.01     0.50731889  0.04001827                TRUE
+statistic...36      0.01     0.94124245  0.01000000                TRUE
+statistic...37      0.01     0.71289330  0.01237334                TRUE
+statistic...38      0.01     0.08594763  0.10000000                TRUE
+statistic...39      0.01     0.37997454  0.08578683                TRUE
+statistic...40      0.01     0.06807098  0.10000000                TRUE
+statistic...41      0.01     0.33266205  0.10000000                TRUE
+statistic...42      0.01     0.12132496  0.10000000                TRUE
+statistic...43      0.01     1.07529662  0.01000000                TRUE
+statistic...44      0.01     0.65749154  0.01740986               FALSE
+statistic...45      0.01     0.25589345  0.10000000                TRUE
+statistic...46      0.01     0.03861653  0.10000000                TRUE
+statistic...47      0.01     0.11455450  0.10000000                TRUE
+statistic...48      0.01     0.67402472  0.01590684               FALSE
+statistic...49      0.01     0.35719352  0.09560624                TRUE
+statistic...50      0.01     0.20166739  0.10000000                TRUE
+statistic...51      0.01     1.10976492  0.01000000                TRUE
+statistic...52      0.01     0.08895886  0.10000000                TRUE
+statistic...53      0.01     0.38055840  0.08553517                TRUE
+statistic...54      0.01     0.14141717  0.10000000                TRUE
+statistic...55      0.01     0.37049509  0.08987281               FALSE
+statistic...56      0.01     0.33254586  0.10000000                TRUE
+statistic...57      0.01     0.94124245  0.01000000                TRUE
+statistic...58      0.01     0.71289330  0.01237334                TRUE
+statistic...59      0.01     0.08594763  0.10000000                TRUE
+statistic...60      0.01     0.37997454  0.08578683                TRUE
+statistic...61      0.01     0.06807098  0.10000000                TRUE
+statistic...62      0.01     0.33266205  0.10000000                TRUE
+statistic...63      0.01     0.32220605  0.10000000                TRUE
+statistic...64      0.01     0.94124245  0.01000000                TRUE
+statistic...65      0.01     0.71289330  0.01237334                TRUE
+statistic...66      0.01     0.08594763  0.10000000                TRUE
+statistic...67      0.01     0.37997454  0.08578683                TRUE
+statistic...68      0.01     0.06807098  0.10000000                TRUE
+statistic...69      0.01     0.33266205  0.10000000                TRUE
+statistic...70      0.01     0.91361263  0.01000000                TRUE
+statistic...71      0.01     0.94124245  0.01000000                TRUE
+statistic...72      0.01     0.71289330  0.01237334                TRUE
+statistic...73      0.01     0.08594763  0.10000000                TRUE
+statistic...74      0.01     0.37997454  0.08578683                TRUE
+statistic...75      0.01     0.06807098  0.10000000                TRUE
+statistic...76      0.01     0.33266205  0.10000000                TRUE
+statistic...77      0.01     0.17880881  0.10000000                TRUE
+               PP_stationary_5pct KPSS_stationary_5pct
+statistic...1                TRUE                FALSE
+statistic...2                TRUE                FALSE
+statistic...3                TRUE                 TRUE
+statistic...4                TRUE                 TRUE
+statistic...5                TRUE                 TRUE
+statistic...6                TRUE                 TRUE
+statistic...7                TRUE                 TRUE
+statistic...8                TRUE                FALSE
+statistic...9                TRUE                FALSE
+statistic...10               TRUE                 TRUE
+statistic...11               TRUE                 TRUE
+statistic...12               TRUE                 TRUE
+statistic...13               TRUE                 TRUE
+statistic...14               TRUE                FALSE
+statistic...15               TRUE                FALSE
+statistic...16               TRUE                FALSE
+statistic...17               TRUE                 TRUE
+statistic...18               TRUE                 TRUE
+statistic...19               TRUE                 TRUE
+statistic...20               TRUE                FALSE
+statistic...21               TRUE                FALSE
+statistic...22               TRUE                FALSE
+statistic...23               TRUE                FALSE
+statistic...24               TRUE                 TRUE
+statistic...25               TRUE                 TRUE
+statistic...26               TRUE                 TRUE
+statistic...27               TRUE                 TRUE
+statistic...28               TRUE                FALSE
+statistic...29               TRUE                FALSE
+statistic...30               TRUE                FALSE
+statistic...31               TRUE                 TRUE
+statistic...32               TRUE                 TRUE
+statistic...33               TRUE                 TRUE
+statistic...34               TRUE                 TRUE
+statistic...35               TRUE                FALSE
+statistic...36               TRUE                FALSE
+statistic...37               TRUE                FALSE
+statistic...38               TRUE                 TRUE
+statistic...39               TRUE                 TRUE
+statistic...40               TRUE                 TRUE
+statistic...41               TRUE                 TRUE
+statistic...42               TRUE                 TRUE
+statistic...43               TRUE                FALSE
+statistic...44               TRUE                FALSE
+statistic...45               TRUE                 TRUE
+statistic...46               TRUE                 TRUE
+statistic...47               TRUE                 TRUE
+statistic...48               TRUE                FALSE
+statistic...49               TRUE                 TRUE
+statistic...50               TRUE                 TRUE
+statistic...51               TRUE                FALSE
+statistic...52               TRUE                 TRUE
+statistic...53               TRUE                 TRUE
+statistic...54               TRUE                 TRUE
+statistic...55               TRUE                 TRUE
+statistic...56               TRUE                 TRUE
+statistic...57               TRUE                FALSE
+statistic...58               TRUE                FALSE
+statistic...59               TRUE                 TRUE
+statistic...60               TRUE                 TRUE
+statistic...61               TRUE                 TRUE
+statistic...62               TRUE                 TRUE
+statistic...63               TRUE                 TRUE
+statistic...64               TRUE                FALSE
+statistic...65               TRUE                FALSE
+statistic...66               TRUE                 TRUE
+statistic...67               TRUE                 TRUE
+statistic...68               TRUE                 TRUE
+statistic...69               TRUE                 TRUE
+statistic...70               TRUE                FALSE
+statistic...71               TRUE                FALSE
+statistic...72               TRUE                FALSE
+statistic...73               TRUE                 TRUE
+statistic...74               TRUE                 TRUE
+statistic...75               TRUE                 TRUE
+statistic...76               TRUE                 TRUE
+statistic...77               TRUE                 TRUE
+
+------------------------------------------------------------
+STATIONNARITE DES RENDEMENTS
+------------------------------------------------------------
+               country variable    N ADF_statistic ADF_pvalue PP_statistic
+statistic...1      DEU   return 6600     -19.45273       0.01    -6558.324
+statistic...2      GBR   return 6565     -20.35628       0.01    -6352.190
+statistic...3      IND   return 4485     -14.80294       0.01    -4174.197
+statistic...4      JPN   return 6368     -18.42669       0.01    -6368.748
+statistic...5      KOR   return 6402     -17.67945       0.01    -6071.185
+statistic...6      MEX   return 6524     -18.48621       0.01    -5549.678
+statistic...7      NOR   return 3202     -15.81646       0.01    -3288.381
+statistic...8      PAK   return 5183     -14.71104       0.01    -5099.052
+statistic...9      SAU   return 5632     -16.33152       0.01    -5745.853
+statistic...10     TUR   return 6502     -17.26134       0.01    -6421.509
+statistic...11     USA   return 6537     -19.32256       0.01    -6885.975
+               PP_pvalue KPSS_statistic KPSS_pvalue ADF_stationary_5pct
+statistic...1       0.01     0.19643934  0.10000000                TRUE
+statistic...2       0.01     0.14259677  0.10000000                TRUE
+statistic...3       0.01     0.05589464  0.10000000                TRUE
+statistic...4       0.01     0.41163828  0.07213867                TRUE
+statistic...5       0.01     0.08729438  0.10000000                TRUE
+statistic...6       0.01     0.19041350  0.10000000                TRUE
+statistic...7       0.01     0.02069863  0.10000000                TRUE
+statistic...8       0.01     0.22323592  0.10000000                TRUE
+statistic...9       0.01     0.24434180  0.10000000                TRUE
+statistic...10      0.01     0.26009735  0.10000000                TRUE
+statistic...11      0.01     0.42699760  0.06551828                TRUE
+               PP_stationary_5pct KPSS_stationary_5pct
+statistic...1                TRUE                 TRUE
+statistic...2                TRUE                 TRUE
+statistic...3                TRUE                 TRUE
+statistic...4                TRUE                 TRUE
+statistic...5                TRUE                 TRUE
+statistic...6                TRUE                 TRUE
+statistic...7                TRUE                 TRUE
+statistic...8                TRUE                 TRUE
+statistic...9                TRUE                 TRUE
+statistic...10               TRUE                 TRUE
+statistic...11               TRUE                 TRUE
+
+------------------------------------------------------------
+ARCH-LM
+------------------------------------------------------------
+                 country    N lags ARCH_LM_statistic ARCH_LM_pvalue
+Chi-squared...1      DEU 6600   12         1187.4327  8.803309e-247
+Chi-squared...2      GBR 6565   12         1380.6146  2.101481e-288
+Chi-squared...3      IND 4485   12          631.2165  2.272797e-127
+Chi-squared...4      JPN 6368   12         1232.4421  1.784988e-256
+Chi-squared...5      KOR 6402   12          921.3763  1.473202e-189
+Chi-squared...6      MEX 6524   12         1051.5176  1.565818e-217
+Chi-squared...7      NOR 3202   12          731.3561  8.517642e-149
+Chi-squared...8      PAK 5183   12          773.5226  7.859127e-158
+Chi-squared...9      SAU 5632   12          948.6929  1.994568e-195
+Chi-squared...10     TUR 6502   12          981.9189  1.443776e-202
+Chi-squared...11     USA 6537   12         1778.2672   0.000000e+00
+                 ARCH_effect_5pct
+Chi-squared...1              TRUE
+Chi-squared...2              TRUE
+Chi-squared...3              TRUE
+Chi-squared...4              TRUE
+Chi-squared...5              TRUE
+Chi-squared...6              TRUE
+Chi-squared...7              TRUE
+Chi-squared...8              TRUE
+Chi-squared...9              TRUE
+Chi-squared...10             TRUE
+Chi-squared...11             TRUE
+
+------------------------------------------------------------
+LJUNG-BOX
+------------------------------------------------------------
+   country    N lags LB_returns_statistic LB_returns_pvalue
+1      DEU 6600   12            21.986954      3.766629e-02
+2      GBR 6565   12            70.968078      2.109843e-10
+3      IND 4485   12            52.769186      4.527648e-07
+4      JPN 6368   12            20.481879      5.850208e-02
+5      KOR 6402   12             9.884148      6.261237e-01
+6      MEX 6524   12            67.307917      1.017833e-09
+7      NOR 3202   12            32.166651      1.304152e-03
+8      PAK 5183   12           119.568344      0.000000e+00
+9      SAU 5632   12            46.959797      4.736978e-06
+10     TUR 6502   12            43.900893      1.587673e-05
+11     USA 6537   12           106.499114      0.000000e+00
+   LB_squared_returns_statistic LB_squared_returns_pvalue
+1                      3648.397                         0
+2                      4616.955                         0
+3                      1668.453                         0
+4                      3648.995                         0
+5                      2544.724                         0
+6                      3232.497                         0
+7                      1833.162                         0
+8                      2243.373                         0
+9                      1840.462                         0
+10                     2132.992                         0
+11                     6838.129                         0
+   autocorrelation_returns_5pct dependence_squared_returns_5pct
+1                          TRUE                            TRUE
+2                          TRUE                            TRUE
+3                          TRUE                            TRUE
+4                         FALSE                            TRUE
+5                         FALSE                            TRUE
+6                          TRUE                            TRUE
+7                          TRUE                            TRUE
+8                          TRUE                            TRUE
+9                          TRUE                            TRUE
+10                         TRUE                            TRUE
+11                         TRUE                            TRUE
+
+------------------------------------------------------------
+VIF
+------------------------------------------------------------
+data frame with 0 columns and 0 rows
+
+============================================================
+FIN DES TESTS
+============================================================

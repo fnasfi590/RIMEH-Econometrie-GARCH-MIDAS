@@ -1,0 +1,46 @@
+============================================================
+RIMEH - RAPPORT AUTOMATIQUE H1-H9
+============================================================
+
+Date : 2026-09-17 13:24:13.967535 
+
+DONNEES
+-------
+Nombre de coefficients : 572 
+Nombre de pays : 11 
+Nombre de modèles : 7 
+
+PAYS
+ [1] "DEU" "GBR" "IND" "JPN" "KOR" "MEX" "NOR" "PAK" "SAU" "TUR" "USA"
+
+MODELES
+[1] "GPRA_SUP" "GPRT_DEM" "GPRT_PRE" "GPRT_SUP" "GPRT_VIX" "SUP_DEM"  "SUP_PRE" 
+
+RESULTATS H1-H9
+  Hypothesis   N Significant_5pct Positive Negative Significant_Positive
+1         H1  21                1       12        9                    1
+2         H2  44                2       14       30                    1
+3         H3  84                6       36       48                    3
+4         H4 140               14       64       76                    8
+5         H5  44                2       14       30                    1
+6         H6  84                6       36       48                    3
+7         H7  21                1       12        9                    1
+8         H8  22                0        9       13                    0
+9         H9  42                2       20       22                    1
+  Significant_Negative Mean_Estimate Mean_PValue                   Conclusion
+1                    0  0.0028384286   0.4765746            EVIDENCE POSITIVE
+2                    1 -0.0107979773   0.3572993            EVIDENCE POSITIVE
+3                    3 -0.0133562857   0.3678465            EVIDENCE NEGATIVE
+4                    6 -0.0068042000   0.3694941 DESCRIPTIVE / NON CONCLUSIVE
+5                    1 -0.0107979773   0.3572993 DESCRIPTIVE / NON CONCLUSIVE
+6                    3 -0.0133562857   0.3678465 DESCRIPTIVE / NON CONCLUSIVE
+7                    0  0.0028384286   0.4765746 DESCRIPTIVE / NON CONCLUSIVE
+8                    0 -0.0003755909   0.3851090 DESCRIPTIVE / NON CONCLUSIVE
+9                    1 -0.0143185952   0.3835688 DESCRIPTIVE / NON CONCLUSIVE
+
+
+IMPORTANT
+H1-H9 sont présentées ici comme une analyse automatique.
+Les formulations théoriques originales des neuf hypothèses
+ne doivent pas être considérées comme vérifiées mot pour mot
+sans le document source contenant leur formulation.

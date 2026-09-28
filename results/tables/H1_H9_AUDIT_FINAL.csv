@@ -1,0 +1,10 @@
+Hypothese,Objet,Statut,P_value,Decision_5pct,Precaution,Conclusion
+H1,Effet de GPRT sur la composante de long terme de la volatilité,A TESTER AVEC RESULTAT STATISTIQUE,NA,A déterminer,Ne pas conclure à partir du seul signe du coefficient.,Aucune p-value exploitable — ne pas conclure
+H2,Effet de GPRA sur la composante de long terme de la volatilité,A TESTER AVEC RESULTAT STATISTIQUE,NA,A déterminer,Ne pas conclure à partir du seul signe du coefficient.,Aucune p-value exploitable — ne pas conclure
+H3,Rôle des variables géopolitiques dans la volatilité,A TESTER AVEC RESULTAT STATISTIQUE,NA,A déterminer,Nécessite un test statistique correspondant à la formulation exacte.,Aucune p-value exploitable — ne pas conclure
+H4,Différence entre pays exportateurs et importateurs,NON TESTABLE AVEC LA BASE ACTUELLE,NA,Non testable,Nécessite une classification documentée exportateurs/importateurs.,NON TESTABLE
+H5,Comparaison des paramètres MIDAS,COMPARAISON DESCRIPTIVE,0.170823089927343,Non significatif à 5%,Covariance entre paramètres absente.,Résultat non significatif à 5%
+H6,Comparaison des paramètres MIDAS,COMPARAISON DESCRIPTIVE,NA,Pas de test de Wald exact,Covariance entre paramètres absente.,Aucune p-value exploitable — ne pas conclure
+H7,Comparaison GPRT–GPRA,COMPARAISON DESCRIPTIVE,NA,Pas de test de Wald exact,Covariance GPRT–GPRA absente.,Aucune p-value exploitable — ne pas conclure
+H8,Effet différencié / comparaison nécessitant une covariance commune,NON TESTABLE AVEC LA STRUCTURE ACTUELLE,NA,Non testable,Éléments nécessaires absents.,Aucune p-value exploitable — ne pas conclure
+H9,Différence GPRT–GPRA,COMPARAISON DESCRIPTIVE,0.186796505500451,Non significatif à 5%,Résultat disponible seulement avec approximation.,Résultat non significatif à 5%

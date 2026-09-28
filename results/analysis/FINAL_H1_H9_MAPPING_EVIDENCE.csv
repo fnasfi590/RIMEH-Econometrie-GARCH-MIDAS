@@ -1,0 +1,8 @@
+"specification","source_code_hits","target_from_source","gpr_from_source","reconstructed_hypothesis","evidence"
+"GPRA_SUP",16,"RETURN; PRICE","GPRT; GPRA; GPR","H7/H8/H9 CANDIDATE - cible a verifier","SOURCE CODE"
+"GPRT_DEM",9,"","GPRT; GPRA; GPR","H7/H8/H9 CANDIDATE - cible a verifier","SOURCE CODE"
+"GPRT_PRE",9,"","GPRT; GPRA; GPR","H7/H8/H9 CANDIDATE - cible a verifier","SOURCE CODE"
+"GPRT_SUP",21,"RETURN; PRICE","GPRT; GPRA; GPR","H7/H8/H9 CANDIDATE - cible a verifier","SOURCE CODE"
+"GPRT_VIX",8,"","GPRT; GPRA; GPR","H7/H8/H9 CANDIDATE - cible a verifier","SOURCE CODE"
+"SUP_DEM",12,"DEMAND; SUPPLY; RETURN; PRICE","GPRT; GPRA; GPR","H7/H8/H9 CANDIDATE - cible a verifier","SOURCE CODE"
+"SUP_PRE",27,"DEMAND; SUPPLY; RETURN; PRICE","GPRT; GPRA; GPR","H7/H8/H9 CANDIDATE - cible a verifier","SOURCE CODE"

@@ -1,0 +1,944 @@
+============================================================
+ TABLEAU FINAL FORMEL DES HYPOTHESES H1-H9
+ RIMEH - GARCH-MIDAS
+============================================================
+
+ Hypothese                    Parametre
+        H1                     GPRT_VIX
+        H2                      theta_1
+        H2                      theta_2
+        H2                      theta_1
+        H2                      theta_2
+        H2                      theta_1
+        H2                      theta_2
+        H2                      theta_1
+        H2                      theta_2
+        H2                      theta_1
+        H2                      theta_2
+        H2                      theta_1
+        H2                      theta_2
+        H2                      theta_1
+        H2                      theta_2
+        H2                      theta_1
+        H2                      theta_2
+        H2                      theta_1
+        H2                      theta_2
+        H2                      theta_1
+        H2                      theta_2
+        H2                      theta_1
+        H2                      theta_2
+        H2                      theta_1
+        H2                      theta_2
+        H2                      theta_1
+        H2                      theta_2
+        H2                      theta_1
+        H2                      theta_2
+        H2                      theta_1
+        H2                      theta_2
+        H2                      theta_1
+        H2                      theta_2
+        H2                      theta_1
+        H2                      theta_2
+        H2                      theta_1
+        H2                      theta_2
+        H2                      theta_1
+        H2                      theta_2
+        H2                      theta_1
+        H2                      theta_2
+        H2                      theta_1
+        H2                      theta_2
+        H2                      theta_1
+        H2                      theta_2
+        H3                      theta_1
+        H3                      theta_2
+        H3                      theta_1
+        H3                      theta_2
+        H3                      theta_1
+        H3                      theta_2
+        H3                      theta_1
+        H3                      theta_2
+        H3                      theta_1
+        H3                      theta_2
+        H3                      theta_1
+        H3                      theta_2
+        H3                      theta_1
+        H3                      theta_2
+        H3                      theta_1
+        H3                      theta_2
+        H3                      theta_1
+        H3                      theta_2
+        H3                      theta_1
+        H3                      theta_2
+        H3                      theta_1
+        H3                      theta_2
+        H3                      theta_1
+        H3                      theta_2
+        H3                      theta_1
+        H3                      theta_2
+        H3                      theta_1
+        H3                      theta_2
+        H3                        theta
+        H3                        theta
+        H3                      theta_1
+        H3                      theta_2
+        H3                      theta_1
+        H3                      theta_2
+        H3                      theta_1
+        H3                      theta_2
+        H3                      theta_1
+        H3                      theta_2
+        H3                      theta_1
+        H3                      theta_2
+        H3                      theta_1
+        H3                      theta_2
+        H4 Exportateurs vs importateurs
+        H5            : theta1 - theta2
+        H5            : theta1 - theta2
+        H5            : theta1 - theta2
+        H5            : theta1 - theta2
+        H5            : theta1 - theta2
+        H5            : theta1 - theta2
+        H5            : theta1 - theta2
+        H5            : theta1 - theta2
+        H5            : theta1 - theta2
+        H5            : theta1 - theta2
+        H5            : theta1 - theta2
+        H5            : theta1 - theta2
+        H5            : theta1 - theta2
+        H5            : theta1 - theta2
+        H5            : theta1 - theta2
+        H5            : theta1 - theta2
+        H5            : theta1 - theta2
+        H5            : theta1 - theta2
+        H5            : theta1 - theta2
+        H5            : theta1 - theta2
+        H5            : theta1 - theta2
+        H5            : theta1 - theta2
+        H6            : theta1 - theta2
+        H6            : theta1 - theta2
+        H6            : theta1 - theta2
+        H6            : theta1 - theta2
+        H6            : theta1 - theta2
+        H6            : theta1 - theta2
+        H6            : theta1 - theta2
+        H6            : theta1 - theta2
+        H6            : theta1 - theta2
+        H6            : theta1 - theta2
+        H6            : theta1 - theta2
+        H6            : theta1 - theta2
+        H6            : theta1 - theta2
+        H6            : theta1 - theta2
+        H6            : theta1 - theta2
+        H6            : theta1 - theta2
+        H6            : theta1 - theta2
+        H6            : theta1 - theta2
+        H6            : theta1 - theta2
+        H6            : theta1 - theta2
+        H7         GPRT vs GPRA - PRICE
+        H8        GPRT vs GPRA - DEMAND
+        H9                theta_1 - DEU
+        H9                theta_2 - DEU
+        H9                theta_1 - GBR
+        H9                theta_2 - GBR
+        H9                theta_1 - IND
+        H9                theta_2 - IND
+        H9                theta_1 - JPN
+        H9                theta_2 - JPN
+        H9                theta_1 - KOR
+        H9                theta_2 - KOR
+        H9                theta_1 - MEX
+        H9                theta_2 - MEX
+        H9                theta_1 - NOR
+        H9                theta_2 - NOR
+        H9                  theta - PAK
+        H9                theta_1 - SAU
+        H9                theta_2 - SAU
+        H9                theta_1 - TUR
+        H9                theta_2 - TUR
+        H9                theta_1 - USA
+        H9                theta_2 - USA
+                                             H0
+                                 Effet GPRT nul
+                                Coefficient = 0
+                                Coefficient = 0
+                                Coefficient = 0
+                                Coefficient = 0
+                                Coefficient = 0
+                                Coefficient = 0
+                                Coefficient = 0
+                                Coefficient = 0
+                                Coefficient = 0
+                                Coefficient = 0
+                                Coefficient = 0
+                                Coefficient = 0
+                                Coefficient = 0
+                                Coefficient = 0
+                                Coefficient = 0
+                                Coefficient = 0
+                                Coefficient = 0
+                                Coefficient = 0
+                                Coefficient = 0
+                                Coefficient = 0
+                                Coefficient = 0
+                                Coefficient = 0
+                                Coefficient = 0
+                                Coefficient = 0
+                                Coefficient = 0
+                                Coefficient = 0
+                                Coefficient = 0
+                                Coefficient = 0
+                                Coefficient = 0
+                                Coefficient = 0
+                                Coefficient = 0
+                                Coefficient = 0
+                                Coefficient = 0
+                                Coefficient = 0
+                                Coefficient = 0
+                                Coefficient = 0
+                                Coefficient = 0
+                                Coefficient = 0
+                                Coefficient = 0
+                                Coefficient = 0
+                                Coefficient = 0
+                                Coefficient = 0
+                                Coefficient = 0
+                                Coefficient = 0
+                                Coefficient = 0
+                                Coefficient = 0
+                                Coefficient = 0
+                                Coefficient = 0
+                                Coefficient = 0
+                                Coefficient = 0
+                                Coefficient = 0
+                                Coefficient = 0
+                                Coefficient = 0
+                                Coefficient = 0
+                                Coefficient = 0
+                                Coefficient = 0
+                                Coefficient = 0
+                                Coefficient = 0
+                                Coefficient = 0
+                                Coefficient = 0
+                                Coefficient = 0
+                                Coefficient = 0
+                                Coefficient = 0
+                                Coefficient = 0
+                                Coefficient = 0
+                                Coefficient = 0
+                                Coefficient = 0
+                                Coefficient = 0
+                                Coefficient = 0
+                                Coefficient = 0
+                                Coefficient = 0
+                                Coefficient = 0
+                                Coefficient = 0
+                                Coefficient = 0
+                                Coefficient = 0
+                                Coefficient = 0
+                                Coefficient = 0
+                                Coefficient = 0
+                                Coefficient = 0
+                                Coefficient = 0
+                                Coefficient = 0
+                                Coefficient = 0
+                                Coefficient = 0
+                                Coefficient = 0
+                                Coefficient = 0
+                                Coefficient = 0
+ Les coefficients sont identiques entre groupes
+                            theta1 - theta2 = 0
+                            theta1 - theta2 = 0
+                            theta1 - theta2 = 0
+                            theta1 - theta2 = 0
+                            theta1 - theta2 = 0
+                            theta1 - theta2 = 0
+                            theta1 - theta2 = 0
+                            theta1 - theta2 = 0
+                            theta1 - theta2 = 0
+                            theta1 - theta2 = 0
+                            theta1 - theta2 = 0
+                            theta1 - theta2 = 0
+                            theta1 - theta2 = 0
+                            theta1 - theta2 = 0
+                            theta1 - theta2 = 0
+                            theta1 - theta2 = 0
+                            theta1 - theta2 = 0
+                            theta1 - theta2 = 0
+                            theta1 - theta2 = 0
+                            theta1 - theta2 = 0
+                            theta1 - theta2 = 0
+                            theta1 - theta2 = 0
+                            theta1 - theta2 = 0
+                            theta1 - theta2 = 0
+                            theta1 - theta2 = 0
+                            theta1 - theta2 = 0
+                            theta1 - theta2 = 0
+                            theta1 - theta2 = 0
+                            theta1 - theta2 = 0
+                            theta1 - theta2 = 0
+                            theta1 - theta2 = 0
+                            theta1 - theta2 = 0
+                            theta1 - theta2 = 0
+                            theta1 - theta2 = 0
+                            theta1 - theta2 = 0
+                            theta1 - theta2 = 0
+                            theta1 - theta2 = 0
+                            theta1 - theta2 = 0
+                            theta1 - theta2 = 0
+                            theta1 - theta2 = 0
+                            theta1 - theta2 = 0
+                            theta1 - theta2 = 0
+                          beta_GPRT = beta_GPRA
+                          beta_GPRT = beta_GPRA
+            Coefficient GPRT = coefficient GPRA
+            Coefficient GPRT = coefficient GPRA
+            Coefficient GPRT = coefficient GPRA
+            Coefficient GPRT = coefficient GPRA
+            Coefficient GPRT = coefficient GPRA
+            Coefficient GPRT = coefficient GPRA
+            Coefficient GPRT = coefficient GPRA
+            Coefficient GPRT = coefficient GPRA
+            Coefficient GPRT = coefficient GPRA
+            Coefficient GPRT = coefficient GPRA
+            Coefficient GPRT = coefficient GPRA
+            Coefficient GPRT = coefficient GPRA
+            Coefficient GPRT = coefficient GPRA
+            Coefficient GPRT = coefficient GPRA
+            Coefficient GPRT = coefficient GPRA
+            Coefficient GPRT = coefficient GPRA
+            Coefficient GPRT = coefficient GPRA
+            Coefficient GPRT = coefficient GPRA
+            Coefficient GPRT = coefficient GPRA
+            Coefficient GPRT = coefficient GPRA
+            Coefficient GPRT = coefficient GPRA
+                                       H1
+                       Effet GPRT positif
+  Effet statistiquement different de zero
+  Effet statistiquement different de zero
+  Effet statistiquement different de zero
+  Effet statistiquement different de zero
+  Effet statistiquement different de zero
+  Effet statistiquement different de zero
+  Effet statistiquement different de zero
+  Effet statistiquement different de zero
+  Effet statistiquement different de zero
+  Effet statistiquement different de zero
+  Effet statistiquement different de zero
+  Effet statistiquement different de zero
+  Effet statistiquement different de zero
+  Effet statistiquement different de zero
+  Effet statistiquement different de zero
+  Effet statistiquement different de zero
+  Effet statistiquement different de zero
+  Effet statistiquement different de zero
+  Effet statistiquement different de zero
+  Effet statistiquement different de zero
+  Effet statistiquement different de zero
+  Effet statistiquement different de zero
+  Effet statistiquement different de zero
+  Effet statistiquement different de zero
+  Effet statistiquement different de zero
+  Effet statistiquement different de zero
+  Effet statistiquement different de zero
+  Effet statistiquement different de zero
+  Effet statistiquement different de zero
+  Effet statistiquement different de zero
+  Effet statistiquement different de zero
+  Effet statistiquement different de zero
+  Effet statistiquement different de zero
+  Effet statistiquement different de zero
+  Effet statistiquement different de zero
+  Effet statistiquement different de zero
+  Effet statistiquement different de zero
+  Effet statistiquement different de zero
+  Effet statistiquement different de zero
+  Effet statistiquement different de zero
+  Effet statistiquement different de zero
+  Effet statistiquement different de zero
+  Effet statistiquement different de zero
+  Effet statistiquement different de zero
+  Effet statistiquement different de zero
+  Effet statistiquement different de zero
+  Effet statistiquement different de zero
+  Effet statistiquement different de zero
+  Effet statistiquement different de zero
+  Effet statistiquement different de zero
+  Effet statistiquement different de zero
+  Effet statistiquement different de zero
+  Effet statistiquement different de zero
+  Effet statistiquement different de zero
+  Effet statistiquement different de zero
+  Effet statistiquement different de zero
+  Effet statistiquement different de zero
+  Effet statistiquement different de zero
+  Effet statistiquement different de zero
+  Effet statistiquement different de zero
+  Effet statistiquement different de zero
+  Effet statistiquement different de zero
+  Effet statistiquement different de zero
+  Effet statistiquement different de zero
+  Effet statistiquement different de zero
+  Effet statistiquement different de zero
+  Effet statistiquement different de zero
+  Effet statistiquement different de zero
+  Effet statistiquement different de zero
+  Effet statistiquement different de zero
+  Effet statistiquement different de zero
+  Effet statistiquement different de zero
+  Effet statistiquement different de zero
+  Effet statistiquement different de zero
+  Effet statistiquement different de zero
+  Effet statistiquement different de zero
+  Effet statistiquement different de zero
+  Effet statistiquement different de zero
+  Effet statistiquement different de zero
+  Effet statistiquement different de zero
+  Effet statistiquement different de zero
+  Effet statistiquement different de zero
+  Effet statistiquement different de zero
+  Effet statistiquement different de zero
+  Effet statistiquement different de zero
+  Effet statistiquement different de zero
+ Les coefficients different entre groupes
+                     theta1 - theta2 != 0
+                     theta1 - theta2 != 0
+                     theta1 - theta2 != 0
+                     theta1 - theta2 != 0
+                     theta1 - theta2 != 0
+                     theta1 - theta2 != 0
+                     theta1 - theta2 != 0
+                     theta1 - theta2 != 0
+                     theta1 - theta2 != 0
+                     theta1 - theta2 != 0
+                     theta1 - theta2 != 0
+                     theta1 - theta2 != 0
+                     theta1 - theta2 != 0
+                     theta1 - theta2 != 0
+                     theta1 - theta2 != 0
+                     theta1 - theta2 != 0
+                     theta1 - theta2 != 0
+                     theta1 - theta2 != 0
+                     theta1 - theta2 != 0
+                     theta1 - theta2 != 0
+                     theta1 - theta2 != 0
+                     theta1 - theta2 != 0
+                     theta1 - theta2 != 0
+                     theta1 - theta2 != 0
+                     theta1 - theta2 != 0
+                     theta1 - theta2 != 0
+                     theta1 - theta2 != 0
+                     theta1 - theta2 != 0
+                     theta1 - theta2 != 0
+                     theta1 - theta2 != 0
+                     theta1 - theta2 != 0
+                     theta1 - theta2 != 0
+                     theta1 - theta2 != 0
+                     theta1 - theta2 != 0
+                     theta1 - theta2 != 0
+                     theta1 - theta2 != 0
+                     theta1 - theta2 != 0
+                     theta1 - theta2 != 0
+                     theta1 - theta2 != 0
+                     theta1 - theta2 != 0
+                     theta1 - theta2 != 0
+                     theta1 - theta2 != 0
+                   beta_GPRT != beta_GPRA
+                   beta_GPRT != beta_GPRA
+     Coefficient GPRT != coefficient GPRA
+     Coefficient GPRT != coefficient GPRA
+     Coefficient GPRT != coefficient GPRA
+     Coefficient GPRT != coefficient GPRA
+     Coefficient GPRT != coefficient GPRA
+     Coefficient GPRT != coefficient GPRA
+     Coefficient GPRT != coefficient GPRA
+     Coefficient GPRT != coefficient GPRA
+     Coefficient GPRT != coefficient GPRA
+     Coefficient GPRT != coefficient GPRA
+     Coefficient GPRT != coefficient GPRA
+     Coefficient GPRT != coefficient GPRA
+     Coefficient GPRT != coefficient GPRA
+     Coefficient GPRT != coefficient GPRA
+     Coefficient GPRT != coefficient GPRA
+     Coefficient GPRT != coefficient GPRA
+     Coefficient GPRT != coefficient GPRA
+     Coefficient GPRT != coefficient GPRA
+     Coefficient GPRT != coefficient GPRA
+     Coefficient GPRT != coefficient GPRA
+     Coefficient GPRT != coefficient GPRA
+                                             Test Estimation          SE
+                                           Test t         NA          NA
+                 Test t individuel du coefficient  -0.002223          NA
+                 Test t individuel du coefficient  -0.006484          NA
+                 Test t individuel du coefficient  -0.043625          NA
+                 Test t individuel du coefficient  -0.006883          NA
+                 Test t individuel du coefficient  -0.001056          NA
+                 Test t individuel du coefficient  -0.005159          NA
+                 Test t individuel du coefficient  -0.041417          NA
+                 Test t individuel du coefficient  -0.005035          NA
+                 Test t individuel du coefficient   0.001464          NA
+                 Test t individuel du coefficient  -0.003233          NA
+                 Test t individuel du coefficient  -0.031641          NA
+                 Test t individuel du coefficient  -0.003154          NA
+                 Test t individuel du coefficient   0.000827          NA
+                 Test t individuel du coefficient  -0.003937          NA
+                 Test t individuel du coefficient  -0.073293          NA
+                 Test t individuel du coefficient  -0.003464          NA
+                 Test t individuel du coefficient   0.001130          NA
+                 Test t individuel du coefficient  -0.007341          NA
+                 Test t individuel du coefficient  -0.146125          NA
+                 Test t individuel du coefficient  -0.005057          NA
+                 Test t individuel du coefficient  -0.002262          NA
+                 Test t individuel du coefficient   0.003068          NA
+                 Test t individuel du coefficient  -0.171566          NA
+                 Test t individuel du coefficient   0.002884          NA
+                 Test t individuel du coefficient   0.004015          NA
+                 Test t individuel du coefficient  -0.006717          NA
+                 Test t individuel du coefficient  -0.051061          NA
+                 Test t individuel du coefficient  -0.006888          NA
+                 Test t individuel du coefficient   0.006704          NA
+                 Test t individuel du coefficient   0.016887          NA
+                 Test t individuel du coefficient   0.179884          NA
+                 Test t individuel du coefficient   0.026683          NA
+                 Test t individuel du coefficient   0.005931          NA
+                 Test t individuel du coefficient   0.003156          NA
+                 Test t individuel du coefficient   0.116097          NA
+                 Test t individuel du coefficient   0.004491          NA
+                 Test t individuel du coefficient  -0.003436          NA
+                 Test t individuel du coefficient  -0.006128          NA
+                 Test t individuel du coefficient  -0.118467          NA
+                 Test t individuel du coefficient  -0.002623          NA
+                 Test t individuel du coefficient  -0.000324          NA
+                 Test t individuel du coefficient  -0.003145          NA
+                 Test t individuel du coefficient  -0.083604          NA
+                 Test t individuel du coefficient  -0.002984          NA
+                 Test t individuel du coefficient   0.001129          NA
+                 Test t individuel du coefficient   0.034596          NA
+                 Test t individuel du coefficient  -0.003346          NA
+                 Test t individuel du coefficient   0.022924          NA
+                 Test t individuel du coefficient   0.003842          NA
+                 Test t individuel du coefficient  -0.064704          NA
+                 Test t individuel du coefficient  -0.001022          NA
+                 Test t individuel du coefficient  -0.041527          NA
+                 Test t individuel du coefficient   0.002596          NA
+                 Test t individuel du coefficient  -0.024079          NA
+                 Test t individuel du coefficient   0.000930          NA
+                 Test t individuel du coefficient  -0.022812          NA
+                 Test t individuel du coefficient   0.000710          NA
+                 Test t individuel du coefficient  -0.063324          NA
+                 Test t individuel du coefficient  -0.001144          NA
+                 Test t individuel du coefficient  -0.067728          NA
+                 Test t individuel du coefficient   0.003168          NA
+                 Test t individuel du coefficient  -0.124647          NA
+                 Test t individuel du coefficient   0.000787          NA
+                 Test t individuel du coefficient  -0.152102          NA
+                 Test t individuel du coefficient   0.002704          NA
+                 Test t individuel du coefficient  -0.173397          NA
+                 Test t individuel du coefficient  -0.002352          NA
+                 Test t individuel du coefficient  -0.081757          NA
+                 Test t individuel du coefficient   0.007394          NA
+                 Test t individuel du coefficient  -0.049895          NA
+                 Test t individuel du coefficient   0.003911          NA
+                 Test t individuel du coefficient  -0.050056          NA
+                 Test t individuel du coefficient   0.180961          NA
+                 Test t individuel du coefficient   0.180963          NA
+                 Test t individuel du coefficient   0.001561          NA
+                 Test t individuel du coefficient   0.111432          NA
+                 Test t individuel du coefficient   0.006134          NA
+                 Test t individuel du coefficient   0.126205          NA
+                 Test t individuel du coefficient   0.002194          NA
+                 Test t individuel du coefficient  -0.090177          NA
+                 Test t individuel du coefficient  -0.001543          NA
+                 Test t individuel du coefficient  -0.116573          NA
+                 Test t individuel du coefficient   0.000076          NA
+                 Test t individuel du coefficient  -0.078307          NA
+                 Test t individuel du coefficient  -0.000715          NA
+                 Test t individuel du coefficient  -0.084391          NA
+                 Test de difference entre groupes         NA          NA
+ Test de difference sous hypothese d'independance         NA          NA
+ Test de difference sous hypothese d'independance         NA          NA
+ Test de difference sous hypothese d'independance         NA          NA
+ Test de difference sous hypothese d'independance         NA          NA
+ Test de difference sous hypothese d'independance         NA          NA
+ Test de difference sous hypothese d'independance         NA          NA
+ Test de difference sous hypothese d'independance         NA          NA
+ Test de difference sous hypothese d'independance         NA          NA
+ Test de difference sous hypothese d'independance         NA          NA
+ Test de difference sous hypothese d'independance         NA          NA
+ Test de difference sous hypothese d'independance         NA          NA
+ Test de difference sous hypothese d'independance         NA          NA
+ Test de difference sous hypothese d'independance         NA          NA
+ Test de difference sous hypothese d'independance         NA          NA
+ Test de difference sous hypothese d'independance         NA          NA
+ Test de difference sous hypothese d'independance         NA          NA
+ Test de difference sous hypothese d'independance         NA          NA
+ Test de difference sous hypothese d'independance         NA          NA
+ Test de difference sous hypothese d'independance         NA          NA
+ Test de difference sous hypothese d'independance         NA          NA
+ Test de difference sous hypothese d'independance         NA          NA
+ Test de difference sous hypothese d'independance         NA          NA
+ Test de difference sous hypothese d'independance         NA          NA
+ Test de difference sous hypothese d'independance         NA          NA
+ Test de difference sous hypothese d'independance         NA          NA
+ Test de difference sous hypothese d'independance         NA          NA
+ Test de difference sous hypothese d'independance         NA          NA
+ Test de difference sous hypothese d'independance         NA          NA
+ Test de difference sous hypothese d'independance         NA          NA
+ Test de difference sous hypothese d'independance         NA          NA
+ Test de difference sous hypothese d'independance         NA          NA
+ Test de difference sous hypothese d'independance         NA          NA
+ Test de difference sous hypothese d'independance         NA          NA
+ Test de difference sous hypothese d'independance         NA          NA
+ Test de difference sous hypothese d'independance         NA          NA
+ Test de difference sous hypothese d'independance         NA          NA
+ Test de difference sous hypothese d'independance         NA          NA
+ Test de difference sous hypothese d'independance         NA          NA
+ Test de difference sous hypothese d'independance         NA          NA
+ Test de difference sous hypothese d'independance         NA          NA
+ Test de difference sous hypothese d'independance         NA          NA
+ Test de difference sous hypothese d'independance         NA          NA
+                      Comparaison de coefficients         NA          NA
+                      Comparaison de coefficients         NA          NA
+               Comparaison appariee approximative  -0.004475 0.003729223
+               Comparaison appariee approximative  -0.011672 0.110871823
+               Comparaison appariee approximative  -0.004864 0.003256517
+               Comparaison appariee approximative   0.023177 0.095310159
+               Comparaison appariee approximative  -0.001666 0.022908914
+               Comparaison appariee approximative   0.001267 0.355537553
+               Comparaison appariee approximative  -0.001854 0.004290389
+               Comparaison appariee approximative  -0.004404 0.090299093
+               Comparaison appariee approximative  -0.002381 0.002884848
+               Comparaison appariee approximative  -0.027455 0.116904638
+               Comparaison appariee approximative  -0.005056 0.002109205
+               Comparaison appariee approximative   0.091640 0.486706257
+               Comparaison appariee approximative  -0.003483 0.005693072
+               Comparaison appariee approximative  -0.000161 0.050625339
+               Comparaison appariee approximative   0.000002 0.210659871
+               Comparaison appariee approximative   0.004573 0.002480935
+               Comparaison appariee approximative   0.014773 0.101909975
+               Comparaison appariee approximative  -0.003737 0.004284630
+               Comparaison appariee approximative  -0.026396 0.367870341
+               Comparaison appariee approximative  -0.000791 0.003609202
+               Comparaison appariee approximative  -0.006084 0.061006244
+   Statistique    P_value   Decision_5pct                   Statut
+            NA         NA    Non testable             Non testable
+            NA 0.19385700 Non-rejet de H0          Test individuel
+            NA 0.15583200 Non-rejet de H0          Test individuel
+            NA 0.17195200 Non-rejet de H0          Test individuel
+            NA 0.14007700 Non-rejet de H0          Test individuel
+            NA 0.61973100 Non-rejet de H0          Test individuel
+            NA 0.30667900 Non-rejet de H0          Test individuel
+            NA 0.37675400 Non-rejet de H0          Test individuel
+            NA 0.74516100 Non-rejet de H0          Test individuel
+            NA 0.90125700 Non-rejet de H0          Test individuel
+            NA 0.84518900 Non-rejet de H0          Test individuel
+            NA 0.72179500 Non-rejet de H0          Test individuel
+            NA 0.07402900 Non-rejet de H0          Test individuel
+            NA 0.60305500 Non-rejet de H0          Test individuel
+            NA 0.18097300 Non-rejet de H0          Test individuel
+            NA 0.23526200 Non-rejet de H0          Test individuel
+            NA 0.29761800 Non-rejet de H0          Test individuel
+            NA 0.66600600 Non-rejet de H0          Test individuel
+            NA 0.07392900 Non-rejet de H0          Test individuel
+            NA 0.77943200 Non-rejet de H0          Test individuel
+            NA 0.70051300 Non-rejet de H0          Test individuel
+            NA 0.14377300 Non-rejet de H0          Test individuel
+            NA 0.21310600 Non-rejet de H0          Test individuel
+            NA 0.28536500 Non-rejet de H0          Test individuel
+            NA 0.43794700 Non-rejet de H0          Test individuel
+            NA 0.13306100 Non-rejet de H0          Test individuel
+            NA 0.30260500 Non-rejet de H0          Test individuel
+            NA 0.16200100 Non-rejet de H0          Test individuel
+            NA 0.31510900 Non-rejet de H0          Test individuel
+            NA 0.13920900 Non-rejet de H0          Test individuel
+            NA 0.07022700 Non-rejet de H0          Test individuel
+            NA 0.16085000 Non-rejet de H0          Test individuel
+            NA 0.00330700     Rejet de H0          Test individuel
+            NA 0.36195900 Non-rejet de H0          Test individuel
+            NA 0.86547300 Non-rejet de H0          Test individuel
+            NA 0.10601900 Non-rejet de H0          Test individuel
+            NA 0.41952000 Non-rejet de H0          Test individuel
+            NA 0.07636600 Non-rejet de H0          Test individuel
+            NA 0.13858900 Non-rejet de H0          Test individuel
+            NA 0.17430200 Non-rejet de H0          Test individuel
+            NA 0.32627900 Non-rejet de H0          Test individuel
+            NA 0.93021100 Non-rejet de H0          Test individuel
+            NA 0.55131000 Non-rejet de H0          Test individuel
+            NA 0.04873600     Rejet de H0          Test individuel
+            NA 0.56674600 Non-rejet de H0          Test individuel
+            NA 0.56213800 Non-rejet de H0          Test individuel
+            NA 0.74363800 Non-rejet de H0          Test individuel
+            NA 0.29271600 Non-rejet de H0          Test individuel
+            NA 0.48991100 Non-rejet de H0          Test individuel
+            NA 0.10333600 Non-rejet de H0          Test individuel
+            NA 0.46500500 Non-rejet de H0          Test individuel
+            NA 0.64899900 Non-rejet de H0          Test individuel
+            NA 0.23850700 Non-rejet de H0          Test individuel
+            NA 0.35124500 Non-rejet de H0          Test individuel
+            NA 0.94322100 Non-rejet de H0          Test individuel
+            NA 0.96736000 Non-rejet de H0          Test individuel
+            NA 0.83575500 Non-rejet de H0          Test individuel
+            NA 0.86570700 Non-rejet de H0          Test individuel
+            NA 0.34211900 Non-rejet de H0          Test individuel
+            NA 0.20112700 Non-rejet de H0          Test individuel
+            NA 0.26620400 Non-rejet de H0          Test individuel
+            NA 0.16552400 Non-rejet de H0          Test individuel
+            NA 0.14145400 Non-rejet de H0          Test individuel
+            NA 0.65484600 Non-rejet de H0          Test individuel
+            NA 0.05883700 Non-rejet de H0          Test individuel
+            NA 0.10960400 Non-rejet de H0          Test individuel
+            NA 0.71803400 Non-rejet de H0          Test individuel
+            NA 0.06245400 Non-rejet de H0          Test individuel
+            NA 0.30235000 Non-rejet de H0          Test individuel
+            NA 0.13481200 Non-rejet de H0          Test individuel
+            NA 0.16109700 Non-rejet de H0          Test individuel
+            NA 0.16568600 Non-rejet de H0          Test individuel
+            NA 0.16427400 Non-rejet de H0          Test individuel
+            NA 0.22468900 Non-rejet de H0          Test individuel
+            NA 0.22416500 Non-rejet de H0          Test individuel
+            NA 0.35857100 Non-rejet de H0          Test individuel
+            NA 0.11483100 Non-rejet de H0          Test individuel
+            NA 0.00068300     Rejet de H0          Test individuel
+            NA 0.08566600 Non-rejet de H0          Test individuel
+            NA 0.50782700 Non-rejet de H0          Test individuel
+            NA 0.80124000 Non-rejet de H0          Test individuel
+            NA 0.57001100 Non-rejet de H0          Test individuel
+            NA 0.16397100 Non-rejet de H0          Test individuel
+            NA 0.97013300 Non-rejet de H0          Test individuel
+            NA 0.07562600 Non-rejet de H0          Test individuel
+            NA 0.81110400 Non-rejet de H0          Test individuel
+            NA 0.04541300     Rejet de H0          Test individuel
+            NA         NA    Non testable             NON TESTABLE
+            NA         NA    Non testable Test formel approximatif
+            NA         NA    Non testable Test formel approximatif
+            NA         NA    Non testable Test formel approximatif
+            NA         NA    Non testable Test formel approximatif
+            NA         NA    Non testable Test formel approximatif
+            NA         NA    Non testable Test formel approximatif
+            NA         NA    Non testable Test formel approximatif
+            NA         NA    Non testable Test formel approximatif
+            NA         NA    Non testable Test formel approximatif
+            NA         NA    Non testable Test formel approximatif
+            NA         NA    Non testable Test formel approximatif
+            NA         NA    Non testable Test formel approximatif
+            NA         NA    Non testable Test formel approximatif
+            NA         NA    Non testable Test formel approximatif
+            NA         NA    Non testable Test formel approximatif
+            NA         NA    Non testable Test formel approximatif
+            NA         NA    Non testable Test formel approximatif
+            NA         NA    Non testable Test formel approximatif
+            NA         NA    Non testable Test formel approximatif
+            NA         NA    Non testable Test formel approximatif
+            NA         NA    Non testable Test formel approximatif
+            NA         NA    Non testable Test formel approximatif
+            NA         NA    Non testable Test formel approximatif
+            NA         NA    Non testable Test formel approximatif
+            NA         NA    Non testable Test formel approximatif
+            NA         NA    Non testable Test formel approximatif
+            NA         NA    Non testable Test formel approximatif
+            NA         NA    Non testable Test formel approximatif
+            NA         NA    Non testable Test formel approximatif
+            NA         NA    Non testable Test formel approximatif
+            NA         NA    Non testable Test formel approximatif
+            NA         NA    Non testable Test formel approximatif
+            NA         NA    Non testable Test formel approximatif
+            NA         NA    Non testable Test formel approximatif
+            NA         NA    Non testable Test formel approximatif
+            NA         NA    Non testable Test formel approximatif
+            NA         NA    Non testable Test formel approximatif
+            NA         NA    Non testable Test formel approximatif
+            NA         NA    Non testable Test formel approximatif
+            NA         NA    Non testable Test formel approximatif
+            NA         NA    Non testable Test formel approximatif
+            NA         NA    Non testable Test formel approximatif
+            NA         NA    Non testable             NON TESTABLE
+            NA         NA    Non testable             NON TESTABLE
+ -1.199982e+00 0.23014638 Non-rejet de H0 Test formel approximatif
+ -1.052747e-01 0.91615782 Non-rejet de H0 Test formel approximatif
+ -1.493620e+00 0.13527494 Non-rejet de H0 Test formel approximatif
+  2.431745e-01 0.80787022 Non-rejet de H0 Test formel approximatif
+ -7.272278e-02 0.94202672 Non-rejet de H0 Test formel approximatif
+  3.563618e-03 0.99715665 Non-rejet de H0 Test formel approximatif
+ -4.321286e-01 0.66564794 Non-rejet de H0 Test formel approximatif
+ -4.877125e-02 0.96110159 Non-rejet de H0 Test formel approximatif
+ -8.253469e-01 0.40917469 Non-rejet de H0 Test formel approximatif
+ -2.348495e-01 0.81432552 Non-rejet de H0 Test formel approximatif
+ -2.397112e+00 0.01652486     Rejet de H0 Test formel approximatif
+  1.882861e-01 0.85065242 Non-rejet de H0 Test formel approximatif
+ -6.117963e-01 0.54067257 Non-rejet de H0 Test formel approximatif
+ -3.180226e-03 0.99746255 Non-rejet de H0 Test formel approximatif
+  9.493977e-06 0.99999242 Non-rejet de H0 Test formel approximatif
+  1.843257e+00 0.06529151 Non-rejet de H0 Test formel approximatif
+  1.449613e-01 0.88474145 Non-rejet de H0 Test formel approximatif
+ -8.721872e-01 0.38310624 Non-rejet de H0 Test formel approximatif
+ -7.175354e-02 0.94279805 Non-rejet de H0 Test formel approximatif
+ -2.191620e-01 0.82652383 Non-rejet de H0 Test formel approximatif
+ -9.972750e-02 0.92056067 Non-rejet de H0 Test formel approximatif
+                                                                                                      Justification
+                                                                 Structure du fichier de coefficients incompatible.
+ Modele GPRT_DEM; H2 est evaluee au niveau des coefficients individuels. Aucun test joint global n'est calcule ici.
+ Modele GPRT_DEM; H2 est evaluee au niveau des coefficients individuels. Aucun test joint global n'est calcule ici.
+  Modele SUP_DEM; H2 est evaluee au niveau des coefficients individuels. Aucun test joint global n'est calcule ici.
+  Modele SUP_DEM; H2 est evaluee au niveau des coefficients individuels. Aucun test joint global n'est calcule ici.
+ Modele GPRT_DEM; H2 est evaluee au niveau des coefficients individuels. Aucun test joint global n'est calcule ici.
+ Modele GPRT_DEM; H2 est evaluee au niveau des coefficients individuels. Aucun test joint global n'est calcule ici.
+  Modele SUP_DEM; H2 est evaluee au niveau des coefficients individuels. Aucun test joint global n'est calcule ici.
+  Modele SUP_DEM; H2 est evaluee au niveau des coefficients individuels. Aucun test joint global n'est calcule ici.
+ Modele GPRT_DEM; H2 est evaluee au niveau des coefficients individuels. Aucun test joint global n'est calcule ici.
+ Modele GPRT_DEM; H2 est evaluee au niveau des coefficients individuels. Aucun test joint global n'est calcule ici.
+  Modele SUP_DEM; H2 est evaluee au niveau des coefficients individuels. Aucun test joint global n'est calcule ici.
+  Modele SUP_DEM; H2 est evaluee au niveau des coefficients individuels. Aucun test joint global n'est calcule ici.
+ Modele GPRT_DEM; H2 est evaluee au niveau des coefficients individuels. Aucun test joint global n'est calcule ici.
+ Modele GPRT_DEM; H2 est evaluee au niveau des coefficients individuels. Aucun test joint global n'est calcule ici.
+  Modele SUP_DEM; H2 est evaluee au niveau des coefficients individuels. Aucun test joint global n'est calcule ici.
+  Modele SUP_DEM; H2 est evaluee au niveau des coefficients individuels. Aucun test joint global n'est calcule ici.
+ Modele GPRT_DEM; H2 est evaluee au niveau des coefficients individuels. Aucun test joint global n'est calcule ici.
+ Modele GPRT_DEM; H2 est evaluee au niveau des coefficients individuels. Aucun test joint global n'est calcule ici.
+  Modele SUP_DEM; H2 est evaluee au niveau des coefficients individuels. Aucun test joint global n'est calcule ici.
+  Modele SUP_DEM; H2 est evaluee au niveau des coefficients individuels. Aucun test joint global n'est calcule ici.
+ Modele GPRT_DEM; H2 est evaluee au niveau des coefficients individuels. Aucun test joint global n'est calcule ici.
+ Modele GPRT_DEM; H2 est evaluee au niveau des coefficients individuels. Aucun test joint global n'est calcule ici.
+  Modele SUP_DEM; H2 est evaluee au niveau des coefficients individuels. Aucun test joint global n'est calcule ici.
+  Modele SUP_DEM; H2 est evaluee au niveau des coefficients individuels. Aucun test joint global n'est calcule ici.
+ Modele GPRT_DEM; H2 est evaluee au niveau des coefficients individuels. Aucun test joint global n'est calcule ici.
+ Modele GPRT_DEM; H2 est evaluee au niveau des coefficients individuels. Aucun test joint global n'est calcule ici.
+  Modele SUP_DEM; H2 est evaluee au niveau des coefficients individuels. Aucun test joint global n'est calcule ici.
+  Modele SUP_DEM; H2 est evaluee au niveau des coefficients individuels. Aucun test joint global n'est calcule ici.
+ Modele GPRT_DEM; H2 est evaluee au niveau des coefficients individuels. Aucun test joint global n'est calcule ici.
+ Modele GPRT_DEM; H2 est evaluee au niveau des coefficients individuels. Aucun test joint global n'est calcule ici.
+  Modele SUP_DEM; H2 est evaluee au niveau des coefficients individuels. Aucun test joint global n'est calcule ici.
+  Modele SUP_DEM; H2 est evaluee au niveau des coefficients individuels. Aucun test joint global n'est calcule ici.
+ Modele GPRT_DEM; H2 est evaluee au niveau des coefficients individuels. Aucun test joint global n'est calcule ici.
+ Modele GPRT_DEM; H2 est evaluee au niveau des coefficients individuels. Aucun test joint global n'est calcule ici.
+  Modele SUP_DEM; H2 est evaluee au niveau des coefficients individuels. Aucun test joint global n'est calcule ici.
+  Modele SUP_DEM; H2 est evaluee au niveau des coefficients individuels. Aucun test joint global n'est calcule ici.
+ Modele GPRT_DEM; H2 est evaluee au niveau des coefficients individuels. Aucun test joint global n'est calcule ici.
+ Modele GPRT_DEM; H2 est evaluee au niveau des coefficients individuels. Aucun test joint global n'est calcule ici.
+  Modele SUP_DEM; H2 est evaluee au niveau des coefficients individuels. Aucun test joint global n'est calcule ici.
+  Modele SUP_DEM; H2 est evaluee au niveau des coefficients individuels. Aucun test joint global n'est calcule ici.
+ Modele GPRT_DEM; H2 est evaluee au niveau des coefficients individuels. Aucun test joint global n'est calcule ici.
+ Modele GPRT_DEM; H2 est evaluee au niveau des coefficients individuels. Aucun test joint global n'est calcule ici.
+  Modele SUP_DEM; H2 est evaluee au niveau des coefficients individuels. Aucun test joint global n'est calcule ici.
+  Modele SUP_DEM; H2 est evaluee au niveau des coefficients individuels. Aucun test joint global n'est calcule ici.
+                                                      Modele GPRA_SUP; H3 est documentee par les tests individuels.
+                                                      Modele GPRA_SUP; H3 est documentee par les tests individuels.
+                                                      Modele GPRT_SUP; H3 est documentee par les tests individuels.
+                                                      Modele GPRT_SUP; H3 est documentee par les tests individuels.
+                                                      Modele GPRA_SUP; H3 est documentee par les tests individuels.
+                                                      Modele GPRA_SUP; H3 est documentee par les tests individuels.
+                                                      Modele GPRT_SUP; H3 est documentee par les tests individuels.
+                                                      Modele GPRT_SUP; H3 est documentee par les tests individuels.
+                                                      Modele GPRA_SUP; H3 est documentee par les tests individuels.
+                                                      Modele GPRA_SUP; H3 est documentee par les tests individuels.
+                                                      Modele GPRT_SUP; H3 est documentee par les tests individuels.
+                                                      Modele GPRT_SUP; H3 est documentee par les tests individuels.
+                                                      Modele GPRA_SUP; H3 est documentee par les tests individuels.
+                                                      Modele GPRA_SUP; H3 est documentee par les tests individuels.
+                                                      Modele GPRT_SUP; H3 est documentee par les tests individuels.
+                                                      Modele GPRT_SUP; H3 est documentee par les tests individuels.
+                                                      Modele GPRA_SUP; H3 est documentee par les tests individuels.
+                                                      Modele GPRA_SUP; H3 est documentee par les tests individuels.
+                                                      Modele GPRT_SUP; H3 est documentee par les tests individuels.
+                                                      Modele GPRT_SUP; H3 est documentee par les tests individuels.
+                                                      Modele GPRA_SUP; H3 est documentee par les tests individuels.
+                                                      Modele GPRA_SUP; H3 est documentee par les tests individuels.
+                                                      Modele GPRT_SUP; H3 est documentee par les tests individuels.
+                                                      Modele GPRT_SUP; H3 est documentee par les tests individuels.
+                                                      Modele GPRA_SUP; H3 est documentee par les tests individuels.
+                                                      Modele GPRA_SUP; H3 est documentee par les tests individuels.
+                                                      Modele GPRT_SUP; H3 est documentee par les tests individuels.
+                                                      Modele GPRT_SUP; H3 est documentee par les tests individuels.
+                                                      Modele GPRA_SUP; H3 est documentee par les tests individuels.
+                                                      Modele GPRT_SUP; H3 est documentee par les tests individuels.
+                                                      Modele GPRA_SUP; H3 est documentee par les tests individuels.
+                                                      Modele GPRA_SUP; H3 est documentee par les tests individuels.
+                                                      Modele GPRT_SUP; H3 est documentee par les tests individuels.
+                                                      Modele GPRT_SUP; H3 est documentee par les tests individuels.
+                                                      Modele GPRA_SUP; H3 est documentee par les tests individuels.
+                                                      Modele GPRA_SUP; H3 est documentee par les tests individuels.
+                                                      Modele GPRT_SUP; H3 est documentee par les tests individuels.
+                                                      Modele GPRT_SUP; H3 est documentee par les tests individuels.
+                                                      Modele GPRA_SUP; H3 est documentee par les tests individuels.
+                                                      Modele GPRA_SUP; H3 est documentee par les tests individuels.
+                                                      Modele GPRT_SUP; H3 est documentee par les tests individuels.
+                                                      Modele GPRT_SUP; H3 est documentee par les tests individuels.
+             La classification exportateur/importateur n'est pas disponible dans la structure actuelle des donnees.
+  Comparaison des horizons pour ; covariance theta1/theta2 non disponible, donc test sous hypothese d'independance.
+  Comparaison des horizons pour ; covariance theta1/theta2 non disponible, donc test sous hypothese d'independance.
+  Comparaison des horizons pour ; covariance theta1/theta2 non disponible, donc test sous hypothese d'independance.
+  Comparaison des horizons pour ; covariance theta1/theta2 non disponible, donc test sous hypothese d'independance.
+  Comparaison des horizons pour ; covariance theta1/theta2 non disponible, donc test sous hypothese d'independance.
+  Comparaison des horizons pour ; covariance theta1/theta2 non disponible, donc test sous hypothese d'independance.
+  Comparaison des horizons pour ; covariance theta1/theta2 non disponible, donc test sous hypothese d'independance.
+  Comparaison des horizons pour ; covariance theta1/theta2 non disponible, donc test sous hypothese d'independance.
+  Comparaison des horizons pour ; covariance theta1/theta2 non disponible, donc test sous hypothese d'independance.
+  Comparaison des horizons pour ; covariance theta1/theta2 non disponible, donc test sous hypothese d'independance.
+  Comparaison des horizons pour ; covariance theta1/theta2 non disponible, donc test sous hypothese d'independance.
+  Comparaison des horizons pour ; covariance theta1/theta2 non disponible, donc test sous hypothese d'independance.
+  Comparaison des horizons pour ; covariance theta1/theta2 non disponible, donc test sous hypothese d'independance.
+  Comparaison des horizons pour ; covariance theta1/theta2 non disponible, donc test sous hypothese d'independance.
+  Comparaison des horizons pour ; covariance theta1/theta2 non disponible, donc test sous hypothese d'independance.
+  Comparaison des horizons pour ; covariance theta1/theta2 non disponible, donc test sous hypothese d'independance.
+  Comparaison des horizons pour ; covariance theta1/theta2 non disponible, donc test sous hypothese d'independance.
+  Comparaison des horizons pour ; covariance theta1/theta2 non disponible, donc test sous hypothese d'independance.
+  Comparaison des horizons pour ; covariance theta1/theta2 non disponible, donc test sous hypothese d'independance.
+  Comparaison des horizons pour ; covariance theta1/theta2 non disponible, donc test sous hypothese d'independance.
+  Comparaison des horizons pour ; covariance theta1/theta2 non disponible, donc test sous hypothese d'independance.
+  Comparaison des horizons pour ; covariance theta1/theta2 non disponible, donc test sous hypothese d'independance.
+  Comparaison des horizons pour ; covariance theta1/theta2 non disponible, donc test sous hypothese d'independance.
+  Comparaison des horizons pour ; covariance theta1/theta2 non disponible, donc test sous hypothese d'independance.
+  Comparaison des horizons pour ; covariance theta1/theta2 non disponible, donc test sous hypothese d'independance.
+  Comparaison des horizons pour ; covariance theta1/theta2 non disponible, donc test sous hypothese d'independance.
+  Comparaison des horizons pour ; covariance theta1/theta2 non disponible, donc test sous hypothese d'independance.
+  Comparaison des horizons pour ; covariance theta1/theta2 non disponible, donc test sous hypothese d'independance.
+  Comparaison des horizons pour ; covariance theta1/theta2 non disponible, donc test sous hypothese d'independance.
+  Comparaison des horizons pour ; covariance theta1/theta2 non disponible, donc test sous hypothese d'independance.
+  Comparaison des horizons pour ; covariance theta1/theta2 non disponible, donc test sous hypothese d'independance.
+  Comparaison des horizons pour ; covariance theta1/theta2 non disponible, donc test sous hypothese d'independance.
+  Comparaison des horizons pour ; covariance theta1/theta2 non disponible, donc test sous hypothese d'independance.
+  Comparaison des horizons pour ; covariance theta1/theta2 non disponible, donc test sous hypothese d'independance.
+  Comparaison des horizons pour ; covariance theta1/theta2 non disponible, donc test sous hypothese d'independance.
+  Comparaison des horizons pour ; covariance theta1/theta2 non disponible, donc test sous hypothese d'independance.
+  Comparaison des horizons pour ; covariance theta1/theta2 non disponible, donc test sous hypothese d'independance.
+  Comparaison des horizons pour ; covariance theta1/theta2 non disponible, donc test sous hypothese d'independance.
+  Comparaison des horizons pour ; covariance theta1/theta2 non disponible, donc test sous hypothese d'independance.
+  Comparaison des horizons pour ; covariance theta1/theta2 non disponible, donc test sous hypothese d'independance.
+  Comparaison des horizons pour ; covariance theta1/theta2 non disponible, donc test sous hypothese d'independance.
+  Comparaison des horizons pour ; covariance theta1/theta2 non disponible, donc test sous hypothese d'independance.
+         Aucune paire compatible GPRT_PRE / GPRA_PRE. Le modele GPRA_PRE n'est pas disponible dans les estimations.
+         Aucune paire compatible GPRT_DEM / GPRA_DEM. Le modele GPRA_DEM n'est pas disponible dans les estimations.
+     Comparaison GPRT vs GPRA pour SUPPLY, pays = DEU. La covariance exacte entre estimations n'est pas disponible.
+     Comparaison GPRT vs GPRA pour SUPPLY, pays = DEU. La covariance exacte entre estimations n'est pas disponible.
+     Comparaison GPRT vs GPRA pour SUPPLY, pays = GBR. La covariance exacte entre estimations n'est pas disponible.
+     Comparaison GPRT vs GPRA pour SUPPLY, pays = GBR. La covariance exacte entre estimations n'est pas disponible.
+     Comparaison GPRT vs GPRA pour SUPPLY, pays = IND. La covariance exacte entre estimations n'est pas disponible.
+     Comparaison GPRT vs GPRA pour SUPPLY, pays = IND. La covariance exacte entre estimations n'est pas disponible.
+     Comparaison GPRT vs GPRA pour SUPPLY, pays = JPN. La covariance exacte entre estimations n'est pas disponible.
+     Comparaison GPRT vs GPRA pour SUPPLY, pays = JPN. La covariance exacte entre estimations n'est pas disponible.
+     Comparaison GPRT vs GPRA pour SUPPLY, pays = KOR. La covariance exacte entre estimations n'est pas disponible.
+     Comparaison GPRT vs GPRA pour SUPPLY, pays = KOR. La covariance exacte entre estimations n'est pas disponible.
+     Comparaison GPRT vs GPRA pour SUPPLY, pays = MEX. La covariance exacte entre estimations n'est pas disponible.
+     Comparaison GPRT vs GPRA pour SUPPLY, pays = MEX. La covariance exacte entre estimations n'est pas disponible.
+     Comparaison GPRT vs GPRA pour SUPPLY, pays = NOR. La covariance exacte entre estimations n'est pas disponible.
+     Comparaison GPRT vs GPRA pour SUPPLY, pays = NOR. La covariance exacte entre estimations n'est pas disponible.
+     Comparaison GPRT vs GPRA pour SUPPLY, pays = PAK. La covariance exacte entre estimations n'est pas disponible.
+     Comparaison GPRT vs GPRA pour SUPPLY, pays = SAU. La covariance exacte entre estimations n'est pas disponible.
+     Comparaison GPRT vs GPRA pour SUPPLY, pays = SAU. La covariance exacte entre estimations n'est pas disponible.
+     Comparaison GPRT vs GPRA pour SUPPLY, pays = TUR. La covariance exacte entre estimations n'est pas disponible.
+     Comparaison GPRT vs GPRA pour SUPPLY, pays = TUR. La covariance exacte entre estimations n'est pas disponible.
+     Comparaison GPRT vs GPRA pour SUPPLY, pays = USA. La covariance exacte entre estimations n'est pas disponible.
+     Comparaison GPRT vs GPRA pour SUPPLY, pays = USA. La covariance exacte entre estimations n'est pas disponible.
+
+
+============================================================
+ SYNTHESE
+============================================================
+
+H1  : 1 observation(s) / test(s) documente(s)
+H2  : 44 observation(s) / test(s) documente(s)
+H3  : 42 observation(s) / test(s) documente(s)
+H4  : NON TESTABLE
+H5  : 22 observation(s) / test(s) documente(s)
+H6  : 20 observation(s) / test(s) documente(s)
+H7  : NON TESTABLE
+H8  : NON TESTABLE
+H9  : 21 observation(s) / test(s) documente(s)

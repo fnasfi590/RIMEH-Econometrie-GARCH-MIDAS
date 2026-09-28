@@ -1,0 +1,11 @@
+Test,Statut
+Statistiques descriptives,TERMINE
+Correlation Pearson,TERMINE
+Correlation Spearman,TERMINE
+ADF,TERMINE
+Phillips-Perron,TERMINE
+KPSS,TERMINE
+VIF,TERMINE
+ARCH-LM,TERMINE
+Ljung-Box,TERMINE
+Ljung-Box carres,TERMINE

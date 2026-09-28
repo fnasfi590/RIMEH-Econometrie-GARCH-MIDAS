@@ -1,0 +1,24 @@
+============================================================
+RIMEH - RAPPORT FINAL H1-H9 - VERSION ROBUSTE
+============================================================
+Projet : C:/Users/clien/Downloads/RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS/RIMEH_ECONOMETRIE
+Coefficients : 572
+Theta : 140
+Pays : 11
+Modeles : 7
+
+Theta significatifs 5% : 14
+Theta significatifs 10% : 27
+
+H1-H3 : tableaux descriptifs.
+H4 : non testable sans classification exportateur/importateur.
+H5 paires theta1-theta2 : 11
+H6 paires theta1-theta2 : 41
+H7 paires GPRT-GPRA : 21
+H8 paires GPRT-GPRA : 0
+H9 paires GPRT-GPRA : 21
+
+IMPORTANT : aucune covariance n'a été inventée.
+Les différences H5-H9 ne sont pas des tests de Wald exacts.
+NA / NOT TESTABLE ne signifie pas rejet.
+Les H1-H9 sont reconstruites si leur formulation originale n'est pas dans les fichiers.

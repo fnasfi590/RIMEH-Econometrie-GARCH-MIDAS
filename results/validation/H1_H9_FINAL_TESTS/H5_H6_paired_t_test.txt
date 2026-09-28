@@ -1,0 +1,12 @@
+
+	Paired t-test
+
+data:  paired_clean$Theta1 and paired_clean$Theta2
+t = 0.31452, df = 63, p-value = 0.7542
+alternative hypothesis: true mean difference is not equal to 0
+95 percent confidence interval:
+ -0.01723914  0.02367926
+sample estimates:
+mean difference 
+    0.003220062 
+

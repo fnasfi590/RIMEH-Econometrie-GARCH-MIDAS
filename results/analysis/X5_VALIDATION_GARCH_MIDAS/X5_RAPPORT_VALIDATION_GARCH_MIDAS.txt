@@ -1,0 +1,27 @@
+============================================================
+ RIMEH - X.5 VALIDATION GARCH-MIDAS
+============================================================
+
+Date : 2026-09-24 18:13:18
+
+Modèles attendus : 76
+Modèles détectés : 4434
+Différence : 4358
+
+DONNEES
+Monthly : 3131 observations
+Daily : 64011 observations
+
+OBJECTIF
+Contrôle des résultats GARCH-MIDAS existants
+avant l'estimation définitive.
+
+CONTROLES
+Convergence
+AIC / BIC / logLik
+alpha / beta / theta
+alpha + beta
+Disponibilité des résidus
+
+Aucune nouvelle estimation n'a été lancée.
+

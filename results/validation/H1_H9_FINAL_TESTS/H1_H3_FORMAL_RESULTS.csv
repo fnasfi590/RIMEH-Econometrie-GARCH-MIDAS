@@ -1,0 +1,4 @@
+Hypothesis,Target,N_coefficients,Significant_5pct,Significant_10pct,Positive,Negative,Positive_Significant_5pct,Negative_Significant_5pct,Mean_Theta,Median_Theta,Status
+H1,VIX / volatilite,13,7,8,7,6,4,3,0.00907661538461538,0.006737,DESCRIPTIF - coefficients individuels
+H2,demande,44,2,6,14,30,1,1,-0.0107979772727273,-0.0031935,DESCRIPTIF - coefficients individuels
+H3,offre,42,2,6,20,22,1,1,-0.0143185952380952,-8.685e-4,DESCRIPTIF - coefficients individuels

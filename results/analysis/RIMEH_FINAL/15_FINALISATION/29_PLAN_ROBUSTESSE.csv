@@ -1,0 +1,6 @@
+"Test","Statut","Specification"
+"Specification principale","TERMINE","K=3; Beta; Student-t; skew=NO"
+"MIDAS K=6","A ESTIMER","K=6"
+"MIDAS K=12","A ESTIMER","K=12"
+"Distribution alternative","A ESTIMER","A definir selon rumidas"
+"Comparaison GPRT vs GPRA","ANALYSE PRINCIPALE DISPONIBLE","Comparaison des coefficients existants"

@@ -1,0 +1,4 @@
+"Hypothesis","Target","N","Positive","Negative","Significant_5pct","Significant_10pct","Positive_Significant_5pct","Negative_Significant_5pct","Mean_Theta","Median_Theta","Status","Interpretation"
+"H1","VIX",13,7,6,7,8,4,3,0.00907661538461538,0.006737,"VALIDATION DESCRIPTIVE A PARTIR DES COEFFICIENTS","Effet du GPR sur la volatilite/prix : les specifications VIX sont traitees comme telles; ne pas assimiler automatiquement VIX a un rendement du prix."
+"H2","DEMAND",22,9,13,0,3,0,0,-0.000375590909090909,-0.0016395,"VALIDATION DESCRIPTIVE A PARTIR DES COEFFICIENTS","Effet sur la demande de petrole; interpretation fondee sur le signe et la significativite des theta."
+"H3","SUPPLY",84,36,48,6,14,3,3,-0.0133562857142857,-0.0028035,"VALIDATION DESCRIPTIVE A PARTIR DES COEFFICIENTS","Effet sur l'offre de petrole; interpretation fondee sur le signe et la significativite des theta."

@@ -1,0 +1,106 @@
+============================================================
+RIMEH - RAPPORT FINAL H1-H9
+============================================================
+
+Date : 2026-09-17 13:25:50.406364 
+
+DONNEES
+-------
+Coefficients : 572 
+Pays : 11 
+Modeles : 7 
+Theta : 140 
+
+PAYS
+----
+ [1] "DEU" "GBR" "IND" "JPN" "KOR" "MEX" "NOR" "PAK" "SAU" "TUR" "USA"
+
+MODELLES
+--------
+[1] "GPRA_SUP" "GPRT_DEM" "GPRT_PRE" "GPRT_SUP" "GPRT_VIX" "SUP_DEM"  "SUP_PRE" 
+
+
+RESULTATS H1-H6
+================
+  Hypothesis   N Significant_5pct Significant_10pct Positive Negative
+1         H1  34                1                 2       12        9
+2         H2  35                0                 3        9       13
+3         H3  55                2                 6       20       22
+4         H4 140               NA                NA       NA       NA
+5         H5  35                0                 3        9       13
+6         H6  55                2                 6       20       22
+  Significant_Positive Significant_Negative Mean_Estimate Median_Estimate
+1                    1                    0  0.0028384286       0.0007750
+2                    0                    0 -0.0003755909      -0.0016395
+3                    1                    1 -0.0143185952      -0.0008685
+4                   NA                   NA            NA              NA
+5                    0                    0 -0.0003755909      -0.0016395
+6                    1                    1 -0.0143185952      -0.0008685
+  Mean_PValue                                                   Status
+1   0.4765746                                              DESCRIPTIVE
+2   0.3851090                                              DESCRIPTIVE
+3   0.3835688                                              DESCRIPTIVE
+4          NA NOT TESTABLE - exporter/importer classification required
+5   0.3851090                DESCRIPTIVE - horizon comparison required
+6   0.3835688                DESCRIPTIVE - horizon comparison required
+
+
+RESULTATS H7-H9
+================
+  Hypothesis Target N_GPRT N_GPRA     Mean_GPRT   Mean_GPRA  Difference
+1         H7  PRICE     34     13  0.0028384286         NaN         NaN
+2         H8 DEMAND     35     13 -0.0003755909         NaN         NaN
+3         H9 SUPPLY     34     34 -0.0135816190 -0.01505557 0.001473952
+                                           Status
+1 DESCRIPTIVE - formal paired comparison required
+2 DESCRIPTIVE - formal paired comparison required
+3 DESCRIPTIVE - formal paired comparison required
+
+
+INTERPRETATION METHODOLOGIQUE
+============================
+
+H1 :
+Analyse descriptive des effets GPR/GPRT/GPRA dans les modeles PRICE.
+Une significativite statistique doit etre interpretee avec le signe du theta.
+
+H2 :
+Analyse descriptive des effets dans les modeles DEMAND.
+
+H3 :
+Analyse descriptive des effets dans les modeles SUPPLY.
+
+H4 :
+NON TESTABLE automatiquement avec le fichier actuel :
+la classification exportateur/importateur n'est pas fournie dans les coefficients.
+
+H5 :
+Une analyse descriptive est disponible, mais une comparaison formelle des horizons
+doit être définie à partir de la spécification exacte des theta.
+
+H6 :
+Une analyse descriptive est disponible, mais une comparaison formelle des horizons
+doit être définie à partir de la spécification exacte des theta.
+
+H7 :
+GPRT vs GPRA - comparaison descriptive générée.
+Une différence de moyennes ne constitue PAS à elle seule un test statistique.
+
+H8 :
+GPRT vs GPRA pour DEMAND - comparaison descriptive générée.
+
+H9 :
+GPRT vs GPRA pour SUPPLY - comparaison descriptive générée.
+
+
+MODELE EN ECHEC CONNU
+======================
+GBR / SUP_PRE reste un échec numérique dans l'estimation initiale.
+Il n'est pas remplacé artificiellement dans les résultats.
+
+
+IMPORTANT SUR LES HYPOTHESES
+============================
+Les formulations H1-H9 utilisées dans le workflow sont une reconstruction
+analytique et ne doivent pas être présentées comme les formulations originales
+des hypothèses sans le document source correspondant.

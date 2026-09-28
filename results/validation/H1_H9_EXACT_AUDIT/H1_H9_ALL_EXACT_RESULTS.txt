@@ -1,0 +1,1230 @@
+===============================================================
+RIMEH - RESULTATS EXACTS DES TESTS H1-H9
+===============================================================
+
+
+
+###############################################################
+FICHIER : H1_H3_CORRECTED 
+CHEMIN  : C:/Users/clien/Downloads/RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS/RIMEH_ECONOMETRIE/results/analysis/FINAL_H1_H3_CORRECTED.csv 
+###############################################################
+
+DIMENSIONS : 3 lignes x 12 colonnes
+
+COLONNES EXACTES :
+01 : Hypothesis
+02 : Target
+03 : N_coefficients
+04 : Significant_5pct
+05 : Significant_10pct
+06 : Positive
+07 : Negative
+08 : Positive_Significant_5pct
+09 : Negative_Significant_5pct
+10 : Mean_Theta
+11 : Median_Theta
+12 : Status
+
+
+CONTENU COMPLET :
+ Hypothesis           Target N_coefficients Significant_5pct Significant_10pct
+         H1 VIX / volatilite             13                7                 8
+         H2          demande             44                2                 6
+         H3            offre             42                2                 6
+ Positive Negative Positive_Significant_5pct Negative_Significant_5pct
+        7        6                         4                         3
+       14       30                         1                         1
+       20       22                         1                         1
+   Mean_Theta Median_Theta                                Status
+  0.009076615    0.0067370 DESCRIPTIF - coefficients individuels
+ -0.010797977   -0.0031935 DESCRIPTIF - coefficients individuels
+ -0.014318595   -0.0008685 DESCRIPTIF - coefficients individuels
+
+
+COLONNES IMPORTANTES DETECTEES :
+[1] "Hypothesis"   "Mean_Theta"   "Median_Theta" "Status"      
+
+
+EXTRACTION DES COLONNES IMPORTANTES :
+ Hypothesis   Mean_Theta Median_Theta                                Status
+         H1  0.009076615    0.0067370 DESCRIPTIF - coefficients individuels
+         H2 -0.010797977   -0.0031935 DESCRIPTIF - coefficients individuels
+         H3 -0.014318595   -0.0008685 DESCRIPTIF - coefficients individuels
+
+
+###############################################################
+FICHIER : H1_H3_ROBUST 
+CHEMIN  : C:/Users/clien/Downloads/RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS/RIMEH_ECONOMETRIE/results/analysis/FINAL_H1_H3_TABLE_ROBUST.csv 
+###############################################################
+
+DIMENSIONS : 3 lignes x 10 colonnes
+
+COLONNES EXACTES :
+01 : Hypothesis
+02 : Target
+03 : N
+04 : Mean_Theta
+05 : Median_Theta
+06 : Positive_N
+07 : Negative_N
+08 : Significant_5pct
+09 : Mean_P_value
+10 : Status
+
+
+CONTENU COMPLET :
+ Hypothesis Target  N    Mean_Theta Median_Theta Positive_N Negative_N
+         H1    VIX 13  0.0090766154    0.0067370          7          6
+         H2 DEMAND 22 -0.0003755909   -0.0016395          9         13
+         H3 SUPPLY 84 -0.0133562857   -0.0028035         36         48
+ Significant_5pct Mean_P_value                         Status
+                7    0.1807388 Descriptif; pas un test formel
+                0    0.3851090 Descriptif; pas un test formel
+                6    0.3678465 Descriptif; pas un test formel
+
+
+COLONNES IMPORTANTES DETECTEES :
+[1] "Hypothesis"   "Mean_Theta"   "Median_Theta" "Mean_P_value" "Status"      
+
+
+EXTRACTION DES COLONNES IMPORTANTES :
+ Hypothesis    Mean_Theta Median_Theta Mean_P_value
+         H1  0.0090766154    0.0067370    0.1807388
+         H2 -0.0003755909   -0.0016395    0.3851090
+         H3 -0.0133562857   -0.0028035    0.3678465
+                         Status
+ Descriptif; pas un test formel
+ Descriptif; pas un test formel
+ Descriptif; pas un test formel
+
+
+###############################################################
+FICHIER : H4_FINAL 
+CHEMIN  : C:/Users/clien/Downloads/RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS/RIMEH_ECONOMETRIE/results/analysis/FINAL_FORMAL_H1_H9/FINAL_H4.csv 
+###############################################################
+
+DIMENSIONS : 1 lignes x 4 colonnes
+
+COLONNES EXACTES :
+01 : H
+02 : Status
+03 : Reason
+04 : p_value
+
+
+CONTENU COMPLET :
+  H       Status
+ H4 NON TESTABLE
+                                                              Reason p_value
+ Classification exportateur/importateur absente des données fournies      NA
+
+
+COLONNES IMPORTANTES DETECTEES :
+[1] "Status"  "Reason"  "p_value"
+
+
+EXTRACTION DES COLONNES IMPORTANTES :
+       Status
+ NON TESTABLE
+                                                              Reason p_value
+ Classification exportateur/importateur absente des données fournies      NA
+
+
+###############################################################
+FICHIER : H4_FORMAL 
+CHEMIN  : C:/Users/clien/Downloads/RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS/RIMEH_ECONOMETRIE/results/analysis/FORMAL_H1_H9/FORMAL_H4.csv 
+###############################################################
+
+DIMENSIONS : 1 lignes x 5 colonnes
+
+COLONNES EXACTES :
+01 : H
+02 : Status
+03 : Reason
+04 : Test
+05 : p_value
+
+
+CONTENU COMPLET :
+  H       Status
+ H4 NON TESTABLE
+                                                                    Reason Test
+ Classification exportateur/importateur absente du fichier de coefficients   NA
+ p_value
+      NA
+
+
+COLONNES IMPORTANTES DETECTEES :
+[1] "Status"  "Reason"  "Test"    "p_value"
+
+
+EXTRACTION DES COLONNES IMPORTANTES :
+       Status
+ NON TESTABLE
+                                                                    Reason Test
+ Classification exportateur/importateur absente du fichier de coefficients   NA
+ p_value
+      NA
+
+
+###############################################################
+FICHIER : H5_DETAIL 
+CHEMIN  : C:/Users/clien/Downloads/RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS/RIMEH_ECONOMETRIE/results/analysis/FINAL_H5_DETAIL.csv 
+###############################################################
+
+DIMENSIONS : 22 lignes x 8 colonnes
+
+COLONNES EXACTES :
+01 : Hypothesis
+02 : Country
+03 : Model
+04 : Theta1
+05 : Theta2
+06 : P_Theta1
+07 : P_Theta2
+08 : Difference
+
+
+CONTENU COMPLET :
+ Hypothesis Country    Model    Theta1    Theta2 P_Theta1 P_Theta2 Difference
+         H5     DEU GPRT_DEM -0.002223 -0.006484 0.193857 0.155832   0.004261
+         H5     DEU  SUP_DEM -0.043625 -0.006883 0.171952 0.140077  -0.036742
+         H5     GBR GPRT_DEM -0.001056 -0.005159 0.619731 0.306679   0.004103
+         H5     GBR  SUP_DEM -0.041417 -0.005035 0.376754 0.745161  -0.036382
+         H5     IND GPRT_DEM  0.001464 -0.003233 0.901257 0.845189   0.004697
+         H5     IND  SUP_DEM -0.031641 -0.003154 0.721795 0.074029  -0.028487
+         H5     JPN GPRT_DEM  0.000827 -0.003937 0.603055 0.180973   0.004764
+         H5     JPN  SUP_DEM -0.073293 -0.003464 0.235262 0.297618  -0.069829
+         H5     KOR GPRT_DEM  0.001130 -0.007341 0.666006 0.073929   0.008471
+         H5     KOR  SUP_DEM -0.146125 -0.005057 0.779432 0.700513  -0.141068
+         H5     MEX GPRT_DEM -0.002262  0.003068 0.143773 0.213106  -0.005330
+         H5     MEX  SUP_DEM -0.171566  0.002884 0.285365 0.437947  -0.174450
+         H5     NOR GPRT_DEM  0.004015 -0.006717 0.133061 0.302605   0.010732
+         H5     NOR  SUP_DEM -0.051061 -0.006888 0.162001 0.315109  -0.044173
+         H5     PAK GPRT_DEM  0.006704  0.016887 0.139209 0.070227  -0.010183
+         H5     PAK  SUP_DEM  0.179884  0.026683 0.160850 0.003307   0.153201
+         H5     SAU GPRT_DEM  0.005931  0.003156 0.361959 0.865473   0.002775
+         H5     SAU  SUP_DEM  0.116097  0.004491 0.106019 0.419520   0.111606
+         H5     TUR GPRT_DEM -0.003436 -0.006128 0.076366 0.138589   0.002692
+         H5     TUR  SUP_DEM -0.118467 -0.002623 0.174302 0.326279  -0.115844
+         H5     USA GPRT_DEM -0.000324 -0.003145 0.930211 0.551310   0.002821
+         H5     USA  SUP_DEM -0.083604 -0.002984 0.048736 0.566746  -0.080620
+
+
+COLONNES IMPORTANTES DETECTEES :
+[1] "Hypothesis" "Country"    "Theta1"     "Theta2"     "P_Theta1"  
+[6] "P_Theta2"  
+
+
+EXTRACTION DES COLONNES IMPORTANTES :
+ Hypothesis Country    Theta1    Theta2 P_Theta1 P_Theta2
+         H5     DEU -0.002223 -0.006484 0.193857 0.155832
+         H5     DEU -0.043625 -0.006883 0.171952 0.140077
+         H5     GBR -0.001056 -0.005159 0.619731 0.306679
+         H5     GBR -0.041417 -0.005035 0.376754 0.745161
+         H5     IND  0.001464 -0.003233 0.901257 0.845189
+         H5     IND -0.031641 -0.003154 0.721795 0.074029
+         H5     JPN  0.000827 -0.003937 0.603055 0.180973
+         H5     JPN -0.073293 -0.003464 0.235262 0.297618
+         H5     KOR  0.001130 -0.007341 0.666006 0.073929
+         H5     KOR -0.146125 -0.005057 0.779432 0.700513
+         H5     MEX -0.002262  0.003068 0.143773 0.213106
+         H5     MEX -0.171566  0.002884 0.285365 0.437947
+         H5     NOR  0.004015 -0.006717 0.133061 0.302605
+         H5     NOR -0.051061 -0.006888 0.162001 0.315109
+         H5     PAK  0.006704  0.016887 0.139209 0.070227
+         H5     PAK  0.179884  0.026683 0.160850 0.003307
+         H5     SAU  0.005931  0.003156 0.361959 0.865473
+         H5     SAU  0.116097  0.004491 0.106019 0.419520
+         H5     TUR -0.003436 -0.006128 0.076366 0.138589
+         H5     TUR -0.118467 -0.002623 0.174302 0.326279
+         H5     USA -0.000324 -0.003145 0.930211 0.551310
+         H5     USA -0.083604 -0.002984 0.048736 0.566746
+
+
+###############################################################
+FICHIER : H5_ROBUST 
+CHEMIN  : C:/Users/clien/Downloads/RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS/RIMEH_ECONOMETRIE/results/analysis/FINAL_H5_HORIZON_DETAIL_ROBUST.csv 
+###############################################################
+
+DIMENSIONS : 11 lignes x 7 colonnes
+
+COLONNES EXACTES :
+01 : Hypothesis
+02 : Country
+03 : Model
+04 : Theta1
+05 : Theta2
+06 : Difference
+07 : Method
+
+
+CONTENU COMPLET :
+ Hypothesis Country    Model    Theta1    Theta2 Difference
+         H5     DEU GPRT_DEM -0.002223 -0.006484   0.004261
+         H5     GBR GPRT_DEM -0.001056 -0.005159   0.004103
+         H5     IND GPRT_DEM  0.001464 -0.003233   0.004697
+         H5     JPN GPRT_DEM  0.000827 -0.003937   0.004764
+         H5     KOR GPRT_DEM  0.001130 -0.007341   0.008471
+         H5     MEX GPRT_DEM -0.002262  0.003068  -0.005330
+         H5     NOR GPRT_DEM  0.004015 -0.006717   0.010732
+         H5     PAK GPRT_DEM  0.006704  0.016887  -0.010183
+         H5     SAU GPRT_DEM  0.005931  0.003156   0.002775
+         H5     TUR GPRT_DEM -0.003436 -0.006128   0.002692
+         H5     USA GPRT_DEM -0.000324 -0.003145   0.002821
+                                  Method
+ Descriptif; VCOV absent pour Wald exact
+ Descriptif; VCOV absent pour Wald exact
+ Descriptif; VCOV absent pour Wald exact
+ Descriptif; VCOV absent pour Wald exact
+ Descriptif; VCOV absent pour Wald exact
+ Descriptif; VCOV absent pour Wald exact
+ Descriptif; VCOV absent pour Wald exact
+ Descriptif; VCOV absent pour Wald exact
+ Descriptif; VCOV absent pour Wald exact
+ Descriptif; VCOV absent pour Wald exact
+ Descriptif; VCOV absent pour Wald exact
+
+
+COLONNES IMPORTANTES DETECTEES :
+[1] "Hypothesis" "Country"    "Theta1"     "Theta2"    
+
+
+EXTRACTION DES COLONNES IMPORTANTES :
+ Hypothesis Country    Theta1    Theta2
+         H5     DEU -0.002223 -0.006484
+         H5     GBR -0.001056 -0.005159
+         H5     IND  0.001464 -0.003233
+         H5     JPN  0.000827 -0.003937
+         H5     KOR  0.001130 -0.007341
+         H5     MEX -0.002262  0.003068
+         H5     NOR  0.004015 -0.006717
+         H5     PAK  0.006704  0.016887
+         H5     SAU  0.005931  0.003156
+         H5     TUR -0.003436 -0.006128
+         H5     USA -0.000324 -0.003145
+
+
+###############################################################
+FICHIER : H6_DETAIL 
+CHEMIN  : C:/Users/clien/Downloads/RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS/RIMEH_ECONOMETRIE/results/analysis/FINAL_H6_DETAIL.csv 
+###############################################################
+
+DIMENSIONS : 22 lignes x 8 colonnes
+
+COLONNES EXACTES :
+01 : Hypothesis
+02 : Country
+03 : Model
+04 : Theta1
+05 : Theta2
+06 : P_Theta1
+07 : P_Theta2
+08 : Difference
+
+
+CONTENU COMPLET :
+ Hypothesis Country    Model    Theta1    Theta2 P_Theta1 P_Theta2 Difference
+         H6     DEU GPRA_SUP  0.001129  0.034596 0.562138 0.743638  -0.033467
+         H6     DEU GPRT_SUP -0.003346  0.022924 0.292716 0.489911  -0.026270
+         H6     GBR GPRA_SUP  0.003842 -0.064704 0.103336 0.465005   0.068546
+         H6     GBR GPRT_SUP -0.001022 -0.041527 0.648999 0.238507   0.040505
+         H6     IND GPRA_SUP  0.002596 -0.024079 0.351245 0.943221   0.026675
+         H6     IND GPRT_SUP  0.000930 -0.022812 0.967360 0.835755   0.023742
+         H6     JPN GPRA_SUP  0.000710 -0.063324 0.865707 0.342119   0.064034
+         H6     JPN GPRT_SUP -0.001144 -0.067728 0.201127 0.266204   0.066584
+         H6     KOR GPRA_SUP  0.003168 -0.124647 0.165524 0.141454   0.127815
+         H6     KOR GPRT_SUP  0.000787 -0.152102 0.654846 0.058837   0.152889
+         H6     MEX GPRA_SUP  0.002704 -0.173397 0.109604 0.718034   0.176101
+         H6     MEX GPRT_SUP -0.002352 -0.081757 0.062454 0.302350   0.079405
+         H6     NOR GPRA_SUP  0.007394 -0.049895 0.134812 0.161097   0.057289
+         H6     NOR GPRT_SUP  0.003911 -0.050056 0.165686 0.164274   0.053967
+         H6     PAK GPRA_SUP        NA        NA       NA       NA         NA
+         H6     PAK GPRT_SUP        NA        NA       NA       NA         NA
+         H6     SAU GPRA_SUP  0.001561  0.111432 0.358571 0.114831  -0.109871
+         H6     SAU GPRT_SUP  0.006134  0.126205 0.000683 0.085666  -0.120071
+         H6     TUR GPRA_SUP  0.002194 -0.090177 0.507827 0.801240   0.092371
+         H6     TUR GPRT_SUP -0.001543 -0.116573 0.570011 0.163971   0.115030
+         H6     USA GPRA_SUP  0.000076 -0.078307 0.970133 0.075626   0.078383
+         H6     USA GPRT_SUP -0.000715 -0.084391 0.811104 0.045413   0.083676
+
+
+COLONNES IMPORTANTES DETECTEES :
+[1] "Hypothesis" "Country"    "Theta1"     "Theta2"     "P_Theta1"  
+[6] "P_Theta2"  
+
+
+EXTRACTION DES COLONNES IMPORTANTES :
+ Hypothesis Country    Theta1    Theta2 P_Theta1 P_Theta2
+         H6     DEU  0.001129  0.034596 0.562138 0.743638
+         H6     DEU -0.003346  0.022924 0.292716 0.489911
+         H6     GBR  0.003842 -0.064704 0.103336 0.465005
+         H6     GBR -0.001022 -0.041527 0.648999 0.238507
+         H6     IND  0.002596 -0.024079 0.351245 0.943221
+         H6     IND  0.000930 -0.022812 0.967360 0.835755
+         H6     JPN  0.000710 -0.063324 0.865707 0.342119
+         H6     JPN -0.001144 -0.067728 0.201127 0.266204
+         H6     KOR  0.003168 -0.124647 0.165524 0.141454
+         H6     KOR  0.000787 -0.152102 0.654846 0.058837
+         H6     MEX  0.002704 -0.173397 0.109604 0.718034
+         H6     MEX -0.002352 -0.081757 0.062454 0.302350
+         H6     NOR  0.007394 -0.049895 0.134812 0.161097
+         H6     NOR  0.003911 -0.050056 0.165686 0.164274
+         H6     PAK        NA        NA       NA       NA
+         H6     PAK        NA        NA       NA       NA
+         H6     SAU  0.001561  0.111432 0.358571 0.114831
+         H6     SAU  0.006134  0.126205 0.000683 0.085666
+         H6     TUR  0.002194 -0.090177 0.507827 0.801240
+         H6     TUR -0.001543 -0.116573 0.570011 0.163971
+         H6     USA  0.000076 -0.078307 0.970133 0.075626
+         H6     USA -0.000715 -0.084391 0.811104 0.045413
+
+
+###############################################################
+FICHIER : H6_ROBUST 
+CHEMIN  : C:/Users/clien/Downloads/RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS/RIMEH_ECONOMETRIE/results/analysis/FINAL_H6_HORIZON_DETAIL_ROBUST.csv 
+###############################################################
+
+DIMENSIONS : 41 lignes x 7 colonnes
+
+COLONNES EXACTES :
+01 : Hypothesis
+02 : Country
+03 : Model
+04 : Theta1
+05 : Theta2
+06 : Difference
+07 : Method
+
+
+CONTENU COMPLET :
+ Hypothesis Country    Model    Theta1    Theta2 Difference
+         H6     DEU GPRA_SUP  0.001129  0.034596  -0.033467
+         H6     DEU GPRT_SUP -0.003346  0.022924  -0.026270
+         H6     DEU  SUP_DEM -0.043625 -0.006883  -0.036742
+         H6     DEU  SUP_PRE  0.030025  0.008593   0.021432
+         H6     GBR GPRA_SUP  0.003842 -0.064704   0.068546
+         H6     GBR GPRT_SUP -0.001022 -0.041527   0.040505
+         H6     GBR  SUP_DEM -0.041417 -0.005035  -0.036382
+         H6     IND GPRA_SUP  0.002596 -0.024079   0.026675
+         H6     IND GPRT_SUP  0.000930 -0.022812   0.023742
+         H6     IND  SUP_DEM -0.031641 -0.003154  -0.028487
+         H6     IND  SUP_PRE  0.010267  0.013084  -0.002817
+         H6     JPN GPRA_SUP  0.000710 -0.063324   0.064034
+         H6     JPN GPRT_SUP -0.001144 -0.067728   0.066584
+         H6     JPN  SUP_DEM -0.073293 -0.003464  -0.069829
+         H6     JPN  SUP_PRE -0.065806 -0.003371  -0.062435
+         H6     KOR GPRA_SUP  0.003168 -0.124647   0.127815
+         H6     KOR GPRT_SUP  0.000787 -0.152102   0.152889
+         H6     KOR  SUP_DEM -0.146125 -0.005057  -0.141068
+         H6     KOR  SUP_PRE -0.131456  0.017352  -0.148808
+         H6     MEX GPRA_SUP  0.002704 -0.173397   0.176101
+         H6     MEX GPRT_SUP -0.002352 -0.081757   0.079405
+         H6     MEX  SUP_DEM -0.171566  0.002884  -0.174450
+         H6     MEX  SUP_PRE -0.174655  0.002620  -0.177275
+         H6     NOR GPRA_SUP  0.007394 -0.049895   0.057289
+         H6     NOR GPRT_SUP  0.003911 -0.050056   0.053967
+         H6     NOR  SUP_DEM -0.051061 -0.006888  -0.044173
+         H6     NOR  SUP_PRE -0.051789 -0.006418  -0.045371
+         H6     PAK  SUP_DEM  0.179884  0.026683   0.153201
+         H6     PAK  SUP_PRE  0.286099  0.092336   0.193763
+         H6     SAU GPRA_SUP  0.001561  0.111432  -0.109871
+         H6     SAU GPRT_SUP  0.006134  0.126205  -0.120071
+         H6     SAU  SUP_DEM  0.116097  0.004491   0.111606
+         H6     SAU  SUP_PRE  0.110473 -0.013084   0.123557
+         H6     TUR GPRA_SUP  0.002194 -0.090177   0.092371
+         H6     TUR GPRT_SUP -0.001543 -0.116573   0.115030
+         H6     TUR  SUP_DEM -0.118467 -0.002623  -0.115844
+         H6     TUR  SUP_PRE -0.115557  0.018922  -0.134479
+         H6     USA GPRA_SUP  0.000076 -0.078307   0.078383
+         H6     USA GPRT_SUP -0.000715 -0.084391   0.083676
+         H6     USA  SUP_DEM -0.083604 -0.002984  -0.080620
+         H6     USA  SUP_PRE -0.083009  0.001675  -0.084684
+                                  Method
+ Descriptif; VCOV absent pour Wald exact
+ Descriptif; VCOV absent pour Wald exact
+ Descriptif; VCOV absent pour Wald exact
+ Descriptif; VCOV absent pour Wald exact
+ Descriptif; VCOV absent pour Wald exact
+ Descriptif; VCOV absent pour Wald exact
+ Descriptif; VCOV absent pour Wald exact
+ Descriptif; VCOV absent pour Wald exact
+ Descriptif; VCOV absent pour Wald exact
+ Descriptif; VCOV absent pour Wald exact
+ Descriptif; VCOV absent pour Wald exact
+ Descriptif; VCOV absent pour Wald exact
+ Descriptif; VCOV absent pour Wald exact
+ Descriptif; VCOV absent pour Wald exact
+ Descriptif; VCOV absent pour Wald exact
+ Descriptif; VCOV absent pour Wald exact
+ Descriptif; VCOV absent pour Wald exact
+ Descriptif; VCOV absent pour Wald exact
+ Descriptif; VCOV absent pour Wald exact
+ Descriptif; VCOV absent pour Wald exact
+ Descriptif; VCOV absent pour Wald exact
+ Descriptif; VCOV absent pour Wald exact
+ Descriptif; VCOV absent pour Wald exact
+ Descriptif; VCOV absent pour Wald exact
+ Descriptif; VCOV absent pour Wald exact
+ Descriptif; VCOV absent pour Wald exact
+ Descriptif; VCOV absent pour Wald exact
+ Descriptif; VCOV absent pour Wald exact
+ Descriptif; VCOV absent pour Wald exact
+ Descriptif; VCOV absent pour Wald exact
+ Descriptif; VCOV absent pour Wald exact
+ Descriptif; VCOV absent pour Wald exact
+ Descriptif; VCOV absent pour Wald exact
+ Descriptif; VCOV absent pour Wald exact
+ Descriptif; VCOV absent pour Wald exact
+ Descriptif; VCOV absent pour Wald exact
+ Descriptif; VCOV absent pour Wald exact
+ Descriptif; VCOV absent pour Wald exact
+ Descriptif; VCOV absent pour Wald exact
+ Descriptif; VCOV absent pour Wald exact
+ Descriptif; VCOV absent pour Wald exact
+
+
+COLONNES IMPORTANTES DETECTEES :
+[1] "Hypothesis" "Country"    "Theta1"     "Theta2"    
+
+
+EXTRACTION DES COLONNES IMPORTANTES :
+ Hypothesis Country    Theta1    Theta2
+         H6     DEU  0.001129  0.034596
+         H6     DEU -0.003346  0.022924
+         H6     DEU -0.043625 -0.006883
+         H6     DEU  0.030025  0.008593
+         H6     GBR  0.003842 -0.064704
+         H6     GBR -0.001022 -0.041527
+         H6     GBR -0.041417 -0.005035
+         H6     IND  0.002596 -0.024079
+         H6     IND  0.000930 -0.022812
+         H6     IND -0.031641 -0.003154
+         H6     IND  0.010267  0.013084
+         H6     JPN  0.000710 -0.063324
+         H6     JPN -0.001144 -0.067728
+         H6     JPN -0.073293 -0.003464
+         H6     JPN -0.065806 -0.003371
+         H6     KOR  0.003168 -0.124647
+         H6     KOR  0.000787 -0.152102
+         H6     KOR -0.146125 -0.005057
+         H6     KOR -0.131456  0.017352
+         H6     MEX  0.002704 -0.173397
+         H6     MEX -0.002352 -0.081757
+         H6     MEX -0.171566  0.002884
+         H6     MEX -0.174655  0.002620
+         H6     NOR  0.007394 -0.049895
+         H6     NOR  0.003911 -0.050056
+         H6     NOR -0.051061 -0.006888
+         H6     NOR -0.051789 -0.006418
+         H6     PAK  0.179884  0.026683
+         H6     PAK  0.286099  0.092336
+         H6     SAU  0.001561  0.111432
+         H6     SAU  0.006134  0.126205
+         H6     SAU  0.116097  0.004491
+         H6     SAU  0.110473 -0.013084
+         H6     TUR  0.002194 -0.090177
+         H6     TUR -0.001543 -0.116573
+         H6     TUR -0.118467 -0.002623
+         H6     TUR -0.115557  0.018922
+         H6     USA  0.000076 -0.078307
+         H6     USA -0.000715 -0.084391
+         H6     USA -0.083604 -0.002984
+         H6     USA -0.083009  0.001675
+
+
+###############################################################
+FICHIER : H7_DETAIL 
+CHEMIN  : C:/Users/clien/Downloads/RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS/RIMEH_ECONOMETRIE/results/analysis/FINAL_H7_DETAIL_ROBUST.csv 
+###############################################################
+
+DIMENSIONS : 21 lignes x 8 colonnes
+
+COLONNES EXACTES :
+01 : Hypothesis
+02 : Country
+03 : Target
+04 : Theta
+05 : GPRT
+06 : GPRA
+07 : Difference_GPRT_minus_GPRA
+08 : Method
+
+
+CONTENU COMPLET :
+ Hypothesis Country Target Theta      GPRT      GPRA Difference_GPRT_minus_GPRA
+         H7     DEU SUPPLY     1 -0.003346  0.001129                  -0.004475
+         H7     DEU SUPPLY     2  0.022924  0.034596                  -0.011672
+         H7     GBR SUPPLY     1 -0.001022  0.003842                  -0.004864
+         H7     GBR SUPPLY     2 -0.041527 -0.064704                   0.023177
+         H7     IND SUPPLY     1  0.000930  0.002596                  -0.001666
+         H7     IND SUPPLY     2 -0.022812 -0.024079                   0.001267
+         H7     JPN SUPPLY     1 -0.001144  0.000710                  -0.001854
+         H7     JPN SUPPLY     2 -0.067728 -0.063324                  -0.004404
+         H7     KOR SUPPLY     1  0.000787  0.003168                  -0.002381
+         H7     KOR SUPPLY     2 -0.152102 -0.124647                  -0.027455
+         H7     MEX SUPPLY     1 -0.002352  0.002704                  -0.005056
+         H7     MEX SUPPLY     2 -0.081757 -0.173397                   0.091640
+         H7     NOR SUPPLY     1  0.003911  0.007394                  -0.003483
+         H7     NOR SUPPLY     2 -0.050056 -0.049895                  -0.000161
+         H7     PAK SUPPLY     1  0.180963  0.180961                   0.000002
+         H7     SAU SUPPLY     1  0.006134  0.001561                   0.004573
+         H7     SAU SUPPLY     2  0.126205  0.111432                   0.014773
+         H7     TUR SUPPLY     1 -0.001543  0.002194                  -0.003737
+         H7     TUR SUPPLY     2 -0.116573 -0.090177                  -0.026396
+         H7     USA SUPPLY     1 -0.000715  0.000076                  -0.000791
+         H7     USA SUPPLY     2 -0.084391 -0.078307                  -0.006084
+                                        Method
+ Descriptif; test joint exact exige covariance
+ Descriptif; test joint exact exige covariance
+ Descriptif; test joint exact exige covariance
+ Descriptif; test joint exact exige covariance
+ Descriptif; test joint exact exige covariance
+ Descriptif; test joint exact exige covariance
+ Descriptif; test joint exact exige covariance
+ Descriptif; test joint exact exige covariance
+ Descriptif; test joint exact exige covariance
+ Descriptif; test joint exact exige covariance
+ Descriptif; test joint exact exige covariance
+ Descriptif; test joint exact exige covariance
+ Descriptif; test joint exact exige covariance
+ Descriptif; test joint exact exige covariance
+ Descriptif; test joint exact exige covariance
+ Descriptif; test joint exact exige covariance
+ Descriptif; test joint exact exige covariance
+ Descriptif; test joint exact exige covariance
+ Descriptif; test joint exact exige covariance
+ Descriptif; test joint exact exige covariance
+ Descriptif; test joint exact exige covariance
+
+
+COLONNES IMPORTANTES DETECTEES :
+[1] "Hypothesis"                 "Country"                   
+[3] "Theta"                      "GPRT"                      
+[5] "GPRA"                       "Difference_GPRT_minus_GPRA"
+
+
+EXTRACTION DES COLONNES IMPORTANTES :
+ Hypothesis Country Theta      GPRT      GPRA Difference_GPRT_minus_GPRA
+         H7     DEU     1 -0.003346  0.001129                  -0.004475
+         H7     DEU     2  0.022924  0.034596                  -0.011672
+         H7     GBR     1 -0.001022  0.003842                  -0.004864
+         H7     GBR     2 -0.041527 -0.064704                   0.023177
+         H7     IND     1  0.000930  0.002596                  -0.001666
+         H7     IND     2 -0.022812 -0.024079                   0.001267
+         H7     JPN     1 -0.001144  0.000710                  -0.001854
+         H7     JPN     2 -0.067728 -0.063324                  -0.004404
+         H7     KOR     1  0.000787  0.003168                  -0.002381
+         H7     KOR     2 -0.152102 -0.124647                  -0.027455
+         H7     MEX     1 -0.002352  0.002704                  -0.005056
+         H7     MEX     2 -0.081757 -0.173397                   0.091640
+         H7     NOR     1  0.003911  0.007394                  -0.003483
+         H7     NOR     2 -0.050056 -0.049895                  -0.000161
+         H7     PAK     1  0.180963  0.180961                   0.000002
+         H7     SAU     1  0.006134  0.001561                   0.004573
+         H7     SAU     2  0.126205  0.111432                   0.014773
+         H7     TUR     1 -0.001543  0.002194                  -0.003737
+         H7     TUR     2 -0.116573 -0.090177                  -0.026396
+         H7     USA     1 -0.000715  0.000076                  -0.000791
+         H7     USA     2 -0.084391 -0.078307                  -0.006084
+
+
+###############################################################
+FICHIER : H8_FINAL 
+CHEMIN  : C:/Users/clien/Downloads/RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS/RIMEH_ECONOMETRIE/results/analysis/FINAL_FORMAL_H1_H9/FINAL_H7_H8.csv 
+###############################################################
+
+DIMENSIONS : 2 lignes x 4 colonnes
+
+COLONNES EXACTES :
+01 : H
+02 : Status
+03 : Reason
+04 : p_value
+
+
+CONTENU COMPLET :
+  H                    Status
+ H7 NON TESTABLE FORMELLEMENT
+ H8 NON TESTABLE FORMELLEMENT
+                                                              Reason p_value
+  Pas de paire GPRT/GPRA compatible dans la structure PRICE actuelle      NA
+ Pas de paire GPRT/GPRA compatible dans la structure DEMAND actuelle      NA
+
+
+COLONNES IMPORTANTES DETECTEES :
+[1] "Status"  "Reason"  "p_value"
+
+
+EXTRACTION DES COLONNES IMPORTANTES :
+                    Status
+ NON TESTABLE FORMELLEMENT
+ NON TESTABLE FORMELLEMENT
+                                                              Reason p_value
+  Pas de paire GPRT/GPRA compatible dans la structure PRICE actuelle      NA
+ Pas de paire GPRT/GPRA compatible dans la structure DEMAND actuelle      NA
+
+
+###############################################################
+FICHIER : H9_DETAIL 
+CHEMIN  : C:/Users/clien/Downloads/RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS/RIMEH_ECONOMETRIE/results/analysis/FINAL_H9_DETAIL.csv 
+###############################################################
+
+DIMENSIONS : 21 lignes x 9 colonnes
+
+COLONNES EXACTES :
+01 : Hypothesis
+02 : Country
+03 : Target
+04 : Theta
+05 : GPRT
+06 : GPRA
+07 : P_GPRT
+08 : P_GPRA
+09 : Difference_GPRT_minus_GPRA
+
+
+CONTENU COMPLET :
+ Hypothesis Country Target Theta      GPRT      GPRA   P_GPRT   P_GPRA
+         H9     DEU SUPPLY     1 -0.003346  0.001129 0.292716 0.562138
+         H9     DEU SUPPLY     2  0.022924  0.034596 0.489911 0.743638
+         H9     GBR SUPPLY     1 -0.001022  0.003842 0.648999 0.103336
+         H9     GBR SUPPLY     2 -0.041527 -0.064704 0.238507 0.465005
+         H9     IND SUPPLY     1  0.000930  0.002596 0.967360 0.351245
+         H9     IND SUPPLY     2 -0.022812 -0.024079 0.835755 0.943221
+         H9     JPN SUPPLY     1 -0.001144  0.000710 0.201127 0.865707
+         H9     JPN SUPPLY     2 -0.067728 -0.063324 0.266204 0.342119
+         H9     KOR SUPPLY     1  0.000787  0.003168 0.654846 0.165524
+         H9     KOR SUPPLY     2 -0.152102 -0.124647 0.058837 0.141454
+         H9     MEX SUPPLY     1 -0.002352  0.002704 0.062454 0.109604
+         H9     MEX SUPPLY     2 -0.081757 -0.173397 0.302350 0.718034
+         H9     NOR SUPPLY     1  0.003911  0.007394 0.165686 0.134812
+         H9     NOR SUPPLY     2 -0.050056 -0.049895 0.164274 0.161097
+         H9     PAK SUPPLY    NA        NA        NA       NA       NA
+         H9     SAU SUPPLY     1  0.006134  0.001561 0.000683 0.358571
+         H9     SAU SUPPLY     2  0.126205  0.111432 0.085666 0.114831
+         H9     TUR SUPPLY     1 -0.001543  0.002194 0.570011 0.507827
+         H9     TUR SUPPLY     2 -0.116573 -0.090177 0.163971 0.801240
+         H9     USA SUPPLY     1 -0.000715  0.000076 0.811104 0.970133
+         H9     USA SUPPLY     2 -0.084391 -0.078307 0.045413 0.075626
+ Difference_GPRT_minus_GPRA
+                  -0.004475
+                  -0.011672
+                  -0.004864
+                   0.023177
+                  -0.001666
+                   0.001267
+                  -0.001854
+                  -0.004404
+                  -0.002381
+                  -0.027455
+                  -0.005056
+                   0.091640
+                  -0.003483
+                  -0.000161
+                         NA
+                   0.004573
+                   0.014773
+                  -0.003737
+                  -0.026396
+                  -0.000791
+                  -0.006084
+
+
+COLONNES IMPORTANTES DETECTEES :
+[1] "Hypothesis"                 "Country"                   
+[3] "Theta"                      "GPRT"                      
+[5] "GPRA"                       "P_GPRT"                    
+[7] "P_GPRA"                     "Difference_GPRT_minus_GPRA"
+
+
+EXTRACTION DES COLONNES IMPORTANTES :
+ Hypothesis Country Theta      GPRT      GPRA   P_GPRT   P_GPRA
+         H9     DEU     1 -0.003346  0.001129 0.292716 0.562138
+         H9     DEU     2  0.022924  0.034596 0.489911 0.743638
+         H9     GBR     1 -0.001022  0.003842 0.648999 0.103336
+         H9     GBR     2 -0.041527 -0.064704 0.238507 0.465005
+         H9     IND     1  0.000930  0.002596 0.967360 0.351245
+         H9     IND     2 -0.022812 -0.024079 0.835755 0.943221
+         H9     JPN     1 -0.001144  0.000710 0.201127 0.865707
+         H9     JPN     2 -0.067728 -0.063324 0.266204 0.342119
+         H9     KOR     1  0.000787  0.003168 0.654846 0.165524
+         H9     KOR     2 -0.152102 -0.124647 0.058837 0.141454
+         H9     MEX     1 -0.002352  0.002704 0.062454 0.109604
+         H9     MEX     2 -0.081757 -0.173397 0.302350 0.718034
+         H9     NOR     1  0.003911  0.007394 0.165686 0.134812
+         H9     NOR     2 -0.050056 -0.049895 0.164274 0.161097
+         H9     PAK    NA        NA        NA       NA       NA
+         H9     SAU     1  0.006134  0.001561 0.000683 0.358571
+         H9     SAU     2  0.126205  0.111432 0.085666 0.114831
+         H9     TUR     1 -0.001543  0.002194 0.570011 0.507827
+         H9     TUR     2 -0.116573 -0.090177 0.163971 0.801240
+         H9     USA     1 -0.000715  0.000076 0.811104 0.970133
+         H9     USA     2 -0.084391 -0.078307 0.045413 0.075626
+ Difference_GPRT_minus_GPRA
+                  -0.004475
+                  -0.011672
+                  -0.004864
+                   0.023177
+                  -0.001666
+                   0.001267
+                  -0.001854
+                  -0.004404
+                  -0.002381
+                  -0.027455
+                  -0.005056
+                   0.091640
+                  -0.003483
+                  -0.000161
+                         NA
+                   0.004573
+                   0.014773
+                  -0.003737
+                  -0.026396
+                  -0.000791
+                  -0.006084
+
+
+###############################################################
+FICHIER : H9_ROBUST 
+CHEMIN  : C:/Users/clien/Downloads/RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS/RIMEH_ECONOMETRIE/results/analysis/FINAL_H9_DETAIL_ROBUST.csv 
+###############################################################
+
+DIMENSIONS : 21 lignes x 8 colonnes
+
+COLONNES EXACTES :
+01 : Hypothesis
+02 : Country
+03 : Target
+04 : Theta
+05 : GPRT
+06 : GPRA
+07 : Difference_GPRT_minus_GPRA
+08 : Method
+
+
+CONTENU COMPLET :
+ Hypothesis Country Target Theta      GPRT      GPRA Difference_GPRT_minus_GPRA
+         H9     DEU SUPPLY     1 -0.003346  0.001129                  -0.004475
+         H9     DEU SUPPLY     2  0.022924  0.034596                  -0.011672
+         H9     GBR SUPPLY     1 -0.001022  0.003842                  -0.004864
+         H9     GBR SUPPLY     2 -0.041527 -0.064704                   0.023177
+         H9     IND SUPPLY     1  0.000930  0.002596                  -0.001666
+         H9     IND SUPPLY     2 -0.022812 -0.024079                   0.001267
+         H9     JPN SUPPLY     1 -0.001144  0.000710                  -0.001854
+         H9     JPN SUPPLY     2 -0.067728 -0.063324                  -0.004404
+         H9     KOR SUPPLY     1  0.000787  0.003168                  -0.002381
+         H9     KOR SUPPLY     2 -0.152102 -0.124647                  -0.027455
+         H9     MEX SUPPLY     1 -0.002352  0.002704                  -0.005056
+         H9     MEX SUPPLY     2 -0.081757 -0.173397                   0.091640
+         H9     NOR SUPPLY     1  0.003911  0.007394                  -0.003483
+         H9     NOR SUPPLY     2 -0.050056 -0.049895                  -0.000161
+         H9     PAK SUPPLY     1  0.180963  0.180961                   0.000002
+         H9     SAU SUPPLY     1  0.006134  0.001561                   0.004573
+         H9     SAU SUPPLY     2  0.126205  0.111432                   0.014773
+         H9     TUR SUPPLY     1 -0.001543  0.002194                  -0.003737
+         H9     TUR SUPPLY     2 -0.116573 -0.090177                  -0.026396
+         H9     USA SUPPLY     1 -0.000715  0.000076                  -0.000791
+         H9     USA SUPPLY     2 -0.084391 -0.078307                  -0.006084
+                                        Method
+ Descriptif; test joint exact exige covariance
+ Descriptif; test joint exact exige covariance
+ Descriptif; test joint exact exige covariance
+ Descriptif; test joint exact exige covariance
+ Descriptif; test joint exact exige covariance
+ Descriptif; test joint exact exige covariance
+ Descriptif; test joint exact exige covariance
+ Descriptif; test joint exact exige covariance
+ Descriptif; test joint exact exige covariance
+ Descriptif; test joint exact exige covariance
+ Descriptif; test joint exact exige covariance
+ Descriptif; test joint exact exige covariance
+ Descriptif; test joint exact exige covariance
+ Descriptif; test joint exact exige covariance
+ Descriptif; test joint exact exige covariance
+ Descriptif; test joint exact exige covariance
+ Descriptif; test joint exact exige covariance
+ Descriptif; test joint exact exige covariance
+ Descriptif; test joint exact exige covariance
+ Descriptif; test joint exact exige covariance
+ Descriptif; test joint exact exige covariance
+
+
+COLONNES IMPORTANTES DETECTEES :
+[1] "Hypothesis"                 "Country"                   
+[3] "Theta"                      "GPRT"                      
+[5] "GPRA"                       "Difference_GPRT_minus_GPRA"
+
+
+EXTRACTION DES COLONNES IMPORTANTES :
+ Hypothesis Country Theta      GPRT      GPRA Difference_GPRT_minus_GPRA
+         H9     DEU     1 -0.003346  0.001129                  -0.004475
+         H9     DEU     2  0.022924  0.034596                  -0.011672
+         H9     GBR     1 -0.001022  0.003842                  -0.004864
+         H9     GBR     2 -0.041527 -0.064704                   0.023177
+         H9     IND     1  0.000930  0.002596                  -0.001666
+         H9     IND     2 -0.022812 -0.024079                   0.001267
+         H9     JPN     1 -0.001144  0.000710                  -0.001854
+         H9     JPN     2 -0.067728 -0.063324                  -0.004404
+         H9     KOR     1  0.000787  0.003168                  -0.002381
+         H9     KOR     2 -0.152102 -0.124647                  -0.027455
+         H9     MEX     1 -0.002352  0.002704                  -0.005056
+         H9     MEX     2 -0.081757 -0.173397                   0.091640
+         H9     NOR     1  0.003911  0.007394                  -0.003483
+         H9     NOR     2 -0.050056 -0.049895                  -0.000161
+         H9     PAK     1  0.180963  0.180961                   0.000002
+         H9     SAU     1  0.006134  0.001561                   0.004573
+         H9     SAU     2  0.126205  0.111432                   0.014773
+         H9     TUR     1 -0.001543  0.002194                  -0.003737
+         H9     TUR     2 -0.116573 -0.090177                  -0.026396
+         H9     USA     1 -0.000715  0.000076                  -0.000791
+         H9     USA     2 -0.084391 -0.078307                  -0.006084
+
+
+###############################################################
+FICHIER : H9_FORMAL 
+CHEMIN  : C:/Users/clien/Downloads/RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS/RIMEH_ECONOMETRIE/results/analysis/FORMAL_H1_H9/H9_GPRT_VS_GPRA_DETAIL.csv 
+###############################################################
+
+DIMENSIONS : 21 lignes x 12 colonnes
+
+COLONNES EXACTES :
+01 : country
+02 : parameter
+03 : estimate.GPRA_SUP
+04 : se.GPRA_SUP
+05 : estimate.GPRT_SUP
+06 : se.GPRT_SUP
+07 : diff
+08 : se_ind
+09 : z_ind
+10 : p_ind
+11 : CI_low
+12 : CI_high
+
+
+CONTENU COMPLET :
+ country parameter estimate.GPRA_SUP se.GPRA_SUP estimate.GPRT_SUP se.GPRT_SUP
+     DEU   theta_1          0.001129    0.001948         -0.003346    0.003180
+     DEU   theta_2          0.034596    0.105784          0.022924    0.033201
+     GBR   theta_1          0.003842    0.002359         -0.001022    0.002245
+     GBR   theta_2         -0.064704    0.088560         -0.041527    0.035230
+     IND   theta_1          0.002596    0.002785          0.000930    0.022739
+     IND   theta_2         -0.024079    0.338084         -0.022812    0.110028
+     JPN   theta_1          0.000710    0.004196         -0.001144    0.000895
+     JPN   theta_2         -0.063324    0.066658         -0.067728    0.060915
+     KOR   theta_1          0.003168    0.002285          0.000787    0.001761
+     KOR   theta_2         -0.124647    0.084771         -0.152102    0.080502
+     MEX   theta_1          0.002704    0.001690         -0.002352    0.001262
+     MEX   theta_2         -0.173397    0.480208         -0.081757    0.079267
+     NOR   theta_1          0.007394    0.004945          0.003911    0.002821
+     NOR   theta_2         -0.049895    0.035604         -0.050056    0.035990
+     PAK     theta          0.180961    0.149042          0.180963    0.148876
+     SAU   theta_1          0.001561    0.001701          0.006134    0.001806
+     SAU   theta_2          0.111432    0.070667          0.126205    0.073429
+     TUR   theta_1          0.002194    0.003313         -0.001543    0.002717
+     TUR   theta_2         -0.090177    0.358209         -0.116573    0.083755
+     USA   theta_1          0.000076    0.002017         -0.000715    0.002993
+     USA   theta_2         -0.078307    0.044076         -0.084391    0.042179
+      diff      se_ind         z_ind      p_ind       CI_low      CI_high
+ -0.004475 0.003729223 -1.199982e+00 0.23014638 -0.011784277  0.002834277
+ -0.011672 0.110871823 -1.052747e-01 0.91615782 -0.228980772  0.205636772
+ -0.004864 0.003256517 -1.493620e+00 0.13527494 -0.011246774  0.001518774
+  0.023177 0.095310159  2.431745e-01 0.80787022 -0.163630913  0.209984913
+ -0.001666 0.022908914 -7.272278e-02 0.94202672 -0.046567472  0.043235472
+  0.001267 0.355537553  3.563618e-03 0.99715665 -0.695586605  0.698120605
+ -0.001854 0.004290389 -4.321286e-01 0.66564794 -0.010263163  0.006555163
+ -0.004404 0.090299093 -4.877125e-02 0.96110159 -0.181390222  0.172582222
+ -0.002381 0.002884848 -8.253469e-01 0.40917469 -0.008035301  0.003273301
+ -0.027455 0.116904638 -2.348495e-01 0.81432552 -0.256588091  0.201678091
+ -0.005056 0.002109205 -2.397112e+00 0.01652486 -0.009190041 -0.000921959
+  0.091640 0.486706257  1.882861e-01 0.85065242 -0.862304264  1.045584264
+ -0.003483 0.005693072 -6.117963e-01 0.54067257 -0.014641421  0.007675421
+ -0.000161 0.050625339 -3.180226e-03 0.99746255 -0.099386664  0.099064664
+  0.000002 0.210659871  9.493977e-06 0.99999242 -0.412891347  0.412895347
+  0.004573 0.002480935  1.843257e+00 0.06529151 -0.000289632  0.009435632
+  0.014773 0.101909975  1.449613e-01 0.88474145 -0.184970550  0.214516550
+ -0.003737 0.004284630 -8.721872e-01 0.38310624 -0.012134876  0.004660876
+ -0.026396 0.367870341 -7.175354e-02 0.94279805 -0.747421868  0.694629868
+ -0.000791 0.003609202 -2.191620e-01 0.82652383 -0.007865036  0.006283036
+ -0.006084 0.061006244 -9.972750e-02 0.92056067 -0.125656238  0.113488238
+
+
+COLONNES IMPORTANTES DETECTEES :
+[1] "country"           "estimate.GPRA_SUP" "se.GPRA_SUP"      
+[4] "estimate.GPRT_SUP" "se.GPRT_SUP"       "se_ind"           
+
+
+EXTRACTION DES COLONNES IMPORTANTES :
+ country estimate.GPRA_SUP se.GPRA_SUP estimate.GPRT_SUP se.GPRT_SUP
+     DEU          0.001129    0.001948         -0.003346    0.003180
+     DEU          0.034596    0.105784          0.022924    0.033201
+     GBR          0.003842    0.002359         -0.001022    0.002245
+     GBR         -0.064704    0.088560         -0.041527    0.035230
+     IND          0.002596    0.002785          0.000930    0.022739
+     IND         -0.024079    0.338084         -0.022812    0.110028
+     JPN          0.000710    0.004196         -0.001144    0.000895
+     JPN         -0.063324    0.066658         -0.067728    0.060915
+     KOR          0.003168    0.002285          0.000787    0.001761
+     KOR         -0.124647    0.084771         -0.152102    0.080502
+     MEX          0.002704    0.001690         -0.002352    0.001262
+     MEX         -0.173397    0.480208         -0.081757    0.079267
+     NOR          0.007394    0.004945          0.003911    0.002821
+     NOR         -0.049895    0.035604         -0.050056    0.035990
+     PAK          0.180961    0.149042          0.180963    0.148876
+     SAU          0.001561    0.001701          0.006134    0.001806
+     SAU          0.111432    0.070667          0.126205    0.073429
+     TUR          0.002194    0.003313         -0.001543    0.002717
+     TUR         -0.090177    0.358209         -0.116573    0.083755
+     USA          0.000076    0.002017         -0.000715    0.002993
+     USA         -0.078307    0.044076         -0.084391    0.042179
+      se_ind
+ 0.003729223
+ 0.110871823
+ 0.003256517
+ 0.095310159
+ 0.022908914
+ 0.355537553
+ 0.004290389
+ 0.090299093
+ 0.002884848
+ 0.116904638
+ 0.002109205
+ 0.486706257
+ 0.005693072
+ 0.050625339
+ 0.210659871
+ 0.002480935
+ 0.101909975
+ 0.004284630
+ 0.367870341
+ 0.003609202
+ 0.061006244
+
+
+###############################################################
+FICHIER : H5_H6_PAIRED 
+CHEMIN  : C:/Users/clien/Downloads/RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS/RIMEH_ECONOMETRIE/results/analysis/FORMAL_H1_H9/H5_H6_PAIRED_THETA_DETAIL.csv 
+###############################################################
+
+DIMENSIONS : 64 lignes x 12 colonnes
+
+COLONNES EXACTES :
+01 : country
+02 : model
+03 : estimate.theta_1
+04 : se.theta_1
+05 : estimate.theta_2
+06 : se.theta_2
+07 : diff
+08 : se_ind
+09 : z_ind
+10 : p_ind
+11 : ci_low_ind
+12 : ci_high_ind
+
+
+CONTENU COMPLET :
+ country    model estimate.theta_1 se.theta_1 estimate.theta_2 se.theta_2
+     DEU GPRA_SUP         0.001129   0.001948         0.034596   0.105784
+     DEU GPRT_DEM        -0.002223   0.001711        -0.006484   0.004568
+     DEU GPRT_PRE        -0.003304   0.005956         0.008261   0.026400
+     DEU GPRT_SUP        -0.003346   0.003180         0.022924   0.033201
+     DEU GPRT_VIX        -0.003641   0.002742        -0.025243   0.011748
+     DEU  SUP_DEM        -0.043625   0.031938        -0.006883   0.004665
+     DEU  SUP_PRE         0.030025   0.087859         0.008593   0.012126
+     GBR GPRA_SUP         0.003842   0.002359        -0.064704   0.088560
+     GBR GPRT_DEM        -0.001056   0.002128        -0.005159   0.005047
+     GBR GPRT_PRE        -0.000337   0.001730         0.009397   0.009854
+     GBR GPRT_SUP        -0.001022   0.002245        -0.041527   0.035230
+     GBR GPRT_VIX        -0.004591   0.001751         0.051701   0.007836
+     GBR  SUP_DEM        -0.041417   0.046857        -0.005035   0.015490
+     IND GPRA_SUP         0.002596   0.002785        -0.024079   0.338084
+     IND GPRT_DEM         0.001464   0.011802        -0.003233   0.016560
+     IND GPRT_PRE         0.000775   0.004763         0.012490   0.096160
+     IND GPRT_SUP         0.000930   0.022739        -0.022812   0.110028
+     IND  SUP_DEM        -0.031641   0.088865        -0.003154   0.001766
+     IND  SUP_PRE         0.010267   0.031516         0.013084   0.015331
+     JPN GPRA_SUP         0.000710   0.004196        -0.063324   0.066658
+     JPN GPRT_DEM         0.000827   0.001590        -0.003937   0.002943
+     JPN GPRT_PRE        -0.001161   0.000925        -0.003504   0.004036
+     JPN GPRT_SUP        -0.001144   0.000895        -0.067728   0.060915
+     JPN  SUP_DEM        -0.073293   0.061751        -0.003464   0.003325
+     JPN  SUP_PRE        -0.065806   0.067312        -0.003371   0.004020
+     KOR GPRA_SUP         0.003168   0.002285        -0.124647   0.084771
+     KOR GPRT_DEM         0.001130   0.002619        -0.007341   0.004108
+     KOR GPRT_PRE         0.000827   0.002050         0.018171   0.009770
+     KOR GPRT_SUP         0.000787   0.001761        -0.152102   0.080502
+     KOR  SUP_DEM        -0.146125   0.521763        -0.005057   0.013147
+     KOR  SUP_PRE        -0.131456   0.084386         0.017352   0.009634
+     MEX GPRA_SUP         0.002704   0.001690        -0.173397   0.480208
+     MEX GPRT_DEM        -0.002262   0.001547         0.003068   0.002464
+     MEX GPRT_PRE        -0.002235   0.001495         0.001578   0.003338
+     MEX GPRT_SUP        -0.002352   0.001262        -0.081757   0.079267
+     MEX  SUP_DEM        -0.171566   0.160590         0.002884   0.003718
+     MEX  SUP_PRE        -0.174655   0.093730         0.002620   0.003874
+     NOR GPRA_SUP         0.007394   0.004945        -0.049895   0.035604
+     NOR GPRT_DEM         0.004015   0.002673        -0.006717   0.006515
+     NOR GPRT_PRE         0.004418   0.002749        -0.020407   0.017816
+     NOR GPRT_SUP         0.003911   0.002821        -0.050056   0.035990
+     NOR  SUP_DEM        -0.051061   0.036515        -0.006888   0.006856
+     NOR  SUP_PRE        -0.051789   0.131401        -0.006418   0.038231
+     PAK GPRT_DEM         0.006704   0.004533         0.016887   0.009328
+     PAK  SUP_DEM         0.179884   0.128286         0.026683   0.009083
+     PAK  SUP_PRE         0.286099   1.068063         0.092336   0.034167
+     SAU GPRA_SUP         0.001561   0.001701         0.111432   0.070667
+     SAU GPRT_DEM         0.005931   0.006506         0.003156   0.018628
+     SAU GPRT_PRE         0.005943   0.002367        -0.013174   0.011362
+     SAU GPRT_SUP         0.006134   0.001806         0.126205   0.073429
+     SAU  SUP_DEM         0.116097   0.071827         0.004491   0.005564
+     SAU  SUP_PRE         0.110473   0.072095        -0.013084   0.011622
+     TUR GPRA_SUP         0.002194   0.003313        -0.090177   0.358209
+     TUR GPRT_DEM        -0.003436   0.001939        -0.006128   0.004138
+     TUR GPRT_PRE        -0.001342   0.003708         0.019402   0.012633
+     TUR GPRT_SUP        -0.001543   0.002717        -0.116573   0.083755
+     TUR  SUP_DEM        -0.118467   0.087203        -0.002623   0.002673
+     TUR  SUP_PRE        -0.115557   0.079170         0.018922   0.010255
+     USA GPRA_SUP         0.000076   0.002017        -0.078307   0.044076
+     USA GPRT_DEM        -0.000324   0.003698        -0.003145   0.005279
+     USA GPRT_PRE         0.000387   0.002527        -0.001786   0.023243
+     USA GPRT_SUP        -0.000715   0.002993        -0.084391   0.042179
+     USA  SUP_DEM        -0.083604   0.042419        -0.002984   0.005210
+     USA  SUP_PRE        -0.083009   0.041946         0.001675   0.004511
+      diff      se_ind       z_ind        p_ind    ci_low_ind   ci_high_ind
+ -0.033467 0.105801935 -0.31631747 7.517616e-01 -0.2408387918  0.1739047918
+  0.004261 0.004877924  0.87352730 3.823757e-01 -0.0052997315  0.0138217315
+ -0.011565 0.027063517 -0.42732806 6.691404e-01 -0.0646094927  0.0414794927
+ -0.026270 0.033352943 -0.78763664 4.309093e-01 -0.0916417681  0.0391017681
+  0.021602 0.012063750  1.79065379 7.334887e-02 -0.0020429503  0.0452469503
+ -0.036742 0.032276897 -1.13833744 2.549796e-01 -0.1000047178  0.0265207178
+  0.021432 0.088691847  0.24164566 8.090547e-01 -0.1524040205  0.1952680205
+  0.068546 0.088591413  0.77373187 4.390894e-01 -0.1050931697  0.2421851697
+  0.004103 0.005477280  0.74909448 4.538003e-01 -0.0066324682  0.0148384682
+ -0.009734 0.010004710 -0.97294177 3.305822e-01 -0.0293432310  0.0098752310
+  0.040505 0.035301458  1.14740304 2.512151e-01 -0.0286858573  0.1096958573
+ -0.056292 0.008029253 -7.01086427 2.368504e-12 -0.0720293351 -0.0405546649
+ -0.036382 0.049350973 -0.73720937 4.609950e-01 -0.1331099073  0.0603459073
+  0.026675 0.338095471  0.07889783 9.371139e-01 -0.6359921225  0.6893421225
+  0.004697 0.020335211  0.23097867 8.173314e-01 -0.0351600134  0.0445540134
+ -0.011715 0.096277888 -0.12167903 9.031532e-01 -0.2004196610  0.1769896610
+  0.023742 0.112353117  0.21131590 8.326408e-01 -0.1964701094  0.2439541094
+ -0.028487 0.088882546 -0.32050162 7.485881e-01 -0.2026967901  0.1457227901
+ -0.002817 0.035047080 -0.08037759 9.359369e-01 -0.0715092768  0.0658752768
+  0.064034 0.066789935  0.95873727 3.376911e-01 -0.0668742721  0.1949422721
+  0.004764 0.003345048  1.42419463 1.543901e-01 -0.0017922949  0.0113202949
+  0.002343 0.004140643  0.56585420 5.714929e-01 -0.0057726595  0.0104586595
+  0.066584 0.060921575  1.09294614 2.744174e-01 -0.0528222862  0.1859902862
+ -0.069829 0.061840453 -1.12917996 2.588219e-01 -0.1910362879  0.0513782879
+ -0.062435 0.067431934 -0.92589662 3.544997e-01 -0.1946015909  0.0697315909
+  0.127815 0.084801790  1.50722054 1.317541e-01 -0.0383965093  0.2940265093
+  0.008471 0.004871840  1.73876810 8.207556e-02 -0.0010778064  0.0180198064
+ -0.017344 0.009982755 -1.73739612 8.231728e-02 -0.0369102001  0.0022222001
+  0.152889 0.080521259  1.89874081 5.759856e-02 -0.0049326673  0.3107106673
+ -0.141068 0.521928608 -0.27028218 7.869432e-01 -1.1640480715  0.8819120715
+ -0.148808 0.084934157 -1.75203953 7.976701e-02 -0.3152789469  0.0176629469
+  0.176101 0.480210974  0.36671590 7.138309e-01 -0.7651125087  1.1173145087
+ -0.005330 0.002909382 -1.83200404 6.695082e-02 -0.0110323892  0.0003723892
+ -0.003813 0.003657495 -1.04251683 2.971721e-01 -0.0109816900  0.0033556900
+  0.079405 0.079277045  1.00161402 3.165300e-01 -0.0759780091  0.2347880091
+ -0.174450 0.160633034 -1.08601572 2.774720e-01 -0.4892907467  0.1403907467
+ -0.177275 0.093810025 -1.88972341 5.879496e-02 -0.3611426488  0.0065926488
+  0.057289 0.035945762  1.59376227 1.109893e-01 -0.0131646945  0.1277426945
+  0.010732 0.007042028  1.52399287 1.275105e-01 -0.0030703743  0.0245343743
+  0.024825 0.018026837  1.37711346 1.684772e-01 -0.0105076008  0.0601576008
+  0.053967 0.036100390  1.49491461 1.349367e-01 -0.0167897639  0.1247237639
+ -0.044173 0.037153061 -1.18894644 2.344607e-01 -0.1169930001  0.0286470001
+ -0.045371 0.136849670 -0.33153898 7.402374e-01 -0.3135963531  0.2228543531
+ -0.010183 0.010371098 -0.98186325 3.261672e-01 -0.0305103520  0.0101443520
+  0.153201 0.128607149  1.19123238 2.335624e-01 -0.0988690114  0.4052710114
+  0.193763 1.068609356  0.18132257 8.561144e-01 -1.9007113379  2.2882373379
+ -0.109871 0.070687469 -1.55432075 1.201079e-01 -0.2484184395  0.0286764395
+  0.002775 0.019731458  0.14063837 8.881556e-01 -0.0358986569  0.0414486569
+  0.019117 0.011605935  1.64717445 9.952219e-02 -0.0036306331  0.0418646331
+ -0.120071 0.073451206 -1.63470427 1.021111e-01 -0.2640353639  0.0238933639
+  0.111606 0.072042182  1.54917573 1.213395e-01 -0.0295966772  0.2528086772
+  0.123557 0.073025748  1.69196486 9.065267e-02 -0.0195734666  0.2666874666
+  0.092371 0.358224320  0.25785798 7.965165e-01 -0.6097486678  0.7944906678
+  0.002692 0.004569766  0.58908919 5.558014e-01 -0.0062647422  0.0116487422
+ -0.020744 0.013165939 -1.57558073 1.151225e-01 -0.0465492407  0.0050612407
+  0.115030 0.083799058  1.37268846 1.698492e-01 -0.0492161536  0.2792761536
+ -0.115844 0.087243958 -1.32781688 1.842386e-01 -0.2868421569  0.0551541569
+ -0.134479 0.079831409 -1.68453747 9.207785e-02 -0.2909485624  0.0219905624
+  0.078383 0.044122127  1.77650095 7.565039e-02 -0.0080963683  0.1648623683
+  0.002821 0.006445389  0.43767720 6.616203e-01 -0.0098119633  0.0154539633
+  0.002173 0.023379965  0.09294282 9.259490e-01 -0.0436517320  0.0479977320
+  0.083676 0.042285058  1.97885506 4.783233e-02  0.0007972872  0.1665547128
+ -0.080620 0.042737755 -1.88638830 5.924265e-02 -0.1643859988  0.0031459988
+ -0.084684 0.042187866 -2.00730703 4.471698e-02 -0.1673722173 -0.0019957827
+
+
+COLONNES IMPORTANTES DETECTEES :
+[1] "country"          "estimate.theta_1" "se.theta_1"       "estimate.theta_2"
+[5] "se.theta_2"       "se_ind"          
+
+
+EXTRACTION DES COLONNES IMPORTANTES :
+ country estimate.theta_1 se.theta_1 estimate.theta_2 se.theta_2      se_ind
+     DEU         0.001129   0.001948         0.034596   0.105784 0.105801935
+     DEU        -0.002223   0.001711        -0.006484   0.004568 0.004877924
+     DEU        -0.003304   0.005956         0.008261   0.026400 0.027063517
+     DEU        -0.003346   0.003180         0.022924   0.033201 0.033352943
+     DEU        -0.003641   0.002742        -0.025243   0.011748 0.012063750
+     DEU        -0.043625   0.031938        -0.006883   0.004665 0.032276897
+     DEU         0.030025   0.087859         0.008593   0.012126 0.088691847
+     GBR         0.003842   0.002359        -0.064704   0.088560 0.088591413
+     GBR        -0.001056   0.002128        -0.005159   0.005047 0.005477280
+     GBR        -0.000337   0.001730         0.009397   0.009854 0.010004710
+     GBR        -0.001022   0.002245        -0.041527   0.035230 0.035301458
+     GBR        -0.004591   0.001751         0.051701   0.007836 0.008029253
+     GBR        -0.041417   0.046857        -0.005035   0.015490 0.049350973
+     IND         0.002596   0.002785        -0.024079   0.338084 0.338095471
+     IND         0.001464   0.011802        -0.003233   0.016560 0.020335211
+     IND         0.000775   0.004763         0.012490   0.096160 0.096277888
+     IND         0.000930   0.022739        -0.022812   0.110028 0.112353117
+     IND        -0.031641   0.088865        -0.003154   0.001766 0.088882546
+     IND         0.010267   0.031516         0.013084   0.015331 0.035047080
+     JPN         0.000710   0.004196        -0.063324   0.066658 0.066789935
+     JPN         0.000827   0.001590        -0.003937   0.002943 0.003345048
+     JPN        -0.001161   0.000925        -0.003504   0.004036 0.004140643
+     JPN        -0.001144   0.000895        -0.067728   0.060915 0.060921575
+     JPN        -0.073293   0.061751        -0.003464   0.003325 0.061840453
+     JPN        -0.065806   0.067312        -0.003371   0.004020 0.067431934
+     KOR         0.003168   0.002285        -0.124647   0.084771 0.084801790
+     KOR         0.001130   0.002619        -0.007341   0.004108 0.004871840
+     KOR         0.000827   0.002050         0.018171   0.009770 0.009982755
+     KOR         0.000787   0.001761        -0.152102   0.080502 0.080521259
+     KOR        -0.146125   0.521763        -0.005057   0.013147 0.521928608
+     KOR        -0.131456   0.084386         0.017352   0.009634 0.084934157
+     MEX         0.002704   0.001690        -0.173397   0.480208 0.480210974
+     MEX        -0.002262   0.001547         0.003068   0.002464 0.002909382
+     MEX        -0.002235   0.001495         0.001578   0.003338 0.003657495
+     MEX        -0.002352   0.001262        -0.081757   0.079267 0.079277045
+     MEX        -0.171566   0.160590         0.002884   0.003718 0.160633034
+     MEX        -0.174655   0.093730         0.002620   0.003874 0.093810025
+     NOR         0.007394   0.004945        -0.049895   0.035604 0.035945762
+     NOR         0.004015   0.002673        -0.006717   0.006515 0.007042028
+     NOR         0.004418   0.002749        -0.020407   0.017816 0.018026837
+     NOR         0.003911   0.002821        -0.050056   0.035990 0.036100390
+     NOR        -0.051061   0.036515        -0.006888   0.006856 0.037153061
+     NOR        -0.051789   0.131401        -0.006418   0.038231 0.136849670
+     PAK         0.006704   0.004533         0.016887   0.009328 0.010371098
+     PAK         0.179884   0.128286         0.026683   0.009083 0.128607149
+     PAK         0.286099   1.068063         0.092336   0.034167 1.068609356
+     SAU         0.001561   0.001701         0.111432   0.070667 0.070687469
+     SAU         0.005931   0.006506         0.003156   0.018628 0.019731458
+     SAU         0.005943   0.002367        -0.013174   0.011362 0.011605935
+     SAU         0.006134   0.001806         0.126205   0.073429 0.073451206
+     SAU         0.116097   0.071827         0.004491   0.005564 0.072042182
+     SAU         0.110473   0.072095        -0.013084   0.011622 0.073025748
+     TUR         0.002194   0.003313        -0.090177   0.358209 0.358224320
+     TUR        -0.003436   0.001939        -0.006128   0.004138 0.004569766
+     TUR        -0.001342   0.003708         0.019402   0.012633 0.013165939
+     TUR        -0.001543   0.002717        -0.116573   0.083755 0.083799058
+     TUR        -0.118467   0.087203        -0.002623   0.002673 0.087243958
+     TUR        -0.115557   0.079170         0.018922   0.010255 0.079831409
+     USA         0.000076   0.002017        -0.078307   0.044076 0.044122127
+     USA        -0.000324   0.003698        -0.003145   0.005279 0.006445389
+     USA         0.000387   0.002527        -0.001786   0.023243 0.023379965
+     USA        -0.000715   0.002993        -0.084391   0.042179 0.042285058
+     USA        -0.083604   0.042419        -0.002984   0.005210 0.042737755
+     USA        -0.083009   0.041946         0.001675   0.004511 0.042187866

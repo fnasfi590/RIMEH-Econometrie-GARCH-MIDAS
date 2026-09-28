@@ -1,0 +1,8 @@
+Test,Objet,Fichier
+ADF,Stationnarite,X4_STATIONARITY_ADF_PP_KPSS.csv
+Phillips-Perron,Stationnarite,X4_STATIONARITY_ADF_PP_KPSS.csv
+KPSS,Stationnarite,X4_STATIONARITY_ADF_PP_KPSS.csv
+ARCH-LM,Heteroscedasticite conditionnelle,X4_ARCH_LM.csv
+Ljung-Box rendements,Autocorrelation,X4_LJUNG_BOX.csv
+Ljung-Box rendements carres,Dependance dans la variance,X4_LJUNG_BOX.csv
+VIF,Multicollinearite,X4_VIF.csv

@@ -1,0 +1,20 @@
+$baseline
+Length  Class   Mode 
+     0   NULL   NULL 
+
+$interaction
+Length  Class   Mode 
+     0   NULL   NULL 
+
+$asymmetry
+Length  Class   Mode 
+     0   NULL   NULL 
+
+$importer_only
+Length  Class   Mode 
+     0   NULL   NULL 
+
+$exporter_only
+Length  Class   Mode 
+     0   NULL   NULL 
+

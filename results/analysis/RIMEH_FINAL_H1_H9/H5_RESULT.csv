@@ -1,0 +1,2 @@
+"H","N","Mean_Diff","t","p","Wilcoxon_p","Status"
+"H5",11,-0.00270936363636364,-1.47562471855898,0.170823089927343,0.197326044882155,"Comparaison θ1/θ2 avec approximation indépendante des SE; pas de VCOV exacte"

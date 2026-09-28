@@ -1,0 +1,57 @@
+RESUME H1-H9
+============================
+
+H1
+Estimate : 0.0028384286
+P-value : 0.47657462
+Decision 5% : NON-REJET DE H0 A 5%
+Test : Significance du parametre
+
+H2
+Estimate : -0.010797977
+P-value : 0.35729934
+Decision 5% : NON-REJET DE H0 A 5%
+Test : Significance du parametre
+
+H3
+Estimate : -0.013356286
+P-value : 0.36784649
+Decision 5% : NON-REJET DE H0 A 5%
+Test : Significance du parametre
+
+H4
+Estimate : -0.0068042
+P-value : 0.36949409
+Decision 5% : NON-REJET DE H0 A 5%
+Test : Test formel spécifique
+
+H5
+Estimate : -0.010797977
+P-value : 0.35729934
+Decision 5% : NON-REJET DE H0 A 5%
+Test : Comparaison Theta
+
+H6
+Estimate : -0.013356286
+P-value : 0.36784649
+Decision 5% : NON-REJET DE H0 A 5%
+Test : Comparaison Theta
+
+H7
+Estimate : 0.0028384286
+P-value : 0.47657462
+Decision 5% : NON-REJET DE H0 A 5%
+Test : Test du parametre
+
+H8
+Estimate : -0.00037559091
+P-value : 0.38510895
+Decision 5% : NON-REJET DE H0 A 5%
+Test : Test formel spécifique
+
+H9
+Estimate : -0.014318595
+P-value : 0.38356881
+Decision 5% : NON-REJET DE H0 A 5%
+Test : Comparaison GPRT vs GPRA
+

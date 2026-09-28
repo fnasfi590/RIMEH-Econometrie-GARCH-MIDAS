@@ -1,0 +1,74 @@
+RIMEH - X.4 FINAL
+=================
+
+Date : 2026-09-24 18:10:02 
+
+RESUME GLOBAL
+                     Element Valeur
+1    Observations mensuelles   3131
+2  Observations quotidiennes  64011
+3        Tests stationnarite     77
+4               Pays ARCH-LM     11
+5             Pays Ljung-Box     11
+6              Variables VIF      6
+7           Inflation valide   3027
+8       Interest rate valide      0
+9       Exchange rate valide      0
+10                GDP valide      0
+
+STATIONNARITE
+             Test N_tests Stationary_5pct Non_stationary_5pct
+1             ADF      77              72                   5
+2 Phillips-Perron      77              77                   0
+3            KPSS      77              49                  28
+
+ARCH-LM
+  N_pays ARCH_significatif_5pct ARCH_non_significatif_5pct
+1     11                     11                          0
+
+LJUNG-BOX
+  N_pays Returns_significatifs_5pct Returns_carres_significatifs_5pct
+1     11                          9                                11
+
+VIF
+   Variable      VIF                      Interpretation
+1      GPRA 1.006488 Pas de multicollinearite importante
+2       SUP 1.012220 Pas de multicollinearite importante
+3       DEM 1.008141 Pas de multicollinearite importante
+4       PRE 1.048631 Pas de multicollinearite importante
+5       VIX 1.058396 Pas de multicollinearite importante
+6 inflation 1.007081 Pas de multicollinearite importante
+
+DIAGNOSTIC VARIABLES
+        Variable N_total N_NA N_Inf N_Finite          Mean         SD
+1           GPRT    3131    0     0     3131  1.083848e+02 45.2293482
+2           GPRA    3131    0     0     3131  1.081927e+02 78.8030691
+3            SUP    3131  485     0     2646  4.086634e-04  0.9218758
+4            DEM    3131  485     0     2646 -1.628019e-01 18.1888342
+5            PRE    3131  485     0     2646 -4.186805e-02  7.7828273
+6            VIX    3131    0     0     3131  1.975297e+01  7.9592211
+7      inflation    3131  104     0     3027  3.832820e-01  0.8322020
+8  interest_rate    3131 3131     0        0            NA         NA
+9  exchange_rate    3131 3131     0        0            NA         NA
+10           GDP    3131 3131     0        0            NA         NA
+          Min      Median        Max
+1   44.357689 95.83842468 403.713623
+2   28.454628 91.76210785 854.074951
+3   -7.807878 -0.02726639   2.599759
+4  -70.629661  0.17179318  49.913164
+5  -36.055874  0.88505254  15.811798
+6   10.125455 17.70500000  62.668947
+7   -1.933869  0.24110921  12.729774
+8          NA          NA         NA
+9          NA          NA         NA
+10         NA          NA         NA
+
+CORRELATION
+   Variable   GPRT    GPRA     SUP     DEM     PRE     VIX inflation
+1      GPRT 1.0000  0.4874  0.0058  0.0506  0.0389  0.0328    0.1294
+2      GPRA 0.4874  1.0000  0.0089  0.0754 -0.0065  0.0228   -0.0062
+3       SUP 0.0058  0.0089  1.0000 -0.0034 -0.0211  0.1050   -0.0296
+4       DEM 0.0506  0.0754 -0.0034  1.0000  0.0008 -0.0452   -0.0130
+5       PRE 0.0389 -0.0065 -0.0211  0.0008  1.0000 -0.2027    0.0680
+6       VIX 0.0328  0.0228  0.1050 -0.0452 -0.2027  1.0000    0.0206
+7 inflation 0.1294 -0.0062 -0.0296 -0.0130  0.0680  0.0206    1.0000

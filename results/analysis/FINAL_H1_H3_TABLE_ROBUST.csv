@@ -1,0 +1,4 @@
+"Hypothesis","Target","N","Mean_Theta","Median_Theta","Positive_N","Negative_N","Significant_5pct","Mean_P_value","Status"
+"H1","VIX",13,0.00907661538461538,0.006737,7,6,7,0.180738769230769,"Descriptif; pas un test formel"
+"H2","DEMAND",22,-0.000375590909090909,-0.0016395,9,13,0,0.385108954545455,"Descriptif; pas un test formel"
+"H3","SUPPLY",84,-0.0133562857142857,-0.0028035,36,48,6,0.367846488095238,"Descriptif; pas un test formel"

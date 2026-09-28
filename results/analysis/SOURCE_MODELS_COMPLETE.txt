@@ -1,0 +1,1378 @@
+
+============================================================
+FICHIER : 08_garch_midas_models.R
+============================================================
+
+--- lignes 1-15 ---
+    1: # ============================================================
+    2: # RIMEH - PARTIE 3B
+    3: # GARCH-MIDAS using rumidas.
+    4: # Parsimonious models: one/two monthly MIDAS variables at a time.
+    5: # This avoids pretending rumidas directly estimates an arbitrary
+    6: # 10+ regressor long-run equation in one call.
+    7: # ============================================================
+    8: rm(list = ls())
+    9: source("scripts/00_packages.R")
+   10: 
+   11: if (!requireNamespace("rumidas", quietly=TRUE)) stop("Install package 'rumidas' first.")
+   12: if (!file.exists("data/processed/daily_clean.csv") || !file.exists("data/processed/monthly_model_data.csv")) stop("Run scripts 06 and 07 first.")
+   13: 
+   14: daily <- readr::read_csv("data/processed/daily_clean.csv", show_col_types=FALSE) %>% mutate(date=as.Date(date))
+   15: monthly <- readr::read_csv("data/processed/monthly_model_data.csv", show_col_types=FALSE) %>% mutate(date=as.Date(date))
+
+--- lignes 1-16 ---
+    1: # ============================================================
+    2: # RIMEH - PARTIE 3B
+    3: # GARCH-MIDAS using rumidas.
+    4: # Parsimonious models: one/two monthly MIDAS variables at a time.
+    5: # This avoids pretending rumidas directly estimates an arbitrary
+    6: # 10+ regressor long-run equation in one call.
+    7: # ============================================================
+    8: rm(list = ls())
+    9: source("scripts/00_packages.R")
+   10: 
+   11: if (!requireNamespace("rumidas", quietly=TRUE)) stop("Install package 'rumidas' first.")
+   12: if (!file.exists("data/processed/daily_clean.csv") || !file.exists("data/processed/monthly_model_data.csv")) stop("Run scripts 06 and 07 first.")
+   13: 
+   14: daily <- readr::read_csv("data/processed/daily_clean.csv", show_col_types=FALSE) %>% mutate(date=as.Date(date))
+   15: monthly <- readr::read_csv("data/processed/monthly_model_data.csv", show_col_types=FALSE) %>% mutate(date=as.Date(date))
+   16: dir.create("results/models/garch_midas", recursive=TRUE, showWarnings=FALSE)
+
+--- lignes 1-17 ---
+    1: # ============================================================
+    2: # RIMEH - PARTIE 3B
+    3: # GARCH-MIDAS using rumidas.
+    4: # Parsimonious models: one/two monthly MIDAS variables at a time.
+    5: # This avoids pretending rumidas directly estimates an arbitrary
+    6: # 10+ regressor long-run equation in one call.
+    7: # ============================================================
+    8: rm(list = ls())
+    9: source("scripts/00_packages.R")
+   10: 
+   11: if (!requireNamespace("rumidas", quietly=TRUE)) stop("Install package 'rumidas' first.")
+   12: if (!file.exists("data/processed/daily_clean.csv") || !file.exists("data/processed/monthly_model_data.csv")) stop("Run scripts 06 and 07 first.")
+   13: 
+   14: daily <- readr::read_csv("data/processed/daily_clean.csv", show_col_types=FALSE) %>% mutate(date=as.Date(date))
+   15: monthly <- readr::read_csv("data/processed/monthly_model_data.csv", show_col_types=FALSE) %>% mutate(date=as.Date(date))
+   16: dir.create("results/models/garch_midas", recursive=TRUE, showWarnings=FALSE)
+   17: dir.create("results/tables", recursive=TRUE, showWarnings=FALSE)
+
+--- lignes 3-23 ---
+    3: # GARCH-MIDAS using rumidas.
+    4: # Parsimonious models: one/two monthly MIDAS variables at a time.
+    5: # This avoids pretending rumidas directly estimates an arbitrary
+    6: # 10+ regressor long-run equation in one call.
+    7: # ============================================================
+    8: rm(list = ls())
+    9: source("scripts/00_packages.R")
+   10: 
+   11: if (!requireNamespace("rumidas", quietly=TRUE)) stop("Install package 'rumidas' first.")
+   12: if (!file.exists("data/processed/daily_clean.csv") || !file.exists("data/processed/monthly_model_data.csv")) stop("Run scripts 06 and 07 first.")
+   13: 
+   14: daily <- readr::read_csv("data/processed/daily_clean.csv", show_col_types=FALSE) %>% mutate(date=as.Date(date))
+   15: monthly <- readr::read_csv("data/processed/monthly_model_data.csv", show_col_types=FALSE) %>% mutate(date=as.Date(date))
+   16: dir.create("results/models/garch_midas", recursive=TRUE, showWarnings=FALSE)
+   17: dir.create("results/tables", recursive=TRUE, showWarnings=FALSE)
+   18: 
+   19: # Standardize a monthly series and build a monthly xts aligned to the daily sample.
+   20: fit_pair <- function(cc, vars, K=3) {
+   21:   d <- daily %>%
+   22:     dplyr::filter(country == cc, is.finite(return)) %>%
+   23:     dplyr::arrange(date)
+
+--- lignes 8-28 ---
+    8: rm(list = ls())
+    9: source("scripts/00_packages.R")
+   10: 
+   11: if (!requireNamespace("rumidas", quietly=TRUE)) stop("Install package 'rumidas' first.")
+   12: if (!file.exists("data/processed/daily_clean.csv") || !file.exists("data/processed/monthly_model_data.csv")) stop("Run scripts 06 and 07 first.")
+   13: 
+   14: daily <- readr::read_csv("data/processed/daily_clean.csv", show_col_types=FALSE) %>% mutate(date=as.Date(date))
+   15: monthly <- readr::read_csv("data/processed/monthly_model_data.csv", show_col_types=FALSE) %>% mutate(date=as.Date(date))
+   16: dir.create("results/models/garch_midas", recursive=TRUE, showWarnings=FALSE)
+   17: dir.create("results/tables", recursive=TRUE, showWarnings=FALSE)
+   18: 
+   19: # Standardize a monthly series and build a monthly xts aligned to the daily sample.
+   20: fit_pair <- function(cc, vars, K=3) {
+   21:   d <- daily %>%
+   22:     dplyr::filter(country == cc, is.finite(return)) %>%
+   23:     dplyr::arrange(date)
+   24: 
+   25:   m <- monthly %>%
+   26:     dplyr::filter(country == cc) %>%
+   27:     dplyr::arrange(date)
+   28: 
+
+--- lignes 12-32 ---
+   12: if (!file.exists("data/processed/daily_clean.csv") || !file.exists("data/processed/monthly_model_data.csv")) stop("Run scripts 06 and 07 first.")
+   13: 
+   14: daily <- readr::read_csv("data/processed/daily_clean.csv", show_col_types=FALSE) %>% mutate(date=as.Date(date))
+   15: monthly <- readr::read_csv("data/processed/monthly_model_data.csv", show_col_types=FALSE) %>% mutate(date=as.Date(date))
+   16: dir.create("results/models/garch_midas", recursive=TRUE, showWarnings=FALSE)
+   17: dir.create("results/tables", recursive=TRUE, showWarnings=FALSE)
+   18: 
+   19: # Standardize a monthly series and build a monthly xts aligned to the daily sample.
+   20: fit_pair <- function(cc, vars, K=3) {
+   21:   d <- daily %>%
+   22:     dplyr::filter(country == cc, is.finite(return)) %>%
+   23:     dplyr::arrange(date)
+   24: 
+   25:   m <- monthly %>%
+   26:     dplyr::filter(country == cc) %>%
+   27:     dplyr::arrange(date)
+   28: 
+   29:   if (nrow(d) < 500 || nrow(m) < 24) {
+   30:     stop("Insufficient data")
+   31:   }
+   32: 
+
+--- lignes 92-112 ---
+   92:   cat("  required_start =", format(required_start), "\n")
+   93:   cat("  r_start_final =", format(as.Date(zoo::index(r)[1])), "\n")
+   94:   cat("  r_end_final =", format(as.Date(zoo::index(r)[NROW(r)])), "\n")
+   95:   cat("  daily observations =", NROW(r), "\n")
+   96: 
+   97:   mm <- lapply(
+   98:     mats,
+   99:     function(z) {
+  100:       rumidas::mv_into_mat(
+  101:         r,
+  102:         z,
+  103:         K = K_use,
+  104:         type = "monthly"
+  105:       )
+  106:     }
+  107:   )
+  108: 
+  109:   if (length(mm) == 1) {
+  110:     args <- list(
+  111:       model = "GM",
+  112:       skew = "NO",
+
+--- lignes 126-146 ---
+  126:       mv_m = mm[[1]],
+  127:       mv_m_2 = mm[[2]],
+  128:       K = K,
+  129:       K_2 = K,
+  130:       lag_fun = "Beta",
+  131:       R = 50
+  132:     )
+  133:   } else {
+  134:     stop("Only one or two MIDAS variables are supported")
+  135:   }
+  136: 
+  137:   do.call(rumidas::ugmfit, args)
+  138: }
+  139: countries <- sort(unique(daily[["country"]]))
+  140: specs <- list(
+  141:   GPRT_SUP = c("GPRT", "SUP"),
+  142:   GPRA_SUP = c("GPRA", "SUP"),
+  143:   GPRT_DEM = c("GPRT", "DEM"),
+  144:   GPRT_PRE = c("GPRT", "PRE"),
+  145:   GPRT_VIX = c("GPRT", "VIX"),
+  146:   SUP_DEM = c("SUP", "DEM"),
+
+--- lignes 129-149 ---
+  129:       K_2 = K,
+  130:       lag_fun = "Beta",
+  131:       R = 50
+  132:     )
+  133:   } else {
+  134:     stop("Only one or two MIDAS variables are supported")
+  135:   }
+  136: 
+  137:   do.call(rumidas::ugmfit, args)
+  138: }
+  139: countries <- sort(unique(daily[["country"]]))
+  140: specs <- list(
+  141:   GPRT_SUP = c("GPRT", "SUP"),
+  142:   GPRA_SUP = c("GPRA", "SUP"),
+  143:   GPRT_DEM = c("GPRT", "DEM"),
+  144:   GPRT_PRE = c("GPRT", "PRE"),
+  145:   GPRT_VIX = c("GPRT", "VIX"),
+  146:   SUP_DEM = c("SUP", "DEM"),
+  147:   SUP_PRE = c("SUP", "PRE")
+  148: )
+  149: summary_rows <- list()
+
+--- lignes 133-153 ---
+  133:   } else {
+  134:     stop("Only one or two MIDAS variables are supported")
+  135:   }
+  136: 
+  137:   do.call(rumidas::ugmfit, args)
+  138: }
+  139: countries <- sort(unique(daily[["country"]]))
+  140: specs <- list(
+  141:   GPRT_SUP = c("GPRT", "SUP"),
+  142:   GPRA_SUP = c("GPRA", "SUP"),
+  143:   GPRT_DEM = c("GPRT", "DEM"),
+  144:   GPRT_PRE = c("GPRT", "PRE"),
+  145:   GPRT_VIX = c("GPRT", "VIX"),
+  146:   SUP_DEM = c("SUP", "DEM"),
+  147:   SUP_PRE = c("SUP", "PRE")
+  148: )
+  149: summary_rows <- list()
+  150: model_count <- 0
+  151: for (cc in countries) {
+  152:   for (nm in names(specs)) {
+  153:     vars <- specs[[nm]]
+
+--- lignes 134-154 ---
+  134:     stop("Only one or two MIDAS variables are supported")
+  135:   }
+  136: 
+  137:   do.call(rumidas::ugmfit, args)
+  138: }
+  139: countries <- sort(unique(daily[["country"]]))
+  140: specs <- list(
+  141:   GPRT_SUP = c("GPRT", "SUP"),
+  142:   GPRA_SUP = c("GPRA", "SUP"),
+  143:   GPRT_DEM = c("GPRT", "DEM"),
+  144:   GPRT_PRE = c("GPRT", "PRE"),
+  145:   GPRT_VIX = c("GPRT", "VIX"),
+  146:   SUP_DEM = c("SUP", "DEM"),
+  147:   SUP_PRE = c("SUP", "PRE")
+  148: )
+  149: summary_rows <- list()
+  150: model_count <- 0
+  151: for (cc in countries) {
+  152:   for (nm in names(specs)) {
+  153:     vars <- specs[[nm]]
+  154:     fit <- tryCatch(fit_pair(cc, vars, K=3), error=function(e){message("MIDAS failed ",cc,"/",nm,": ",e$message); NULL})
+
+--- lignes 135-155 ---
+  135:   }
+  136: 
+  137:   do.call(rumidas::ugmfit, args)
+  138: }
+  139: countries <- sort(unique(daily[["country"]]))
+  140: specs <- list(
+  141:   GPRT_SUP = c("GPRT", "SUP"),
+  142:   GPRA_SUP = c("GPRA", "SUP"),
+  143:   GPRT_DEM = c("GPRT", "DEM"),
+  144:   GPRT_PRE = c("GPRT", "PRE"),
+  145:   GPRT_VIX = c("GPRT", "VIX"),
+  146:   SUP_DEM = c("SUP", "DEM"),
+  147:   SUP_PRE = c("SUP", "PRE")
+  148: )
+  149: summary_rows <- list()
+  150: model_count <- 0
+  151: for (cc in countries) {
+  152:   for (nm in names(specs)) {
+  153:     vars <- specs[[nm]]
+  154:     fit <- tryCatch(fit_pair(cc, vars, K=3), error=function(e){message("MIDAS failed ",cc,"/",nm,": ",e$message); NULL})
+  155:     if (!is.null(fit)) {
+
+--- lignes 136-156 ---
+  136: 
+  137:   do.call(rumidas::ugmfit, args)
+  138: }
+  139: countries <- sort(unique(daily[["country"]]))
+  140: specs <- list(
+  141:   GPRT_SUP = c("GPRT", "SUP"),
+  142:   GPRA_SUP = c("GPRA", "SUP"),
+  143:   GPRT_DEM = c("GPRT", "DEM"),
+  144:   GPRT_PRE = c("GPRT", "PRE"),
+  145:   GPRT_VIX = c("GPRT", "VIX"),
+  146:   SUP_DEM = c("SUP", "DEM"),
+  147:   SUP_PRE = c("SUP", "PRE")
+  148: )
+  149: summary_rows <- list()
+  150: model_count <- 0
+  151: for (cc in countries) {
+  152:   for (nm in names(specs)) {
+  153:     vars <- specs[[nm]]
+  154:     fit <- tryCatch(fit_pair(cc, vars, K=3), error=function(e){message("MIDAS failed ",cc,"/",nm,": ",e$message); NULL})
+  155:     if (!is.null(fit)) {
+  156:       saveRDS(fit, file.path("results/models/garch_midas", paste0(cc,"_",nm,".rds")))
+
+--- lignes 137-157 ---
+  137:   do.call(rumidas::ugmfit, args)
+  138: }
+  139: countries <- sort(unique(daily[["country"]]))
+  140: specs <- list(
+  141:   GPRT_SUP = c("GPRT", "SUP"),
+  142:   GPRA_SUP = c("GPRA", "SUP"),
+  143:   GPRT_DEM = c("GPRT", "DEM"),
+  144:   GPRT_PRE = c("GPRT", "PRE"),
+  145:   GPRT_VIX = c("GPRT", "VIX"),
+  146:   SUP_DEM = c("SUP", "DEM"),
+  147:   SUP_PRE = c("SUP", "PRE")
+  148: )
+  149: summary_rows <- list()
+  150: model_count <- 0
+  151: for (cc in countries) {
+  152:   for (nm in names(specs)) {
+  153:     vars <- specs[[nm]]
+  154:     fit <- tryCatch(fit_pair(cc, vars, K=3), error=function(e){message("MIDAS failed ",cc,"/",nm,": ",e$message); NULL})
+  155:     if (!is.null(fit)) {
+  156:       saveRDS(fit, file.path("results/models/garch_midas", paste0(cc,"_",nm,".rds")))
+  157:       txt <- capture.output(summary(fit))
+
+--- lignes 138-158 ---
+  138: }
+  139: countries <- sort(unique(daily[["country"]]))
+  140: specs <- list(
+  141:   GPRT_SUP = c("GPRT", "SUP"),
+  142:   GPRA_SUP = c("GPRA", "SUP"),
+  143:   GPRT_DEM = c("GPRT", "DEM"),
+  144:   GPRT_PRE = c("GPRT", "PRE"),
+  145:   GPRT_VIX = c("GPRT", "VIX"),
+  146:   SUP_DEM = c("SUP", "DEM"),
+  147:   SUP_PRE = c("SUP", "PRE")
+  148: )
+  149: summary_rows <- list()
+  150: model_count <- 0
+  151: for (cc in countries) {
+  152:   for (nm in names(specs)) {
+  153:     vars <- specs[[nm]]
+  154:     fit <- tryCatch(fit_pair(cc, vars, K=3), error=function(e){message("MIDAS failed ",cc,"/",nm,": ",e$message); NULL})
+  155:     if (!is.null(fit)) {
+  156:       saveRDS(fit, file.path("results/models/garch_midas", paste0(cc,"_",nm,".rds")))
+  157:       txt <- capture.output(summary(fit))
+  158:       writeLines(txt, file.path("results/tables", paste0("GARCH_MIDAS_",cc,"_",nm,".txt")))
+
+--- lignes 139-159 ---
+  139: countries <- sort(unique(daily[["country"]]))
+  140: specs <- list(
+  141:   GPRT_SUP = c("GPRT", "SUP"),
+  142:   GPRA_SUP = c("GPRA", "SUP"),
+  143:   GPRT_DEM = c("GPRT", "DEM"),
+  144:   GPRT_PRE = c("GPRT", "PRE"),
+  145:   GPRT_VIX = c("GPRT", "VIX"),
+  146:   SUP_DEM = c("SUP", "DEM"),
+  147:   SUP_PRE = c("SUP", "PRE")
+  148: )
+  149: summary_rows <- list()
+  150: model_count <- 0
+  151: for (cc in countries) {
+  152:   for (nm in names(specs)) {
+  153:     vars <- specs[[nm]]
+  154:     fit <- tryCatch(fit_pair(cc, vars, K=3), error=function(e){message("MIDAS failed ",cc,"/",nm,": ",e$message); NULL})
+  155:     if (!is.null(fit)) {
+  156:       saveRDS(fit, file.path("results/models/garch_midas", paste0(cc,"_",nm,".rds")))
+  157:       txt <- capture.output(summary(fit))
+  158:       writeLines(txt, file.path("results/tables", paste0("GARCH_MIDAS_",cc,"_",nm,".txt")))
+  159:       # Store the printed summary as an auditable text result; package object is the authoritative estimate.
+
+--- lignes 146-166 ---
+  146:   SUP_DEM = c("SUP", "DEM"),
+  147:   SUP_PRE = c("SUP", "PRE")
+  148: )
+  149: summary_rows <- list()
+  150: model_count <- 0
+  151: for (cc in countries) {
+  152:   for (nm in names(specs)) {
+  153:     vars <- specs[[nm]]
+  154:     fit <- tryCatch(fit_pair(cc, vars, K=3), error=function(e){message("MIDAS failed ",cc,"/",nm,": ",e$message); NULL})
+  155:     if (!is.null(fit)) {
+  156:       saveRDS(fit, file.path("results/models/garch_midas", paste0(cc,"_",nm,".rds")))
+  157:       txt <- capture.output(summary(fit))
+  158:       writeLines(txt, file.path("results/tables", paste0("GARCH_MIDAS_",cc,"_",nm,".txt")))
+  159:       # Store the printed summary as an auditable text result; package object is the authoritative estimate.
+  160:       summary_rows[[paste(cc,nm)]] <- tibble::tibble(country=cc, model=nm, var1=vars[1], var2=vars[2], status="OK")
+  161:       model_count <- model_count+1
+  162:     }
+  163:   }
+  164: }
+  165: readr::write_csv(dplyr::bind_rows(summary_rows), "results/tables/garch_midas_run_audit.csv")
+  166: message("GARCH-MIDAS models completed: ", model_count)
+
+--- lignes 148-167 ---
+  148: )
+  149: summary_rows <- list()
+  150: model_count <- 0
+  151: for (cc in countries) {
+  152:   for (nm in names(specs)) {
+  153:     vars <- specs[[nm]]
+  154:     fit <- tryCatch(fit_pair(cc, vars, K=3), error=function(e){message("MIDAS failed ",cc,"/",nm,": ",e$message); NULL})
+  155:     if (!is.null(fit)) {
+  156:       saveRDS(fit, file.path("results/models/garch_midas", paste0(cc,"_",nm,".rds")))
+  157:       txt <- capture.output(summary(fit))
+  158:       writeLines(txt, file.path("results/tables", paste0("GARCH_MIDAS_",cc,"_",nm,".txt")))
+  159:       # Store the printed summary as an auditable text result; package object is the authoritative estimate.
+  160:       summary_rows[[paste(cc,nm)]] <- tibble::tibble(country=cc, model=nm, var1=vars[1], var2=vars[2], status="OK")
+  161:       model_count <- model_count+1
+  162:     }
+  163:   }
+  164: }
+  165: readr::write_csv(dplyr::bind_rows(summary_rows), "results/tables/garch_midas_run_audit.csv")
+  166: message("GARCH-MIDAS models completed: ", model_count)
+  167: 
+
+--- lignes 150-167 ---
+  150: model_count <- 0
+  151: for (cc in countries) {
+  152:   for (nm in names(specs)) {
+  153:     vars <- specs[[nm]]
+  154:     fit <- tryCatch(fit_pair(cc, vars, K=3), error=function(e){message("MIDAS failed ",cc,"/",nm,": ",e$message); NULL})
+  155:     if (!is.null(fit)) {
+  156:       saveRDS(fit, file.path("results/models/garch_midas", paste0(cc,"_",nm,".rds")))
+  157:       txt <- capture.output(summary(fit))
+  158:       writeLines(txt, file.path("results/tables", paste0("GARCH_MIDAS_",cc,"_",nm,".txt")))
+  159:       # Store the printed summary as an auditable text result; package object is the authoritative estimate.
+  160:       summary_rows[[paste(cc,nm)]] <- tibble::tibble(country=cc, model=nm, var1=vars[1], var2=vars[2], status="OK")
+  161:       model_count <- model_count+1
+  162:     }
+  163:   }
+  164: }
+  165: readr::write_csv(dplyr::bind_rows(summary_rows), "results/tables/garch_midas_run_audit.csv")
+  166: message("GARCH-MIDAS models completed: ", model_count)
+  167: 
+
+--- lignes 157-167 ---
+  157:       txt <- capture.output(summary(fit))
+  158:       writeLines(txt, file.path("results/tables", paste0("GARCH_MIDAS_",cc,"_",nm,".txt")))
+  159:       # Store the printed summary as an auditable text result; package object is the authoritative estimate.
+  160:       summary_rows[[paste(cc,nm)]] <- tibble::tibble(country=cc, model=nm, var1=vars[1], var2=vars[2], status="OK")
+  161:       model_count <- model_count+1
+  162:     }
+  163:   }
+  164: }
+  165: readr::write_csv(dplyr::bind_rows(summary_rows), "results/tables/garch_midas_run_audit.csv")
+  166: message("GARCH-MIDAS models completed: ", model_count)
+  167: 
+
+--- lignes 158-167 ---
+  158:       writeLines(txt, file.path("results/tables", paste0("GARCH_MIDAS_",cc,"_",nm,".txt")))
+  159:       # Store the printed summary as an auditable text result; package object is the authoritative estimate.
+  160:       summary_rows[[paste(cc,nm)]] <- tibble::tibble(country=cc, model=nm, var1=vars[1], var2=vars[2], status="OK")
+  161:       model_count <- model_count+1
+  162:     }
+  163:   }
+  164: }
+  165: readr::write_csv(dplyr::bind_rows(summary_rows), "results/tables/garch_midas_run_audit.csv")
+  166: message("GARCH-MIDAS models completed: ", model_count)
+  167: 
+
+============================================================
+FICHIER : 06_prepare_part3_data.R
+============================================================
+
+--- lignes 1-14 ---
+    1: # ============================================================
+    2: # RIMEH - PARTIE 3 / DATA PREPARATION
+    3: # Merge daily returns, monthly GPR, controls and Kilian shocks.
+    4: # ============================================================
+    5: rm(list = ls())
+    6: source("scripts/00_packages.R")
+    7: 
+    8: req <- c("data/processed/daily_clean.csv", "data/processed/monthly_clean.csv", "data/oil/oil_structural_shocks.csv", "data/raw/country_classification.csv")
+    9: miss <- req[!file.exists(req)]
+   10: if (length(miss)) stop("Missing files. Run Part 1 and Part 2 first: ", paste(miss, collapse=", "))
+   11: 
+   12: dir.create("data/processed", recursive=TRUE, showWarnings=FALSE)
+   13: dir.create("results/tables", recursive=TRUE, showWarnings=FALSE)
+   14: 
+
+--- lignes 1-20 ---
+    1: # ============================================================
+    2: # RIMEH - PARTIE 3 / DATA PREPARATION
+    3: # Merge daily returns, monthly GPR, controls and Kilian shocks.
+    4: # ============================================================
+    5: rm(list = ls())
+    6: source("scripts/00_packages.R")
+    7: 
+    8: req <- c("data/processed/daily_clean.csv", "data/processed/monthly_clean.csv", "data/oil/oil_structural_shocks.csv", "data/raw/country_classification.csv")
+    9: miss <- req[!file.exists(req)]
+   10: if (length(miss)) stop("Missing files. Run Part 1 and Part 2 first: ", paste(miss, collapse=", "))
+   11: 
+   12: dir.create("data/processed", recursive=TRUE, showWarnings=FALSE)
+   13: dir.create("results/tables", recursive=TRUE, showWarnings=FALSE)
+   14: 
+   15: daily <- readr::read_csv("data/processed/daily_clean.csv", show_col_types=FALSE) %>%
+   16:   mutate(date=as.Date(date), month=lubridate::floor_date(date, "month")) %>%
+   17:   filter(date >= as.Date("2000-01-01"), date <= as.Date("2025-12-31"))
+   18: monthly <- readr::read_csv("data/processed/monthly_clean.csv", show_col_types=FALSE) %>%
+   19:   mutate(date=as.Date(date)) %>%
+   20:   filter(date >= as.Date("2000-01-01"), date <= as.Date("2025-12-01"))
+
+--- lignes 15-35 ---
+   15: daily <- readr::read_csv("data/processed/daily_clean.csv", show_col_types=FALSE) %>%
+   16:   mutate(date=as.Date(date), month=lubridate::floor_date(date, "month")) %>%
+   17:   filter(date >= as.Date("2000-01-01"), date <= as.Date("2025-12-31"))
+   18: monthly <- readr::read_csv("data/processed/monthly_clean.csv", show_col_types=FALSE) %>%
+   19:   mutate(date=as.Date(date)) %>%
+   20:   filter(date >= as.Date("2000-01-01"), date <= as.Date("2025-12-01"))
+   21: shocks <- readr::read_csv("data/oil/oil_structural_shocks.csv", show_col_types=FALSE) %>%
+   22:   mutate(date=lubridate::floor_date(as.Date(date), "month"))
+   23: classif <- readr::read_csv("data/raw/country_classification.csv", show_col_types=FALSE)
+   24: 
+   25: # Global monthly variables are common to all countries; country-level controls may be present.
+   26: global_monthly <- monthly %>%
+   27:   dplyr::select(date, any_of(c("GPRT","GPRA","VIX","dlog_real_oil_price","IGREA","real_wti"))) %>%
+   28:   distinct(date, .keep_all=TRUE) %>%
+   29:   left_join(shocks %>% distinct(date, .keep_all=TRUE), by="date")
+   30: 
+   31: country_monthly <- monthly %>%
+   32:   dplyr::select(country, date, any_of(c("interest_rate","exchange_rate","GDP","inflation","RV","n_obs"))) %>%
+   33:   left_join(classif %>% dplyr::select(country, exporter), by="country") %>%
+   34:   left_join(global_monthly, by="date") %>%
+   35:   mutate(
+
+--- lignes 17-37 ---
+   17:   filter(date >= as.Date("2000-01-01"), date <= as.Date("2025-12-31"))
+   18: monthly <- readr::read_csv("data/processed/monthly_clean.csv", show_col_types=FALSE) %>%
+   19:   mutate(date=as.Date(date)) %>%
+   20:   filter(date >= as.Date("2000-01-01"), date <= as.Date("2025-12-01"))
+   21: shocks <- readr::read_csv("data/oil/oil_structural_shocks.csv", show_col_types=FALSE) %>%
+   22:   mutate(date=lubridate::floor_date(as.Date(date), "month"))
+   23: classif <- readr::read_csv("data/raw/country_classification.csv", show_col_types=FALSE)
+   24: 
+   25: # Global monthly variables are common to all countries; country-level controls may be present.
+   26: global_monthly <- monthly %>%
+   27:   dplyr::select(date, any_of(c("GPRT","GPRA","VIX","dlog_real_oil_price","IGREA","real_wti"))) %>%
+   28:   distinct(date, .keep_all=TRUE) %>%
+   29:   left_join(shocks %>% distinct(date, .keep_all=TRUE), by="date")
+   30: 
+   31: country_monthly <- monthly %>%
+   32:   dplyr::select(country, date, any_of(c("interest_rate","exchange_rate","GDP","inflation","RV","n_obs"))) %>%
+   33:   left_join(classif %>% dplyr::select(country, exporter), by="country") %>%
+   34:   left_join(global_monthly, by="date") %>%
+   35:   mutate(
+   36:     exporter=as.integer(exporter),
+   37:     GPR_SUP = as.numeric(as.character(GPRT)) * as.numeric(as.character(SUP)),
+
+--- lignes 19-39 ---
+   19:   mutate(date=as.Date(date)) %>%
+   20:   filter(date >= as.Date("2000-01-01"), date <= as.Date("2025-12-01"))
+   21: shocks <- readr::read_csv("data/oil/oil_structural_shocks.csv", show_col_types=FALSE) %>%
+   22:   mutate(date=lubridate::floor_date(as.Date(date), "month"))
+   23: classif <- readr::read_csv("data/raw/country_classification.csv", show_col_types=FALSE)
+   24: 
+   25: # Global monthly variables are common to all countries; country-level controls may be present.
+   26: global_monthly <- monthly %>%
+   27:   dplyr::select(date, any_of(c("GPRT","GPRA","VIX","dlog_real_oil_price","IGREA","real_wti"))) %>%
+   28:   distinct(date, .keep_all=TRUE) %>%
+   29:   left_join(shocks %>% distinct(date, .keep_all=TRUE), by="date")
+   30: 
+   31: country_monthly <- monthly %>%
+   32:   dplyr::select(country, date, any_of(c("interest_rate","exchange_rate","GDP","inflation","RV","n_obs"))) %>%
+   33:   left_join(classif %>% dplyr::select(country, exporter), by="country") %>%
+   34:   left_join(global_monthly, by="date") %>%
+   35:   mutate(
+   36:     exporter=as.integer(exporter),
+   37:     GPR_SUP = as.numeric(as.character(GPRT)) * as.numeric(as.character(SUP)),
+   38:     GPRT_SUP = as.numeric(as.character(GPRT)) * as.numeric(as.character(SUP)),
+   39:     GPRA_SUP = as.numeric(as.character(GPRA)) * as.numeric(as.character(SUP)),
+
+--- lignes 25-45 ---
+   25: # Global monthly variables are common to all countries; country-level controls may be present.
+   26: global_monthly <- monthly %>%
+   27:   dplyr::select(date, any_of(c("GPRT","GPRA","VIX","dlog_real_oil_price","IGREA","real_wti"))) %>%
+   28:   distinct(date, .keep_all=TRUE) %>%
+   29:   left_join(shocks %>% distinct(date, .keep_all=TRUE), by="date")
+   30: 
+   31: country_monthly <- monthly %>%
+   32:   dplyr::select(country, date, any_of(c("interest_rate","exchange_rate","GDP","inflation","RV","n_obs"))) %>%
+   33:   left_join(classif %>% dplyr::select(country, exporter), by="country") %>%
+   34:   left_join(global_monthly, by="date") %>%
+   35:   mutate(
+   36:     exporter=as.integer(exporter),
+   37:     GPR_SUP = as.numeric(as.character(GPRT)) * as.numeric(as.character(SUP)),
+   38:     GPRT_SUP = as.numeric(as.character(GPRT)) * as.numeric(as.character(SUP)),
+   39:     GPRA_SUP = as.numeric(as.character(GPRA)) * as.numeric(as.character(SUP)),
+   40:     SUP_EXPORTER=SUP*exporter,
+   41:     SUP_positive=pmax(SUP,0),
+   42:     SUP_negative=pmin(SUP,0),
+   43:     DEM_EXPORTER=DEM*exporter,
+   44:     PRE_EXPORTER=PRE*exporter
+   45:   ) %>% arrange(country,date)
+
+--- lignes 28-48 ---
+   28:   distinct(date, .keep_all=TRUE) %>%
+   29:   left_join(shocks %>% distinct(date, .keep_all=TRUE), by="date")
+   30: 
+   31: country_monthly <- monthly %>%
+   32:   dplyr::select(country, date, any_of(c("interest_rate","exchange_rate","GDP","inflation","RV","n_obs"))) %>%
+   33:   left_join(classif %>% dplyr::select(country, exporter), by="country") %>%
+   34:   left_join(global_monthly, by="date") %>%
+   35:   mutate(
+   36:     exporter=as.integer(exporter),
+   37:     GPR_SUP = as.numeric(as.character(GPRT)) * as.numeric(as.character(SUP)),
+   38:     GPRT_SUP = as.numeric(as.character(GPRT)) * as.numeric(as.character(SUP)),
+   39:     GPRA_SUP = as.numeric(as.character(GPRA)) * as.numeric(as.character(SUP)),
+   40:     SUP_EXPORTER=SUP*exporter,
+   41:     SUP_positive=pmax(SUP,0),
+   42:     SUP_negative=pmin(SUP,0),
+   43:     DEM_EXPORTER=DEM*exporter,
+   44:     PRE_EXPORTER=PRE*exporter
+   45:   ) %>% arrange(country,date)
+   46: 
+   47: # If monthly GPR/controls were not already present, preserve explicit NA rather than fabricate.
+   48: write_csv(country_monthly, "data/processed/monthly_model_data.csv")
+
+--- lignes 29-49 ---
+   29:   left_join(shocks %>% distinct(date, .keep_all=TRUE), by="date")
+   30: 
+   31: country_monthly <- monthly %>%
+   32:   dplyr::select(country, date, any_of(c("interest_rate","exchange_rate","GDP","inflation","RV","n_obs"))) %>%
+   33:   left_join(classif %>% dplyr::select(country, exporter), by="country") %>%
+   34:   left_join(global_monthly, by="date") %>%
+   35:   mutate(
+   36:     exporter=as.integer(exporter),
+   37:     GPR_SUP = as.numeric(as.character(GPRT)) * as.numeric(as.character(SUP)),
+   38:     GPRT_SUP = as.numeric(as.character(GPRT)) * as.numeric(as.character(SUP)),
+   39:     GPRA_SUP = as.numeric(as.character(GPRA)) * as.numeric(as.character(SUP)),
+   40:     SUP_EXPORTER=SUP*exporter,
+   41:     SUP_positive=pmax(SUP,0),
+   42:     SUP_negative=pmin(SUP,0),
+   43:     DEM_EXPORTER=DEM*exporter,
+   44:     PRE_EXPORTER=PRE*exporter
+   45:   ) %>% arrange(country,date)
+   46: 
+   47: # If monthly GPR/controls were not already present, preserve explicit NA rather than fabricate.
+   48: write_csv(country_monthly, "data/processed/monthly_model_data.csv")
+   49: 
+
+--- lignes 30-50 ---
+   30: 
+   31: country_monthly <- monthly %>%
+   32:   dplyr::select(country, date, any_of(c("interest_rate","exchange_rate","GDP","inflation","RV","n_obs"))) %>%
+   33:   left_join(classif %>% dplyr::select(country, exporter), by="country") %>%
+   34:   left_join(global_monthly, by="date") %>%
+   35:   mutate(
+   36:     exporter=as.integer(exporter),
+   37:     GPR_SUP = as.numeric(as.character(GPRT)) * as.numeric(as.character(SUP)),
+   38:     GPRT_SUP = as.numeric(as.character(GPRT)) * as.numeric(as.character(SUP)),
+   39:     GPRA_SUP = as.numeric(as.character(GPRA)) * as.numeric(as.character(SUP)),
+   40:     SUP_EXPORTER=SUP*exporter,
+   41:     SUP_positive=pmax(SUP,0),
+   42:     SUP_negative=pmin(SUP,0),
+   43:     DEM_EXPORTER=DEM*exporter,
+   44:     PRE_EXPORTER=PRE*exporter
+   45:   ) %>% arrange(country,date)
+   46: 
+   47: # If monthly GPR/controls were not already present, preserve explicit NA rather than fabricate.
+   48: write_csv(country_monthly, "data/processed/monthly_model_data.csv")
+   49: 
+   50: # Daily returns with monthly key; this is the input for GARCH/GARCH-MIDAS.
+
+--- lignes 31-51 ---
+   31: country_monthly <- monthly %>%
+   32:   dplyr::select(country, date, any_of(c("interest_rate","exchange_rate","GDP","inflation","RV","n_obs"))) %>%
+   33:   left_join(classif %>% dplyr::select(country, exporter), by="country") %>%
+   34:   left_join(global_monthly, by="date") %>%
+   35:   mutate(
+   36:     exporter=as.integer(exporter),
+   37:     GPR_SUP = as.numeric(as.character(GPRT)) * as.numeric(as.character(SUP)),
+   38:     GPRT_SUP = as.numeric(as.character(GPRT)) * as.numeric(as.character(SUP)),
+   39:     GPRA_SUP = as.numeric(as.character(GPRA)) * as.numeric(as.character(SUP)),
+   40:     SUP_EXPORTER=SUP*exporter,
+   41:     SUP_positive=pmax(SUP,0),
+   42:     SUP_negative=pmin(SUP,0),
+   43:     DEM_EXPORTER=DEM*exporter,
+   44:     PRE_EXPORTER=PRE*exporter
+   45:   ) %>% arrange(country,date)
+   46: 
+   47: # If monthly GPR/controls were not already present, preserve explicit NA rather than fabricate.
+   48: write_csv(country_monthly, "data/processed/monthly_model_data.csv")
+   49: 
+   50: # Daily returns with monthly key; this is the input for GARCH/GARCH-MIDAS.
+   51: daily_model <- daily %>%
+
+--- lignes 32-52 ---
+   32:   dplyr::select(country, date, any_of(c("interest_rate","exchange_rate","GDP","inflation","RV","n_obs"))) %>%
+   33:   left_join(classif %>% dplyr::select(country, exporter), by="country") %>%
+   34:   left_join(global_monthly, by="date") %>%
+   35:   mutate(
+   36:     exporter=as.integer(exporter),
+   37:     GPR_SUP = as.numeric(as.character(GPRT)) * as.numeric(as.character(SUP)),
+   38:     GPRT_SUP = as.numeric(as.character(GPRT)) * as.numeric(as.character(SUP)),
+   39:     GPRA_SUP = as.numeric(as.character(GPRA)) * as.numeric(as.character(SUP)),
+   40:     SUP_EXPORTER=SUP*exporter,
+   41:     SUP_positive=pmax(SUP,0),
+   42:     SUP_negative=pmin(SUP,0),
+   43:     DEM_EXPORTER=DEM*exporter,
+   44:     PRE_EXPORTER=PRE*exporter
+   45:   ) %>% arrange(country,date)
+   46: 
+   47: # If monthly GPR/controls were not already present, preserve explicit NA rather than fabricate.
+   48: write_csv(country_monthly, "data/processed/monthly_model_data.csv")
+   49: 
+   50: # Daily returns with monthly key; this is the input for GARCH/GARCH-MIDAS.
+   51: daily_model <- daily %>%
+   52:   dplyr::select(country,date,month,any_of(c("stock_price","return","exporter"))) %>%
+
+--- lignes 33-53 ---
+   33:   left_join(classif %>% dplyr::select(country, exporter), by="country") %>%
+   34:   left_join(global_monthly, by="date") %>%
+   35:   mutate(
+   36:     exporter=as.integer(exporter),
+   37:     GPR_SUP = as.numeric(as.character(GPRT)) * as.numeric(as.character(SUP)),
+   38:     GPRT_SUP = as.numeric(as.character(GPRT)) * as.numeric(as.character(SUP)),
+   39:     GPRA_SUP = as.numeric(as.character(GPRA)) * as.numeric(as.character(SUP)),
+   40:     SUP_EXPORTER=SUP*exporter,
+   41:     SUP_positive=pmax(SUP,0),
+   42:     SUP_negative=pmin(SUP,0),
+   43:     DEM_EXPORTER=DEM*exporter,
+   44:     PRE_EXPORTER=PRE*exporter
+   45:   ) %>% arrange(country,date)
+   46: 
+   47: # If monthly GPR/controls were not already present, preserve explicit NA rather than fabricate.
+   48: write_csv(country_monthly, "data/processed/monthly_model_data.csv")
+   49: 
+   50: # Daily returns with monthly key; this is the input for GARCH/GARCH-MIDAS.
+   51: daily_model <- daily %>%
+   52:   dplyr::select(country,date,month,any_of(c("stock_price","return","exporter"))) %>%
+   53:   left_join(country_monthly, by=c("country","month"="date"))
+
+--- lignes 34-54 ---
+   34:   left_join(global_monthly, by="date") %>%
+   35:   mutate(
+   36:     exporter=as.integer(exporter),
+   37:     GPR_SUP = as.numeric(as.character(GPRT)) * as.numeric(as.character(SUP)),
+   38:     GPRT_SUP = as.numeric(as.character(GPRT)) * as.numeric(as.character(SUP)),
+   39:     GPRA_SUP = as.numeric(as.character(GPRA)) * as.numeric(as.character(SUP)),
+   40:     SUP_EXPORTER=SUP*exporter,
+   41:     SUP_positive=pmax(SUP,0),
+   42:     SUP_negative=pmin(SUP,0),
+   43:     DEM_EXPORTER=DEM*exporter,
+   44:     PRE_EXPORTER=PRE*exporter
+   45:   ) %>% arrange(country,date)
+   46: 
+   47: # If monthly GPR/controls were not already present, preserve explicit NA rather than fabricate.
+   48: write_csv(country_monthly, "data/processed/monthly_model_data.csv")
+   49: 
+   50: # Daily returns with monthly key; this is the input for GARCH/GARCH-MIDAS.
+   51: daily_model <- daily %>%
+   52:   dplyr::select(country,date,month,any_of(c("stock_price","return","exporter"))) %>%
+   53:   left_join(country_monthly, by=c("country","month"="date"))
+   54: write_csv(daily_model, "data/processed/daily_model_data.csv")
+
+--- lignes 35-55 ---
+   35:   mutate(
+   36:     exporter=as.integer(exporter),
+   37:     GPR_SUP = as.numeric(as.character(GPRT)) * as.numeric(as.character(SUP)),
+   38:     GPRT_SUP = as.numeric(as.character(GPRT)) * as.numeric(as.character(SUP)),
+   39:     GPRA_SUP = as.numeric(as.character(GPRA)) * as.numeric(as.character(SUP)),
+   40:     SUP_EXPORTER=SUP*exporter,
+   41:     SUP_positive=pmax(SUP,0),
+   42:     SUP_negative=pmin(SUP,0),
+   43:     DEM_EXPORTER=DEM*exporter,
+   44:     PRE_EXPORTER=PRE*exporter
+   45:   ) %>% arrange(country,date)
+   46: 
+   47: # If monthly GPR/controls were not already present, preserve explicit NA rather than fabricate.
+   48: write_csv(country_monthly, "data/processed/monthly_model_data.csv")
+   49: 
+   50: # Daily returns with monthly key; this is the input for GARCH/GARCH-MIDAS.
+   51: daily_model <- daily %>%
+   52:   dplyr::select(country,date,month,any_of(c("stock_price","return","exporter"))) %>%
+   53:   left_join(country_monthly, by=c("country","month"="date"))
+   54: write_csv(daily_model, "data/processed/daily_model_data.csv")
+   55: 
+
+--- lignes 36-56 ---
+   36:     exporter=as.integer(exporter),
+   37:     GPR_SUP = as.numeric(as.character(GPRT)) * as.numeric(as.character(SUP)),
+   38:     GPRT_SUP = as.numeric(as.character(GPRT)) * as.numeric(as.character(SUP)),
+   39:     GPRA_SUP = as.numeric(as.character(GPRA)) * as.numeric(as.character(SUP)),
+   40:     SUP_EXPORTER=SUP*exporter,
+   41:     SUP_positive=pmax(SUP,0),
+   42:     SUP_negative=pmin(SUP,0),
+   43:     DEM_EXPORTER=DEM*exporter,
+   44:     PRE_EXPORTER=PRE*exporter
+   45:   ) %>% arrange(country,date)
+   46: 
+   47: # If monthly GPR/controls were not already present, preserve explicit NA rather than fabricate.
+   48: write_csv(country_monthly, "data/processed/monthly_model_data.csv")
+   49: 
+   50: # Daily returns with monthly key; this is the input for GARCH/GARCH-MIDAS.
+   51: daily_model <- daily %>%
+   52:   dplyr::select(country,date,month,any_of(c("stock_price","return","exporter"))) %>%
+   53:   left_join(country_monthly, by=c("country","month"="date"))
+   54: write_csv(daily_model, "data/processed/daily_model_data.csv")
+   55: 
+   56: # Coverage audit
+
+--- lignes 39-59 ---
+   39:     GPRA_SUP = as.numeric(as.character(GPRA)) * as.numeric(as.character(SUP)),
+   40:     SUP_EXPORTER=SUP*exporter,
+   41:     SUP_positive=pmax(SUP,0),
+   42:     SUP_negative=pmin(SUP,0),
+   43:     DEM_EXPORTER=DEM*exporter,
+   44:     PRE_EXPORTER=PRE*exporter
+   45:   ) %>% arrange(country,date)
+   46: 
+   47: # If monthly GPR/controls were not already present, preserve explicit NA rather than fabricate.
+   48: write_csv(country_monthly, "data/processed/monthly_model_data.csv")
+   49: 
+   50: # Daily returns with monthly key; this is the input for GARCH/GARCH-MIDAS.
+   51: daily_model <- daily %>%
+   52:   dplyr::select(country,date,month,any_of(c("stock_price","return","exporter"))) %>%
+   53:   left_join(country_monthly, by=c("country","month"="date"))
+   54: write_csv(daily_model, "data/processed/daily_model_data.csv")
+   55: 
+   56: # Coverage audit
+   57: coverage <- country_monthly %>%
+   58:   group_by(country) %>%
+   59:   summarise(
+
+--- lignes 42-62 ---
+   42:     SUP_negative=pmin(SUP,0),
+   43:     DEM_EXPORTER=DEM*exporter,
+   44:     PRE_EXPORTER=PRE*exporter
+   45:   ) %>% arrange(country,date)
+   46: 
+   47: # If monthly GPR/controls were not already present, preserve explicit NA rather than fabricate.
+   48: write_csv(country_monthly, "data/processed/monthly_model_data.csv")
+   49: 
+   50: # Daily returns with monthly key; this is the input for GARCH/GARCH-MIDAS.
+   51: daily_model <- daily %>%
+   52:   dplyr::select(country,date,month,any_of(c("stock_price","return","exporter"))) %>%
+   53:   left_join(country_monthly, by=c("country","month"="date"))
+   54: write_csv(daily_model, "data/processed/daily_model_data.csv")
+   55: 
+   56: # Coverage audit
+   57: coverage <- country_monthly %>%
+   58:   group_by(country) %>%
+   59:   summarise(
+   60:     first_date=min(date,na.rm=TRUE), last_date=max(date,na.rm=TRUE), n_months=n(),
+   61:     n_GPRT=sum(!is.na(GPRT)), n_GPRA=sum(!is.na(GPRA)),
+   62:     n_SUP=sum(!is.na(SUP)), n_DEM=sum(!is.na(DEM)), n_PRE=sum(!is.na(PRE)),
+
+--- lignes 44-64 ---
+   44:     PRE_EXPORTER=PRE*exporter
+   45:   ) %>% arrange(country,date)
+   46: 
+   47: # If monthly GPR/controls were not already present, preserve explicit NA rather than fabricate.
+   48: write_csv(country_monthly, "data/processed/monthly_model_data.csv")
+   49: 
+   50: # Daily returns with monthly key; this is the input for GARCH/GARCH-MIDAS.
+   51: daily_model <- daily %>%
+   52:   dplyr::select(country,date,month,any_of(c("stock_price","return","exporter"))) %>%
+   53:   left_join(country_monthly, by=c("country","month"="date"))
+   54: write_csv(daily_model, "data/processed/daily_model_data.csv")
+   55: 
+   56: # Coverage audit
+   57: coverage <- country_monthly %>%
+   58:   group_by(country) %>%
+   59:   summarise(
+   60:     first_date=min(date,na.rm=TRUE), last_date=max(date,na.rm=TRUE), n_months=n(),
+   61:     n_GPRT=sum(!is.na(GPRT)), n_GPRA=sum(!is.na(GPRA)),
+   62:     n_SUP=sum(!is.na(SUP)), n_DEM=sum(!is.na(DEM)), n_PRE=sum(!is.na(PRE)),
+   63:     n_VIX=sum(!is.na(VIX)), n_interest=sum(!is.na(interest_rate)),
+   64:     n_exchange=sum(!is.na(exchange_rate)), n_GDP=sum(!is.na(GDP)), n_inflation=sum(!is.na(inflation)),
+
+--- lignes 53-68 ---
+   53:   left_join(country_monthly, by=c("country","month"="date"))
+   54: write_csv(daily_model, "data/processed/daily_model_data.csv")
+   55: 
+   56: # Coverage audit
+   57: coverage <- country_monthly %>%
+   58:   group_by(country) %>%
+   59:   summarise(
+   60:     first_date=min(date,na.rm=TRUE), last_date=max(date,na.rm=TRUE), n_months=n(),
+   61:     n_GPRT=sum(!is.na(GPRT)), n_GPRA=sum(!is.na(GPRA)),
+   62:     n_SUP=sum(!is.na(SUP)), n_DEM=sum(!is.na(DEM)), n_PRE=sum(!is.na(PRE)),
+   63:     n_VIX=sum(!is.na(VIX)), n_interest=sum(!is.na(interest_rate)),
+   64:     n_exchange=sum(!is.na(exchange_rate)), n_GDP=sum(!is.na(GDP)), n_inflation=sum(!is.na(inflation)),
+   65:     .groups="drop"
+   66:   )
+   67: write_csv(coverage, "results/tables/part3_data_coverage.csv")
+   68: message("Part 3 data preparation completed.")
+
+--- lignes 54-68 ---
+   54: write_csv(daily_model, "data/processed/daily_model_data.csv")
+   55: 
+   56: # Coverage audit
+   57: coverage <- country_monthly %>%
+   58:   group_by(country) %>%
+   59:   summarise(
+   60:     first_date=min(date,na.rm=TRUE), last_date=max(date,na.rm=TRUE), n_months=n(),
+   61:     n_GPRT=sum(!is.na(GPRT)), n_GPRA=sum(!is.na(GPRA)),
+   62:     n_SUP=sum(!is.na(SUP)), n_DEM=sum(!is.na(DEM)), n_PRE=sum(!is.na(PRE)),
+   63:     n_VIX=sum(!is.na(VIX)), n_interest=sum(!is.na(interest_rate)),
+   64:     n_exchange=sum(!is.na(exchange_rate)), n_GDP=sum(!is.na(GDP)), n_inflation=sum(!is.na(inflation)),
+   65:     .groups="drop"
+   66:   )
+   67: write_csv(coverage, "results/tables/part3_data_coverage.csv")
+   68: message("Part 3 data preparation completed.")
+
+--- lignes 55-68 ---
+   55: 
+   56: # Coverage audit
+   57: coverage <- country_monthly %>%
+   58:   group_by(country) %>%
+   59:   summarise(
+   60:     first_date=min(date,na.rm=TRUE), last_date=max(date,na.rm=TRUE), n_months=n(),
+   61:     n_GPRT=sum(!is.na(GPRT)), n_GPRA=sum(!is.na(GPRA)),
+   62:     n_SUP=sum(!is.na(SUP)), n_DEM=sum(!is.na(DEM)), n_PRE=sum(!is.na(PRE)),
+   63:     n_VIX=sum(!is.na(VIX)), n_interest=sum(!is.na(interest_rate)),
+   64:     n_exchange=sum(!is.na(exchange_rate)), n_GDP=sum(!is.na(GDP)), n_inflation=sum(!is.na(inflation)),
+   65:     .groups="drop"
+   66:   )
+   67: write_csv(coverage, "results/tables/part3_data_coverage.csv")
+   68: message("Part 3 data preparation completed.")
+
+--- lignes 60-68 ---
+   60:     first_date=min(date,na.rm=TRUE), last_date=max(date,na.rm=TRUE), n_months=n(),
+   61:     n_GPRT=sum(!is.na(GPRT)), n_GPRA=sum(!is.na(GPRA)),
+   62:     n_SUP=sum(!is.na(SUP)), n_DEM=sum(!is.na(DEM)), n_PRE=sum(!is.na(PRE)),
+   63:     n_VIX=sum(!is.na(VIX)), n_interest=sum(!is.na(interest_rate)),
+   64:     n_exchange=sum(!is.na(exchange_rate)), n_GDP=sum(!is.na(GDP)), n_inflation=sum(!is.na(inflation)),
+   65:     .groups="drop"
+   66:   )
+   67: write_csv(coverage, "results/tables/part3_data_coverage.csv")
+   68: message("Part 3 data preparation completed.")
+
+============================================================
+FICHIER : 09_garch_midas_resume.R
+============================================================
+
+--- lignes 1-13 ---
+    1: lines <- readLines("scripts/08_garch_midas_models.R", warn = FALSE)
+    2: 
+    3: marker <- 'countries <- sort(unique(daily[["country"]]))'
+    4: cut <- which(trimws(lines) == marker)[1]
+    5: 
+    6: if (is.na(cut)) {
+    7:   stop("Impossible de trouver le d?but de la boucle principale.")
+    8: }
+    9: 
+   10: eval(parse(text = paste(lines[1:(cut - 1)], collapse = "\n")),
+   11:      envir = .GlobalEnv)
+   12: 
+   13: countries <- sort(unique(daily[["country"]]))
+
+--- lignes 8-28 ---
+    8: }
+    9: 
+   10: eval(parse(text = paste(lines[1:(cut - 1)], collapse = "\n")),
+   11:      envir = .GlobalEnv)
+   12: 
+   13: countries <- sort(unique(daily[["country"]]))
+   14: 
+   15: specs <- list(
+   16:   GPRT_SUP = c("GPRT","SUP"),
+   17:   GPRA_SUP = c("GPRA","SUP"),
+   18:   GPRT_DEM = c("GPRT","DEM"),
+   19:   GPRT_PRE = c("GPRT","PRE"),
+   20:   GPRT_VIX = c("GPRT","VIX"),
+   21:   SUP_DEM = c("SUP","DEM"),
+   22:   SUP_PRE = c("SUP","PRE")
+   23: )
+   24: 
+   25: audit_file <- "results/tables/garch_midas_run_audit.csv"
+   26: 
+   27: audit_rows <- list()
+   28: 
+
+--- lignes 9-29 ---
+    9: 
+   10: eval(parse(text = paste(lines[1:(cut - 1)], collapse = "\n")),
+   11:      envir = .GlobalEnv)
+   12: 
+   13: countries <- sort(unique(daily[["country"]]))
+   14: 
+   15: specs <- list(
+   16:   GPRT_SUP = c("GPRT","SUP"),
+   17:   GPRA_SUP = c("GPRA","SUP"),
+   18:   GPRT_DEM = c("GPRT","DEM"),
+   19:   GPRT_PRE = c("GPRT","PRE"),
+   20:   GPRT_VIX = c("GPRT","VIX"),
+   21:   SUP_DEM = c("SUP","DEM"),
+   22:   SUP_PRE = c("SUP","PRE")
+   23: )
+   24: 
+   25: audit_file <- "results/tables/garch_midas_run_audit.csv"
+   26: 
+   27: audit_rows <- list()
+   28: 
+   29: for (cc in countries) {
+
+--- lignes 10-30 ---
+   10: eval(parse(text = paste(lines[1:(cut - 1)], collapse = "\n")),
+   11:      envir = .GlobalEnv)
+   12: 
+   13: countries <- sort(unique(daily[["country"]]))
+   14: 
+   15: specs <- list(
+   16:   GPRT_SUP = c("GPRT","SUP"),
+   17:   GPRA_SUP = c("GPRA","SUP"),
+   18:   GPRT_DEM = c("GPRT","DEM"),
+   19:   GPRT_PRE = c("GPRT","PRE"),
+   20:   GPRT_VIX = c("GPRT","VIX"),
+   21:   SUP_DEM = c("SUP","DEM"),
+   22:   SUP_PRE = c("SUP","PRE")
+   23: )
+   24: 
+   25: audit_file <- "results/tables/garch_midas_run_audit.csv"
+   26: 
+   27: audit_rows <- list()
+   28: 
+   29: for (cc in countries) {
+   30:   for (nm in names(specs)) {
+
+--- lignes 11-31 ---
+   11:      envir = .GlobalEnv)
+   12: 
+   13: countries <- sort(unique(daily[["country"]]))
+   14: 
+   15: specs <- list(
+   16:   GPRT_SUP = c("GPRT","SUP"),
+   17:   GPRA_SUP = c("GPRA","SUP"),
+   18:   GPRT_DEM = c("GPRT","DEM"),
+   19:   GPRT_PRE = c("GPRT","PRE"),
+   20:   GPRT_VIX = c("GPRT","VIX"),
+   21:   SUP_DEM = c("SUP","DEM"),
+   22:   SUP_PRE = c("SUP","PRE")
+   23: )
+   24: 
+   25: audit_file <- "results/tables/garch_midas_run_audit.csv"
+   26: 
+   27: audit_rows <- list()
+   28: 
+   29: for (cc in countries) {
+   30:   for (nm in names(specs)) {
+   31: 
+
+--- lignes 12-32 ---
+   12: 
+   13: countries <- sort(unique(daily[["country"]]))
+   14: 
+   15: specs <- list(
+   16:   GPRT_SUP = c("GPRT","SUP"),
+   17:   GPRA_SUP = c("GPRA","SUP"),
+   18:   GPRT_DEM = c("GPRT","DEM"),
+   19:   GPRT_PRE = c("GPRT","PRE"),
+   20:   GPRT_VIX = c("GPRT","VIX"),
+   21:   SUP_DEM = c("SUP","DEM"),
+   22:   SUP_PRE = c("SUP","PRE")
+   23: )
+   24: 
+   25: audit_file <- "results/tables/garch_midas_run_audit.csv"
+   26: 
+   27: audit_rows <- list()
+   28: 
+   29: for (cc in countries) {
+   30:   for (nm in names(specs)) {
+   31: 
+   32:     vars <- specs[[nm]]
+
+--- lignes 13-33 ---
+   13: countries <- sort(unique(daily[["country"]]))
+   14: 
+   15: specs <- list(
+   16:   GPRT_SUP = c("GPRT","SUP"),
+   17:   GPRA_SUP = c("GPRA","SUP"),
+   18:   GPRT_DEM = c("GPRT","DEM"),
+   19:   GPRT_PRE = c("GPRT","PRE"),
+   20:   GPRT_VIX = c("GPRT","VIX"),
+   21:   SUP_DEM = c("SUP","DEM"),
+   22:   SUP_PRE = c("SUP","PRE")
+   23: )
+   24: 
+   25: audit_file <- "results/tables/garch_midas_run_audit.csv"
+   26: 
+   27: audit_rows <- list()
+   28: 
+   29: for (cc in countries) {
+   30:   for (nm in names(specs)) {
+   31: 
+   32:     vars <- specs[[nm]]
+   33:     rds_file <- file.path(
+
+--- lignes 14-34 ---
+   14: 
+   15: specs <- list(
+   16:   GPRT_SUP = c("GPRT","SUP"),
+   17:   GPRA_SUP = c("GPRA","SUP"),
+   18:   GPRT_DEM = c("GPRT","DEM"),
+   19:   GPRT_PRE = c("GPRT","PRE"),
+   20:   GPRT_VIX = c("GPRT","VIX"),
+   21:   SUP_DEM = c("SUP","DEM"),
+   22:   SUP_PRE = c("SUP","PRE")
+   23: )
+   24: 
+   25: audit_file <- "results/tables/garch_midas_run_audit.csv"
+   26: 
+   27: audit_rows <- list()
+   28: 
+   29: for (cc in countries) {
+   30:   for (nm in names(specs)) {
+   31: 
+   32:     vars <- specs[[nm]]
+   33:     rds_file <- file.path(
+   34:       "results/models/garch_midas",
+
+--- lignes 17-37 ---
+   17:   GPRA_SUP = c("GPRA","SUP"),
+   18:   GPRT_DEM = c("GPRT","DEM"),
+   19:   GPRT_PRE = c("GPRT","PRE"),
+   20:   GPRT_VIX = c("GPRT","VIX"),
+   21:   SUP_DEM = c("SUP","DEM"),
+   22:   SUP_PRE = c("SUP","PRE")
+   23: )
+   24: 
+   25: audit_file <- "results/tables/garch_midas_run_audit.csv"
+   26: 
+   27: audit_rows <- list()
+   28: 
+   29: for (cc in countries) {
+   30:   for (nm in names(specs)) {
+   31: 
+   32:     vars <- specs[[nm]]
+   33:     rds_file <- file.path(
+   34:       "results/models/garch_midas",
+   35:       paste0(cc, "_", nm, ".rds")
+   36:     )
+   37: 
+
+--- lignes 26-46 ---
+   26: 
+   27: audit_rows <- list()
+   28: 
+   29: for (cc in countries) {
+   30:   for (nm in names(specs)) {
+   31: 
+   32:     vars <- specs[[nm]]
+   33:     rds_file <- file.path(
+   34:       "results/models/garch_midas",
+   35:       paste0(cc, "_", nm, ".rds")
+   36:     )
+   37: 
+   38:     txt_file <- file.path(
+   39:       "results/tables",
+   40:       paste0("GARCH_MIDAS_", cc, "_", nm, ".txt")
+   41:     )
+   42: 
+   43:     if (file.exists(rds_file)) {
+   44: 
+   45:       cat("\nSKIP EXISTING:", cc, "/", nm, "\n")
+   46: 
+
+--- lignes 32-52 ---
+   32:     vars <- specs[[nm]]
+   33:     rds_file <- file.path(
+   34:       "results/models/garch_midas",
+   35:       paste0(cc, "_", nm, ".rds")
+   36:     )
+   37: 
+   38:     txt_file <- file.path(
+   39:       "results/tables",
+   40:       paste0("GARCH_MIDAS_", cc, "_", nm, ".txt")
+   41:     )
+   42: 
+   43:     if (file.exists(rds_file)) {
+   44: 
+   45:       cat("\nSKIP EXISTING:", cc, "/", nm, "\n")
+   46: 
+   47:       audit_rows[[paste(cc, nm)]] <- tibble::tibble(
+   48:         country = cc,
+   49:         model = nm,
+   50:         var1 = vars[1],
+   51:         var2 = vars[2],
+   52:         status = "EXISTING"
+
+--- lignes 55-75 ---
+   55:       next
+   56:     }
+   57: 
+   58:     cat("\n========================================\n")
+   59:     cat("ESTIMATING:", cc, "/", nm, "\n")
+   60:     cat("========================================\n")
+   61: 
+   62:     fit <- tryCatch(
+   63:       fit_pair(cc, vars, K = 3),
+   64:       error = function(e) {
+   65:         message("MIDAS failed ", cc, "/", nm, ": ", e$message)
+   66:         NULL
+   67:       }
+   68:     )
+   69: 
+   70:     if (!is.null(fit)) {
+   71: 
+   72:       saveRDS(fit, rds_file)
+   73: 
+   74:       txt <- capture.output(summary(fit))
+   75:       writeLines(txt, txt_file)
+
+--- lignes 57-77 ---
+   57: 
+   58:     cat("\n========================================\n")
+   59:     cat("ESTIMATING:", cc, "/", nm, "\n")
+   60:     cat("========================================\n")
+   61: 
+   62:     fit <- tryCatch(
+   63:       fit_pair(cc, vars, K = 3),
+   64:       error = function(e) {
+   65:         message("MIDAS failed ", cc, "/", nm, ": ", e$message)
+   66:         NULL
+   67:       }
+   68:     )
+   69: 
+   70:     if (!is.null(fit)) {
+   71: 
+   72:       saveRDS(fit, rds_file)
+   73: 
+   74:       txt <- capture.output(summary(fit))
+   75:       writeLines(txt, txt_file)
+   76: 
+   77:       audit_rows[[paste(cc, nm)]] <- tibble::tibble(
+
+--- lignes 105-115 ---
+  105: }
+  106: 
+  107: readr::write_csv(
+  108:   dplyr::bind_rows(audit_rows),
+  109:   audit_file
+  110: )
+  111: 
+  112: cat("\n========================================\n")
+  113: cat("GARCH-MIDAS RESUME COMPLETED\n")
+  114: cat("========================================\n")
+  115: cat("Audit:", audit_file, "\n")
+
+============================================================
+FICHIER : 14_finalize_midas_audit.R
+============================================================
+
+--- lignes 1-13 ---
+    1: audit_file <- "results/tables/garch_midas_run_audit.csv"
+    2: 
+    3: audit <- readr::read_csv(audit_file, show_col_types = FALSE)
+    4: 
+    5: audit <- audit |>
+    6:   dplyr::mutate(
+    7:     status = dplyr::case_when(
+    8:       country == "MEX" & model == "GPRT_SUP" ~ "OK",
+    9:       country == "NOR" & model == "SUP_PRE"  ~ "OK",
+   10:       country == "USA" & model == "GPRA_SUP" ~ "OK",
+   11:       country == "GBR" & model == "SUP_PRE"  ~ "FAILED_NUMERICAL",
+   12:       TRUE ~ status
+   13:     )
+
+--- lignes 1-20 ---
+    1: audit_file <- "results/tables/garch_midas_run_audit.csv"
+    2: 
+    3: audit <- readr::read_csv(audit_file, show_col_types = FALSE)
+    4: 
+    5: audit <- audit |>
+    6:   dplyr::mutate(
+    7:     status = dplyr::case_when(
+    8:       country == "MEX" & model == "GPRT_SUP" ~ "OK",
+    9:       country == "NOR" & model == "SUP_PRE"  ~ "OK",
+   10:       country == "USA" & model == "GPRA_SUP" ~ "OK",
+   11:       country == "GBR" & model == "SUP_PRE"  ~ "FAILED_NUMERICAL",
+   12:       TRUE ~ status
+   13:     )
+   14:   )
+   15: 
+   16: readr::write_csv(audit, audit_file)
+   17: 
+   18: cat("\n========================================\n")
+   19: cat("FINAL GARCH-MIDAS AUDIT\n")
+   20: cat("========================================\n")
+
+--- lignes 1-21 ---
+    1: audit_file <- "results/tables/garch_midas_run_audit.csv"
+    2: 
+    3: audit <- readr::read_csv(audit_file, show_col_types = FALSE)
+    4: 
+    5: audit <- audit |>
+    6:   dplyr::mutate(
+    7:     status = dplyr::case_when(
+    8:       country == "MEX" & model == "GPRT_SUP" ~ "OK",
+    9:       country == "NOR" & model == "SUP_PRE"  ~ "OK",
+   10:       country == "USA" & model == "GPRA_SUP" ~ "OK",
+   11:       country == "GBR" & model == "SUP_PRE"  ~ "FAILED_NUMERICAL",
+   12:       TRUE ~ status
+   13:     )
+   14:   )
+   15: 
+   16: readr::write_csv(audit, audit_file)
+   17: 
+   18: cat("\n========================================\n")
+   19: cat("FINAL GARCH-MIDAS AUDIT\n")
+   20: cat("========================================\n")
+   21: print(table(audit$status))
+
+--- lignes 2-22 ---
+    2: 
+    3: audit <- readr::read_csv(audit_file, show_col_types = FALSE)
+    4: 
+    5: audit <- audit |>
+    6:   dplyr::mutate(
+    7:     status = dplyr::case_when(
+    8:       country == "MEX" & model == "GPRT_SUP" ~ "OK",
+    9:       country == "NOR" & model == "SUP_PRE"  ~ "OK",
+   10:       country == "USA" & model == "GPRA_SUP" ~ "OK",
+   11:       country == "GBR" & model == "SUP_PRE"  ~ "FAILED_NUMERICAL",
+   12:       TRUE ~ status
+   13:     )
+   14:   )
+   15: 
+   16: readr::write_csv(audit, audit_file)
+   17: 
+   18: cat("\n========================================\n")
+   19: cat("FINAL GARCH-MIDAS AUDIT\n")
+   20: cat("========================================\n")
+   21: print(table(audit$status))
+   22: cat("\nTotal models:", nrow(audit), "\n")
+
+--- lignes 3-23 ---
+    3: audit <- readr::read_csv(audit_file, show_col_types = FALSE)
+    4: 
+    5: audit <- audit |>
+    6:   dplyr::mutate(
+    7:     status = dplyr::case_when(
+    8:       country == "MEX" & model == "GPRT_SUP" ~ "OK",
+    9:       country == "NOR" & model == "SUP_PRE"  ~ "OK",
+   10:       country == "USA" & model == "GPRA_SUP" ~ "OK",
+   11:       country == "GBR" & model == "SUP_PRE"  ~ "FAILED_NUMERICAL",
+   12:       TRUE ~ status
+   13:     )
+   14:   )
+   15: 
+   16: readr::write_csv(audit, audit_file)
+   17: 
+   18: cat("\n========================================\n")
+   19: cat("FINAL GARCH-MIDAS AUDIT\n")
+   20: cat("========================================\n")
+   21: print(table(audit$status))
+   22: cat("\nTotal models:", nrow(audit), "\n")
+   23: cat("Successful:", sum(audit$status %in% c("OK","EXISTING")), "\n")
+
+--- lignes 11-26 ---
+   11:       country == "GBR" & model == "SUP_PRE"  ~ "FAILED_NUMERICAL",
+   12:       TRUE ~ status
+   13:     )
+   14:   )
+   15: 
+   16: readr::write_csv(audit, audit_file)
+   17: 
+   18: cat("\n========================================\n")
+   19: cat("FINAL GARCH-MIDAS AUDIT\n")
+   20: cat("========================================\n")
+   21: print(table(audit$status))
+   22: cat("\nTotal models:", nrow(audit), "\n")
+   23: cat("Successful:", sum(audit$status %in% c("OK","EXISTING")), "\n")
+   24: cat("Numerical failure:", sum(audit$status == "FAILED_NUMERICAL"), "\n")
+   25: cat("\nGBR/SUP_PRE status:\n")
+   26: print(audit[audit$country == "GBR" & audit$model == "SUP_PRE", ])
+
+--- lignes 17-26 ---
+   17: 
+   18: cat("\n========================================\n")
+   19: cat("FINAL GARCH-MIDAS AUDIT\n")
+   20: cat("========================================\n")
+   21: print(table(audit$status))
+   22: cat("\nTotal models:", nrow(audit), "\n")
+   23: cat("Successful:", sum(audit$status %in% c("OK","EXISTING")), "\n")
+   24: cat("Numerical failure:", sum(audit$status == "FAILED_NUMERICAL"), "\n")
+   25: cat("\nGBR/SUP_PRE status:\n")
+   26: print(audit[audit$country == "GBR" & audit$model == "SUP_PRE", ])
+
+--- lignes 18-26 ---
+   18: cat("\n========================================\n")
+   19: cat("FINAL GARCH-MIDAS AUDIT\n")
+   20: cat("========================================\n")
+   21: print(table(audit$status))
+   22: cat("\nTotal models:", nrow(audit), "\n")
+   23: cat("Successful:", sum(audit$status %in% c("OK","EXISTING")), "\n")
+   24: cat("Numerical failure:", sum(audit$status == "FAILED_NUMERICAL"), "\n")
+   25: cat("\nGBR/SUP_PRE status:\n")
+   26: print(audit[audit$country == "GBR" & audit$model == "SUP_PRE", ])

@@ -1,0 +1,17 @@
+Échantillon : 11 pays, période janvier 2000-décembre 2025, 3131 observations mensuelles.
+
+Variables intégrées : RV, GPRT, GPRA, SUP, DEM, PRE, VIX, inflation, taux d'intérêt, taux de change et croissance du PIB réel.
+
+Validité des variables :
+RV = 3131
+GPRT = 3131
+GPRA = 3131
+SUP = 2646
+DEM = 2646
+PRE = 2646
+VIX = 3131
+Inflation = 3027
+Taux d'intérêt = 3025
+Taux de change = 3131
+Croissance = 3131
+

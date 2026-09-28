@@ -1,0 +1,68 @@
+============================================================
+RIMEH - RAPPORT FINAL H1-H9
+============================================================
+
+Source : garch_midas_all_results.csv
+Lignes totales : 572 
+Pays : 11 
+Modeles : 7 
+Theta valides : 140 
+
+METHODOLOGIE ET LIMITES
+------------------------
+Les hypotheses H1-H9 sont traitees comme la grille de travail actuelle.
+Le fichier de coefficients ne contient pas de VCOV exploitable.
+Aucune covariance n'est inventee.
+Les comparaisons H5-H9 utilisant des SE sont donc des approximations, pas des tests de Wald exacts.
+H4 n'est pas testable sans classification documentee exportateurs/importateurs.
+GBR/SUP_PRE est exclu car il s'agit d'un echec numerique documente.
+
+H1-H3
+------
+  H      TARGET  N          Mean     Median Positive Negative Sig5 Sig10
+ H1  PRICE_GPRT 21  0.0028384286  0.0007750       12        9    1     2
+ H2 DEMAND_GPRT 22 -0.0003755909 -0.0016395        9       13    0     3
+ H3 SUPPLY_GPRT 21 -0.0135816190 -0.0015430        7       14    2     5
+     Mean_t    P_mean             Conclusion
+  0.1889723 0.8520190 Non significatif à 10%
+ -0.2633390 0.7948559 Non significatif à 10%
+ -0.3220462 0.7507596 Non significatif à 10%
+
+H4
+--
+  H       Status
+ H4 NON TESTABLE
+                                                                                                     Reason
+ La classification documentee exportateurs/importateurs n'est pas présente dans le fichier de coefficients.
+
+H5
+--
+  H  N    Mean_Diff         t         p Wilcoxon_p
+ H5 11 -0.002709364 -1.475625 0.1708231   0.197326
+                                                                       Status
+ Comparaison θ1/θ2 avec approximation indépendante des SE; pas de VCOV exacte
+
+H6
+--
+  H  N  Mean_Diff        t         p Wilcoxon_p
+ H6 10 -0.0469457 -2.45903 0.0362162  0.1029175
+                                                                       Status
+ Comparaison θ1/θ2 avec approximation indépendante des SE; pas de VCOV exacte
+
+H7-H9
+------
+  H   N Mean_Diff         t         p Wilcoxon_p
+ H7 169        NA       NaN        NA         NA
+ H8 169        NA       NaN        NA         NA
+ H9 190        NA -1.366996 0.1867965  0.1443392
+                                                              Status
+ GPRT vs GPRA; approximation indépendante des SE; pas de VCOV exacte
+ GPRT vs GPRA; approximation indépendante des SE; pas de VCOV exacte
+ GPRT vs GPRA; approximation indépendante des SE; pas de VCOV exacte
+
+INTERPRETATION
+--------------
+Une significativite statistique d'un coefficient ne constitue pas a elle seule une validation de toute l'hypothese theorique.
+Pour H4, la classification exportateurs/importateurs doit etre ajoutee.
+Pour H5-H9, une VCOV complete permettrait de remplacer les approximations par des tests de Wald exacts.
+Les resultats non testables ne sont pas interpretes comme des rejets.

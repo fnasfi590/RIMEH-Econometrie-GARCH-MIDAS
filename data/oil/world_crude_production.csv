@@ -1,0 +1,2 @@
+date,global_oil_production
+# Leave this file empty until EIA API data are supplied. Required format: YYYY-MM-01,value

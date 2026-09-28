@@ -1,0 +1,50 @@
+============================================================
+RIMEH - ANALYSE FINALE FORMELLE H1-H9
+============================================================
+
+Coefficients CSV : 572 
+Theta : 140 
+Pays : 11 
+Modeles : 7 
+RDS trouves : 90 
+RDS avec VCOV : 0 
+
+H1-H3
+  H  N         Mean          SE          t          p       CI_low    CI_high
+ H1 11 0.0058158864 0.003199885 1.81752958 0.09917618 -0.001313903 0.01294568
+ H2 11 0.0033002121 0.003257569 1.01309060 0.33490142 -0.003958103 0.01055853
+ H3 11 0.0001951818 0.008520220 0.02290807 0.98217427 -0.018789051 0.01917941
+
+H4
+  H       Status
+ H4 NON TESTABLE
+                                                              Reason p_value
+ Classification exportateur/importateur absente des données fournies      NA
+
+H5-H6
+  H N Mean_Diff SE  t  p CI_low CI_high                              Method
+ H5 0        NA NA NA NA     NA      NA VCOV unavailable/insufficient pairs
+ H6 0        NA NA NA NA     NA      NA VCOV unavailable/insufficient pairs
+
+H7-H8
+  H                    Status
+ H7 NON TESTABLE FORMELLEMENT
+ H8 NON TESTABLE FORMELLEMENT
+                                                              Reason p_value
+  Pas de paire GPRT/GPRA compatible dans la structure PRICE actuelle      NA
+ Pas de paire GPRT/GPRA compatible dans la structure DEMAND actuelle      NA
+
+H9
+  H  N   Mean_Diff          SE         t         p       CI_low    CI_high
+ H9 21 0.001473952 0.005089964 0.2895801 0.7751182 -0.009143526 0.01209143
+                                                  Method
+ Country-paired test; cross-model covariance unavailable
+
+LIMITES
+- H1-H9 restent une reconstruction analytique et non les formulations originales documentees.
+- H4 necessite une classification exportateurs/importateurs documentee.
+- H5-H6 utilisent la covariance theta1/theta2 quand elle est disponible dans les RDS.
+- H9 est un test apparie par pays; la covariance entre estimations GPRT et GPRA n'est pas disponible,
+  donc son erreur de difference est une approximation independante.
+- H7-H8 ne sont pas forces lorsque la structure des donnees ne permet pas une comparaison valide.
+- GBR/SUP_PRE reste un echec numerique et n'est pas remplace artificiellement.

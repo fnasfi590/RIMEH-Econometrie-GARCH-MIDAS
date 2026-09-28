@@ -1,0 +1,4 @@
+"H","N","Mean_Diff","t","p","Wilcoxon_p","Status"
+"H7",169,NA,NA,NA,NA,"GPRT vs GPRA; approximation indépendante des SE; pas de VCOV exacte"
+"H8",169,NA,NA,NA,NA,"GPRT vs GPRA; approximation indépendante des SE; pas de VCOV exacte"
+"H9",190,NA,-1.3669960581353,0.186796505500451,0.144339193370849,"GPRT vs GPRA; approximation indépendante des SE; pas de VCOV exacte"

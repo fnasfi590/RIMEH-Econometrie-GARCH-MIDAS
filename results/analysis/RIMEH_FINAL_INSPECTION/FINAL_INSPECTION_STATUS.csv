@@ -1,0 +1,8 @@
+"metric","value"
+"CSV_rows",572
+"CSV_columns",15
+"RDS_found",90
+"RDS_readable",90
+"RDS_named_coef_or_vcov_hits",76
+"RDS_has_declared_vcov",0
+"RDS_with_S3_vcov",0

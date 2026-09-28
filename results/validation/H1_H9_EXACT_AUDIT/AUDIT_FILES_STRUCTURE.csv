@@ -1,0 +1,33 @@
+File,Rows,Columns,Column_Names
+results/analysis/H1_H9_FINAL.csv,9,10,Hypothesis | N | Significant_5pct | Positive | Negative | Significant_Positive | Significant_Negative | Mean_Estimate | Mean_PValue | Conclusion
+results/tables/H1_H9_AUDIT_FINAL.csv,9,7,Hypothese | Objet | Statut | P_value | Decision_5pct | Precaution | Conclusion
+results/analysis/FINAL_H1_H3_CORRECTED.csv,3,12,Hypothesis | Target | N_coefficients | Significant_5pct | Significant_10pct | Positive | Negative | Positive_Significant_5pct | Negative_Significant_5pct | Mean_Theta | Median_Theta | Status
+results/analysis/FINAL_H1_H3_TABLE_ROBUST.csv,3,10,Hypothesis | Target | N | Mean_Theta | Median_Theta | Positive_N | Negative_N | Significant_5pct | Mean_P_value | Status
+results/analysis/VALIDATION_H1_H3.csv,3,13,Hypothesis | Target | N | Positive | Negative | Significant_5pct | Significant_10pct | Positive_Significant_5pct | Negative_Significant_5pct | Mean_Theta | Median_Theta | Status | Interpretation
+results/analysis/FINAL_FORMAL_H1_H9/FINAL_H4.csv,1,4,H | Status | Reason | p_value
+results/analysis/FORMAL_H1_H9/FORMAL_H4.csv,1,5,H | Status | Reason | Test | p_value
+results/analysis/VALIDATION_H4.csv,1,7,Hypothesis | Test | N | Statistic | P_value | Decision_5pct | Interpretation
+results/analysis/FINAL_H5_DETAIL.csv,22,8,Hypothesis | Country | Model | Theta1 | Theta2 | P_Theta1 | P_Theta2 | Difference
+results/analysis/FINAL_H5_HORIZON_DETAIL_ROBUST.csv,11,7,Hypothesis | Country | Model | Theta1 | Theta2 | Difference | Method
+results/analysis/VALIDATION_H5_DETAIL.csv,11,10,Hypothesis | Country | Model | Theta1 | Theta2 | P_Theta1 | P_Theta2 | Difference | Stronger_Absolute_Theta | Method
+results/analysis/FINAL_H6_DETAIL.csv,22,8,Hypothesis | Country | Model | Theta1 | Theta2 | P_Theta1 | P_Theta2 | Difference
+results/analysis/FINAL_H6_HORIZON_DETAIL_ROBUST.csv,41,7,Hypothesis | Country | Model | Theta1 | Theta2 | Difference | Method
+results/analysis/VALIDATION_H6_DETAIL.csv,41,10,Hypothesis | Country | Model | Theta1 | Theta2 | P_Theta1 | P_Theta2 | Difference | Stronger_Absolute_Theta | Method
+results/analysis/FINAL_H7_DETAIL_ROBUST.csv,21,8,Hypothesis | Country | Target | Theta | GPRT | GPRA | Difference_GPRT_minus_GPRA | Method
+results/analysis/VALIDATION_H7_DETAIL.csv,21,10,Hypothesis | Country | Target | Theta | GPRT | GPRA | P_GPRT | P_GPRA | Difference_GPRT_minus_GPRA | Status
+results/analysis/FINAL_FORMAL_H1_H9/FINAL_H7_H8.csv,2,4,H | Status | Reason | p_value
+results/analysis/FINAL_H9_DETAIL.csv,21,9,Hypothesis | Country | Target | Theta | GPRT | GPRA | P_GPRT | P_GPRA | Difference_GPRT_minus_GPRA
+results/analysis/FINAL_H9_DETAIL_ROBUST.csv,21,8,Hypothesis | Country | Target | Theta | GPRT | GPRA | Difference_GPRT_minus_GPRA | Method
+results/analysis/FINAL_FORMAL_H1_H9/FINAL_H9_GPRT_GPRA_DETAIL.csv,21,12,country | parameter | estimate.GPRA_SUP | se.GPRA_SUP | estimate.GPRT_SUP | se.GPRT_SUP | diff | se_diff | z | p | CI_low | CI_high
+results/analysis/FORMAL_H1_H9/H9_GPRT_VS_GPRA_DETAIL.csv,21,12,country | parameter | estimate.GPRA_SUP | se.GPRA_SUP | estimate.GPRT_SUP | se.GPRT_SUP | diff | se_ind | z_ind | p_ind | CI_low | CI_high
+results/analysis/FINAL_ALL_COEFFICIENTS_AUDIT.csv,572,23,parameter | Estimate | Std_Error | t_value | p_value | country | model | observations | start_date | end_date | loglik | AIC | BIC | MSE_percent | QLIKE | COUNTRY | MODEL | PARAMETER | ESTIMATE | P_VALUE | SIG5 | SIG10 | SIGN
+results/analysis/FINAL_HYPOTHESES_DETAIL_BY_COUNTRY.csv,140,25,parameter | Estimate | Std_Error | t_value | p_value | country | model | observations | start_date | end_date | loglik | AIC | BIC | MSE_percent | QLIKE | COUNTRY | MODEL | PARAMETER | ESTIMATE | P_VALUE | SIG5 | SIG10 | SIGN | SHOCK | TARGET
+results/analysis/FORMAL_H1_H9/H5_H6_PAIRED_THETA_DETAIL.csv,64,12,country | model | estimate.theta_1 | se.theta_1 | estimate.theta_2 | se.theta_2 | diff | se_ind | z_ind | p_ind | ci_low_ind | ci_high_ind
+results/analysis/table_SUP_DEM_PRE.csv,104,7,country | model | shock_type | parameter | Estimate | p_value | significance
+results/analysis/table_tests_H1_H6.csv,213,9,hypothesis | country | model | parameter | Estimate | p_value | significance | expected_sign | statistical_result
+results/analysis/garch_midas_coefficients_analysis.csv,572,20,parameter | Estimate | Std_Error | t_value | p_value | country | model | observations | start_date | end_date | loglik | AIC | BIC | MSE_percent | QLIKE | significance | significant_5pct | significant_10pct | positive | negative
+results/tables/garch_midas_all_results.csv,572,15,parameter | Estimate | Std_Error | t_value | p_value | country | model | observations | start_date | end_date | loglik | AIC | BIC | MSE_percent | QLIKE
+results/analysis/table_parameters_principaux.csv,420,17,country | model | parameter | Estimate | Std_Error | t_value | p_value | significance | significant_5pct | observations | start_date | end_date | loglik | AIC | BIC | MSE_percent | QLIKE
+results/analysis/table_alpha_beta.csv,152,6,country | model | parameter | Estimate | p_value | significance
+results/analysis/table_theta_MIDAS.csv,128,7,country | model | parameter | Estimate | p_value | significance | significant_5pct
+results/analysis/table_comparaison_GPRT_GPRA.csv,86,7,country | model | GPR_type | parameter | Estimate | p_value | significance

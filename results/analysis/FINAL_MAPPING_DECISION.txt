@@ -1,0 +1,20 @@
+============================================================
+RIMEH - DECISION FINALE H1-H9
+============================================================
+
+Specifications identifiees : 7
+Specifications avec evidence source : 7
+Coefficients disponibles : 572
+Paires GPRT-GPRA : 0
+Occurrences H1-H9 dans sources originales : 104
+
+H1-H3 : mapping reconstruit a partir de la cible economique.
+H4 : NON TESTABLE sans classification exportateur/importateur.
+H5-H6 : comparaison theta ; covariance commune absente.
+H7-H9 : comparaison GPRT/GPRA si cible correspondante confirmee.
+
+Aucune covariance ou erreur-type n'a ete inventee.
+NA / NON TESTABLE ne signifie PAS rejet.
+
+Les hypotheses sont dites RECONSTRUITES si aucune formulation
+originale independante n'est retrouvee dans les sources.

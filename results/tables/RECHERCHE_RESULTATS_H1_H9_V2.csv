@@ -1,0 +1,74 @@
+Fichier,Colonnes_trouvees,N_lignes,N_colonnes
+C:\Users\clien\Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\data\processed\daily_clean.csv,return,64011,6
+C:\Users\clien\Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\data\processed\daily_clean_FINAL.csv,return,70537,3
+C:\Users\clien\Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\data\processed\daily_model_data.csv,return,64011,26
+C:\Users\clien\Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\data\processed\garch_daily_all_countries.csv,return ; garch_sigma ; garch_variance,64000,8
+C:\Users\clien\Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\data\processed\monthly_clean.csv,RV.x ; RV.y,3131,21
+C:\Users\clien\Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\data\processed\monthly_clean_BEFORE_GPR_FIX.csv,RV.x ; RV.y,3131,21
+C:\Users\clien\Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\data\processed\monthly_model_data.csv,RV.x ; RV.y,3131,25
+C:\Users\clien\Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\data\processed\monthly_model_data_FINAL.csv,RV ; RV_sqrt ; mean_return ; sd_return,3443,32
+C:\Users\clien\Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\data\processed\monthly_model_data_PART5_11COUNTRIES.csv,RV ; RV_sqrt ; mean_return ; sd_return,3131,32
+C:\Users\clien\Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\data\processed\monthly_realized_volatility_FINAL.csv,RV ; RV_sqrt ; mean_return ; sd_return,3443,7
+C:\Users\clien\Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\data\raw\daily_data.csv,return,64011,5
+C:\Users\clien\Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\data\raw\monthly_data.csv,RV,3131,15
+C:\Users\clien\Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\data\raw\recovered\ARE_recovered_FINAL.csv,return,6537,4
+C:\Users\clien\Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\results\analysis\AUDIT_7_SPECIFICATIONS.csv,N_coefficients,7,9
+C:\Users\clien\Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\results\analysis\AUDIT_GPRT_GPRA_PAIRS.csv,Theta ; GPRT_Estimate ; GPRA_Estimate,88,9
+C:\Users\clien\Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\results\analysis\FINAL_ALL_COEFFICIENTS_AUDIT.csv,Estimate ; p_value ; observations ; ESTIMATE ; P_VALUE,572,23
+C:\Users\clien\Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\results\analysis\FINAL_FORMAL_H1_H9\FINAL_H4.csv,p_value,1,4
+C:\Users\clien\Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\results\analysis\FINAL_FORMAL_H1_H9\FINAL_H7_H8.csv,p_value,2,4
+C:\Users\clien\Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\results\analysis\FINAL_FORMAL_H1_H9\FINAL_H9_GPRT_GPRA_DETAIL.csv,estimate.GPRA_SUP ; estimate.GPRT_SUP,21,12
+C:\Users\clien\Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\results\analysis\FINAL_FORMAL_H1_H9\RDS_VCOV_INVENTORY.csv,coef_matrix ; coef_dim,90,5
+C:\Users\clien\Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\results\analysis\FINAL_H1_H3_CORRECTED.csv,N_coefficients ; Mean_Theta ; Median_Theta,3,12
+C:\Users\clien\Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\results\analysis\FINAL_H1_H3_TABLE_ROBUST.csv,Mean_Theta ; Median_Theta ; Mean_P_value,3,10
+C:\Users\clien\Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\results\analysis\FINAL_H1_H6_TABLE.csv,Mean_Estimate ; Median_Estimate ; Mean_PValue,6,12
+C:\Users\clien\Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\results\analysis\FINAL_H5_DETAIL.csv,Theta1 ; Theta2 ; P_Theta1 ; P_Theta2,22,8
+C:\Users\clien\Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\results\analysis\FINAL_H5_HORIZON_DETAIL_ROBUST.csv,Theta1 ; Theta2,11,7
+C:\Users\clien\Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\results\analysis\FINAL_H6_DETAIL.csv,Theta1 ; Theta2 ; P_Theta1 ; P_Theta2,22,8
+C:\Users\clien\Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\results\analysis\FINAL_H6_HORIZON_DETAIL_ROBUST.csv,Theta1 ; Theta2,41,7
+C:\Users\clien\Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\results\analysis\FINAL_H7_DETAIL_ROBUST.csv,Theta,21,8
+C:\Users\clien\Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\results\analysis\FINAL_H9_DETAIL.csv,Theta,21,9
+C:\Users\clien\Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\results\analysis\FINAL_H9_DETAIL_ROBUST.csv,Theta,21,8
+C:\Users\clien\Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\results\analysis\FINAL_HYPOTHESES_DETAIL_BY_COUNTRY.csv,Estimate ; p_value ; observations ; ESTIMATE ; P_VALUE,140,25
+C:\Users\clien\Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\results\analysis\FINAL_MODEL_THETA_SUMMARY.csv,Mean_Theta,7,2
+C:\Users\clien\Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\results\analysis\FINAL_THETA_DETAIL.csv,Estimate ; p_value ; observations ; ESTIMATE ; P_VALUE,140,23
+C:\Users\clien\Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\results\analysis\FINAL_THETA_DETAIL_ROBUST.csv,Theta ; Estimate ; P_value,140,8
+C:\Users\clien\Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\results\analysis\FORMAL_H1_H9\FORMAL_H4.csv,p_value,1,5
+C:\Users\clien\Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\results\analysis\FORMAL_H1_H9\H5_H6_PAIRED_THETA_DETAIL.csv,estimate.theta_1 ; se.theta_1 ; estimate.theta_2 ; se.theta_2,64,12
+C:\Users\clien\Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\results\analysis\FORMAL_H1_H9\H9_GPRT_VS_GPRA_DETAIL.csv,estimate.GPRA_SUP ; estimate.GPRT_SUP,21,12
+C:\Users\clien\Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\results\analysis\garch_midas_coefficients_analysis.csv,Estimate ; p_value ; observations,572,20
+C:\Users\clien\Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\results\analysis\H1_H9_FINAL.csv,Mean_Estimate ; Mean_PValue,9,10
+C:\Users\clien\Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\results\analysis\H1_H9_THETA_DETAIL.csv,Estimate ; p_value ; observations ; ESTIMATE ; P_VALUE,140,25
+C:\Users\clien\Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\results\analysis\RIMEH_FINAL_H1_H9\COUNTRY_THETA_DETAIL.csv,Theta_N ; Theta_Sig5 ; Theta_Sig10 ; Theta_Positive ; Theta_Negative ; Mean_Theta,11,7
+C:\Users\clien\Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\results\analysis\RIMEH_FINAL_INSPECTION\RDS_INVENTORY.csv,has_rob_coef,90,6
+C:\Users\clien\Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\results\analysis\RIMEH_FINAL_INSPECTION\RDS_S3_COEF_VCOV_TEST.csv,coef_class ; coef_len ; coef_names,90,7
+C:\Users\clien\Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\results\analysis\table_AIC_min_par_pays.csv,observations,11,10
+C:\Users\clien\Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\results\analysis\table_alpha_beta.csv,Estimate ; p_value,152,6
+C:\Users\clien\Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\results\analysis\table_comparaison_GPRT_GPRA.csv,Estimate ; p_value,86,7
+C:\Users\clien\Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\results\analysis\table_parameters_principaux.csv,Estimate ; p_value ; observations,420,17
+C:\Users\clien\Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\results\analysis\table_performance_modeles.csv,observations,76,10
+C:\Users\clien\Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\results\analysis\table_Qlike_min_par_pays.csv,observations,11,10
+C:\Users\clien\Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\results\analysis\table_statistiques_par_modele.csv,mean_estimate ; median_estimate ; sd_estimate ; min_estimate ; max_estimate,64,12
+C:\Users\clien\Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\results\analysis\table_statistiques_par_pays.csv,mean_estimate,44,8
+C:\Users\clien\Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\results\analysis\table_SUP_DEM_PRE.csv,Estimate ; p_value,104,7
+C:\Users\clien\Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\results\analysis\table_tests_H1_H6.csv,Estimate ; p_value,213,9
+C:\Users\clien\Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\results\analysis\table_theta_MIDAS.csv,Estimate ; p_value,128,7
+C:\Users\clien\Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\results\analysis\VALIDATION_H1_H3.csv,Mean_Theta ; Median_Theta,3,13
+C:\Users\clien\Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\results\analysis\VALIDATION_H4.csv,P_value,1,7
+C:\Users\clien\Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\results\analysis\VALIDATION_H5_DETAIL.csv,Theta1 ; Theta2 ; P_Theta1 ; P_Theta2 ; Stronger_Absolute_Theta,11,10
+C:\Users\clien\Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\results\analysis\VALIDATION_H6_DETAIL.csv,Theta1 ; Theta2 ; P_Theta1 ; P_Theta2 ; Stronger_Absolute_Theta,41,10
+C:\Users\clien\Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\results\analysis\VALIDATION_H7_DETAIL.csv,Theta,21,10
+C:\Users\clien\Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\results\analysis\VALIDATION_H9_DETAIL.csv,Theta,21,10
+C:\Users\clien\Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\results\final_analysis\GARCH_COEFFICIENTS_FINAL.csv,alpha ; beta ; alpha_beta,12,10
+C:\Users\clien\Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\results\tables\garch_coefficients.csv,estimate,55,3
+C:\Users\clien\Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\results\tables\garch_coefficients_FINAL.csv,alpha ; beta ; alpha_beta,12,10
+C:\Users\clien\Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\results\tables\garch_midas_all_results.csv,Estimate ; p_value ; observations,572,15
+C:\Users\clien\Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\results\tables\garch_midas_extraction_audit.csv,observations,76,8
+C:\Users\clien\Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\results\tables\garch_midas_model_summary.csv,observations,76,10
+C:\Users\clien\Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\results\tables\garch_persistence.csv,alpha ; beta,11,6
+C:\Users\clien\Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\results\tables\H1_H9_AUDIT_FINAL.csv,P_value,9,7
+C:\Users\clien\Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\results\tables\part3_reconstructed_coverage.csv,n_RV,11,13
+C:\Users\clien\Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\results\validation\data_coverage_FINAL.csv,RV,12,11
+C:\Users\clien\Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\results\validation\GARCH_MIDAS_COVERAGE_CHECK.csv,RV,12,9
+C:\Users\clien\Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\results\validation\GARCH_MIDAS_ELIGIBILITY_11COUNTRIES.csv,RV,11,9
+C:\Users\clien\Downloads\RIMEH_ECONOMETRIE_PART3_GARCH_MIDAS\RIMEH_ECONOMETRIE\results\validation\missingness_FINAL.csv,RV,11,12
