@@ -1,0 +1,13 @@
+﻿*.Rhistory
+*.RData
+.Rproj.user/
+*.log
+*.tmp
+*.bak
+~$*
+data/raw/
+results/tmp/
+results/cache/
+*.zip
+*.7z
+*.rar
